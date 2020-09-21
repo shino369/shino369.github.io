@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <link rel="stylesheet" href="style.css" type="text/css"/>
+        <title>Lab1</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=0">
+    </head>
+    <body>
+        <!--header-->
+        <div class="header">
+            <h1>My Cityu Website</h1>
+            <p>With a <b>flexible</b> and <b>responsive</b> layout.</p>
+        </div>
+        <!--Navigation Bar-->
+
+        <div class="navbar">
+            <a href="https://s3.amazonaws.com/gt7sp-prod/decal/32/98/27/6133908271644279832_1.png" id="myimg1">Link 1</a>
+            <a href="https://cdn-ak.f.st-hatena.com/images/fotolife/d/damenuko/20190729/20190729233351.jpg" id="myimg2">Link 1</a>
+        <!--   <img id="myImg" src="https://s3.amazonaws.com/gt7sp-prod/decal/32/98/27/6133908271644279832_1.png" alt="Snow" style="width:100%;max-width:300px">
+-->
+            <a href="#">Link 1</a>
+            <a href="#">Link 1</a>
+        </div>
+
+        <!-- The Flexible Grid (content)-->
+        <div class="row">
+
+        <!-- Side content and main content here-->
+            <div class="side">
+                <h2>About Me</h2>
+                <h5>Photo of Me:</h5>
+                <div class="fakeimg" style="height:200px;">Image</div>
+                <p>mae wa mo shindeiru</p>
+                <h3>More Text</h3>
+                <p>nani!?</p>
+                <div class="fakeimg" style="height:60px;">Image</div><br>
+                <div class="fakeimg" style="height:60px;">Image</div><br>
+                <div class="fakeimg" style="height:60px;">Image</div>
+            </div>
+            <div class="main">
+                <div class="section">
+                    <h2>Title Heading</h2>
+                    <h5>Title Description, Feb 20, 2020</h5>
+                    <div class="fakeimg" style="height:200px;">Image</div>
+                    <p>some text...</p>
+                    <p>attention! thank you for your attention.</p>
+                </div>
+
+                <br>
+
+                <div class="section">
+                    <h2>Title Heading</h2>
+                    <h5>Title Description, Feb 20, 2020</h5>
+                    <video width="1280" height="720" controls>
+						<source src="movie.mp4" type="video/mp4">
+					</video>
+                    <p>some text...</p>
+                    <p>attention! thank you for your attention.</p>
+					<div id="result"></div>
+					<script>
+					document.getElementById("result").innerHTML = "Sorry, your browser does not support web storage...";
+					</script>
+					
+                </div>
+            </div>
+        </div>
+
+        <!--Footer-->
+
+        <div class="footer">
+            <h2>Footer</h2>
+        </div>
+        
+        
+        <!--modal-->
+        <div id="myModal" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p>attention! thank you for your attention.</p>
+                <img class="img" id="img01">
+            </div>
+        </div>
+        
+
+        <script>
+        // Get the modal
+
+		
+		
+        var modal = document.getElementById("myModal");
+        var modalImg = document.getElementById("img01");
+        var a = document.getElementById("myimg1");
+        var b = document.getElementById("myimg2");
+        // Get the image and insert it inside the modal - use its "alt" text as a caption
+    //    var img = document.getElementById("myImg");
+
+  //      img.onclick = function(){
+     //     modal.style.display = "flex";
+      //    modalImg.src = this.src;
+     //   }
+        a.onclick = function(){
+            event.preventDefault();
+            modal.style.display = "flex";
+            modalImg.src = this.href;
+        }
+        b.onclick = function(){
+            event.preventDefault();
+            modal.style.display = "flex";
+            modalImg.src = this.href;
+        }
+
+        // Get the <span> element that closes the modal
+        var span = document.getElementsByClassName("close")[0];
+
+        // When the user clicks on <span> (x), close the modal
+        span.onclick = function() { 
+          modal.style.display = "none";
+        }
+        </script>
+
+
+
+    </body>
+</html>
