@@ -40,7 +40,7 @@ nav a:hover {
 }
 
 /*column container*/
-.column {
+.row {
     display: flex;
 }
 
@@ -74,7 +74,7 @@ footer {
 }
 
 @media screen and (max-width: 700px){
-    .column, nav{
+    .row, nav{
         flex-direction: column;
     }
 
