@@ -76,12 +76,7 @@ footer {
     .column, nav{
         flex-direction: column;
     }
-	header {
-    padding: 10px;
-    text-align: center;
-    background: #FFA500;
-    color: white;
-}
+
 }
 
 @media print{
