@@ -73,7 +73,7 @@ footer {
 }
 
 @media screen and (orientation:portrait){
-    .column, .nav{
+    .column, nav{
         flex-direction: column-reverse;
     }
 	header {
