@@ -2,6 +2,7 @@
 <html>
     <head>
         <link rel="stylesheet" href="css/style.css" type="text/css"/>
+		
         <title>Lab1</title>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=0">
@@ -15,12 +16,10 @@
         <!--Navigation Bar-->
 
         <div class="navbar">
-            <a href="https://s3.amazonaws.com/gt7sp-prod/decal/32/98/27/6133908271644279832_1.png" id="myimg1">Link 1</a>
-            <a href="https://cdn-ak.f.st-hatena.com/images/fotolife/d/damenuko/20190729/20190729233351.jpg" id="myimg2">Link 2</a>
-        <!--   <img id="myImg" src="https://s3.amazonaws.com/gt7sp-prod/decal/32/98/27/6133908271644279832_1.png" alt="Snow" style="width:100%;max-width:300px">
--->
-            <a href="#">Link 3</a>
-            <a href="#">Link 4</a>
+            <a href="https://pbs.twimg.com/profile_images/1204068661956235265/ksRvrbVv.jpg" id="myimg1">Link 1</a>
+            <a href="https://pbs.twimg.com/profile_images/1236004510679490561/cp71cFmq.jpg" id="myimg2">Link 2</a>
+            <a href="https://pbs.twimg.com/profile_images/1144312083674103808/8YO8ygES.jpg" id="myimg3">Link 3</a>
+            <a href="https://pbs.twimg.com/media/EUh_QH7UUAUhig9.jpg" id="myimg4">Link 4</a>
         </div>
 
         <!-- The Flexible Grid (content)-->
@@ -31,7 +30,7 @@
                 <h2>About Me</h2>
                 <h5>Photo of Me:</h5>
                 <div class="fakeimg" style="height:200px;">Image</div>
-                <p>mae wa mo shindeiru</p>
+                <p>welcome to nijisanji</p>
                 <h3>More Text</h3>
                 <p>nani!?</p>
                 <div class="fakeimg" style="height:60px;">Image</div><br>
@@ -43,7 +42,7 @@
                     <h2>Title Heading</h2>
                     <h5>Title Description, Sep 20, 2020</h5>
                     <div class="fakeimg" style="height:200px;">Image</div>
-                    <p>some text...</p>
+                    <p>welcome to nijisanji...</p>
                     <p>attention! thank you for your attention.</p>
                 </div>
 
@@ -53,7 +52,7 @@
                     <h2>Title Heading</h2>
                     <h5>Title Description, Sep 20, 2020</h5>
 					<div class="fakeimg" style="height:200px;">Image</div>
-                    <p>some text...</p>
+                    <p>welcome to nijisanji...</p>
                     <p>attention! thank you for your attention.</p>
 					
 					
@@ -72,41 +71,13 @@
         <div id="myModal" class="modal">
             <div class="modal-content">
                 <span class="close">&times;</span>
-                <p>attention! thank you for your attention.</p>
+                <p id="caption">attention! thank you for your attention.</p>
                 <img class="img" id="img01">
             </div>
         </div>
         
+<script src="script/jscript.js"></script>
 
-        <script>
-        // Get the modal
-
-		
-		
-        var modal = document.getElementById("myModal");
-        var modalImg = document.getElementById("img01");
-        var a = document.getElementById("myimg1");
-        var b = document.getElementById("myimg2");
-
-        a.onclick = function(){
-            event.preventDefault();
-            modal.style.display = "flex";
-            modalImg.src = this.href;
-        }
-        b.onclick = function(){
-            event.preventDefault();
-            modal.style.display = "flex";
-            modalImg.src = this.href;
-        }
-
-        // Get the <span> element that closes the modal
-        var span = document.getElementsByClassName("close")[0];
-
-        // When the user clicks on <span> (x), close the modal
-        span.onclick = function() { 
-          modal.style.display = "none";
-        }
-        </script>
 
 
 
