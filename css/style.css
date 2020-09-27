@@ -123,9 +123,12 @@ body    {
 }
 
 @media screen and (orientation:portrait){
-    .row, .navbar {
+    .row{
         flex-direction: column-reverse;
     }
+	.navbar{
+		flex-direction: column;
+	}
 	.header {
     padding: 10px;
     background: #FFA500;

@@ -73,9 +73,12 @@ footer {
 }
 
 @media screen and (orientation:portrait){
-    .column, nav{
+    .column{
         flex-direction: column-reverse;
     }
+	nav{
+		flex-direction: column;
+	}
 	header {
     padding: 10px;
     background: #FFA500;
