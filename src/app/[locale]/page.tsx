@@ -6,7 +6,7 @@ import Blinker from "@/components/Blinker";
 import DelayDiv from "@/components/DelayDiv";
 import Typing from "@/components/Typing";
 import Link from "next/link";
-
+import Encounter from "@/components/Encounter";
 
 export default function IndexPage({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
@@ -30,7 +30,8 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
       </section>
       <section>
         <DelayDiv effect="opacity" time={2500}>
-          <p className="text-center text-xl">{t("caption")}</p>
+          <p className="text-center text-xl mb-2">{t("caption")}</p>
+          <Encounter />
         </DelayDiv>
       </section>
       <DelayDiv effect="opacity" time={2500}>
