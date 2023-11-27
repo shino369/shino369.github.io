@@ -1,9 +1,9 @@
 import { ResumeCardProps } from "@/types";
+import clsx from "clsx";
+import { useTranslations } from "next-intl";
+import Image from "next/image";
 import Badge from "./Badge";
 import CodeBlock from "./CodeBlock";
-import { useTranslations } from "next-intl";
-import clsx from "clsx";
-import Image from "next/image";
 
 const Th = ({
   children,
@@ -35,25 +35,14 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
 
   return (
     <CodeBlock title={t(props.title) + ".txt"}>
-      <div>
+      <div className="flex-1">
         <table className="md:max-w-[80%] text-sm md:text-base">
           <tbody>
             {props.title === "academic" && (
               <>
                 <tr>
                   <Th className="text-[#475cbb]">{t("university")}</Th>
-                  <Td>
-                    <div className="flex items-center">
-                      {t("cityu")}
-                      <Image
-                        className="ml-auto"
-                        alt="Cityu"
-                        height={30}
-                        width={50}
-                        src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/CityU_logo.svg/1200px-CityU_logo.svg.png"
-                      />
-                    </div>
-                  </Td>
+                  <Td>{t("cityu")}</Td>
                 </tr>
                 <tr>
                   <Th className="text-[#475cbb]">{t("degree")}</Th>
@@ -81,20 +70,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
               <>
                 <tr>
                   <Th>{t("company_name")}</Th>
-                  <Td>
-                    <div className="flex items-center">
-                      {props.company_name}
-                      {props.image && (
-                        <Image
-                          className="ml-auto"
-                          alt={t("company_name")}
-                          height={40}
-                          width={40}
-                          src={props.image}
-                        />
-                      )}
-                    </div>
-                  </Td>
+                  <Td>{props.company_name}</Td>
                 </tr>
                 <tr>
                   <Th>{t("role")}</Th>
@@ -141,6 +117,13 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
         </table>
         {props.title === "academic" && (
           <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
+            <Image
+              className="bg-white my-1"
+              alt="Cityu"
+              height={30}
+              width={50}
+              src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/CityU_logo.svg/1200px-CityU_logo.svg.png"
+            />
             <div className="text-gray-300 text-xs whitespace-pre-line">
               {t("uni_description")}
             </div>
@@ -148,11 +131,22 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
         )}
 
         {props.title === "job" && (
-          <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
-            <div className="text-gray-300 text-xs whitespace-pre-line">
-            {t(props.company_description)}
+      
+            <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
+              <div className="text-gray-300 text-xs whitespace-pre-line">
+                {props.image && (
+                  <Image
+                    className="bg-white my-1"
+                    alt={t("company_name")}
+                    height={40}
+                    width={40}
+                    src={props.image}
+                  />
+                )}
+                {t(props.company_description)}
+              </div>
             </div>
-          </div>
+      
         )}
       </div>
     </CodeBlock>

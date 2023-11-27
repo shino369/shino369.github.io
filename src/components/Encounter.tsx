@@ -61,7 +61,7 @@ const Encounter = () => {
   return (
     <div
       className={clsx(
-        "flex justify-center character-shadow relative",
+        "flex justify-center character-shadow relative cursor-punch",
         isHover ? "" : "character-bright"
       )}
     >

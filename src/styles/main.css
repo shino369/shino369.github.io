@@ -17,5 +17,9 @@
 }
 
 .character-bright {
-  filter: brightness(0.5)
+  filter: brightness(0.5);
+}
+
+.cursor-punch {
+  cursor: url("/sword.svg"), pointer;
 }

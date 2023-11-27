@@ -33,6 +33,7 @@ body {
 body,
 html {
   font-family: 'PixelMplus', sans-serif !important;
+  -webkit-tap-highlight-color: transparent;
 }
 
 @font-face {
