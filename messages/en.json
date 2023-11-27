@@ -1,12 +1,31 @@
 {
   "page": {
     "helloworld": "hello world",
-    "caption": "Encounter a wild engineer!",
+    "caption": "Encounter a wild developer, Anthony!",
     "profile": "observe",
     "_profile": "profile",
     "resume": "adventure log",
     "_resume": "resume",
     "increment": "Increment",
-    "decrement": "Decrement"
+    "decrement": "Decrement",
+    "role": "role",
+    "company_name": "company name",
+    "employment_type": "employment type",
+    "employment_period": "employment period",
+    "environment": "environment",
+    "permanent": "permanent",
+    "programmer": "programmer",
+    "backend_developer": "backend developer",
+    "university": "university",
+    "cityu": "City University of Hong Kong",
+    "degree": "degree",
+    "information_engineering": "BEng Information Engineering",
+    "grad_year": "gradation year",
+    "job": "job",
+    "academic": "academic"
+  },
+  "meta": {
+    "title": "shino369 homepage",
+    "description": "shino369 Next.js 14 homepage"
   }
 }

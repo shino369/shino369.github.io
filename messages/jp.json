@@ -1,12 +1,31 @@
 {
   "page": {
     "helloworld": "ハローワールド",
-    "caption": "野生のエンジニアが現れた！",
+    "caption": "野生のITエンジニア、アンソニーが現れた！",
     "profile": "観察",
     "_profile": "プロフィール",
     "resume": "鑑定",
     "_resume": "履歴書",
     "increment": "増やす",
-    "decrement": "減らす"
+    "decrement": "減らす",
+    "role": "役職",
+    "company_name": "会社名",
+    "employment_type": "雇用形態",
+    "employment_period": "在籍期間",
+    "environment": "環境",
+    "permanent": "正社員",
+    "programmer": "プログラマ",
+    "backend_developer": "バックエンドエンジニア",
+    "university": "大学",
+    "cityu": "香港城市大学",
+    "degree": "学科",
+    "information_engineering": "情報工学科",
+    "grad_year": "卒業年月",
+    "job": "仕事",
+    "academic": "学歴"
+  },
+  "meta": {
+    "title": "shino369ホームページ",
+    "description": "shino369の Next.js 14 ホームページ"
   }
 }
