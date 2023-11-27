@@ -2,9 +2,9 @@
   "page": {
     "helloworld": "hello world",
     "caption": "Encounter a wild developer, Anthony!",
-    "profile": "observe",
+    "profile": "investigate",
     "_profile": "profile",
-    "resume": "adventure log",
+    "resume": "identify spell",
     "_resume": "resume",
     "increment": "Increment",
     "decrement": "Decrement",
@@ -22,10 +22,15 @@
     "information_engineering": "BEng Information Engineering",
     "grad_year": "gradation year",
     "job": "job",
-    "academic": "academic"
+    "academic": "academic",
+    "uni_description": "2024 The Times Higher Education World University Rankings: 70th",
+    "shiji_description": "Shiji group mainly provide IT solution in Hospitality industry. 4000+ employees around the world.",
+    "appicidea_description": "An IT startup in Hong Kong which mainly provides entrusted development service."
   },
   "meta": {
     "title": "shino369 homepage",
-    "description": "shino369 Next.js 14 homepage"
+    "description": "shino369 Next.js 14 homepage",
+    "profile": "Profile of Anthony",
+    "resume": "Resume of Anthony"
   }
 }

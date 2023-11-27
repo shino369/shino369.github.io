@@ -24,7 +24,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </h1>
           <Blinker />
         </div>
-        <div className="capitalize">
+        <div className="uppercase">
           <p>welcome to my homepage</p>
         </div>
       </section>

@@ -18,4 +18,6 @@ export type ResumeCardProps = {
     employment_type?: string
     employment_period?: string
     environment?: string[]
+    image?: string
+    company_description?: string
 }

@@ -2,7 +2,7 @@
   "page": {
     "helloworld": "ハローワールド",
     "caption": "野生のITエンジニア、アンソニーが現れた！",
-    "profile": "観察",
+    "profile": "調査",
     "_profile": "プロフィール",
     "resume": "鑑定",
     "_resume": "履歴書",
@@ -14,18 +14,23 @@
     "employment_period": "在籍期間",
     "environment": "環境",
     "permanent": "正社員",
-    "programmer": "プログラマ",
-    "backend_developer": "バックエンドエンジニア",
+    "programmer": "プログラマ（社内SE、フルスタック）",
+    "backend_developer": "バックエンドエンジニア（実質フルスタック）",
     "university": "大学",
     "cityu": "香港城市大学",
     "degree": "学科",
     "information_engineering": "情報工学科",
     "grad_year": "卒業年月",
     "job": "仕事",
-    "academic": "学歴"
+    "academic": "学歴",
+    "uni_description": "香港城市大学とは世界大学ランキング上位100名以内の優秀大学です。\n 2024年QS世界大学ランキング　70位",
+    "shiji_description": "Shijiグループはホスピタリティ産業界において世界規模のITソリューションを提供する会社。総従業員数4000+、世界各地に70以上のオフィスを展開しています。",
+    "appicidea_description": "主に受託開発を行うスタートアップ。"
   },
   "meta": {
     "title": "shino369ホームページ",
-    "description": "shino369の Next.js 14 ホームページ"
+    "description": "shino369の Next.js 14 ホームページ",
+    "profile": "アンソニーのプロフィール",
+    "resume": "アンソニーの履歴書"
   }
 }
