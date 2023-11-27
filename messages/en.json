@@ -1,0 +1,12 @@
+{
+  "page": {
+    "helloworld": "hello world",
+    "caption": "Encounter a wild engineer!",
+    "profile": "observe",
+    "_profile": "profile",
+    "resume": "adventure log",
+    "_resume": "resume",
+    "increment": "Increment",
+    "decrement": "Decrement"
+  }
+}

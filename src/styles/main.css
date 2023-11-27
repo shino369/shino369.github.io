@@ -1,0 +1,13 @@
+.show-effect {
+  animation: showup 750ms ease-in-out;
+  animation-fill-mode: forwards;
+}
+
+@keyframes showup {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}

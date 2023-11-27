@@ -1,0 +1,12 @@
+{
+  "page": {
+    "helloworld": "ハローワールド",
+    "caption": "野生のエンジニアが現れた！",
+    "profile": "観察",
+    "_profile": "プロフィール",
+    "resume": "鑑定",
+    "_resume": "履歴書",
+    "increment": "増やす",
+    "decrement": "減らす"
+  }
+}
