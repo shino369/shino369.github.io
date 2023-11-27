@@ -1,45 +1,52 @@
-'use client'
+"use client";
 
-import { motion } from "framer-motion"
+import clsx from "clsx";
+import { motion } from "framer-motion";
+import { useEffect, useState } from "react";
 
 const variants = {
   open: {
     y: 0,
     opacity: 1,
     transition: {
-      y: { stiffness: 1000, velocity: -100 , duration: 0.7, type: 'spring',},
+      y: { stiffness: 1000, velocity: -100, duration: 0.7, type: "spring" },
     },
   },
   closed: {
     y: 50,
     opacity: 0,
     transition: {
-      y: { stiffness: 1000, duration: 0.7, type: 'spring', },
+      y: { stiffness: 1000, duration: 0.7, type: "spring" },
     },
   },
 };
 
 const variants2 = {
   open: {
-    width: 'auto',
-    transition: { staggerChildren: 0.07, delayChildren: 0.5, delay: 0.5, type: 'spring', },
+    width: "auto",
+    transition: {
+      staggerChildren: 0.25,
+      delayChildren: 1.5,
+      delay: 0.5,
+      //   type: "spring",
+    },
   },
   closed: {
     width: 0,
-    display: 'none',
-    transition: { staggerChildren: 0.05, staggerDirection: -1, type: 'spring',  },
+    display: "none",
+    transition: {
+      staggerChildren: 0.05,
+      staggerDirection: -1,
+      // type: "spring"
+    },
   },
 };
 
-export const ListItem = ({
-  children,
-}: {
-  children: React.ReactNode;
-}) => {
+export const ListItem = ({ children }: { children: React.ReactNode }) => {
   return (
     <motion.li
       variants={variants}
-    //   whileHover={{ scale: 1.1 }}
+      //   whileHover={{ scale: 1.1 }}
       whileTap={{ scale: 0.95 }}
     >
       {children}
@@ -47,6 +54,28 @@ export const ListItem = ({
   );
 };
 
-export const ListWrapper = ({ children }: { children: React.ReactNode }) => (
-  <motion.ul className="overflow-auto scrollbar-hide max-h-[85vh]" variants={variants2} initial="closed" animate="open">{children}</motion.ul>
-);
+export const ListWrapper = ({ children }: { children: React.ReactNode }) => {
+  const [maxHeight, setMaxHeight] = useState("70vh");
+
+  useEffect(() => {
+    const paranode = document.getElementById("resume-description");
+    if (paranode) {
+      console.log(paranode.offsetHeight);
+      setMaxHeight(`calc(100vh - ${paranode.offsetHeight}px - 5rem)`);
+    }
+  }, []);
+
+  return (
+    <motion.ul
+      className={"overflow-auto scrollbar-hide"}
+      style={{
+        maxHeight: maxHeight,
+      }}
+      variants={variants2}
+      initial="closed"
+      animate="open"
+    >
+      {children}
+    </motion.ul>
+  );
+};
