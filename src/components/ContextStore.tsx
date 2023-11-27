@@ -1,0 +1,22 @@
+"use client";
+
+import { PropsWithChildren, createContext, useState } from "react";
+
+export const MainContext = createContext< {
+  context: any;
+  setter: Function;
+}>({ context: {}, setter: () => 1 });
+
+export const ContextWrapper = ({ children }: PropsWithChildren) => {
+  const [context, setContext] = useState({});
+
+  const setter = (newVal: any) => {
+    setContext(newVal);
+  };
+
+  return (
+    <MainContext.Provider value={{ context, setter }}>
+      {children}
+    </MainContext.Provider>
+  );
+};

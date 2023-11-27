@@ -9,7 +9,7 @@ const Blinker = () => {
     setWidth("w-full");
   }, []);
   return (
-    <div className={clsx("bg-black min-w-1 h-1 transition-all duration-1000 ease-in-out", width)}></div>
+    <div className={clsx("bg-black dark:bg-white min-w-1 h-1 transition-all duration-1000 ease-in-out", width)}></div>
   );
 };
 

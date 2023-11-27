@@ -12,6 +12,7 @@ import "@/styles/globals.css";
 import ParticlesBG from "@/components/ParticlesBG";
 import { i18nLocale } from "@/middleware";
 import FramerTransitionWrapper from "@/components/FramerTransitionWrapper";
+import { ContextWrapper } from "@/components/ContextStore";
 
 export function generateStaticParams() {
   return i18nLocale.locales.map((locale) => ({ locale }));
@@ -49,9 +50,11 @@ export default function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={inter.className}>
-        <Navbar paths={concatedPAths} locale={locale} />
-        <FramerTransitionWrapper>{children}</FramerTransitionWrapper>
-        <ParticlesBG />
+        <ContextWrapper>
+          <Navbar paths={concatedPAths} locale={locale} />
+          <FramerTransitionWrapper>{children}</FramerTransitionWrapper>
+          <ParticlesBG />
+        </ContextWrapper>
       </body>
     </html>
   );

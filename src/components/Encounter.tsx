@@ -1,16 +1,28 @@
 "use client";
+
 import { debounce } from "@/helper/client-utils";
 import clsx from "clsx";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useEffect, useState } from "react";
+import { useCallback, useContext, useEffect, useState } from "react";
+// import { MainContext } from "./ContextStore";
 
-const Encounter = () => {
+const Encounter = ({
+  translated: { remind },
+}: {
+  translated: {
+    remind: string;
+  };
+}) => {
   const [isHover, setIsHover] = useState(false);
   const [isPress, setIsPress] = useState(false);
   const [pressStack, setPressStack] = useState<[] | number[]>([]);
 
   const controls = useAnimation();
+  const showText = useAnimation();
+
+  const [isShow, setIsShow] = useState(false);
+//   const { context, setter } = useContext(MainContext);
 
   const startAnimate = useCallback(() => {
     controls.start({
@@ -25,9 +37,39 @@ const Encounter = () => {
     });
   }, [controls]);
 
+  const startText = useCallback(() => {
+    setIsShow(true);
+    showText.start({
+      opacity: [0, 1, 1, 0],
+      transition: {
+        //   time: [0, 4, 8, 12],
+        duration: 10,
+      },
+    });
+
+    setTimeout(() => {
+      console.log("hide");
+      setIsShow(false);
+    }, 10000);
+  }, [showText]);
+
   useEffect(() => {
     startAnimate();
-  }, [startAnimate]);
+
+    showText.set({
+      opacity: [0, 1, 1, 0],
+      transition: {
+        //   time: [0, 4, 8, 12],
+        duration: 10,
+      },
+    });
+  }, [startAnimate, showText]);
+
+  useEffect(() => {
+    if (pressStack.length > 5 && !isShow) {
+      startText();
+    }
+  }, [pressStack, isShow, startText]);
 
   const handleHoverStart = () => {
     // controls.stop();
@@ -42,7 +84,25 @@ const Encounter = () => {
   const handlePress = () => {
     setIsPress(true);
     setPressStack((p) => [...p, 1]);
+    // setter({
+    //   attack: true,
+    // });
+
+    // contextCleanup();
   };
+
+//   const debouncedContextCleanup = debounce(() => {
+//     setTimeout(() => {
+//       if (!context.attack) {
+//         console.log("clean");
+//         setter({
+//           attack: false,
+//         });
+//       }
+//     }, 5000);
+//   }, 2000);
+
+//   const contextCleanup = useCallback(debouncedContextCleanup, []);
 
   const handleRelease = () => {
     setIsPress(false);
@@ -59,12 +119,7 @@ const Encounter = () => {
   const cleanup = useCallback(debouncedCleanup, []);
 
   return (
-    <div
-      className={clsx(
-        "flex justify-center character-shadow relative cursor-punch",
-        isHover ? "" : "character-bright"
-      )}
-    >
+    <div className={clsx("flex justify-center relative cursor-punch")}>
       {pressStack.map((s, i) => (
         <motion.div
           key={i}
@@ -95,6 +150,7 @@ const Encounter = () => {
         onContextMenu={(e) => {
           e.preventDefault();
         }}
+        className={clsx(isHover ? "" : "character-bright", "character-shadow")}
       >
         <Image
           width={200}
@@ -102,6 +158,13 @@ const Encounter = () => {
           alt="chcracter"
           src={`/character${isPress ? "2" : ""}.png`}
         />
+      </motion.div>
+
+      <motion.div
+        animate={showText}
+        className="flex justify-center absolute bottom-0 translate-y-full bg-[rgba(255,255,255,0.7)] p-1 m-1 max-w-[80vw] w-[400px] rounded"
+      >
+        {remind}
       </motion.div>
     </div>
   );

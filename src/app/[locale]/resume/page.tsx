@@ -30,7 +30,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           Spring BootおよびCakePHPを使用したRESTful APIの開発経験があります。
         </p>
         <div className="grid grid-flow-col justify-center items-center">
-          <div className="text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black self-start">
+          <div className="text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1>{t("_resume")}</h1>
           </div>
 

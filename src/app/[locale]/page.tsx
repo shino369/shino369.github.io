@@ -31,7 +31,11 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
       <section>
         <DelayDiv effect="opacity" time={2500}>
           <p className="text-center text-xl mb-2">{t("caption")}</p>
-          <Encounter />
+          <Encounter
+            translated={{
+              remind: t("remind"),
+            }}
+          />
         </DelayDiv>
       </section>
       <DelayDiv effect="opacity" time={2500}>
