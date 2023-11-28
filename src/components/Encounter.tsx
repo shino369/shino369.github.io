@@ -4,7 +4,7 @@ import { debounce } from "@/helper/client-utils";
 import clsx from "clsx";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
-import { useCallback, useContext, useEffect, useState } from "react";
+import { useCallback, useEffect, useRef, useState } from "react";
 // import { MainContext } from "./ContextStore";
 
 const Encounter = ({
@@ -15,14 +15,18 @@ const Encounter = ({
   };
 }) => {
   const [isHover, setIsHover] = useState(false);
-  const [isPress, setIsPress] = useState(false);
+  // const [isPress, setIsPress] = useState(false);
   const [pressStack, setPressStack] = useState<[] | number[]>([]);
+  const [triggered, setTriggered] = useState(false);
+  const [currentPic, setCurrentPic] = useState(1);
+  const interVal = useRef<NodeJS.Timeout>();
+  const timeout = useRef<NodeJS.Timeout>();
 
   const controls = useAnimation();
   const showText = useAnimation();
 
   const [isShow, setIsShow] = useState(false);
-//   const { context, setter } = useContext(MainContext);
+  //   const { context, setter } = useContext(MainContext);
 
   const startAnimate = useCallback(() => {
     controls.start({
@@ -82,7 +86,17 @@ const Encounter = ({
   };
 
   const handlePress = () => {
-    setIsPress(true);
+    clearTimeout(timeout.current);
+    // setIsPress(true);
+    if (!triggered) {
+      setTriggered(true);
+    }
+      clearInterval(interVal.current);
+      timeout.current = setTimeout(() => {
+        setTriggered(false);
+      }, 10000);
+    
+    setCurrentPic(6);
     setPressStack((p) => [...p, 1]);
     // setter({
     //   attack: true,
@@ -91,21 +105,40 @@ const Encounter = ({
     // contextCleanup();
   };
 
-//   const debouncedContextCleanup = debounce(() => {
-//     setTimeout(() => {
-//       if (!context.attack) {
-//         console.log("clean");
-//         setter({
-//           attack: false,
-//         });
-//       }
-//     }, 5000);
-//   }, 2000);
+  useEffect(() => {
+    if (!triggered) {
+      interVal.current = setInterval(() => {
+        setCurrentPic((p) => {
+          if (p < 4) {
+            return p + 1;
+          } else {
+            return 1;
+          }
+        });
+      }, 1000);
 
-//   const contextCleanup = useCallback(debouncedContextCleanup, []);
+      return () => {
+        clearInterval(interVal.current);
+      };
+    }
+  }, [triggered]);
+
+  //   const debouncedContextCleanup = debounce(() => {
+  //     setTimeout(() => {
+  //       if (!context.attack) {
+  //         console.log("clean");
+  //         setter({
+  //           attack: false,
+  //         });
+  //       }
+  //     }, 5000);
+  //   }, 2000);
+
+  //   const contextCleanup = useCallback(debouncedContextCleanup, []);
 
   const handleRelease = () => {
-    setIsPress(false);
+    // setIsPress(false);
+    setCurrentPic(5);
     cleanup();
   };
 
@@ -156,7 +189,7 @@ const Encounter = ({
           width={200}
           height={200}
           alt="chcracter"
-          src={`/character${isPress ? "2" : ""}.png`}
+          src={`/character${currentPic}.png`}
         />
       </motion.div>
 
