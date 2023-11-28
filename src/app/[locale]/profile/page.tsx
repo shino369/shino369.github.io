@@ -22,7 +22,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
       <ProfileInitEffect>
         <div className="flex justify-center mb-2">
           <Image
-            src="/character3.jpg"
+            src="/profile.jpg"
             alt="character3"
             width={300}
             height={300}
