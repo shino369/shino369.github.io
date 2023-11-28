@@ -69,7 +69,7 @@ export const ProfileInitEffect = ({ children }: PropsWithChildren) => {
     },
     closed: {
       height: 0,
-      display: "none",
+      // display: "none",
       transition: {
         // staggerChildren: 0.05,
         // staggerDirection: -1,
@@ -82,7 +82,7 @@ export const ProfileInitEffect = ({ children }: PropsWithChildren) => {
     <AnimatePresence mode="wait">
       <motion.div
         className={clsx(
-          "flex flex-col h-fit justify-center items-center overflow-hidden mt-2"
+          "mt-2 overflow-auto scrollbar-hide"
         )}
         variants={variants}
         initial="closed"
