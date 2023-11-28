@@ -1,8 +1,6 @@
 "use client";
 
-import clsx from "clsx";
 import { motion } from "framer-motion";
-import { useEffect, useState } from "react";
 
 const variants = {
   open: {
@@ -55,22 +53,8 @@ export const ListItem = ({ children }: { children: React.ReactNode }) => {
 };
 
 export const ListWrapper = ({ children }: { children: React.ReactNode }) => {
-  const [maxHeight, setMaxHeight] = useState("70vh");
-
-  useEffect(() => {
-    const paranode = document.getElementById("resume-description");
-    if (paranode) {
-      console.log(paranode.offsetHeight);
-      setMaxHeight(`calc(100vh - ${paranode.offsetHeight}px - 5rem)`);
-    }
-  }, []);
-
   return (
     <motion.ul
-      className={"overflow-auto scrollbar-hide"}
-      style={{
-        maxHeight: maxHeight,
-      }}
       variants={variants2}
       initial="closed"
       animate="open"

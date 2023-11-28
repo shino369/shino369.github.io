@@ -1,6 +1,7 @@
 {
   "page": {
-    "helloworld": "hello world",
+    "helloworld": "greetings!!!",
+    "welcome_message": "shino369: welcome to my homepage",
     "caption": "Encounter a wild developer, Anthony! He is stairing at you.",
     "remind": "Your device get lagger and lagger if you keep attack me!",
     "profile": "investigate",
@@ -26,12 +27,13 @@
     "academic": "academic",
     "uni_description": "2024 The Times Higher Education World University Rankings: 70th",
     "shiji_description": "Shiji group mainly provide IT solution in Hospitality industry. 4000+ employees around the world.",
-    "appicidea_description": "An IT startup in Hong Kong which mainly provides entrusted development service."
+    "appicidea_description": "An IT startup in Hong Kong which mainly provides entrusted development service.",
+    "resume_description": "Specialize in creating dynamic and responsive web applications. Experienced in an array of JavaScript frameworks including React.js, Vue.js, Angular, Next.js. While I excel in full-stack development, my passion lies in crafting seamless and user-centric frontend experiences. JLPT N1 passed"
   },
   "meta": {
-    "title": "shino369 homepage",
-    "description": "shino369 Next.js 14 homepage",
-    "profile": "Profile of Anthony",
-    "resume": "Resume of Anthony"
+    "title": "shino369/AnthonyW homepage",
+    "description": "shino369/AnthonyW Next.js 14 homepage",
+    "profile": "Profile of Anthony Wong",
+    "resume": "Resume of Anthony Wong"
   }
 }

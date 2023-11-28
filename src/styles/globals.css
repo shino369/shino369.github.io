@@ -2,8 +2,8 @@
 @tailwind components;
 @tailwind utilities;
 
-@import './navbar.css';
-@import './main.css';
+@import "./navbar.css";
+@import "./main.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -21,7 +21,12 @@
 
 body {
   color: rgb(var(--foreground-rgb));
-  background: linear-gradient(to bottom, transparent, rgb(var(--background-end-rgb))) rgb(var(--background-start-rgb));
+  background: linear-gradient(
+      to bottom,
+      transparent,
+      rgb(var(--background-end-rgb))
+    )
+    rgb(var(--background-start-rgb));
   max-width: 1600px;
   margin-inline: auto;
 }
@@ -32,13 +37,15 @@ body {
 
 body,
 html {
-  font-family: 'PixelMplus', sans-serif !important;
+  font-family: "PixelMplus", sans-serif !important;
   -webkit-tap-highlight-color: transparent;
+  max-height: 100dvh;
 }
 
 @font-face {
-  font-family: 'PixelMplus';
-  src: local('PixelMplus'), url(./fonts/PixelMplus12-Regular.ttf) format('truetype');
+  font-family: "PixelMplus";
+  src: local("PixelMplus"),
+    url(./fonts/PixelMplus12-Regular.ttf) format("truetype");
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */
@@ -48,6 +55,11 @@ html {
 
 /* For IE, Edge and Firefox */
 .scrollbar-hide {
-  -ms-overflow-style: none;  /* IE and Edge */
-  scrollbar-width: none;  /* Firefox */
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.max-height-dvh {
+  max-height: 100dvh;
+  min-height: 100dvh;
 }

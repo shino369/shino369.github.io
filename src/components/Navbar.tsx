@@ -7,8 +7,14 @@ import LocaleSwitcher from "./locale-switcher";
 import Link from "next/link";
 import { NavPath } from "@/types";
 import Image from "next/image";
-import sword from "@/assets/sword.svg";
 import { Locale } from "@/middleware";
+import ToggleButton from "./ToggleButton";
+import { useAppDispatch, useAppSelector } from "@/redux/store";
+import { setParticle } from "@/redux/reducer/commonSlice";
+
+//svg
+import sword from "@/assets/sword.svg";
+
 
 export const Navbar = ({
   // children,
@@ -20,6 +26,10 @@ export const Navbar = ({
   locale: Locale;
 }) => {
   const [toggleState, setToggleState] = useState("");
+  const { particleInteractive, particleActive } = useAppSelector(
+    (rootState) => rootState.common
+  );
+  const dispatch = useAppDispatch();
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const toggle = useCallback(
@@ -71,6 +81,32 @@ export const Navbar = ({
             toggle={() => {
               setToggleState("collapsing");
             }}
+          />
+        </section>
+        <section>
+          <ToggleButton
+            className="text-sm p-2"
+            label="BG effect"
+            onToggle={() => {
+              dispatch(
+                setParticle({
+                  particleActive: !particleActive,
+                })
+              );
+            }}
+            isChecked={particleActive}
+          />
+          <ToggleButton
+            className="text-sm p-2"
+            label="BG interactive"
+            onToggle={() => {
+              dispatch(
+                setParticle({
+                  particleInteractive: !particleInteractive,
+                })
+              );
+            }}
+            isChecked={particleInteractive}
           />
         </section>
       </div>

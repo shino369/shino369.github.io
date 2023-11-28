@@ -11,8 +11,11 @@ import { LocaleParam } from "@/types";
 import "@/styles/globals.css";
 import ParticlesBG from "@/components/ParticlesBG";
 import { i18nLocale } from "@/middleware";
-import FramerTransitionWrapper from "@/components/FramerTransitionWrapper";
-import { ContextWrapper } from "@/components/ContextStore";
+import { PageTransitionWrapper } from "@/components/FramerTransitionWrapper";
+import ContextProvider from "@/components/ContextStore";
+import AppProvider from "@/redux/AppProvider";
+import clsx from "clsx";
+import Disclaimer from "@/components/Disclaimer";
 
 export function generateStaticParams() {
   return i18nLocale.locales.map((locale) => ({ locale }));
@@ -25,6 +28,8 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
   return {
     title: t("title"),
     description: t("description"),
+    keywords:
+      "nextjs, nextjs 14, react, framer motion, portfolio, shino369, anthony wong",
   };
 }
 
@@ -49,12 +54,17 @@ export default function LocaleLayout({
 
   return (
     <html lang={locale}>
-      <body className={inter.className}>
-        <ContextWrapper>
-          <Navbar paths={concatedPAths} locale={locale} />
-          <FramerTransitionWrapper>{children}</FramerTransitionWrapper>
-          <ParticlesBG />
-        </ContextWrapper>
+      <body className={clsx(inter.className, "scrollbar-hide")}>
+        <AppProvider>
+          <ContextProvider>
+            <header>
+              <Navbar paths={concatedPAths} locale={locale} />
+            </header>
+            <PageTransitionWrapper>{children}</PageTransitionWrapper>
+            <ParticlesBG />
+            <Disclaimer />
+          </ContextProvider>
+        </AppProvider>
       </body>
     </html>
   );

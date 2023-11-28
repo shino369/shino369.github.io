@@ -1,7 +1,8 @@
 {
   "page": {
-    "helloworld": "ハローワールド",
-    "caption": "野生のITエンジニア、アンソニーが現れた！彼はあなたを見つめている。",
+    "helloworld": "こんにちは!!!",
+    "welcome_message": "shino369: ホームページへようこそ",
+    "caption": "やせいのITエンジニア、アンソニーがあらわれた！彼はあなたを見つめている。",
     "remind": "あなたが攻撃をする度に、デバイスがどんどん重くなるぞ！",
     "profile": "調査",
     "_profile": "プロフィール",
@@ -26,11 +27,12 @@
     "academic": "学歴",
     "uni_description": "香港城市大学とは世界大学ランキング上位100名以内の優秀大学です。\n 2024年QS世界大学ランキング　70位",
     "shiji_description": "Shijiグループはホスピタリティ産業界において世界規模のITソリューションを提供する会社。総従業員数4000+、世界各地に70以上のオフィスを展開しています。",
-    "appicidea_description": "主に受託開発を行うスタートアップ。"
+    "appicidea_description": "主に受託開発を行うスタートアップ。",
+    "resume_description": "フロントエンド領域では、レスポンシブなWEBアプリケーションを制作することに長けており、React.js、Vue.js、Angular、そしてNext.jsなど、多岐にわたるJavaScriptフレームワークでの開発経験を保有しています。中でもVue3を用いたフロントエンドのリニューアルプロジェクトをリードした経験があります。バックエンドにおいては、Java Spring BootおよびCakePHPを使用したRESTful APIの開発経験があります。"
   },
   "meta": {
-    "title": "shino369ホームページ",
-    "description": "shino369の Next.js 14 ホームページ",
+    "title": "shino369/AnthonyW のホームページ",
+    "description": "shino369/AnthonyW の Next.js 14 ホームページ",
     "profile": "アンソニーのプロフィール",
     "resume": "アンソニーの履歴書"
   }

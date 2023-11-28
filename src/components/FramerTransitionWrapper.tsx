@@ -1,9 +1,14 @@
 "use client";
 
+import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 import { usePathname } from "next/navigation";
-import { ReactNode } from "react";
-const FramerTransitionWrapper = ({ children }: { children: ReactNode }) => {
+import { PropsWithChildren, ReactNode, useEffect, useState } from "react";
+export const PageTransitionWrapper = ({
+  children,
+}: {
+  children: ReactNode;
+}) => {
   const pathName = usePathname();
 
   // const variants = {
@@ -38,7 +43,7 @@ const FramerTransitionWrapper = ({ children }: { children: ReactNode }) => {
       </motion.div> */}
       <motion.div
         key={pathName}
-        className="opacity-0 bg-[rgba(0,0,0,0.1)]"
+        className="opacity-0 bg-[rgba(0,0,0,0.1)] max-height-dvh"
         initial={{ opacity: 0 }}
         animate={{ opacity: 1 }}
         transition={{ duration: 2 }}
@@ -49,4 +54,42 @@ const FramerTransitionWrapper = ({ children }: { children: ReactNode }) => {
   );
 };
 
-export default FramerTransitionWrapper;
+export const ProfileInitEffect = ({ children }: PropsWithChildren) => {
+  const variants = {
+    open: {
+      height: "auto",
+      transition: {
+        duration: 1,
+        // staggerChildren: 0.25,
+        // delayChildren: 1.5,
+        delay: 1.5,
+          type: "spring",
+        // ease: "",
+      },
+    },
+    closed: {
+      height: 0,
+      display: "none",
+      transition: {
+        // staggerChildren: 0.05,
+        // staggerDirection: -1,
+        // type: "spring"
+      },
+    },
+  };
+
+  return (
+    <AnimatePresence mode="wait">
+      <motion.div
+        className={clsx(
+          "flex flex-col h-fit justify-center items-center overflow-hidden mt-2"
+        )}
+        variants={variants}
+        initial="closed"
+        animate="open"
+      >
+        {children}
+      </motion.div>
+    </AnimatePresence>
+  );
+};

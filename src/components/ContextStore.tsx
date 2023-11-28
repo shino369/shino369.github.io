@@ -2,12 +2,12 @@
 
 import { PropsWithChildren, createContext, useState } from "react";
 
-export const MainContext = createContext< {
+export const MainContext = createContext<{
   context: any;
   setter: Function;
-}>({ context: {}, setter: () => 1 });
+}>({ context: {}, setter: () => {} });
 
-export const ContextWrapper = ({ children }: PropsWithChildren) => {
+export default function ContextProvider({ children }: PropsWithChildren) {
   const [context, setContext] = useState({});
 
   const setter = (newVal: any) => {
@@ -19,4 +19,4 @@ export const ContextWrapper = ({ children }: PropsWithChildren) => {
       {children}
     </MainContext.Provider>
   );
-};
+}
