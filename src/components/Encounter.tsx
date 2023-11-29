@@ -35,6 +35,7 @@ const Encounter = ({
   const showText = useAnimation();
 
   const [isShow, setIsShow] = useState(false);
+  const [isCaraShow, setIsCaraShow] = useState(true);
   //   const { context, setter } = useContext(MainContext);
 
   const startAnimate = useCallback(() => {
@@ -110,10 +111,18 @@ const Encounter = ({
         duration: 3000,
       },
       {
+        name: "hide character",
+        func: () => {
+          setIsCaraShow(false);
+        },
+        duration: 500,
+      },
+      {
         name: "change pic",
         func: () => {
           setQuestion(false);
           setCurrentPic(5);
+          setIsCaraShow(true);
         },
         duration: 1000,
       },
@@ -130,6 +139,7 @@ const Encounter = ({
         func: () => {
           setCurrentText("greeting1");
           startText();
+          reset();
         },
         duration: 0,
       },
@@ -140,9 +150,25 @@ const Encounter = ({
     clearTimeout(timeout.current);
     timeout.current = setTimeout(() => {
       // console.log("reset");
-      setTriggered(false);
-      setCurrentPic(1);
-      setIsHover(false);
+      chainAction([
+        {
+          name: "hide character",
+          func: () => {
+            setIsCaraShow(false);
+          },
+          duration: 500,
+        },
+        {
+          name: "show character",
+          func: () => {
+            setTriggered(false);
+            setCurrentPic(1);
+            setIsHover(false);
+            setIsCaraShow(true);
+          },
+          duration: 500,
+        },
+      ]);
     }, 10000);
   };
 
@@ -267,6 +293,10 @@ const Encounter = ({
         className={clsx(isHover ? "" : "character-bright", "character-shadow")}
       >
         <Image
+          className={clsx(
+            "transition-opacity",
+            isCaraShow ? "opacity-100" : "opacity-0"
+          )}
           width={200}
           height={200}
           alt="chcracter"
