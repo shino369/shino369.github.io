@@ -30,7 +30,7 @@ export const PageTransitionWrapper = ({
   // };
 
   return (
-    <AnimatePresence mode="wait" initial={false}>
+    <AnimatePresence mode="wait" >
       {/* <motion.div
         // className="bg-[rgba(0,0,0,0.2)] relative"
         key={pathName}

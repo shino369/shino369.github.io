@@ -46,7 +46,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
   const t = useTranslations("page");
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
-  const [filteredList, setFiltedList] = useState<WorkProps[]>([]);
+  const [filteredList, setFiltedList] = useState<WorkProps[]>(works);
 
   useEffect(() => {
     if (search) {
@@ -64,7 +64,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
     } else {
       setFiltedList(works);
     }
-  }, [search, works]);
+  }, [search]);
 
   return (
     <ListWrapper>

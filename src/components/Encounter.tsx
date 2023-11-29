@@ -311,6 +311,7 @@ const Encounter = ({
             isCaraShow ? "opacity-100" : "opacity-0",
             triggered || isHover ? "" : "character-bright",
           )}
+          priority
           width={200}
           height={200}
           alt="chcracter"

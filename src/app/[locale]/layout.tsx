@@ -62,17 +62,17 @@ export default function LocaleLayout({
 
   unstable_setRequestLocale(locale);
   const messages = useMessages();
-  const allPaths = getRootPaths();
-  const concatedPAths = [
-    {
-      name: "home",
-      icon: "home",
-      path: "/",
-    },
-    ...allPaths,
-  ];
+  // const allPaths = getRootPaths();
+  // const concatedPAths = [
+  //   {
+  //     name: "home",
+  //     icon: "home",
+  //     path: "/",
+  //   },
+  //   ...allPaths,
+  // ];
 
-  console.log(allPaths);
+  // console.log(concatedPAths);
 
   return (
     <html lang={locale}>
@@ -81,7 +81,15 @@ export default function LocaleLayout({
           <ContextProvider>
             <NextIntlClientProvider locale={locale} messages={messages}>
               <header>
-                <Navbar paths={concatedPAths} locale={locale} />
+                <Navbar
+                  paths={[
+                    { name: "home", icon: "home", path: "/" },
+                    { name: "profile", icon: "profile", path: "/profile" },
+                    { name: "resume", icon: "resume", path: "/resume" },
+                    { name: "work", icon: "work", path: "/work" },
+                  ]}
+                  locale={locale}
+                />
               </header>
               <PageTransitionWrapper>{children}</PageTransitionWrapper>
               <ParticlesBG />

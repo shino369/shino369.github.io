@@ -1,6 +1,6 @@
 "use client";
 
-import { motion } from "framer-motion";
+import { AnimatePresence, motion } from "framer-motion";
 
 export const ListItem = ({
   children,
@@ -67,8 +67,10 @@ export const ListWrapper = ({ children }: { children: React.ReactNode }) => {
     },
   };
   return (
-    <motion.ul variants={variants2} initial="closed" animate="open">
-      {children}
-    </motion.ul>
+    <AnimatePresence mode="wait">
+      <motion.ul variants={variants2} initial="closed" animate="open">
+        {children}
+      </motion.ul>
+    </AnimatePresence>
   );
 };
