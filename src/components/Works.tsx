@@ -50,22 +50,18 @@ export default function Works({ works }: { works: WorkProps[] }) {
 
   useEffect(() => {
     if (search) {
+      const t1 = new Date().getMilliseconds()
+      const reg = new RegExp(`.+${search}|${search}|${search}}.`, "gi");
       const contain = works.filter(
         (w) =>
-          w.title.toLocaleUpperCase().includes(search.toLocaleUpperCase()) ||
-          w.description
-            .toLocaleUpperCase()
-            .includes(search.toLocaleUpperCase()) ||
-          w.responsibility
-            .toLocaleUpperCase()
-            .includes(search.toLocaleUpperCase()) ||
-          w.result.toLocaleUpperCase().includes(search.toLocaleUpperCase()) ||
-          w.environemnt
-            .join("")
-            .toLocaleUpperCase()
-            .includes(search.toLocaleUpperCase())
+          reg.test(w.title) ||
+          reg.test(w.description) ||
+          reg.test(w.responsibility) ||
+          reg.test(w.result) ||
+          reg.test(w.environemnt.join(""))
       );
-
+      const t2 = new Date().getMilliseconds()
+      console.log((t2-t1))
       setFiltedList(contain);
     } else {
       setFiltedList(works);
