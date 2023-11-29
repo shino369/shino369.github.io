@@ -50,7 +50,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
 
   useEffect(() => {
     if (search) {
-      const t1 = new Date().getMilliseconds()
       const reg = new RegExp(`.+${search}|${search}|${search}}.`, "gi");
       const contain = works.filter(
         (w) =>
@@ -60,8 +59,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
           reg.test(w.result) ||
           reg.test(w.environemnt.join(""))
       );
-      const t2 = new Date().getMilliseconds()
-      console.log((t2-t1))
+
       setFiltedList(contain);
     } else {
       setFiltedList(works);
