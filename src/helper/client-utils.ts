@@ -1,7 +1,7 @@
-export const sleep = (time: number): Promise<boolean> => {
-  return new Promise((res) => {
+export const sleep = (time: number): Promise<void> => {
+  return new Promise<void>((res) => {
     setTimeout(() => {
-      res(true);
+      res();
     }, time);
   });
 };

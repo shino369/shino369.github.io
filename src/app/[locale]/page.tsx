@@ -25,7 +25,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           <Blinker />
         </div>
         <div className="uppercase" title="welcome to my homepage">
-          <p>{t('welcome_message')}</p>
+          <p>{t("welcome_message")}</p>
         </div>
       </header>
       <section>
@@ -33,7 +33,12 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           <p className="text-center text-xl mb-2">{t("caption")}</p>
           <Encounter
             translated={{
+              greeting1: t("greeting1"),
+              greeting2: t("greeting2"),
+              greeting3: t("greeting3"),
               remind: t("remind"),
+              stopit: t("stopit"),
+              bored: t("bored"),
             }}
           />
         </DelayDiv>

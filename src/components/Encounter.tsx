@@ -1,5 +1,6 @@
 "use client";
 
+import { chainAction } from "@/helper/animate-chain";
 import { debounce } from "@/helper/client-utils";
 import clsx from "clsx";
 import { motion, useAnimation } from "framer-motion";
@@ -7,20 +8,28 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 // import { MainContext } from "./ContextStore";
 
+const complaints = ["remind", "stopit", "bored"];
+
+const availableText = ["greeting1", "greeting2", "greeting3"];
+
 const Encounter = ({
-  translated: { remind },
+  translated,
 }: {
   translated: {
-    remind: string;
+    [key: string]: string;
   };
 }) => {
   const [isHover, setIsHover] = useState(false);
   // const [isPress, setIsPress] = useState(false);
   const [pressStack, setPressStack] = useState<[] | number[]>([]);
   const [triggered, setTriggered] = useState(false);
+  const [freezeAction, setFreezeAction] = useState(false);
   const [currentPic, setCurrentPic] = useState(1);
+  const [question, setQuestion] = useState(false);
+  const [currentText, setCurrentText] = useState("greeting1");
   const interVal = useRef<NodeJS.Timeout>();
   const timeout = useRef<NodeJS.Timeout>();
+  const timeout2 = useRef<NodeJS.Timeout>();
 
   const controls = useAnimation();
   const showText = useAnimation();
@@ -41,21 +50,21 @@ const Encounter = ({
     });
   }, [controls]);
 
-  const startText = useCallback(() => {
+  const startText = () => {
     setIsShow(true);
     showText.start({
       opacity: [0, 1, 1, 0],
       transition: {
         //   time: [0, 4, 8, 12],
-        duration: 10,
+        duration: 3,
       },
     });
 
     setTimeout(() => {
-      console.log("hide");
+      // console.log("hide");
       setIsShow(false);
-    }, 10000);
-  }, [showText]);
+    }, 3000);
+  };
 
   useEffect(() => {
     startAnimate();
@@ -69,12 +78,6 @@ const Encounter = ({
     });
   }, [startAnimate, showText]);
 
-  useEffect(() => {
-    if (pressStack.length > 5 && !isShow) {
-      startText();
-    }
-  }, [pressStack, isShow, startText]);
-
   const handleHoverStart = () => {
     // controls.stop();
     setIsHover(true);
@@ -82,27 +85,110 @@ const Encounter = ({
 
   const handleHoverEnd = () => {
     // startAnimate();
-    setIsHover(false);
+    if (!triggered) {
+      setIsHover(false);
+    }
   };
+
+  const changeAction = () => {
+    setTriggered(true);
+    setFreezeAction(true);
+    chainAction([
+      {
+        name: "stop walking",
+        func: () => {
+          setCurrentPic(3);
+        },
+        duration: 500,
+        delay: 500,
+      },
+      {
+        name: "show question mark",
+        func: () => {
+          setQuestion(true);
+        },
+        duration: 3000,
+      },
+      {
+        name: "change pic",
+        func: () => {
+          setQuestion(false);
+          setCurrentPic(5);
+        },
+        duration: 1000,
+      },
+      {
+        name: "unfreeze",
+        func: () => {
+          setFreezeAction(false);
+        },
+        delay: 300,
+        duration: 0,
+      },
+      {
+        name: "show greet",
+        func: () => {
+          setCurrentText("greeting1");
+          startText();
+        },
+        duration: 0,
+      },
+    ]);
+  };
+
+  const reset = () => {
+    clearTimeout(timeout.current);
+    timeout.current = setTimeout(() => {
+      // console.log("reset");
+      setTriggered(false);
+      setCurrentPic(1);
+      setIsHover(false);
+    }, 10000);
+  };
+
+  const randomText = useCallback(
+    debounce((pressStack, isShow) => {
+      // console.log(isShow);
+      if (pressStack.length > 5 && !isShow) {
+        const randomComplaint =
+          complaints[Math.floor(Math.random() * complaints.length)];
+        // console.log(randomComplaint);
+        setCurrentText(randomComplaint);
+        startText();
+      }
+      if (pressStack.length < 6 && !isShow) {
+        const randomText =
+          availableText[Math.floor(Math.random() * availableText.length)];
+        setCurrentText(randomText);
+        startText();
+      }
+    }, 500),
+    []
+  );
 
   const handlePress = () => {
     clearTimeout(timeout.current);
     // setIsPress(true);
-    if (!triggered) {
-      setTriggered(true);
+    if (!triggered && !freezeAction) {
+      changeAction();
     }
-      clearInterval(interVal.current);
-      timeout.current = setTimeout(() => {
-        setTriggered(false);
-      }, 10000);
-    
-    setCurrentPic(6);
-    setPressStack((p) => [...p, 1]);
-    // setter({
-    //   attack: true,
-    // });
 
-    // contextCleanup();
+    if (currentPic >= 5 && !freezeAction) {
+      randomText(pressStack, isShow);
+      setPressStack((p) => [...p, 1]);
+      setCurrentPic(6);
+      clearInterval(interVal.current);
+      reset();
+    }
+  };
+
+  const handleRelease = () => {
+    if (triggered && !freezeAction) {
+      // console.log("release");
+      setCurrentPic(5);
+      cleanup();
+      reset();
+    }
   };
 
   useEffect(() => {
@@ -123,33 +209,13 @@ const Encounter = ({
     }
   }, [triggered]);
 
-  //   const debouncedContextCleanup = debounce(() => {
-  //     setTimeout(() => {
-  //       if (!context.attack) {
-  //         console.log("clean");
-  //         setter({
-  //           attack: false,
-  //         });
-  //       }
-  //     }, 5000);
-  //   }, 2000);
-
-  //   const contextCleanup = useCallback(debouncedContextCleanup, []);
-
-  const handleRelease = () => {
-    // setIsPress(false);
-    setCurrentPic(5);
-    cleanup();
-  };
-
-  const debouncedCleanup = debounce(() => {
-    setTimeout(() => {
-      console.log("clear arr");
+  const cleanup = () => {
+    clearTimeout(timeout2.current);
+    timeout2.current = setTimeout(() => {
+      // console.log("clear stack");
       setPressStack([]);
-    }, 1000);
-  }, 1000);
-
-  const cleanup = useCallback(debouncedCleanup, []);
+    }, 2000);
+  };
 
   return (
     <div className={clsx("flex justify-center relative cursor-punch")}>
@@ -169,6 +235,21 @@ const Encounter = ({
           - 10 HP
         </motion.div>
       ))}
+
+      {question && (
+        <motion.div
+          animate={{
+            opacity: [0, 1, 0, 1, 0],
+            transition: {
+              duration: 2,
+              ease: "linear",
+            },
+          }}
+          className="absolute top-4 right-20 md:right-1/4 text-lg"
+        >
+          ??
+        </motion.div>
+      )}
 
       <motion.div
         animate={controls}
@@ -197,7 +278,7 @@ const Encounter = ({
         animate={showText}
         className="flex justify-center absolute bottom-0 translate-y-full bg-[rgba(255,255,255,0.7)] p-1 m-1 max-w-[80vw] w-[400px] rounded"
       >
-        {remind}
+        {translated[currentText]}
       </motion.div>
     </div>
   );

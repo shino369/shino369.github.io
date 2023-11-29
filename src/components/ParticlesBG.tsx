@@ -28,7 +28,7 @@ const ParticlesBG = () => {
   const particleRef = useRef<Container | null>(null);
 
   useEffect(() => {
-    console.log(particleActive);
+    // console.log(particleActive);
     particleActive ? particleRef.current?.play() : particleRef.current?.pause();
   }, [particleActive]);
 
