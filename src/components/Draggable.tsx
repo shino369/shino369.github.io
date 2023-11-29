@@ -58,7 +58,7 @@ export function useDraggable(
   const timing = (1 / 60) * 1000; // period of most monitors (60fps)
 
   useLayoutEffect(() => {
-    if (isMounted) {
+    if (isMounted && ref.current) {
       isScrollableAlongX =
         window.getComputedStyle(ref.current).overflowX === "scroll";
       isScrollableAlongY =
@@ -93,7 +93,7 @@ export function useDraggable(
         }
       );
     }
-  }, [isMounted]);
+  }, [isMounted, ref.current]);
 
   const runScroll = () => {
     const dx = internalState.current.scrollSpeedX * timing;
@@ -334,8 +334,10 @@ export function useDraggable(
   };
 
   const handleResize = () => {
-    maxHorizontalScroll = ref.current.scrollWidth - ref.current.clientWidth;
-    maxVerticalScroll = ref.current.scrollHeight - ref.current.clientHeight;
+    if (ref.current) {
+      maxHorizontalScroll = ref.current.scrollWidth - ref.current.clientWidth;
+      maxVerticalScroll = ref.current.scrollHeight - ref.current.clientHeight;
+    }
   };
 
   useEffect(() => {
@@ -371,11 +373,7 @@ export default function DraggableDiv({
   const { events } = useDraggable(ref);
 
   return (
-    <div
-      ref={ref}
-      {...events}
-      className={clsx("overflow-auto scrollbar-hide", className)}
-    >
+    <div ref={ref} {...events} className={clsx("scrollbar-hide", className)}>
       {children}
     </div>
   );

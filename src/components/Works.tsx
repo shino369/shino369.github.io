@@ -80,11 +80,11 @@ export default function Works({ works }: { works: WorkProps[] }) {
           <ListItem key={title}>
             <div className="flex items-center justify-center py-2 pl-2 border-dashed border-b-2 border-b-black dark:border-b-white">
               <div className="w-full">
-                <div className="flex justify-center">
+                <div className="flex justify-center relative">
                   {image.length > 1 && (
-                    <div className="flex items-center text-2xl px-2">{"<"}</div>
+                    <div className="character-shadow self-center absolute left-0 flex items-center text-2xl px-2">{"<"}</div>
                   )}
-                  <DraggableDiv className="flex max-w-full">
+                  <DraggableDiv className="flex max-w-full overflow-auto">
                     {image.map((m) => (
                       <Image
                         className="mr-3 max-h-[300px] w-auto"
@@ -97,7 +97,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                     ))}
                   </DraggableDiv>
                   {image.length > 1 && (
-                    <div className="flex items-center text-2xl px-2">{">"}</div>
+                    <div className="character-shadow self-center absolute right-0  flex items-center text-2xl px-2">{">"}</div>
                   )}
                 </div>
                 <div className="flex my-2 max-w-full text-slate-300 flex-wrap">
