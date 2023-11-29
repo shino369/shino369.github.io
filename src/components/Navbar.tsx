@@ -47,7 +47,7 @@ export const Navbar = ({
         <div
           onClick={toggle}
           className={clsx(
-            "bg-slate-500 top-0 right-0 rounded mt-4 mr-4 navbar w-6 h-6 md:h-7 md:w-7 p-1 spinning opacity-75 flex justify-center items-center"
+            "bg-slate-500 dark:bg-slate-300 top-0 right-0 rounded mt-4 mr-4 navbar w-6 h-6 md:h-7 md:w-7 p-1 spinning opacity-75 flex justify-center items-center"
           )}
         >
           <Image src={sword} alt="sword" />

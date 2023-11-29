@@ -8,7 +8,6 @@
     "greeting3": "I love anime and comic!",
     "remind": "Hey stop!",
     "stopit": "Stop tapping me…",
-    "bored": "Are you bored?",
     "profile": "investigate",
     "_profile": "profile",
     "resume": "identify spell",
@@ -33,11 +32,12 @@
     "uni_description": "2024 The Times Higher Education World University Rankings: 70th",
     "shiji_description": "Shiji group mainly provide IT solution in Hospitality industry. 4000+ employees around the world.",
     "appicidea_description": "An IT startup in Hong Kong which mainly provides entrusted development service.",
-    "resume_description": "Specialize in creating dynamic and responsive web applications. Experienced in an array of JavaScript frameworks including React.js, Vue.js, Angular, Next.js. While I excel in full-stack development, my passion lies in crafting seamless and user-centric frontend experiences. JLPT N1 passed"
+    "resume_description": "Specialize in creating dynamic and responsive web applications. Experienced in an array of JavaScript frameworks including React.js, Vue.js, Angular, Next.js. While I excel in full-stack development, my passion lies in crafting seamless and user-centric frontend experiences. JLPT N1 passed",
+    "profile_description": "Anthony Wong, Web developer, otaku. Originally from Hong Kong and now based in Japan. Proficient in JavaScript, TypeScript, Java, and PHP, with expertise in frameworks like React.js, Vue.js, and Node.js. \n\nInfluenced by Japanese culture, particularly anime and Niconico Douga during secondary school. Enjoys playing video games, with Darksouls as a favorite series. \n\nRecommends the anime 'Undead Unluck' this season."
   },
   "meta": {
-    "title": "shino369/AnthonyW homepage",
-    "description": "shino369/AnthonyW Next.js 14 homepage",
+    "title": "shino369's homepage",
+    "description": "shino369 Next.js 14 homepage",
     "profile": "Profile of Anthony Wong",
     "resume": "Resume of Anthony Wong"
   }

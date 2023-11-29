@@ -1,7 +1,14 @@
 "use client";
 
 import { useAppSelector } from "@/redux/store";
-import { LegacyRef, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
+import {
+  LegacyRef,
+  useCallback,
+  useEffect,
+  useLayoutEffect,
+  useRef,
+  useState,
+} from "react";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
@@ -15,7 +22,9 @@ const ParticlesBG = () => {
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
       if (!particleActive) {
-        particleRef.current?.pause();
+        setTimeout(() => {
+          particleRef.current?.pause();
+        }, 1000);
       }
     },
     []
@@ -34,7 +43,7 @@ const ParticlesBG = () => {
 
   useLayoutEffect(() => {
     document.documentElement.setAttribute("data-theme", "dark");
-  },[])
+  }, []);
 
   return (
     <Particles
@@ -98,9 +107,9 @@ const ParticlesBG = () => {
           number: {
             density: {
               enable: true,
-              area: 400,
+              area: 600,
             },
-            value: 40,
+            value: 80,
           },
           opacity: {
             value: 0.7,

@@ -16,6 +16,7 @@ import ContextProvider from "@/components/ContextStore";
 import AppProvider from "@/redux/AppProvider";
 import clsx from "clsx";
 import Disclaimer from "@/components/Disclaimer";
+import { NextIntlClientProvider, useMessages } from "next-intl";
 
 export function generateStaticParams() {
   return i18nLocale.locales.map((locale) => ({ locale }));
@@ -28,8 +29,27 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
   return {
     title: t("title"),
     description: t("description"),
-    keywords:
-      "nextjs, nextjs 14, react, framer motion, portfolio, shino369, anthony wong",
+    keywords: [
+      "Next.js",
+      "React",
+      "JavaScript",
+      "TypeScript",
+      "developer",
+      "shino369",
+      "Anthony Wong",
+    ],
+    creator: "Antonhy Wong",
+    generator: "Next.js 14",
+    authors: { name: "shino369", url: "https://github.com/shino369" },
+    metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      // url,
+      siteName: t("title"),
+      type: "website",
+      image: "/og-imag.jpg",
+    },
   };
 }
 
@@ -41,7 +61,7 @@ export default function LocaleLayout({
   if (!i18nLocale.locales.includes(locale as any)) notFound();
 
   unstable_setRequestLocale(locale);
-
+  const messages = useMessages();
   const allPaths = getRootPaths();
   const concatedPAths = [
     {
@@ -52,17 +72,21 @@ export default function LocaleLayout({
     ...allPaths,
   ];
 
+  console.log(allPaths);
+
   return (
     <html lang={locale}>
       <body className={clsx(inter.className, "scrollbar-hide")}>
         <AppProvider>
           <ContextProvider>
-            <header>
-              <Navbar paths={concatedPAths} locale={locale} />
-            </header>
-            <PageTransitionWrapper>{children}</PageTransitionWrapper>
-            <ParticlesBG />
-            <Disclaimer />
+            <NextIntlClientProvider locale={locale} messages={messages}>
+              <header>
+                <Navbar paths={concatedPAths} locale={locale} />
+              </header>
+              <PageTransitionWrapper>{children}</PageTransitionWrapper>
+              <ParticlesBG />
+              <Disclaimer />
+            </NextIntlClientProvider>
           </ContextProvider>
         </AppProvider>
       </body>

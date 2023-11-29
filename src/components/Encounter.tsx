@@ -8,7 +8,7 @@ import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 // import { MainContext } from "./ContextStore";
 
-const complaints = ["remind", "stopit", "bored"];
+const complaints = ["remind", "stopit"];
 
 const availableText = ["greeting1", "greeting2", "greeting3"];
 
@@ -309,7 +309,7 @@ const Encounter = ({
           className={clsx(
             "transition-opacity",
             isCaraShow ? "opacity-100" : "opacity-0",
-            triggered ? "" : "character-bright",
+            triggered || isHover ? "" : "character-bright",
           )}
           width={200}
           height={200}

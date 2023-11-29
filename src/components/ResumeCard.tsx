@@ -97,7 +97,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
                 <tr>
                   <Th>{t("environment")}</Th>
                   <Td>
-                    <div className="flex flex-wrap">
+                    <div className="flex flex-wrap text-slate-100">
                       {props.environment?.map((t, i) => (
                         <Badge
                           key={t}

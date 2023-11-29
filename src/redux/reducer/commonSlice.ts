@@ -14,7 +14,7 @@ type CommonStateAction = {
 
 const initialState: CommonState = {
   particleActive: true,
-  particleInteractive: true,
+  particleInteractive: false,
 };
 
 export const commonSlice = createSlice({

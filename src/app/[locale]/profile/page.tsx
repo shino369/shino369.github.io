@@ -1,10 +1,8 @@
 import DelayDiv from "@/components/DelayDiv";
 import { ProfileInitEffect } from "@/components/FramerTransitionWrapper";
 import { LocaleParam } from "@/types";
-import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
-import Head from "next/head";
 import Image from "next/image";
 
 export default function Page({ params: { locale } }: LocaleParam) {
@@ -33,17 +31,8 @@ export default function Page({ params: { locale } }: LocaleParam) {
 
         <DelayDiv effect="opacity" time={3000}>
           <div className="max-w-[400px] p-4 rounded bg-[rgba(0,0,0,0.2)]">
-            <p className="mb-2">
-              Otaku who love Japanese ACG contents. Came
-              from Hong Kong. moved to Japan in late 2023.
-            </p>
-            <p>
-              Enjoy a wide variety of video games, from action RPG to
-              AVG/galgame. Favorite game series is Darksouls.
-            </p>
-            <p>
-              Interested in generative AI, especially image generation. Will
-              play around whenever free. This profile pic is made with Bing Dall-E 3.
+            <p className="whitespace-pre-wrap">
+              {t('profile_description')}
             </p>
           </div>
         </DelayDiv>

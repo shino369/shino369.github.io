@@ -3,7 +3,6 @@ import ResumeCard from "@/components/ResumeCard";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 
 export async function generateMetadata({ params: { locale } }: LocaleParam) {
   const t = await getTranslations({ locale, namespace: "meta" });
@@ -35,7 +34,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           </div>
           <div className="overflow-auto scrollbar-hide w-auto">
             <ListWrapper>
-              <ListItem>
+              <ListItem scale spring>
                 <ResumeCard
                   props={{
                     title: "academic",
@@ -87,7 +86,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
                   company_description: `appicidea_description`,
                 },
               ].map((props) => (
-                <ListItem key={props.company_name}>
+                <ListItem scale spring key={props.company_name}>
                   <ResumeCard props={props} />
                 </ListItem>
               ))}

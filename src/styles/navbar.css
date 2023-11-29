@@ -9,6 +9,20 @@
   z-index: 150;
 }
 
+@media (prefers-color-scheme: dark) {
+  .menu {
+    /* background: #ff8a00; */
+    clip-path: circle(0% at 100% 5%);
+    background-color: rgba(120, 120, 126, 0.9) !important;
+    backdrop-filter: blur(1px);
+    position: absolute;
+    width: 100svw;
+    height: 100svh;
+    z-index: 150;
+  }
+  
+}
+
 .menu.expanding {
   animation: expansion 750ms ease-in-out;
   animation-fill-mode: forwards;

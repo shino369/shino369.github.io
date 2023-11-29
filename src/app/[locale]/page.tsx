@@ -38,7 +38,6 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
               greeting3: t("greeting3"),
               remind: t("remind"),
               stopit: t("stopit"),
-              bored: t("bored"),
             }}
           />
         </DelayDiv>
