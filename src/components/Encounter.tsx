@@ -122,9 +122,15 @@ const Encounter = ({
         func: () => {
           setQuestion(false);
           setCurrentPic(5);
+        },
+        duration: 500,
+      },
+      {
+        name: "show character",
+        func: () => {
           setIsCaraShow(true);
         },
-        duration: 1000,
+        duration: 500,
       },
       {
         name: "unfreeze",
@@ -159,11 +165,18 @@ const Encounter = ({
           duration: 500,
         },
         {
-          name: "show character",
+          name: "reset",
           func: () => {
             setTriggered(false);
             setCurrentPic(1);
             setIsHover(false);
+            setIsCaraShow(true);
+          },
+          duration: 500,
+        },
+        {
+          name: "show character",
+          func: () => {
             setIsCaraShow(true);
           },
           duration: 500,
@@ -290,12 +303,13 @@ const Encounter = ({
         onContextMenu={(e) => {
           e.preventDefault();
         }}
-        className={clsx(isHover ? "" : "character-bright", "character-shadow")}
+        className={clsx( "character-shadow")}
       >
         <Image
           className={clsx(
             "transition-opacity",
-            isCaraShow ? "opacity-100" : "opacity-0"
+            isCaraShow ? "opacity-100" : "opacity-0",
+            triggered ? "" : "character-bright",
           )}
           width={200}
           height={200}

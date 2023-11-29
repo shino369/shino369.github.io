@@ -1,7 +1,7 @@
 "use client";
 
 import { useAppSelector } from "@/redux/store";
-import { LegacyRef, useCallback, useEffect, useRef, useState } from "react";
+import { LegacyRef, useCallback, useEffect, useLayoutEffect, useRef, useState } from "react";
 import Particles from "react-particles";
 import type { Container, Engine } from "tsparticles-engine";
 import { loadSlim } from "tsparticles-slim";
@@ -31,6 +31,10 @@ const ParticlesBG = () => {
     // console.log(particleActive);
     particleActive ? particleRef.current?.play() : particleRef.current?.pause();
   }, [particleActive]);
+
+  useLayoutEffect(() => {
+    document.documentElement.setAttribute("data-theme", "dark");
+  },[])
 
   return (
     <Particles
