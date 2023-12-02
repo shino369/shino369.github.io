@@ -1,15 +1,18 @@
 "use client";
 
+import clsx from "clsx";
 import { AnimatePresence, motion } from "framer-motion";
 
 export const ListItem = ({
   children,
   scale,
   spring,
+  className,
 }: {
   children: React.ReactNode;
   scale?: boolean;
   spring?: boolean;
+  className?: string;
 }) => {
   const variants = {
     open: {
@@ -39,36 +42,30 @@ export const ListItem = ({
       {...{
         ...(scale ? { whileTap: { scale: 0.95 } } : {}),
       }}
+      className={clsx(className)}
     >
       {children}
     </motion.li>
   );
 };
 
-export const ListWrapper = ({ children }: { children: React.ReactNode }) => {
-  const variants2 = {
-    open: {
-      width: "auto",
-      transition: {
-        staggerChildren: 0.25,
-        delayChildren: 1.5,
-        delay: 0.5,
-        //   type: "spring",
-      },
-    },
-    closed: {
-      width: 0,
-      display: "none",
-      transition: {
-        staggerChildren: 0.05,
-        staggerDirection: -1,
-        // type: "spring"
-      },
-    },
-  };
+export const ListWrapper = ({
+  children,
+  className,
+  variant,
+}: {
+  children: React.ReactNode;
+  className?: string;
+  variant: Record<string, any>;
+}) => {
   return (
     <AnimatePresence mode="wait">
-      <motion.ul variants={variants2} initial="closed" animate="open">
+      <motion.ul
+        variants={variant}
+        initial="closed"
+        animate="open"
+        className={clsx(className)}
+      >
         {children}
       </motion.ul>
     </AnimatePresence>

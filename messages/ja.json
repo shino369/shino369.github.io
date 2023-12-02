@@ -1,5 +1,9 @@
 {
   "page": {
+    "en": "english",
+    "ja": "日本語",
+    "404": "404 ページが見つかりませんでした",
+    "back": "戻る",
     "helloworld": "こんにちは!!!",
     "welcome_message": "shino369: ホームページへようこそ",
     "caption": "やせいのITエンジニア、アンソニーがあらわれた！",
@@ -11,6 +15,7 @@
     "profile": "調査",
     "_profile": "プロフィール",
     "resume": "鑑定",
+    "skill": "スキル",
     "_resume": "履歴書",
     "increment": "増やす",
     "decrement": "減らす",
@@ -33,7 +38,7 @@
     "shiji_description": "Shijiグループはホスピタリティ産業界において世界規模のITソリューションを提供する会社。総従業員数4000+、世界各地に70以上のオフィスを展開しています。",
     "appicidea_description": "主に受託開発を行うスタートアップ。",
     "resume_description": "フロントエンド領域では、レスポンシブなWEBアプリケーションを制作することに長けており、React.js、Vue.js、Angular、そしてNext.jsなど、多岐にわたるJavaScriptフレームワークでの開発経験を保有しています。中でもVue3を用いたフロントエンドのリニューアルプロジェクトをリードした経験があります。バックエンドにおいては、Java Spring BootおよびCakePHPを使用したRESTful APIの開発経験があります。",
-    "profile_description": "ウェブデベロッパーのアンソニー・ウォン。オタクです。香港出身で、現在は日本在住。JavaScript、TypeScript、Java、PHPなど、さまざまなプログラミング言語の経験があります。React.js、Vue.js、Node.jsなどのフレームワークも得意としており、ウェブアプリケーションの開発に情熱を注いでいます。\n\n学生時代にはアニメやニコニコ動画を通じて日本文化に触れ、それが仕事にも影響を与えています。趣味はビデオゲームで、特に「ダークソウル」シリーズがお気に入り。\n\n今シーズンのおすすめアニメは「アンデッドアンラック」です。",
+    "profile_description": "ウェブデベロッパーのアンソニー・ウォン。オタクです。香港出身で、現在は日本在住。JavaScript、TypeScript、Java、PHPなど、さまざまなプログラミング言語の経験があります。React.js、Vue.js、Angularなどのフレームワークも得意としており、ウェブアプリケーションの開発に情熱を注いでいます。\n\n学生時代にはアニメやニコニコ動画を通じて日本文化に触れ、それが仕事にも影響を与えています。趣味はビデオゲームで、特に「ダークソウル」シリーズがお気に入り。\n\n今シーズンのおすすめアニメは「アンデッドアンラック」です。",
     "works": "プロジェクト",
     "description": "概要",
     "responsibility": "業務内容",
@@ -46,12 +51,17 @@
     "tms_resv_description": "JQueryで出来た予約システムにVue3を導入（フロントエンド部分） ",
     "tms_resv_responsibility": "・プロジェクトの技術スタックの選定、詳細設計、開発、テスト\n・アジャイル手法を用いてスクラム開発に参加",
     "tms_resv_result": "技術的負債を処理するためにVue3の導入をマネージャーに提案、開発をリードし、エンジニアたちの負担を上手く減らしました。",
-    "search": "検索"
+    "search": "検索",
+    "spa": "React.js/Vue.js/Angular/Svelteによるシングルページアプリケーション制作",
+    "staticsite": "Next.jsによるSSR/SSGランディングページ制作",
+    "mobileapp": "React Nativeによるモバイルアプリ制作",
+    "api": "Java/PHPによるバックエンドAPI作成"
   },
   "meta": {
     "title": "shino369のホームページ",
     "description": "shino369 の Next.js 14 ホームページ",
     "profile": "アンソニーのプロフィール",
-    "resume": "アンソニーの履歴書"
+    "resume": "アンソニーの履歴書",
+    "404": "404 ページが見つかりませんでした"
   }
 }

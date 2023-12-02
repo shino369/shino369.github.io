@@ -29,7 +29,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
 
         <div className="text-center mb-2">Anthony Wong</div>
 
-        <DelayDiv effect="opacity" time={3000}>
+        <DelayDiv effect="opacity" time={1000}>
           <div className="max-w-[400px] p-4 rounded bg-[rgba(0,0,0,0.2)]">
             <p className="whitespace-pre-wrap">
               {t('profile_description')}

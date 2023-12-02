@@ -13,8 +13,7 @@ import { useAppDispatch, useAppSelector } from "@/redux/store";
 import { setParticle } from "@/redux/reducer/commonSlice";
 
 //svg
-import sword from "@/assets/sword.svg";
-
+import gear from "@/assets/gear.svg";
 
 export const Navbar = ({
   // children,
@@ -43,23 +42,26 @@ export const Navbar = ({
 
   return (
     <div className="fixed z-50 top-0 right-0">
+      {/* nav toggle button */}
       <div className="cursor-pointer active:scale-90 focus:scale-90 hover:scale-90 transition-transform">
         <div
           onClick={toggle}
           className={clsx(
-            "bg-slate-500 dark:bg-slate-300 top-0 right-0 rounded mt-4 mr-4 navbar w-6 h-6 md:h-7 md:w-7 p-1 spinning opacity-75 flex justify-center items-center"
+            "top-0 right-0 rounded mt-4 mr-4 navbar w-9 h-9 md:h-10 md:w-10 p-1  opacity-75 flex justify-center items-center"
           )}
         >
-          <Image src={sword} alt="sword" />
+          <Image className="spinning filter dark:invert" src={gear} alt="gear" />
         </div>
       </div>
 
+      {/* main menu */}
       <div
         className={clsx(
           "menu top-0 -z-10 right-0 flex flex-col items-center justify-around px-2 py-1 rounded text-white uppercase",
           toggleState
         )}
       >
+        {/* page navigation */}
         <nav className=" text-xl md:text-2xl">
           <ul>
             {paths.map((p, i) => (
@@ -70,12 +72,13 @@ export const Navbar = ({
                     setToggleState("collapsing");
                   }}
                 >
-                  {p.name}
+                  <div className="transition-transform hover:translate-x-2"> {p.name}</div>
                 </Link>
               </li>
             ))}
           </ul>
         </nav>
+        {/* i18n switcher */}
         <section className="">
           <LocaleSwitcher
             toggle={() => {
@@ -83,6 +86,7 @@ export const Navbar = ({
             }}
           />
         </section>
+        {/* toggel bg particle effect */}
         <section>
           <ToggleButton
             className="text-sm p-2"

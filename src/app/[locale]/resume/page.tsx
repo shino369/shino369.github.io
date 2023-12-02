@@ -4,14 +4,14 @@ import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
-  const t = await getTranslations({ locale, namespace: "meta" });
+// export async function generateMetadata({ params: { locale } }: LocaleParam) {
+//   const t = await getTranslations({ locale, namespace: "meta" });
 
-  return {
-    title: t("resume"),
-    description: t("resume"),
-  };
-}
+//   return {
+//     title: t("resume"),
+//     description: t("resume"),
+//   };
+// }
 
 export default function Page({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
@@ -20,20 +20,34 @@ export default function Page({ params: { locale } }: LocaleParam) {
   return (
     <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh">
       <section className="flex flex-col flex-1">
-        <p
-          className="text-xs md:text-base pb-4"
-          id="resume-description"
-          title="resume-description"
-        >
-          {t("resume_description")}
-        </p>
         {/* grid grid-flow-col */}
         <div className="flex justify-center flex-1 overflow-auto">
           <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1>{t("_resume")}</h1>
           </div>
           <div className="overflow-auto scrollbar-hide w-auto max-w-5xl">
-            <ListWrapper>
+            <ListWrapper
+              variant={{
+                open: {
+                  width: "auto",
+                  transition: {
+                    staggerChildren: 0.25,
+                    delayChildren: 1.5,
+                    delay: 0.5,
+                    //   type: "spring",
+                  },
+                },
+                closed: {
+                  width: 0,
+                  display: "none",
+                  transition: {
+                    staggerChildren: 0.05,
+                    staggerDirection: -1,
+                    // type: "spring"
+                  },
+                },
+              }}
+            >
               <ListItem scale spring>
                 <ResumeCard
                   props={{

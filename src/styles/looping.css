@@ -1,0 +1,13 @@
+.banner img:last-of-type {
+  padding-left: 0;
+}
+
+@keyframes swipe {
+  0% {
+    transform: translate(0);
+  }
+
+  100% {
+    transform: translate(-100%);
+  }
+}

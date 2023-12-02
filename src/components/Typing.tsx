@@ -23,7 +23,7 @@ const Typing = ({ text }: { text: string }) => {
         // console.log(letter)
         setNewText((prev) => prev + letter);
       }
-    }, 200);
+    }, 150);
 
     return () => {
       // cleanup

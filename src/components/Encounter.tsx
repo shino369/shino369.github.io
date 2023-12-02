@@ -1,11 +1,12 @@
 "use client";
 
-import { chainAction } from "@/helper/animate-chain";
+import { RegisterMap, initChain } from "@/helper/animate-chain";
 import { debounce } from "@/helper/client-utils";
 import clsx from "clsx";
 import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
+import Carousel from "./Carousel";
 // import { MainContext } from "./ContextStore";
 
 const complaints = ["remind", "stopit"];
@@ -27,9 +28,11 @@ const Encounter = ({
   const [currentPic, setCurrentPic] = useState(1);
   const [question, setQuestion] = useState(false);
   const [currentText, setCurrentText] = useState("greeting1");
+  const [carouselActive, setCarouselActive] = useState(true);
   const interVal = useRef<NodeJS.Timeout>();
   const timeout = useRef<NodeJS.Timeout>();
   const timeout2 = useRef<NodeJS.Timeout>();
+  const chainRef = useRef<RegisterMap[]>([]);
 
   const controls = useAnimation();
   const showText = useAnimation();
@@ -37,6 +40,20 @@ const Encounter = ({
   const [isShow, setIsShow] = useState(false);
   const [isCaraShow, setIsCaraShow] = useState(true);
   //   const { context, setter } = useContext(MainContext);
+
+  useEffect(() => {
+    return () => {
+      // console.log('cleaning up')
+      clearInterval(interVal.current);
+      clearTimeout(timeout.current);
+      clearTimeout(timeout2.current);
+      // eslint-disable-next-line react-hooks/exhaustive-deps
+      chainRef.current?.forEach((registerd) => {
+        // console.log(registerd);
+        registerd.clear();
+      });
+    };
+  }, []);
 
   const startAnimate = useCallback(() => {
     controls.start({
@@ -94,11 +111,13 @@ const Encounter = ({
   const changeAction = () => {
     setTriggered(true);
     setFreezeAction(true);
-    chainAction([
+    // console.log("changeAction");
+    const chainaction = initChain([
       {
         name: "stop walking",
         func: () => {
           setCurrentPic(3);
+          setCarouselActive(false);
         },
         duration: 500,
         delay: 500,
@@ -108,7 +127,7 @@ const Encounter = ({
         func: () => {
           setQuestion(true);
         },
-        duration: 3000,
+        duration: 2000,
       },
       {
         name: "hide character",
@@ -150,16 +169,19 @@ const Encounter = ({
         duration: 0,
       },
     ]);
+
+    chainRef.current.push(chainaction);
   };
 
   const reset = () => {
     clearTimeout(timeout.current);
     timeout.current = setTimeout(() => {
       // console.log("reset");
-      chainAction([
+      const chainaction = initChain([
         {
           name: "hide character",
           func: () => {
+            setCarouselActive(true);
             setIsCaraShow(false);
           },
           duration: 500,
@@ -182,9 +204,11 @@ const Encounter = ({
           duration: 500,
         },
       ]);
+      chainRef.current.push(chainaction);
     }, 10000);
   };
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const randomText = useCallback(
     debounce((pressStack, isShow) => {
       // console.log(isShow);
@@ -258,6 +282,22 @@ const Encounter = ({
 
   return (
     <div className={clsx("flex justify-center relative cursor-punch")}>
+      <div className="absolute w-full h-full">
+        <Carousel
+          className="h-full"
+          innerClassName="h-full"
+          speed={30000}
+          active={carouselActive}
+        >
+          <Image
+            alt="city"
+            src="/city.png"
+            className="max-w-[1500px] filter grayscale"
+            width={1500}
+            height={166}
+          />
+        </Carousel>
+      </div>
       {pressStack.map((s, i) => (
         <motion.div
           key={i}
@@ -275,21 +315,6 @@ const Encounter = ({
         </motion.div>
       ))}
 
-      {question && (
-        <motion.div
-          animate={{
-            opacity: [0, 1, 0, 1, 0],
-            transition: {
-              duration: 2,
-              ease: "linear",
-            },
-          }}
-          className="absolute top-4 right-20 md:right-1/4 text-lg"
-        >
-          ??
-        </motion.div>
-      )}
-
       <motion.div
         animate={controls}
         onHoverStart={handleHoverStart}
@@ -303,13 +328,27 @@ const Encounter = ({
         onContextMenu={(e) => {
           e.preventDefault();
         }}
-        className={clsx( "character-shadow")}
+        className={clsx("character-shadow relative")}
       >
+        {question && (
+          <motion.div
+            animate={{
+              opacity: [0, 1, 0, 1, 0],
+              transition: {
+                duration: 2,
+                ease: "linear",
+              },
+            }}
+            className="absolute top-4 right-0 text-lg"
+          >
+            !!
+          </motion.div>
+        )}
         <Image
           className={clsx(
             "transition-opacity",
             isCaraShow ? "opacity-100" : "opacity-0",
-            triggered || isHover ? "" : "character-bright",
+            triggered || isHover ? "" : "character-bright"
           )}
           priority
           width={200}

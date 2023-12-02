@@ -1,5 +1,9 @@
 {
   "page": {
+    "en": "english",
+    "ja": "日本語",
+    "404": "404 page not found",
+    "back": "go back to home",
     "helloworld": "greetings!!!",
     "welcome_message": "shino369: welcome to my homepage",
     "caption": "Encounter a wild developer, Anthony!",
@@ -11,6 +15,7 @@
     "profile": "investigate",
     "_profile": "profile",
     "resume": "identify spell",
+    "skill": "skill",
     "_resume": "resume",
     "increment": "Increment",
     "decrement": "Decrement",
@@ -32,13 +37,31 @@
     "uni_description": "2024 The Times Higher Education World University Rankings: 70th",
     "shiji_description": "Shiji group mainly provide IT solution in Hospitality industry. 4000+ employees around the world.",
     "appicidea_description": "An IT startup in Hong Kong which mainly provides entrusted development service.",
-    "resume_description": "Specialize in creating dynamic and responsive web applications. Experienced in an array of JavaScript frameworks including React.js, Vue.js, Angular, Next.js. While I excel in full-stack development, my passion lies in crafting seamless and user-centric frontend experiences. JLPT N1 passed",
-    "profile_description": "Anthony Wong, Web developer, otaku. Originally from Hong Kong and now based in Japan. Proficient in JavaScript, TypeScript, Java, and PHP, with expertise in frameworks like React.js, Vue.js, and Node.js. \n\nInfluenced by Japanese culture, particularly anime and Niconico Douga during secondary school. Enjoys playing video games, with Darksouls as a favorite series. \n\nRecommends the anime 'Undead Unluck' this season."
+    "resume_description": "Specialize in creating dynamic and responsive web applications. Experienced in an array of JavaScript frameworks including React.js, Vue.js, Angular, Next.js. While I excel in full-stack development, my passion lies in crafting seamless and user-centric frontend experiences. JLPT N1 passed.",
+    "profile_description": "Anthony Wong, Web developer, otaku. Originally from Hong Kong and now based in Japan. Proficient in JavaScript, TypeScript, Java, and PHP, with expertise in frameworks like React.js, Vue.js, and Angular. \n\nInfluenced by Japanese culture, particularly anime and Niconico Douga during secondary school. Enjoys playing video games, with Darksouls as a favorite series. \n\nRecommends the anime 'Undead Unluck' this season.",
+    "works": "project",
+    "description": "概要",
+    "responsibility": "業務内容",
+    "result": "成果",
+    "tms": "テーブル予約管理システム",
+    "tms_description": "自社プロダクト「テーブル予約管理システム」の開発及び保守運用",
+    "tms_responsibility": "・仕様書に沿ってUI/UXの開発、テスト\n・RESTful APIの設計、開発、テスト\n・システムのセキュリティ強化\n・アジャイル手法を用いてスクラム開発に参加",
+    "tms_result": "・システムの安定性が確保され、障害やバグが最小限に抑えられること\n・APIのセキュリティホールを修正され、外部からの不正アクセスを防ぐ仕組みが備わっていること",
+    "tms_resv": "予約システムのリニューアル",
+    "tms_resv_description": "JQueryで出来た予約システムにVue3を導入（フロントエンド部分） ",
+    "tms_resv_responsibility": "・プロジェクトの技術スタックの選定、詳細設計、開発、テスト\n・アジャイル手法を用いてスクラム開発に参加",
+    "tms_resv_result": "技術的負債を処理するためにVue3の導入をマネージャーに提案、開発をリードし、エンジニアたちの負担を上手く減らしました。",
+    "search": "検索",
+    "spa": "Single Page Application with React.js/Vue.js/Angular/Svelte",
+    "staticsite": "SSR/SSG site with Next.js",
+    "mobileapp": "Mobile app with React Native",
+    "api": "Backend server API with Java/PHP"
   },
   "meta": {
     "title": "shino369's homepage",
     "description": "shino369 Next.js 14 homepage",
     "profile": "Profile of Anthony Wong",
-    "resume": "Resume of Anthony Wong"
+    "resume": "Resume of Anthony Wong",
+    "404": "404 page not found"
   }
 }

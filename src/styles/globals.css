@@ -4,6 +4,7 @@
 
 @import "./navbar.css";
 @import "./main.css";
+@import "./looping.css";
 
 :root {
   --foreground-rgb: 0, 0, 0;
@@ -38,15 +39,19 @@ body {
 
 body,
 html {
-  font-family: "PixelMplus", sans-serif !important;
+  font-family: "PixelMplus" !important;
   -webkit-tap-highlight-color: transparent;
-  max-height: 100dvh;
+  /* max-height: 100dvh; */
+  scroll-behavior: smooth;
 }
 
 @font-face {
   font-family: "PixelMplus";
+  font-style: normal;
+  font-weight: 400;
   src: local("PixelMplus"),
-    url(./fonts/PixelMplus12-Regular.ttf) format("truetype");
+    url(./fonts/PixelMplus12-Regular.woff2) format("woff2");
+  font-display: swap;
 }
 
 /* For Webkit-based browsers (Chrome, Safari and Opera) */

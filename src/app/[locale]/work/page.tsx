@@ -7,6 +7,7 @@ import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+import { Suspense } from "react";
 
 export default function Page({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
@@ -22,6 +23,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         "React.js",
         "JavaScript",
         "TypeScript",
+        "Redux",
         "JQuery",
         "HTML5",
         "CSS3",
@@ -74,7 +76,16 @@ export default function Page({ params: { locale } }: LocaleParam) {
     <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh">
       <section className="flex flex-col flex-1">
         {t("search")}
-        <SearchBar className="text-xs md:text-base pb-4 w-[200px]" />
+        <Suspense
+          fallback={
+            <div className="text-xs md:text-base pb-4 w-[200px]">
+              <input className="h-full w-full text-lg focus:outline-gray-500 p-1 bg-[rgba(255,255,255,0.8)] rounded" />
+            </div>
+          }
+        >
+          <SearchBar className="text-xs md:text-base pb-4 w-[200px]" />
+        </Suspense>
+
         {/* grid grid-flow-col */}
         <div className="flex justify-center flex-1 overflow-auto">
           <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">

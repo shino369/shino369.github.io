@@ -64,10 +64,32 @@ export default function Works({ works }: { works: WorkProps[] }) {
     } else {
       setFiltedList(works);
     }
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [search]);
 
   return (
-    <ListWrapper>
+    <ListWrapper
+      variant={{
+        open: {
+          width: "auto",
+          transition: {
+            staggerChildren: 0.25,
+            delayChildren: 1.5,
+            delay: 0.5,
+            //   type: "spring",
+          },
+        },
+        closed: {
+          width: 0,
+          display: "none",
+          transition: {
+            staggerChildren: 0.05,
+            staggerDirection: -1,
+            // type: "spring"
+          },
+        },
+      }}
+    >
       {filteredList.map(
         ({
           title,
@@ -82,7 +104,9 @@ export default function Works({ works }: { works: WorkProps[] }) {
               <div className="w-full">
                 <div className="flex justify-center relative">
                   {image.length > 1 && (
-                    <div className="character-shadow self-center absolute left-0 flex items-center text-2xl px-2">{"<"}</div>
+                    <div className="character-shadow self-center absolute left-0 flex items-center text-2xl px-2">
+                      {"<"}
+                    </div>
                   )}
                   <DraggableDiv className="flex max-w-full overflow-auto">
                     {image.map((m) => (
@@ -97,7 +121,9 @@ export default function Works({ works }: { works: WorkProps[] }) {
                     ))}
                   </DraggableDiv>
                   {image.length > 1 && (
-                    <div className="character-shadow self-center absolute right-0  flex items-center text-2xl px-2">{">"}</div>
+                    <div className="character-shadow self-center absolute right-0  flex items-center text-2xl px-2">
+                      {">"}
+                    </div>
                   )}
                 </div>
                 <div className="flex my-2 max-w-full text-slate-300 flex-wrap">

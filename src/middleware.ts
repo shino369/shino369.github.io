@@ -1,8 +1,8 @@
 import createMiddleware from "next-intl/middleware";
 
 export const i18nLocale = {
-  locales: ["en", "jp"],
-  defaultLocale: "jp",
+  locales: ["en", "ja"],
+  defaultLocale: "ja",
   localeDetection: true
 } as const;
 
@@ -12,5 +12,5 @@ export default createMiddleware(i18nLocale);
 
 export const config = {
   // Match only internationalized pathnames
-  matcher: ["/", "/(jp|en)/:path*"],
+  matcher: ["/", "/(ja|en)/:path*"],
 };

@@ -3,10 +3,11 @@
 import { usePathname } from "next/navigation";
 import { Locale, i18nLocale } from "@/middleware";
 import { useRouter } from "next/navigation";
+import { useTranslations } from "next-intl";
 
 export default function LocaleSwitcher({ toggle }: { toggle: () => void }) {
   const router = useRouter();
-
+  const t = useTranslations('page')
   const pathName = usePathname();
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/";
@@ -34,7 +35,7 @@ export default function LocaleSwitcher({ toggle }: { toggle: () => void }) {
                 beforeRedirect(locale);
               }}
             >
-              {locale}
+              {t(locale)}
             </li>
           );
         })}

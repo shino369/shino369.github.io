@@ -60,17 +60,25 @@ export function useDraggable(
   useLayoutEffect(() => {
     if (isMounted && ref.current) {
       isScrollableAlongX =
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         window.getComputedStyle(ref.current).overflowX === "scroll";
       isScrollableAlongY =
+        // eslint-disable-next-line react-hooks/exhaustive-deps
         window.getComputedStyle(ref.current).overflowY === "scroll";
 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       maxHorizontalScroll = ref.current.scrollWidth - ref.current.clientWidth;
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       maxVerticalScroll = ref.current.scrollHeight - ref.current.clientHeight;
 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       cursorStyleOfWrapperElement = window.getComputedStyle(ref.current).cursor;
 
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       cursorStyleOfChildElements = [];
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       transformStyleOfChildElements = [];
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       transitionStyleOfChildElements = [];
 
       (ref.current.childNodes as NodeListOf<HTMLOptionElement>).forEach(
@@ -355,6 +363,7 @@ export function useDraggable(
       clearInterval(keepMovingY);
       clearTimeout(rubberBandAnimationTimer);
     };
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [isMounted]);
 
   return {
