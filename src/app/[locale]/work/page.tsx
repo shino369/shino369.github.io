@@ -6,7 +6,6 @@ import Works from "@/components/Works";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 import { Suspense } from "react";
 
 export default function Page({ params: { locale } }: LocaleParam) {

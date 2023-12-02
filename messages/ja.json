@@ -4,8 +4,8 @@
     "ja": "日本語",
     "404": "404 ページが見つかりませんでした",
     "back": "戻る",
-    "helloworld": "こんにちは!!!",
-    "welcome_message": "shino369: ホームページへようこそ",
+    "helloworld": "ハローワールド！",
+    "welcome_message": "console.log(\"ホームページへようこそ\")",
     "caption": "やせいのITエンジニア、アンソニーがあらわれた！",
     "greeting1": "こんにちは、いい天気ですね！",
     "greeting2": "僕はアンソニー。WEBエンジニアです！",
@@ -55,7 +55,16 @@
     "spa": "React.js/Vue.js/Angular/Svelteによるシングルページアプリケーション制作",
     "staticsite": "Next.jsによるSSR/SSGランディングページ制作",
     "mobileapp": "React Nativeによるモバイルアプリ制作",
-    "api": "Java/PHPによるバックエンドAPI作成"
+    "api": "Java/PHPによるバックエンドAPI作成",
+    "required": "入力必須です",
+    "not_email": "メールアドレスの形式ではありません",
+    "more_than_20": "20文字以上入力してください",
+    "email": "メール",
+    "name": "名前",
+    "message": "メッセージ",
+    "success": "送信しました",
+    "fail": "エラーは発生しました",
+    "send": "送信"
   },
   "meta": {
     "title": "shino369のホームページ",

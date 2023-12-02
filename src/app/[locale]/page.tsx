@@ -12,10 +12,17 @@ import Image from "next/image";
 import { usePathname, useRouter } from "next/navigation";
 import { HoverDiv, InViewDiv } from "@/components/FramerTransitionWrapper";
 import { ListItem, ListWrapper } from "@/components/ListMotion";
+import EmailForm from "@/components/Email";
 
 export default function IndexPage({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("page");
+
+  const env = {
+    EMAIL_SERVICE_ID: process.env.EMAIL_SERVICE_ID,
+    EMAIL_TEMPLATE_ID: process.env.EMAIL_TEMPLATE_ID,
+    EMAIL_PUBLIC_KEY: process.env.EMAIL_PUBLIC_KEY,
+  }
 
   return (
     <main>
@@ -173,7 +180,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </div>
         </div>
         <div className="flex justify-center">
-          <div className="uppercase text-2xl max-w-[80vw]">
+          <div className="uppercase text-xl max-w-[80vw]">
             <InViewDiv>
               <ul className="w-full">
                 <DelayDiv effect="both" time={2000}>
@@ -184,7 +191,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                       className="flex items-center justify-center"
                     >
                       <div className="block delay-150  group-hover/route:hidden">
-                        {t("_resume")}
+                        {t("_profile")}
                       </div>
                       <div className="hidden delay-150  group-hover/route:block">
                         {t("resume")}
@@ -199,7 +206,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                       className="flex items-center justify-center"
                     >
                       <div className="block delay-150  group-hover/route:hidden">
-                        {t("_profile")}
+                        {t("_resume")}
                       </div>
                       <div className="hidden delay-150  group-hover/route:block">
                         {t("resume")}
@@ -212,6 +219,9 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
             </InViewDiv>
           </div>
         </div>
+      </section>
+      <section className="pb-20">
+        <EmailForm env={env} />
       </section>
     </main>
   );

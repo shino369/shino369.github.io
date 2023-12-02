@@ -4,8 +4,8 @@
     "ja": "日本語",
     "404": "404 page not found",
     "back": "go back to home",
-    "helloworld": "greetings!!!",
-    "welcome_message": "shino369: welcome to my homepage",
+    "helloworld": "hello_world!",
+    "welcome_message": "console.log(\"welcome to my homepage\")",
     "caption": "Encounter a wild developer, Anthony!",
     "greeting1": "Hi there! How are you?",
     "greeting2": "I'm Anthony Wong, a web developer.",
@@ -55,7 +55,16 @@
     "spa": "Single Page Application with React.js/Vue.js/Angular/Svelte",
     "staticsite": "SSR/SSG site with Next.js",
     "mobileapp": "Mobile app with React Native",
-    "api": "Backend server API with Java/PHP"
+    "api": "Backend server API with Java/PHP",
+    "required": "required",
+    "not_email": "not a correct email",
+    "more_than_20": "please input more than 20 characters",
+    "email": "email",
+    "name": "name",
+    "message": "message",
+    "success": "Email sent successfully",
+    "fail": "Error occured. Please try again",
+    "send": "send"
   },
   "meta": {
     "title": "shino369's homepage",
