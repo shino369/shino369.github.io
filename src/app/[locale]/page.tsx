@@ -22,7 +22,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
     EMAIL_SERVICE_ID: process.env.EMAIL_SERVICE_ID,
     EMAIL_TEMPLATE_ID: process.env.EMAIL_TEMPLATE_ID,
     EMAIL_PUBLIC_KEY: process.env.EMAIL_PUBLIC_KEY,
-  }
+  };
 
   return (
     <main>
@@ -221,7 +221,9 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         </div>
       </section>
       <section className="pb-20">
-        <EmailForm env={env} />
+        <InViewDiv>
+          <EmailForm env={env} />
+        </InViewDiv>
       </section>
     </main>
   );
