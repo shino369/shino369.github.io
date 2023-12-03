@@ -41,21 +41,21 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
     creator: "Antonhy Wong",
     generator: "Next.js 14",
     authors: { name: "shino369", url: "https://github.com/shino369" },
-    metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
+    metadataBase: new URL("https://shino369.github.io"),
     openGraph: {
       title: t("title"),
       description: t("description"),
       // url,
       siteName: t("title"),
       type: "website",
-      image: process.env.URL +  "/og-imag.jpg",
+      image: "https://shino369.github.io/og-imag.jpg",
     },
     twitter: {
       card: "summary_large_image",
       site: "@shino_aw39",
       title: t("title"),
       description: t("description"),
-      image: process.env.URL + "/og-imag.jpg",
+      image: "https://shino369.github.io/og-imag.jpg",
     },
   };
 }
