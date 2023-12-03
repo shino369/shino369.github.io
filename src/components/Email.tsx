@@ -44,6 +44,7 @@ export default function EmailForm({
     formState: { errors, isDirty },
   } = useForm({ resolver: zodResolver(schema) });
 
+  // eslint-disable-next-line react-hooks/exhaustive-deps
   const sendEmail = useCallback(
     throttle(async (value: any) => {
       console.log(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_PUBLIC_KEY);

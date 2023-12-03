@@ -36,12 +36,12 @@ export default function Carousel({
       animate={active ? "show" : "hide"}
       className={clsx("banner relative overflow-hidden w-full", className)}
     >
-      <div className={clsx("absolute flex items-center", innerClassName)}>
+      <div className={clsx("absolute flex w-full h-full items-center", innerClassName)}>
         <section
           style={{
             animation: `swipe ${speed}ms linear infinite backwards`,
           }}
-          className="banner-section flex items-center py-2 h-full"
+          className="flex items-center py-2 min-w-max"
         >
           {children}
         </section>
@@ -49,7 +49,7 @@ export default function Carousel({
           style={{
             animation: `swipe ${speed}ms linear infinite backwards`,
           }}
-          className="banner-section flex items-center py-2 h-full"
+          className="flex items-center py-2 min-w-max"
         >
           {children}
         </section>
@@ -57,7 +57,7 @@ export default function Carousel({
           style={{
             animation: `swipe ${speed}ms linear infinite backwards`,
           }}
-          className="banner-section flex items-center py-2 h-full"
+          className="flex items-center py-2 min-w-max"
         >
           {children}
         </section>

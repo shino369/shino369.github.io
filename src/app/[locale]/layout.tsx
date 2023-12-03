@@ -24,7 +24,6 @@ const inter = Inter({ subsets: ["latin"], display: "swap" });
 
 export async function generateMetadata({ params: { locale } }: LocaleParam) {
   const t = await getTranslations({ locale, namespace: "meta" });
-
   // generate metadata
   // consider all page use the same metadata, unless contain blog post
   return {
@@ -42,21 +41,21 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
     creator: "Antonhy Wong",
     generator: "Next.js 14",
     authors: { name: "shino369", url: "https://github.com/shino369" },
-    metadataBase: new URL(process.env.URL || "http://localhost:3000"),
+    metadataBase: new URL(process.env.URL ?? "http://localhost:3000"),
     openGraph: {
       title: t("title"),
       description: t("description"),
       // url,
       siteName: t("title"),
       type: "website",
-      image: "/og-imag.jpg",
+      image: process.env.URL +  "/og-imag.jpg",
     },
     twitter: {
       card: "summary_large_image",
       site: "@shino_aw39",
       title: t("title"),
       description: t("description"),
-      image: "/og-imag.jpg",
+      image: process.env.URL + "/og-imag.jpg",
     },
   };
 }
