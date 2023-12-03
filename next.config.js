@@ -1,11 +1,11 @@
 /** @type {import('next').NextConfig} */
 const withNextIntl = require("next-intl/plugin")();
 const nextConfig = {};
-// let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
+let envImageUnoptimize = process.env.NODE_ENV !== "production" ? false : true
 module.exports = withNextIntl({
-  // output: process.env.NODE_ENV !== "production" ? undefined : "export",
+  output: process.env.NODE_ENV !== "production" ? undefined : "export",
   images: {
-    // unoptimized: envImageUnoptimize,
+    unoptimized: envImageUnoptimize,
     remotePatterns: [
       {
         protocol: "https",
