@@ -7,7 +7,7 @@ https://shino369.github.io/ja
 - Client side with [redux toolkit](https://redux-toolkit.js.org/)
 - Animation with [framer motion](https://www.framer.com/motion/)
 - Deployed with github action
-- form validation with [react hook form](https://react-hook-form.com/) and [zod](https://zod.dev/)
+- Form validation with [react hook form](https://react-hook-form.com/) and [zod](https://zod.dev/)
 - Styled with [tailwindCSS](https://tailwindcss.com/)
 
 
@@ -17,7 +17,12 @@ https://shino369.github.io/ja
 </div>
 
 \
-Just for demo usage. May add blog post in the future.
+Light house rating not quite good due to bad image optimization.
+
+<img src="./preview3.jpg" width="500" />
+
+\
+Just for demo usage. May add blog post in the future lmao. But I'm not going to fix this for now.
 
 
 ## 
