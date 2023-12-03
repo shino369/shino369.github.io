@@ -10,12 +10,16 @@ import { z } from "zod";
 import { InViewDiv } from "./FramerTransitionWrapper";
 
 export default function EmailForm({
-  env: { EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_PUBLIC_KEY },
+  env: {
+    NEXT_PUBLIC_EMAIL_SERVICE_ID,
+    NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+    NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
+  },
 }: {
   env: {
-    EMAIL_SERVICE_ID?: string;
-    EMAIL_TEMPLATE_ID?: string;
-    EMAIL_PUBLIC_KEY?: string;
+    NEXT_PUBLIC_EMAIL_SERVICE_ID?: string;
+    NEXT_PUBLIC_EMAIL_TEMPLATE_ID?: string;
+    NEXT_PUBLIC_EMAIL_PUBLIC_KEY?: string;
   };
 }) {
   const t = useTranslations("page");
@@ -47,8 +51,12 @@ export default function EmailForm({
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const sendEmail = useCallback(
     throttle(async (value: any) => {
-      console.log(EMAIL_SERVICE_ID, EMAIL_TEMPLATE_ID, EMAIL_PUBLIC_KEY);
-      if (!EMAIL_SERVICE_ID || !EMAIL_TEMPLATE_ID || !EMAIL_PUBLIC_KEY) {
+      if (
+        !NEXT_PUBLIC_EMAIL_SERVICE_ID ||
+        !NEXT_PUBLIC_EMAIL_TEMPLATE_ID ||
+        !NEXT_PUBLIC_EMAIL_PUBLIC_KEY
+      ) {
+        alert("Error Occur");
         return;
       }
       // console.log(value);
@@ -56,10 +64,10 @@ export default function EmailForm({
       if (ref.current) {
         try {
           const res = await emailjs.sendForm(
-            EMAIL_SERVICE_ID,
-            EMAIL_TEMPLATE_ID,
+            NEXT_PUBLIC_EMAIL_SERVICE_ID,
+            NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
             ref.current,
-            EMAIL_PUBLIC_KEY
+            NEXT_PUBLIC_EMAIL_PUBLIC_KEY
           );
           console.log(res.text);
           setFormStatus({

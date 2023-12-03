@@ -1,12 +1,13 @@
-// "use client";
+"use client";
 
-import { redirect } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 
 // Can be imported from a shared config
 const defaultLocale = "ja";
 
 export default function NotFound() {
-  // const pathname = usePathname();
+  const pathname = usePathname();
+  console.log(pathname)
 
   // Add a locale prefix to show a localized not found page
   redirect(`/${defaultLocale}`);

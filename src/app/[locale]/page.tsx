@@ -19,9 +19,9 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
   const t = useTranslations("page");
 
   const env = {
-    EMAIL_SERVICE_ID: process.env.EMAIL_SERVICE_ID,
-    EMAIL_TEMPLATE_ID: process.env.EMAIL_TEMPLATE_ID,
-    EMAIL_PUBLIC_KEY: process.env.EMAIL_PUBLIC_KEY,
+    NEXT_PUBLIC_EMAIL_SERVICE_ID: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,
+    NEXT_PUBLIC_EMAIL_TEMPLATE_ID: process.env.NEXT_PUBLIC_EMAIL_TEMPLATE_ID,
+    NEXT_PUBLIC_EMAIL_PUBLIC_KEY: process.env.NEXT_PUBLIC_EMAIL_PUBLIC_KEY,
   };
 
   return (
