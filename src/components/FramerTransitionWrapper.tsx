@@ -126,7 +126,8 @@ export const InViewDiv = ({
 export const HoverDiv = ({
   children,
   className,
-}: PropsWithChildren & { className?: string }) => {
+  even
+}: PropsWithChildren & { className?: string, even: boolean }) => {
   const [isHovered, setIsHovered] = useState(false);
   const variant = {
     collapse: {
@@ -157,7 +158,7 @@ export const HoverDiv = ({
           transition={{
             duration: 0.3,
           }}
-          className="absolute w-full origin-top h-full top-0 left-0 bg-red-500 -z-10"
+          className={clsx("absolute w-full origin-top h-full top-0 left-0 -z-10", even ? 'bg-gray-600' : 'bg-red-500')}
         >
           {children}
         </motion.div>

@@ -97,8 +97,8 @@ export default function EmailForm({
     >
       <div className="w-[800px] max-w-[80vw]">
         <div className="flex justify-center mb-6">
-          <div className="uppercase w-fit text-2xl text-center font-bold">
-            <InViewDiv>{"<Contact/>"}</InViewDiv>
+          <div className="uppercase w-fit text-2xl md:text-3xl text-center font-bold">
+            <InViewDiv><h2>{"<Contact/>"}</h2></InViewDiv>
           </div>
         </div>
         <div className="mb-2">

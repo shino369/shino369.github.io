@@ -98,14 +98,14 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         </div>
 
         <div className="flex justify-center mb-2">
-          <div className="uppercase w-fit text-2xl text-center font-bold">
-            <InViewDiv>{"<techstack/>"}</InViewDiv>
+          <div className="uppercase w-fit text-2xl  md:text-3xl text-center font-bold">
+            <InViewDiv><h2>{"<techstack/>"}</h2></InViewDiv>
           </div>
         </div>
         <div className="flex justify-center md:mb-10">
           <InViewDiv>
             <p
-              className="text-xs md:text-base pb-4 w-[80vw] max-w-[800px]"
+              className="text-xs md:text-lg pb-4 w-[80vw] max-w-[800px]"
               id="resume-description"
               title="resume-description"
             >
@@ -155,15 +155,19 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                   />
                 </div>
 
-                <div className="text-center capitalize font-sans text-xs md:text-sm">{skill}</div>
+                <div className="text-center capitalize font-sans text-xs md:text-sm">
+                  {skill}
+                </div>
               </a>
             ))}
           </Carousel>
         </InViewDiv>
 
         <div className="flex justify-center mb-2">
-          <div className="uppercase w-fit text-2xl text-center font-bold">
-            <InViewDiv>{"<Service/>"}</InViewDiv>
+          <div className="uppercase w-fit text-2xl md:text-3xl text-center font-bold">
+            <InViewDiv>
+              <h2>{"<Service/>"}</h2>
+            </InViewDiv>
           </div>
         </div>
         <div className="flex justify-center mb-2">
@@ -188,13 +192,16 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                 },
               }}
             >
-              {["spa", "staticsite", "mobileapp", "api"].map((cando) => (
+              {["spa", "staticsite", "mobileapp", "api"].map((cando, i) => (
                 <ListItem
                   key={cando}
-                  className="flex justify-center text-sm hover:text-white"
+                  className="flex justify-center text-sm md:text-lg hover:text-white"
                 >
                   <div className="m-3 relative max-w-[40vw] max-h-[200px] w-40 h-fit md:w-60 md:h-fit text-center break-all p-2 overflow-hidden">
-                    <HoverDiv className="absolute w-full h-full top-0 left-0" />
+                    <HoverDiv
+                      className="absolute w-full h-full top-0 left-0"
+                      even={i % 2 === 0}
+                    />
                     {t(cando)}
                   </div>
                 </ListItem>
@@ -237,8 +244,10 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         id="more"
       >
         <div className="flex flex-col items-center justify-center mb-6">
-          <div className="uppercase flex justify-center w-fit text-2xl text-center font-bold mb-10">
-            <InViewDiv>{"<Detail/>"}</InViewDiv>
+          <div className="uppercase flex justify-center w-fit text-2xl md:text-3xl  text-center font-bold mb-10">
+            <InViewDiv>
+              <h2>{"<Detail/>"}</h2>
+            </InViewDiv>
           </div>
           <div className="flex justify-center mb-20">
             <div className="uppercase text-xl max-w-[80vw]">
