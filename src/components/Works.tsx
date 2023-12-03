@@ -108,7 +108,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
             url,
           }) => (
             <ListItem key={title}>
-              <div className="flex items-center justify-center py-2 pl-2 border-dashed border-b-2 border-b-black dark:border-b-white">
+              <div className="flex items-center justify-center py-2 px-2 border-dashed border-b-2 border-b-black dark:border-b-white">
                 <div className="w-full">
                   <div className="flex justify-center relative">
                     {image.length > 1 && (
@@ -171,22 +171,24 @@ export default function Works({ works }: { works: WorkProps[] }) {
                       ))}
                   </div>
                   <div></div>
-                  <table className="table whitespace-pre-wrap">
-                    <tbody>
-                      <Tr>
-                        <Th>{t("description")}</Th>
-                        <Td>{description}</Td>
-                      </Tr>
-                      <Tr>
-                        <Th>{t("responsibility")}</Th>
-                        <Td>{responsibility}</Td>
-                      </Tr>
-                      <Tr>
-                        <Th>{t("result")}</Th>
-                        <Td>{result}</Td>
-                      </Tr>
-                    </tbody>
-                  </table>
+                  <div className="bg-[rgba(0,0,0,0.2)] dark:bg-[rgba(255,255,255,0.5)] p-2 rounded-xl">
+                    <table className="table whitespace-pre-wrap">
+                      <tbody>
+                        <Tr>
+                          <Th>{t("description")}</Th>
+                          <Td>{description}</Td>
+                        </Tr>
+                        <Tr>
+                          <Th>{t("responsibility")}</Th>
+                          <Td>{responsibility}</Td>
+                        </Tr>
+                        <Tr>
+                          <Th>{t("result")}</Th>
+                          <Td>{result}</Td>
+                        </Tr>
+                      </tbody>
+                    </table>
+                  </div>
                 </div>
               </div>
             </ListItem>
@@ -204,9 +206,9 @@ export default function Works({ works }: { works: WorkProps[] }) {
               height={1000}
               onClick={() => {
                 setImageClicked({
-                  src: '',
-                  clicked: false
-                })
+                  src: "",
+                  clicked: false,
+                });
               }}
             />
           </div>
