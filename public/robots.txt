@@ -1,0 +1,9 @@
+# *
+User-agent: *
+Allow: /
+
+# Host
+Host: https://shino369.github.io
+
+# Sitemaps
+Sitemap: https://shino369.github.io/sitemap.xml
