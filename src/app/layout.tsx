@@ -20,7 +20,9 @@ export async function generateMetadata() {
     creator: "Antonhy Wong",
     generator: "Next.js 14",
     authors: { name: "shino369", url: "https://github.com/shino369" },
-    "google-site-verification": "63nDQ2uCV1_BGmV0KxU6stNJhWMZD0OCZEpGrbAMkWQ",
+    verification: {
+      google: "63nDQ2uCV1_BGmV0KxU6stNJhWMZD0OCZEpGrbAMkWQ"
+    },
     metadataBase: new URL(process.env.NEXT_PUBLIC_BASEURL!),
     openGraph: {
       title: t("title"),

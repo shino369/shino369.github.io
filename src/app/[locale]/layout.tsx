@@ -38,7 +38,9 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
       "shino369",
       "Anthony Wong",
     ],
-    "google-site-verification": "63nDQ2uCV1_BGmV0KxU6stNJhWMZD0OCZEpGrbAMkWQ",
+    verification: {
+      google: "63nDQ2uCV1_BGmV0KxU6stNJhWMZD0OCZEpGrbAMkWQ"
+    },
     creator: "Antonhy Wong",
     generator: "Next.js 14",
     authors: { name: "shino369", url: "https://github.com/shino369" },
