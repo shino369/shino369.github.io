@@ -58,6 +58,13 @@ jobs:
       - name: Install dependencies
         run: pnpm install --no-frozen-lockfile
 
+      - name: Create .env manually
+        run: |
+          echo "${{vars.NEXT_PUBLIC_BASEURL }}" > .env
+          echo "${{secrets.NEXT_PUBLIC_EMAIL_SERVICE_ID }}" > .env
+          echo "${{secrets.NEXT_PUBLIC_EMAIL_TEMPLATE_ID }}" > .env
+          echo "${{secrets.NEXT_PUBLIC_EMAIL_PUBLIC_KEY }}" > .env
+
       - name: Setup Pages
         uses: actions/configure-pages@v3
         with:
