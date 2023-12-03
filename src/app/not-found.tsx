@@ -7,7 +7,7 @@ const defaultLocale = "ja";
 
 export default function NotFound() {
   const pathname = usePathname();
-  console.log(pathname);
+  // console.log(pathname);
   if (pathname === "/") {
     // Add a locale prefix to show a localized not found page
     redirect(`/${defaultLocale}`);

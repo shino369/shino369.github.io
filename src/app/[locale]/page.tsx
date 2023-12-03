@@ -155,7 +155,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                   />
                 </div>
 
-                <div className="text-center capitalize font-sans">{skill}</div>
+                <div className="text-center capitalize font-sans text-xs md:text-sm">{skill}</div>
               </a>
             ))}
           </Carousel>
