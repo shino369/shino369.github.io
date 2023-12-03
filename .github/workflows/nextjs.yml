@@ -60,10 +60,7 @@ jobs:
 
       - name: Create .env manually
         run: |
-          echo "${{vars.NEXT_PUBLIC_BASEURL }}" > .env
-          echo "${{secrets.NEXT_PUBLIC_EMAIL_SERVICE_ID }}" > .env
-          echo "${{secrets.NEXT_PUBLIC_EMAIL_TEMPLATE_ID }}" > .env
-          echo "${{secrets.NEXT_PUBLIC_EMAIL_PUBLIC_KEY }}" > .env
+          echo "${{secrets.SECRET_ENV }}" > .env
 
       - name: Setup Pages
         uses: actions/configure-pages@v3
