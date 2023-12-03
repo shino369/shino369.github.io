@@ -4,7 +4,7 @@ import { PropsWithChildren } from "react";
 
 export async function generateMetadata() {
   const t = await getTranslations({ locale: 'ja', namespace: "meta" });
-  // next intl do not handle this level, force to use ja locale
+  // next intl do not handle this level, no idea how to show og image without locale
   return {
     title: t("title"),
     description: t("description"),
