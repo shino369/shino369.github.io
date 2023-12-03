@@ -48,14 +48,14 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
       // url,
       siteName: t("title"),
       type: "website",
-      image: process.env.NEXT_PUBLIC_BASEURL!
+      image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
     },
     twitter: {
       card: "summary_large_image",
       site: "@shino_aw39",
       title: t("title"),
       description: t("description"),
-      image: process.env.NEXT_PUBLIC_BASEURL!
+      image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
     },
   };
 }

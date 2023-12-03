@@ -43,13 +43,13 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
 }
 
 export default function NotFound() {
-  const t = useTranslations('page')
-  
+  const t = useTranslations("page");
+
   return (
     <main className="flex flex-col items-center justify-center p-8 sm:p-20 md:p-24 max-height-dvh">
-      <h1 className="text-2xl">{t('404')}</h1>
+      <h1 className="text-2xl">{t("404")}</h1>
       <Link href="/" className="hover:bg-[rgba(0,0,0,0.5)] px-2">
-        {t('back')}
+        {t("back")}
       </Link>
     </main>
   );
