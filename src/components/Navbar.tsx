@@ -67,7 +67,7 @@ export const Navbar = ({
             {paths.map((p, i) => (
               <li key={p.path} className="mb-2 link">
                 <Link
-                  href={"/" + locale + "/" + p.path}
+                  href={p.path}
                   onClick={() => {
                     setToggleState("collapsing");
                   }}

@@ -118,7 +118,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
         {props.title === "academic" && (
           <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
             <Image
-              className="bg-white my-1 w-auto"
+              className="bg-white my-1"
               alt="Cityu"
               height={30}
               width={50}

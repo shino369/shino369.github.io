@@ -90,10 +90,10 @@ export default function LocaleLayout({
             <header>
               <Navbar
                 paths={[
-                  { name: "home", icon: "home", path: "/" },
-                  { name: "profile", icon: "profile", path: "/profile" },
-                  { name: "resume", icon: "resume", path: "/resume" },
-                  { name: "work", icon: "work", path: "/work" },
+                  { name: "home", icon: "home", path: `/${locale}` },
+                  { name: "profile", icon: "profile", path: `/${locale}/profile` },
+                  { name: "resume", icon: "resume", path:`/${locale}/resume` },
+                  { name: "work", icon: "work", path: `/${locale}/work` },
                 ]}
                 locale={locale}
               />
