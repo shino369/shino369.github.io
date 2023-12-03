@@ -15,7 +15,7 @@
 @media (prefers-color-scheme: dark) {
   :root {
     --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 70, 70, 50;
+    --background-start-rgb: 40, 40, 40;
     --background-end-rgb: 0, 0, 0;
     /* color: rgb(143, 143, 143) */
   }
@@ -67,5 +67,6 @@ html {
 
 .max-height-dvh {
   max-height: 100dvh;
-  min-height: 100dvh;
+  height: 100svh;
+  min-height: 100svh;
 }

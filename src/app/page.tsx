@@ -10,7 +10,7 @@ export default function RootPage() {
   return (
     <html lang={"ja"}>
       <body className={clsx(inter.className, "scrollbar-hide")}>
-        empty page
+        shino369 homepage
       </body>
       {redirect(`/ja`)}
     </html>

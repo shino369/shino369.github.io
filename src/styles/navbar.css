@@ -5,7 +5,8 @@
   backdrop-filter: blur(1px);
   position: absolute;
   width: 100svw;
-  height: 100svh;
+  height: 100dvh;
+  min-height: 100dvh;
   z-index: 150;
 }
 
@@ -17,7 +18,7 @@
     backdrop-filter: blur(1px);
     position: absolute;
     width: 100svw;
-    height: 100svh;
+    min-height: 100dvh;
     z-index: 150;
   }
   
@@ -38,7 +39,7 @@
 }
 
 .expanding .link {
-  animation: showing 300ms linear;
+  animation: showing 600ms linear;
   animation-delay: 500ms;
   animation-fill-mode: forwards;
 }
@@ -58,6 +59,10 @@
 
 .expanding .link:nth-child(3) {
   animation-delay: 450ms;
+}
+
+.expanding .link:nth-child(4) {
+  animation-delay: 600ms;
 }
 
 @keyframes expansion {

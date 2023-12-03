@@ -99,7 +99,9 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
 
         <div className="flex justify-center mb-2">
           <div className="uppercase w-fit text-2xl  md:text-3xl text-center font-bold">
-            <InViewDiv><h2>{"<techstack/>"}</h2></InViewDiv>
+            <InViewDiv>
+              <h2>{"<techstack/>"}</h2>
+            </InViewDiv>
           </div>
         </div>
         <div className="flex justify-center md:mb-10">
@@ -142,7 +144,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                 key={skill}
                 className="w-[96px] md:w-[128px] pr-4 max-h-[64px] h-[64px] md:h-[96px] md:max-h-[96px]  filter contrast-50 hover:contrast-100"
               >
-                <div className="flex flex-col items-center mb-2">
+                <div className="flex flex-col items-center mb-2 character-shadow">
                   <Image
                     className="w-auto h-[36px] md:h-[64px]"
                     alt={skill}
@@ -155,7 +157,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                   />
                 </div>
 
-                <div className="text-center capitalize font-sans text-xs md:text-sm">
+                <div className="text-center capitalize font-sans text-xs md:text-sm text-black ">
                   {skill}
                 </div>
               </a>
@@ -173,7 +175,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         <div className="flex justify-center mb-2">
           <InViewDiv className="w-full flex justify-center">
             <ListWrapper
-              className="grid grid-cols-2 w-full max-w-[800px]"
+              className="grid grid-cols-2 w-full max-w-[800px] bg-[rgba(255,255,255,0.5)] p-2 md:p-4 rounded-xl "
               variant={{
                 open: {
                   transition: {
@@ -195,7 +197,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
               {["spa", "staticsite", "mobileapp", "api"].map((cando, i) => (
                 <ListItem
                   key={cando}
-                  className="flex justify-center text-sm md:text-lg hover:text-white"
+                  className="flex justify-center text-xs md:text-lg hover:text-white"
                 >
                   <div className="m-3 relative max-w-[40vw] max-h-[200px] w-40 h-fit md:w-60 md:h-fit text-center break-all p-2 overflow-hidden">
                     <HoverDiv
@@ -209,12 +211,12 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
             </ListWrapper>
           </InViewDiv>
         </div>
-        <div className="flex justify-center items-end">
+
           <InViewDiv>
-            <DelayDiv effect="opacity" time={1500}>
+            <DelayDiv effect="opacity" time={1000}>
               <div className="uppercase text-xl md:text-2xl max-w-[80vw] overflow-hidden">
                 <ul className="w-full">
-                  <DelayDiv effect="both" time={2000}>
+                  <DelayDiv effect="both" time={1000}>
                     <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
                       <Link
                         // scroll={false}
@@ -237,10 +239,10 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
               </div>
             </DelayDiv>
           </InViewDiv>
-        </div>
+     
       </section>
       <section
-        className="flex flex-col items-center justify-around  py-8 sm:py-20 md:py-24 max-height-dvh"
+        className="flex flex-col items-center justify-around pb-16 py-8 sm:py-20 md:py-24 max-height-dvh"
         id="more"
       >
         <div className="flex flex-col items-center justify-center mb-6">
@@ -249,7 +251,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
               <h2>{"<Detail/>"}</h2>
             </InViewDiv>
           </div>
-          <div className="flex justify-center mb-20">
+          <div className="flex justify-center mb-10">
             <div className="uppercase text-xl max-w-[80vw]">
               <InViewDiv>
                 <ul className="w-full">
@@ -291,9 +293,11 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </div>
         </div>
 
-        <InViewDiv>
-          <EmailForm env={env} />
-        </InViewDiv>
+        <div className="bg-[rgba(255,255,255,0.7)] p-4 rounded-xl">
+          <InViewDiv>
+            <EmailForm env={env} />
+          </InViewDiv>
+        </div>
       </section>
     </main>
   );

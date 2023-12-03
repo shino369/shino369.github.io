@@ -49,7 +49,7 @@ const ParticlesBG = () => {
   return (
     <Particles
       container={particleRef}
-      className="-z-10 fixed top-0 left-0"
+      className="-z-10 fixed top-0 left-0 max-height-dvh opacity-50"
       id="tsparticles"
       init={particlesInit}
       loaded={particlesLoaded}
@@ -59,7 +59,7 @@ const ParticlesBG = () => {
         //     value: "#0d47a1",
         //   },
         // },
-        fpsLimit: 60,
+        fpsLimit: 40,
         interactivity: particleInteractive
           ? {
               events: {
