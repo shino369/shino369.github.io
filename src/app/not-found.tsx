@@ -1,11 +1,13 @@
+"use client";
 
-import { notFound } from "next/navigation";
+import { redirect, usePathname } from "next/navigation";
 
 // Can be imported from a shared config
 const defaultLocale = "ja";
 
 export default function NotFound() {
+  const pathname = usePathname();
 
   // Add a locale prefix to show a localized not found page
-  notFound();
+  redirect(`/`);
 }
