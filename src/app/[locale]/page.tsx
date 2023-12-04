@@ -242,7 +242,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         className="flex flex-col items-center justify-around pb-16 py-8 sm:py-20 md:py-24 max-height-dvh"
         id="more"
       >
-        <InViewDiv withBorder className="min-w-[calc(80vw+2rem)] md:min-w-max">
+        <InViewDiv withBorder className="min-w-[calc(80vw+2rem)] md:min-w-max ">
           <div className="flex flex-col items-center justify-center">
             <div className="uppercase flex justify-center w-fit text-2xl md:text-3xl  text-center font-bold mb-4">
               <InViewDiv>
@@ -292,7 +292,17 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </div>
         </InViewDiv>
 
-        <div className="bg-[rgba(255,255,255,0.7)] p-4 rounded-xl shadow-md">
+        <div className="bg-[rgba(255,255,255,0.7)] p-4 shadow-md rounded-xl relative">
+          <div className="w-full h-full absolute top-0 left-0 opacity-50 filter brightness-50 -z-10 rounded-xl overflow-hidden">
+            <Image
+              className="absolute h-full w-full top-0 left-0 object-cover object-center "
+              src="/contactbg.jpg"
+              alt="code background"
+              width={1280}
+              height={720}
+              priority
+            />
+          </div>
           <InViewDiv>
             <EmailForm env={env} />
           </InViewDiv>

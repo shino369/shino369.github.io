@@ -87,7 +87,7 @@ export const ProfileInitEffect = ({ children }: PropsWithChildren) => {
 
   return (
     <motion.div
-      className={clsx("mt-2 overflow-auto scrollbar-hide")}
+      className={clsx("mt-2 overflow-auto scrollbar-hide ")}
       variants={variants}
       initial="closed"
       animate="open"

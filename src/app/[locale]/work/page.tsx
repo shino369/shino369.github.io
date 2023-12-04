@@ -1,12 +1,10 @@
-import DelayDiv from "@/components/DelayDiv";
-import { ProfileInitEffect } from "@/components/FramerTransitionWrapper";
-import { ListItem, ListWrapper } from "@/components/ListMotion";
 import SearchBar from "@/components/Searchbar";
 import Works from "@/components/Works";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 import { Suspense } from "react";
+import Image from 'next/image'
 
 export default function Page({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
@@ -217,8 +215,18 @@ export default function Page({ params: { locale } }: LocaleParam) {
   ];
 
   return (
-    <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh">
-      <section className="flex flex-col flex-1">
+    <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh relative">
+      <div className="w-full h-full absolute top-0 left-0 opacity-20 filter brightness-50 -z-10">
+        <Image
+          className="absolute h-full w-full top-0 left-0 object-cover object-center "
+          src="/workbg.jpg"
+          alt="code background"
+          width={1280}
+          height={720}
+          priority
+        />
+      </div>
+      <section className="flex flex-col flex-1 max-w-full">
         {t("search")}
         <Suspense
           fallback={

@@ -8,6 +8,7 @@ import Badge from "./Badge";
 import { ListItem, ListWrapper } from "./ListMotion";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import WithPlaceholder from "./WithPlaceholder";
 
 const Tr = ({
   children,
@@ -107,8 +108,8 @@ export default function Works({ works }: { works: WorkProps[] }) {
             image,
             url,
           }) => (
-            <ListItem key={title}>
-              <div className="flex items-center justify-center py-4 px-2 border-dashed border-b-2 border-b-black dark:border-b-white">
+            <ListItem key={title} className="bg-[rgba(0,0,0,0.2)] dark:bg-[rgba(255,255,255,0.7)] shadow-sm mb-4 rounded-md">
+              <div className="flex items-center justify-center py-4 px-2 ">
                 <div className="w-full">
                   <div className="flex justify-center relative">
                     {image.length > 1 && (
@@ -118,7 +119,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                     )}
                     <DraggableDiv className="flex max-w-full overflow-auto">
                       {image.map((m) => (
-                        <Image
+                        <WithPlaceholder
                           className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
                           key={m}
                           alt={title}

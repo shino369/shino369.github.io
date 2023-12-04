@@ -3,6 +3,7 @@ import ResumeCard from "@/components/ResumeCard";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import Image from "next/image";
 
 // export async function generateMetadata({ params: { locale } }: LocaleParam) {
 //   const t = await getTranslations({ locale, namespace: "meta" });
@@ -18,7 +19,17 @@ export default function Page({ params: { locale } }: LocaleParam) {
   const t = useTranslations("page");
 
   return (
-    <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh">
+    <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh relative">
+      <div className="w-full h-full absolute top-0 left-0 opacity-30 filter brightness-50 -z-10">
+        <Image
+          className="absolute h-full w-full top-0 left-0 object-cover object-center "
+          src="/resumebg.jpg"
+          alt="code background"
+          width={1280}
+          height={720}
+          priority
+        />
+      </div>
       <section className="flex flex-col flex-1">
         {/* grid grid-flow-col */}
         <div className="flex justify-center flex-1 overflow-auto">

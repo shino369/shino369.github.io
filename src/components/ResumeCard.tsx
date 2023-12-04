@@ -34,7 +34,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
   const t = useTranslations("page");
 
   return (
-    <CodeBlock title={t(props.title) + ".txt"}>
+    <CodeBlock title={t(props.title) + ".txt"} white={props.title === "academic"}>
       <div className="flex-1">
         <table className="md:max-w-[80%] text-sm md:text-base">
           <tbody>
@@ -116,7 +116,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
           </tbody>
         </table>
         {props.title === "academic" && (
-          <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
+          <div className="border-t-black border-t-[1px] mt-2 pt-2 px-2">
             <Image
               className="bg-white my-1"
               alt="Cityu"
@@ -124,7 +124,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
               width={50}
               src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/CityU_logo.svg/1200px-CityU_logo.svg.png"
             />
-            <div className="text-gray-300 text-xs whitespace-pre-line">
+            <div className="text-black text-xs whitespace-pre-line">
               {t("uni_description")}
             </div>
           </div>
