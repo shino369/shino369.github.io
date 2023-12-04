@@ -1,0 +1,162 @@
+/* @property --myColor1 {
+  syntax: "<color>";
+  initial-value: #000000;
+  inherits: false;
+}
+
+@property --myColor2 {
+  syntax: "<color>";
+  initial-value: #000000;
+  inherits: false;
+}
+
+@property --myColor3 {
+  syntax: "<color>";
+  initial-value: #000000;
+  inherits: false;
+}
+
+.dynamic-gradient {
+  background: linear-gradient(
+    to bottom,
+    var(--myColor1) 0%,
+    var(--myColor2) 20%,
+    var(--myColor3) 50%
+  );
+  transition: --myColor1 3s, --myColor2 3s, --myColor3 3s;
+}
+
+.sky-gradient-0,
+.sky-gradient-24 {
+  --myColor1: #020214;
+  --myColor2: #020214;
+  --myColor3: #bababa;
+}
+.sky-gradient-1 {
+  --myColor1: #020111;
+  --myColor2: #020111;
+  --myColor3: #bababa;
+}
+.sky-gradient-2 {
+  --myColor1: #020111;
+  --myColor2: #020111;
+  --myColor3: #bababa;
+}
+.sky-gradient-3 {
+  --myColor1: #020111;
+  --myColor2: #020111;
+  --myColor3: #bababa;
+}
+.sky-gradient-4 {
+  --myColor1: #20202c;
+  --myColor2: #515175;
+  --myColor3: #dfd6db;
+}
+.sky-gradient-5 {
+  --myColor1: #40405c;
+  --myColor2: #8a76ab;
+  --myColor3: #dfd6db;
+}
+.sky-gradient-6 {
+  --myColor1: #4a4969;
+  --myColor2: #7072ab;
+  --myColor3: #dfd6db;
+}
+.sky-gradient-7 {
+  --myColor1: #757abf;
+  --myColor2: #8583be;
+  --myColor3: #dfd6db;
+}
+.sky-gradient-8 {
+  --myColor1: #82addb;
+  --myColor2: #ebb2b1;
+  --myColor3: #ffffff;
+}
+.sky-gradient-9 {
+  --myColor1: #94c5f8;
+  --myColor2: #a6e6ff;
+  --myColor3: #ffffff;
+}
+.sky-gradient-10 {
+  --myColor1: #b7eaff;
+  --myColor2: #94dfff;
+  --myColor3: #ffffff;
+}
+.sky-gradient-11 {
+  --myColor1: #9be2fe;
+  --myColor2: #67d1fb;
+  --myColor3: #ffffff;
+}
+.sky-gradient-12 {
+  --myColor1: #90dffe;
+  --myColor2: #cbdbe2;
+  --myColor3: #ffffff;
+}
+.sky-gradient-13 {
+  --myColor1: #57c1eb;
+  --myColor2: #246fa8;
+  --myColor3: #ffffff;
+}
+.sky-gradient-14 {
+  --myColor1: #2d91c2;
+  --myColor2: #1e528e;
+  --myColor3: #ffffff;
+}
+.sky-gradient-15 {
+  --myColor1: #2473ab;
+  --myColor2: #1e528e;
+  --myColor3: #ffffff;
+}
+.sky-gradient-16 {
+  --myColor1: #1e528e;
+  --myColor2: #265889;
+  --myColor3: #ffffff;
+}
+.sky-gradient-17 {
+  --myColor1: #1e528e;
+  --myColor2: #cda28b;
+  --myColor3: #ffffff;
+}
+.sky-gradient-18 {
+  --myColor1: #154277;
+  --myColor2: #9d6654;
+  --myColor3: #ffffff;
+}
+.sky-gradient-19 {
+  --myColor1: #163c52;
+  --myColor2: #2f1107;
+  --myColor3: #ffffff;
+}
+.sky-gradient-20 {
+  --myColor1: #071b26;
+  --myColor2: #240e03;
+  --myColor3: #ffffff;
+}
+.sky-gradient-21 {
+  --myColor1: #010a10;
+  --myColor2: #2f1107;
+  --myColor3: #ffffff;
+}
+.sky-gradient-22 {
+  --myColor1: #000631;
+  --myColor2: #4b1d06;
+  --myColor3: #ffffff;
+}
+.sky-gradient-23 {
+  --myColor1: #000631;
+  --myColor2: #000631;
+  --myColor3: #bababa;
+}
+
+.sky-gradient {
+  position: relative;
+  z-index: 1;
+  float: left;
+  width: 4%;
+  height: 4rem;
+  cursor: pointer;
+}
+.sky-gradient:hover {
+  z-index: 2;
+  box-shadow: 0 -5px 10px black;
+} */
