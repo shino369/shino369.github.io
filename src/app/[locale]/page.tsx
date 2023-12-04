@@ -29,10 +29,10 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
       <section className="flex flex-col items-center justify-around p-8 sm:p-20 md:p-24 max-height-dvh">
         <header>
           <div className="relative">
-            <h1 className="text-4xl md:text-8xl p-2 bg-[rgba(255,255,255,0.3)]">
+            <h1 className="text-4xl md:text-7xl p-2 bg-[rgba(255,255,255,0.3)]">
               <span className="opacity-0">{t("helloworld")}</span>
             </h1>
-            <div className="text-4xl md:text-8xl p-2 absolute top-0 left-0 whitespace-nowrap">
+            <div className="text-4xl md:text-7xl p-2 absolute top-0 left-0 whitespace-nowrap">
               <Typing text={t("helloworld")} />
             </div>
             <Blinker />
@@ -212,88 +212,87 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </InViewDiv>
         </div>
 
-          <InViewDiv>
-            <DelayDiv effect="opacity" time={1000}>
-              <div className="uppercase text-xl md:text-2xl max-w-[80vw] overflow-hidden">
-                <ul className="w-full">
-                  <DelayDiv effect="both" time={1000}>
-                    <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
-                      <Link
-                        // scroll={false}
-                        href="#more"
-                        className="flex flex-col items-center justify-center"
-                      >
-                        <div className="block delay-150  group-hover/route:hidden">
-                          {t("more")}
-                        </div>
-                        <div className="hidden delay-150  group-hover/route:block">
-                          {t("contact")}
-                        </div>
-                        <div className="text-2xl md:text-3xl scale-x-150">
-                          v
-                        </div>
-                      </Link>
-                    </li>
-                  </DelayDiv>
-                </ul>
-              </div>
-            </DelayDiv>
-          </InViewDiv>
-     
+        <InViewDiv>
+          <DelayDiv effect="opacity" time={1000}>
+            <div className="uppercase text-xl md:text-2xl max-w-[80vw] overflow-hidden">
+              <ul className="w-full">
+                <DelayDiv effect="both" time={1000}>
+                  <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
+                    <Link
+                      // scroll={false}
+                      href="#more"
+                      className="flex flex-col items-center justify-center"
+                    >
+                      <div className="block delay-150  group-hover/route:hidden">
+                        {t("more")}
+                      </div>
+                      <div className="hidden delay-150  group-hover/route:block">
+                        {t("contact")}
+                      </div>
+                      <div className="text-2xl md:text-3xl scale-x-150">v</div>
+                    </Link>
+                  </li>
+                </DelayDiv>
+              </ul>
+            </div>
+          </DelayDiv>
+        </InViewDiv>
       </section>
       <section
         className="flex flex-col items-center justify-around pb-16 py-8 sm:py-20 md:py-24 max-height-dvh"
         id="more"
       >
-        <div className="flex flex-col items-center justify-center mb-6">
-          <div className="uppercase flex justify-center w-fit text-2xl md:text-3xl  text-center font-bold mb-10">
-            <InViewDiv>
-              <h2>{"<Detail/>"}</h2>
-            </InViewDiv>
-          </div>
-          <div className="flex justify-center mb-10">
-            <div className="uppercase text-xl max-w-[80vw]">
+        <InViewDiv withBorder className="min-w-[calc(80vw+2rem)] md:min-w-max">
+          <div className="flex flex-col items-center justify-center">
+            <div className="uppercase flex justify-center w-fit text-2xl md:text-3xl  text-center font-bold mb-4">
               <InViewDiv>
-                <ul className="w-full">
-                  <DelayDiv effect="both" time={1000}>
-                    <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 mb-6">
-                      <Link
-                        // scroll={false}
-                        href={`/${locale}/resume`}
-                        className="flex items-center justify-center"
-                      >
-                        <div className="block delay-150  group-hover/route:hidden">
-                          {t("_profile")}
-                        </div>
-                        <div className="hidden delay-150  group-hover/route:block">
-                          {t("resume")}
-                        </div>
-                        <div className="text-xl scale-x-150 ml-2">{"->"}</div>
-                      </Link>
-                    </li>
-                    <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
-                      <Link
-                        // scroll={false}
-                        href={`/${locale}/profile`}
-                        className="flex items-center justify-center"
-                      >
-                        <div className="block delay-150  group-hover/route:hidden">
-                          {t("_resume")}
-                        </div>
-                        <div className="hidden delay-150  group-hover/route:block">
-                          {t("resume")}
-                        </div>
-                        <div className="text-xl scale-x-150 ml-2">{"->"}</div>
-                      </Link>
-                    </li>
-                  </DelayDiv>
-                </ul>
+                <h2>{"<Detail/>"}</h2>
               </InViewDiv>
             </div>
+            <div className="flex justify-center mb-4">
+              <div className="uppercase text-xl max-w-[80vw]">
+                <InViewDiv>
+                  <ul className="w-60">
+                    <DelayDiv effect="both" time={500}>
+                      <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white hover:scale-90 px-1 mb-4">
+                        <Link
+                          // scroll={false}
+                          href={`/${locale}/profile`}
+                          className="flex items-center justify-center"
+                        >
+                          <div className="block delay-150  group-hover/route:hidden">
+                            {t("_profile")}
+                          </div>
+                          <div className="hidden delay-150  group-hover/route:block">
+                            {t("resume")}
+                          </div>
+                          <div className="text-xl scale-x-150 ml-2">{"->"}</div>
+                        </Link>
+                      </li>
+                      <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
+                        <Link
+                          // scroll={false}
+                          href={`/${locale}/resume`}
+                          className="flex items-center justify-center"
+                        >
+                          <div className="block delay-150  group-hover/route:hidden">
+                            {t("_resume")}
+                          </div>
+                          <div className="hidden delay-150  group-hover/route:block">
+                            {t("resume")}
+                          </div>
+                          <div className="text-xl scale-x-150 ml-2">{"->"}</div>
+                        </Link>
+                      </li>
+                    </DelayDiv>
+                  </ul>
+                </InViewDiv>
+              </div>
+            </div>
           </div>
-        </div>
+        </InViewDiv>
 
-        <div className="bg-[rgba(255,255,255,0.7)] p-4 rounded-xl">
+        <div className="bg-[rgba(255,255,255,0.7)] p-4 rounded-xl shadow-md">
           <InViewDiv>
             <EmailForm env={env} />
           </InViewDiv>

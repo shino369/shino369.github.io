@@ -110,7 +110,7 @@ export default function EmailForm({
             {...register("from_email")}
           />
           {errors.from_email && (
-            <p className="py-3 text-sm text-red-700">
+            <p className="py-1 text-sm text-red-700">
               {errors.from_email.message as string}
             </p>
           )}
@@ -125,7 +125,7 @@ export default function EmailForm({
             {...register("from_name")}
           />
           {errors.from_name && (
-            <p className="py-3 text-sm text-red-700">
+            <p className="py-1 text-sm text-red-700">
               {errors.from_name.message as string}
             </p>
           )}
@@ -140,7 +140,7 @@ export default function EmailForm({
             {...register("message")}
           />
           {errors.message && (
-            <p className="py-3 text-sm text-red-700">
+            <p className="py-1 text-sm text-red-700">
               {errors.message.message as string}
             </p>
           )}

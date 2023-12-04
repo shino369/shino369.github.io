@@ -101,7 +101,8 @@ export const InViewDiv = ({
   children,
   delay = 0,
   className,
-}: PropsWithChildren & { delay?: number; className?: string }) => {
+  withBorder = false
+}: PropsWithChildren & { delay?: number; className?: string, withBorder?: boolean }) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -116,7 +117,7 @@ export const InViewDiv = ({
         dealy: delay,
       }}
       ref={ref}
-      className={clsx(className)}
+      className={clsx(className, withBorder ? 'border-effect' : '', withBorder && isInView ? 'border-effect-active' : '')}
     >
       {isInView && <div>{children}</div>}
     </motion.div>

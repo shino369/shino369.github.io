@@ -108,7 +108,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
             url,
           }) => (
             <ListItem key={title}>
-              <div className="flex items-center justify-center py-2 px-2 border-dashed border-b-2 border-b-black dark:border-b-white">
+              <div className="flex items-center justify-center py-4 px-2 border-dashed border-b-2 border-b-black dark:border-b-white">
                 <div className="w-full">
                   <div className="flex justify-center relative">
                     {image.length > 1 && (
@@ -171,7 +171,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                       ))}
                   </div>
                   <div></div>
-                  <div className="bg-[rgba(0,0,0,0.2)] dark:bg-[rgba(255,255,255,0.5)] p-2 rounded-xl">
+                  <div className="bg-[rgba(0,0,0,0.2)] text-white dark:bg-[rgba(255,255,255,0.5)] dark:text-black p-2">
                     <table className="table whitespace-pre-wrap">
                       <tbody>
                         <Tr>
