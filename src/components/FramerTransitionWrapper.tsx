@@ -117,7 +117,7 @@ export const InViewDiv = ({
         dealy: delay,
       }}
       ref={ref}
-      className={clsx(className, withBorder ? 'border-effect' : '', withBorder && isInView ? 'border-effect-active' : '')}
+      className={clsx(className, withBorder ? 'border-effect border-effect-color' : '', withBorder && isInView ? 'border-effect-active' : '')}
     >
       {isInView && <div>{children}</div>}
     </motion.div>

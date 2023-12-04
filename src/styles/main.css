@@ -24,8 +24,18 @@
   cursor: url("/sword.svg"), pointer;
 }
 
-.border-effect {
+.border-effect-color {
   --c: black; /* the border color */
+}
+
+
+@media (prefers-color-scheme: dark) {
+  .border-effect-color {
+    --c: white; /* the border color */
+  }
+}
+
+.border-effect {
   --b: 0.5rem; /* the border thickness*/
   --g: 1rem; /* the gap on hover */
 
@@ -41,6 +51,7 @@
   transition: 0.7s, background-position 0.7s 0.7s;
   cursor: pointer;
 }
+
 .border-effect-active {
   --_i: 100%;
   transition: 0.57s, background-size 0.7s 0.7s;
