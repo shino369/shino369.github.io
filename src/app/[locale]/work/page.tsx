@@ -229,7 +229,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
             <h1>{t("works")}</h1>
           </div>
           <div className="overflow-auto scrollbar-hide w-auto max-w-5xl">
-            <Suspense fallback={<>...</>}>
+            <Suspense fallback={<></>}>
               <Works works={WORKS} />
             </Suspense>
           </div>

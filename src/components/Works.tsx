@@ -1,15 +1,15 @@
 "use client";
 import clsx from "clsx";
-import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import Link from "next/link";
-import { useSearchParams } from "next/navigation";
 import { PropsWithChildren, useEffect, useState } from "react";
-import Badge from "./Badge";
 import DraggableDiv from "./Draggable";
+import Badge from "./Badge";
 import { ListItem, ListWrapper } from "./ListMotion";
+import { useSearchParams } from "next/navigation";
+import Link from "next/link";
 import WithPlaceholder from "./WithPlaceholder";
+import { AnimatePresence, motion } from "framer-motion";
 
 const Tr = ({
   children,
@@ -50,15 +50,13 @@ export default function Works({ works }: { works: WorkProps[] }) {
   const t = useTranslations("page");
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
-  // const pass = searchParams.get("password");
-  const [filteredList, setFiltedList] = useState<WorkProps[]>([]);
+  const [filteredList, setFiltedList] = useState<WorkProps[]>(works);
   const [imageClicked, setImageClicked] = useState({
     src: "",
     clicked: false,
   });
 
   useEffect(() => {
-    // if (pass === "showme") {
     if (search) {
       const reg = new RegExp(`.+${search}|${search}|${search}}.`, "gi");
       const contain = works.filter(
@@ -74,18 +72,12 @@ export default function Works({ works }: { works: WorkProps[] }) {
     } else {
       setFiltedList(works);
     }
-    // }
-
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [
-    search,
-    // pass
-  ]);
+  }, [search]);
 
   return (
     <>
       <ListWrapper
-        className="px-1"
         variant={{
           open: {
             width: "auto",
@@ -93,6 +85,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
               staggerChildren: 0.25,
               delayChildren: 1.5,
               delay: 0.5,
+              //   type: "spring",
             },
           },
           closed: {
@@ -101,6 +94,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
             transition: {
               staggerChildren: 0.05,
               staggerDirection: -1,
+              // type: "spring"
             },
           },
         }}
@@ -206,9 +200,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
           )
         )}
       </ListWrapper>
-
       {/* simple popup */}
-
       <AnimatePresence mode="wait">
         {imageClicked.clicked && (
           <motion.div
