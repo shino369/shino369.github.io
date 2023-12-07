@@ -294,22 +294,6 @@ const Encounter = () => {
           />
         </Carousel>
       </div>
-      {pressStack.map((s, i) => (
-        <motion.div
-          key={i}
-          animate={{
-            opacity: [1, 0],
-            y: [10, -20],
-            transition: {
-              duration: 2,
-              ease: "linear",
-            },
-          }}
-          className="absolute top-0 right-[10%] md:right-1/4"
-        >
-          - 10 HP
-        </motion.div>
-      ))}
 
       <motion.div
         animate={controls}
@@ -326,6 +310,23 @@ const Encounter = () => {
         }}
         className={clsx("character-shadow relative")}
       >
+        {pressStack.map((s, i) => (
+          <motion.div
+            key={i}
+            animate={{
+              opacity: [1, 0],
+              y: [10, -20],
+              transition: {
+                duration: 2,
+                ease: "linear",
+              },
+            }}
+            className="absolute top-4 -right-4 text-lg"
+          >
+            - 10 HP
+          </motion.div>
+        ))}
+
         {question && (
           <motion.div
             animate={{
@@ -341,30 +342,36 @@ const Encounter = () => {
           </motion.div>
         )}
         {/* dynamic src will cause refetch bug in production */}
-        {[1, 2, 3, 4, 5, 6].map((pic) =>
-          currentPic === pic ? (
-            <Image
+        <div className={clsx("relative h-[200px] w-[200px]")}>
+          {[1, 2, 3, 4, 5, 6].map((pic) => (
+            <div
               key={pic}
               className={clsx(
-                "transition-opacity",
-                isCaraShow ? "opacity-100" : "opacity-0",
-                triggered || isHover ? "" : "character-bright"
+                "absolute top-0",
+                currentPic !== pic && "opacity-0"
               )}
-              priority
-              width={200}
-              height={200}
-              alt="chcracter"
-              src={`/character${pic}.png`}
-            />
-          ) : (
-            <></>
-          )
-        )}
+            >
+              <Image
+                key={pic}
+                className={clsx(
+                  "transition-opacity",
+                  isCaraShow ? "opacity-100" : "opacity-0",
+                  triggered || isHover ? "" : "character-bright"
+                )}
+                priority
+                width={200}
+                height={200}
+                alt="chcracter"
+                src={`/character${pic}.png`}
+              />
+            </div>
+          ))}
+        </div>
       </motion.div>
 
       <motion.div
         animate={showText}
-        className="flex justify-center absolute bottom-0 translate-y-full bg-[rgba(255,255,255,0.7)] p-1 m-1 max-w-[80vw] w-[400px] rounded"
+        className="flex justify-center md:text-2xl absolute bottom-0 translate-y-full bg-[rgba(255,255,255,0.7)] p-1 m-1 max-w-[80vw] w-[400px] rounded"
       >
         {translated[currentText]}
       </motion.div>
