@@ -246,7 +246,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                           className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white hover:scale-90 px-1 mb-2"
                         >
                           <Link
-                            href={`/${locale}/profile`}
+                            href={`/${locale}/${t.href}`}
                             className="flex items-center justify-center"
                           >
                             <div className="block delay-150  group-hover/route:hidden">
