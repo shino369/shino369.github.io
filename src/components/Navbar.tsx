@@ -34,10 +34,17 @@ const Navigation = ({
       className={clsx(
         "text-xl md:text-2xl uppercase",
         toggleState &&
-          (toggleState === "collapsing" ? "expanding" : "collapsing"),
+          (toggleState === "collapsing" || toggleState === "init"
+            ? "expanding"
+            : "collapsing")
       )}
     >
-      <ul className={clsx(toggleState && 'flex md:block w-[calc(100vw-104px)] md:w-full justify-around')}>
+      <ul
+        className={clsx(
+          toggleState &&
+            "flex md:block w-[calc(100vw-104px)] md:w-full justify-around"
+        )}
+      >
         {paths.map((p, i) => (
           <li key={p.path} className="mb-2 link">
             <Link
@@ -77,7 +84,7 @@ export const Navbar = ({
   paths: NavPath[];
   locale: Locale;
 }) => {
-  const [toggleState, setToggleState] = useState("collapsing");
+  const [toggleState, setToggleState] = useState("init");
   const { particleInteractive, particleActive } = useAppSelector(
     (rootState) => rootState.common
   );
