@@ -340,18 +340,26 @@ const Encounter = () => {
             !!
           </motion.div>
         )}
-        <Image
-          className={clsx(
-            "transition-opacity",
-            isCaraShow ? "opacity-100" : "opacity-0",
-            triggered || isHover ? "" : "character-bright"
-          )}
-          priority
-          width={200}
-          height={200}
-          alt="chcracter"
-          src={`/character${currentPic}.png`}
-        />
+        {/* dynamic src will cause refetch bug in production */}
+        {[1, 2, 3, 4, 5, 6].map((pic) =>
+          currentPic === pic ? (
+            <Image
+              key={pic}
+              className={clsx(
+                "transition-opacity",
+                isCaraShow ? "opacity-100" : "opacity-0",
+                triggered || isHover ? "" : "character-bright"
+              )}
+              priority
+              width={200}
+              height={200}
+              alt="chcracter"
+              src={`/character${pic}.png`}
+            />
+          ) : (
+            <></>
+          )
+        )}
       </motion.div>
 
       <motion.div
