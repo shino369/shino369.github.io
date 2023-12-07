@@ -223,7 +223,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
             animate="animate"
             exit="exit"
             transition={{ duration: 0.4 }}
-            className="fixed transition-all h-[100dvh] w-[100vw] top-0 left-0 z-10 flex justify-center items-center bg-[rgba(0,0,0,0.5)]"
+            className="fixed h-[100dvh] w-[100vw] top-0 left-0 z-10 flex justify-center items-center bg-[rgba(0,0,0,0.5)]"
           >
             <div>
               <Image
