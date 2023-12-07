@@ -13,6 +13,8 @@ import { usePathname, useRouter } from "next/navigation";
 import { HoverDiv, InViewDiv } from "@/components/FramerTransitionWrapper";
 import { ListItem, ListWrapper } from "@/components/ListMotion";
 import EmailForm from "@/components/Email";
+import { SERVICES, SKILLSET } from "@/constants/common";
+import BgImage from "@/components/BgImage";
 
 export default function IndexPage({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
@@ -26,7 +28,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
 
   return (
     <main>
-      <section className="flex flex-col items-center justify-around p-8 sm:p-20 md:p-24 max-height-dvh">
+      <section className="flex flex-col items-center justify-around py-8 px-4 sm:p-20 md:p-24 max-height-dvh">
         <header>
           <div className="relative">
             <h1 className="text-4xl md:text-7xl p-2 bg-[rgba(255,255,255,0.3)]">
@@ -44,15 +46,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         <div className="relative w-full">
           <DelayDiv effect="opacity" time={1500}>
             <p className="text-center text-xl mb-2">{t("caption")}</p>
-            <Encounter
-              translated={{
-                greeting1: t("greeting1"),
-                greeting2: t("greeting2"),
-                greeting3: t("greeting3"),
-                remind: t("remind"),
-                stopit: t("stopit"),
-              }}
-            />
+            <Encounter />
           </DelayDiv>
         </div>
         <div>
@@ -86,17 +80,13 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         className="flex flex-col items-center justify-around  py-8 sm:py-20 md:py-24 max-height-dvh relative"
         id="techstack"
       >
-        <div className="w-full h-full absolute top-0 left-0 opacity-50 filter brightness-50 -z-10">
-          <Image
-            className="absolute h-full w-full top-0 left-0 object-cover object-center "
-            src="/codebg.jpg"
-            alt="code background"
-            width={1280}
-            height={720}
-            priority
-          />
-        </div>
-
+        <BgImage
+          src="/codebg.jpg"
+          alt="code background"
+          width={1280}
+          height={720}
+          priority
+        />
         <div className="flex justify-center mb-2">
           <div className="uppercase w-fit text-2xl  md:text-3xl text-center font-bold">
             <InViewDiv>
@@ -107,7 +97,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         <div className="flex justify-center md:mb-10">
           <InViewDiv>
             <p
-              className="text-xs md:text-lg pb-4 w-[80vw] max-w-[800px]"
+              className="text-xs md:text-xl pb-4 w-[80vw] max-w-[800px]"
               id="resume-description"
               title="resume-description"
             >
@@ -121,24 +111,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
             className="h-[96px] min-h-[96px] md:h-[128px] md:min-h-[128px] bg-[rgba(255,255,255,0.5)] mb-4 md:mb-10"
             speed={30000}
           >
-            {[
-              "javascript",
-              "typescript",
-              "react",
-              "react native",
-              "next",
-              "redux",
-              "angular",
-              "vue",
-              "vite",
-              "node",
-              "tailwindcss",
-              "java",
-              "springboot",
-              "php",
-              "cakephp",
-              "docker",
-            ].map((skill) => (
+            {SKILLSET.map((skill) => (
               <a
                 href={`/${locale}/work?search=${skill}`}
                 key={skill}
@@ -150,9 +123,6 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                     alt={skill}
                     width={128}
                     height={128}
-                    // layout="fill"
-                    // objectFit="contain"
-                    // objectPosition="center"
                     src={`/logo/${skill}-logo.svg`}
                   />
                 </div>
@@ -172,45 +142,50 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
             </InViewDiv>
           </div>
         </div>
-        <div className="flex justify-center mb-2">
-          <InViewDiv className="w-full flex justify-center">
-            <ListWrapper
-              className="grid grid-cols-2 w-full max-w-[800px] bg-[rgba(255,255,255,0.5)] p-2 md:p-4 rounded-xl "
-              variant={{
-                open: {
-                  transition: {
-                    staggerChildren: 0.25,
-                    delayChildren: 1.5,
-                    delay: 0.5,
-                    //   type: "spring",
-                  },
+
+        <InViewDiv className="w-full flex justify-center">
+          <ListWrapper
+            className="grid grid-cols-2 max-w-[calc(80vw+2rem)] md:max-w-[800px] bg-[rgba(255,255,255,0.5)] p-2 md:p-4 rounded-xl relative shadow-md"
+            variant={{
+              open: {
+                transition: {
+                  staggerChildren: 0.25,
+                  delayChildren: 1.5,
+                  delay: 0.5,
                 },
-                closed: {
-                  transition: {
-                    staggerChildren: 0.05,
-                    staggerDirection: -1,
-                    // type: "spring"
-                  },
+              },
+              closed: {
+                transition: {
+                  staggerChildren: 0.05,
+                  staggerDirection: -1,
                 },
-              }}
-            >
-              {["spa", "staticsite", "mobileapp", "api"].map((cando, i) => (
-                <ListItem
-                  key={cando}
-                  className="flex justify-center text-xs md:text-lg hover:text-white"
-                >
-                  <div className="m-3 relative max-w-[40vw] max-h-[200px] w-40 h-fit md:w-60 md:h-fit text-center break-all p-2 overflow-hidden">
-                    <HoverDiv
-                      className="absolute w-full h-full top-0 left-0"
-                      even={i % 2 === 0}
-                    />
-                    {t(cando)}
-                  </div>
-                </ListItem>
-              ))}
-            </ListWrapper>
-          </InViewDiv>
-        </div>
+              },
+            }}
+          >
+            <BgImage
+              wrapperClassName="rounded-xl overflow-hidden"
+              src="/servicebg.jpg"
+              alt="code background"
+              width={720}
+              height={320}
+              priority
+            />
+            {SERVICES.map((cando, i) => (
+              <ListItem
+                key={cando}
+                className="flex justify-center text-xs md:text-lg hover:text-white"
+              >
+                <div className="m-3 relative text-center break-all p-2 overflow-hidden">
+                  <HoverDiv
+                    className="absolute w-full h-full top-0 left-0"
+                    even={i % 2 === 0}
+                  />
+                  {t(cando)}
+                </div>
+              </ListItem>
+            ))}
+          </ListWrapper>
+        </InViewDiv>
 
         <InViewDiv>
           <DelayDiv effect="opacity" time={1000}>
@@ -254,36 +229,36 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                 <InViewDiv>
                   <ul className="w-60">
                     <DelayDiv effect="both" time={500}>
-                      <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white hover:scale-90 px-1 mb-4">
-                        <Link
-                          // scroll={false}
-                          href={`/${locale}/profile`}
-                          className="flex items-center justify-center"
+                      {[
+                        {
+                          label: t("_profile"),
+                          hover: t("resume"),
+                        },
+                        {
+                          label: t("_resume"),
+                          hover: t("resume"),
+                        },
+                      ].map((t) => (
+                        <li
+                          key={t.label}
+                          className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white hover:scale-90 px-1 mb-2"
                         >
-                          <div className="block delay-150  group-hover/route:hidden">
-                            {t("_profile")}
-                          </div>
-                          <div className="hidden delay-150  group-hover/route:block">
-                            {t("resume")}
-                          </div>
-                          <div className="text-xl scale-x-150 ml-2">{"->"}</div>
-                        </Link>
-                      </li>
-                      <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
-                        <Link
-                          // scroll={false}
-                          href={`/${locale}/resume`}
-                          className="flex items-center justify-center"
-                        >
-                          <div className="block delay-150  group-hover/route:hidden">
-                            {t("_resume")}
-                          </div>
-                          <div className="hidden delay-150  group-hover/route:block">
-                            {t("resume")}
-                          </div>
-                          <div className="text-xl scale-x-150 ml-2">{"->"}</div>
-                        </Link>
-                      </li>
+                          <Link
+                            href={`/${locale}/profile`}
+                            className="flex items-center justify-center"
+                          >
+                            <div className="block delay-150  group-hover/route:hidden">
+                              {t.label}
+                            </div>
+                            <div className="hidden delay-150  group-hover/route:block">
+                              {t.hover}
+                            </div>
+                            <div className="text-xl scale-x-150 ml-2">
+                              {"->"}
+                            </div>
+                          </Link>
+                        </li>
+                      ))}
                     </DelayDiv>
                   </ul>
                 </InViewDiv>
@@ -292,17 +267,16 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </div>
         </InViewDiv>
 
-        <div className="bg-[rgba(255,255,255,0.7)] p-4 shadow-md rounded-xl relative">
-          <div className="w-full h-full absolute top-0 left-0 opacity-50 filter brightness-50 -z-10 rounded-xl overflow-hidden">
-            <Image
-              className="absolute h-full w-full top-0 left-0 object-cover object-center "
-              src="/contactbg.jpg"
-              alt="code background"
-              width={1280}
-              height={720}
-              priority
-            />
-          </div>
+        <div className="bg-[rgba(255,255,255,0.7)] p-4 shadow-md  rounded-xl relative">
+          <BgImage
+            wrapperClassName="rounded-xl overflow-hidden"
+            src="/contactbg.jpg"
+            alt="code background"
+            width={720}
+            height={320}
+            priority
+          />
+
           <InViewDiv>
             <EmailForm env={env} />
           </InViewDiv>

@@ -19,6 +19,7 @@ const ParticlesBG = () => {
     await loadSlim(engine);
   }, []);
 
+  // will be called when loaded
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
       if (!particleActive) {
@@ -41,10 +42,6 @@ const ParticlesBG = () => {
     // console.log(particleActive);
     particleActive ? particleRef.current?.play() : particleRef.current?.pause();
   }, [particleActive]);
-
-  useLayoutEffect(() => {
-    document.documentElement.setAttribute("data-theme", "dark");
-  }, []);
 
   return (
     <Particles

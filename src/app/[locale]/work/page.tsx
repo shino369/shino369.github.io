@@ -2,15 +2,24 @@ import SearchBar from "@/components/Searchbar";
 import Works from "@/components/Works";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import { Suspense } from "react";
-import Image from 'next/image'
+import BgImage from "@/components/BgImage";
+
+export async function generateMetadata({ params: { locale } }: LocaleParam) {
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    title: t("works"),
+    description: t("works"),
+  };
+}
 
 export default function Page({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("page");
 
-  const works = [
+  // the lower component is client side. Need to handle translate here
+  const WORKS = [
     {
       title: t("tms"),
       description: t("tms_description"),
@@ -36,17 +45,8 @@ export default function Page({ params: { locale } }: LocaleParam) {
       image: [
         "/pics/shiji/tms/1.jpg",
         "/pics/shiji/tms/1-2.jpg",
-        // "/pics/shiji/tms/2.jpg",
         "/pics/shiji/tms/3.jpg",
         "/pics/shiji/tms/4.jpg",
-        // "/pics/shiji/tms/5.jpg",
-        // "/pics/shiji/tms/6.jpg",
-        // "/pics/shiji/tms/7.jpg",
-        // "/pics/shiji/tms/8.jpg",
-        // "/pics/shiji/tms/9.jpg",
-        // "/pics/shiji/tms/10.jpg",
-        // "/pics/shiji/tms/11.jpg",
-        // "/pics/shiji/tms/12.jpg",
       ],
     },
     {
@@ -70,11 +70,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         "git",
         "Gitlab",
       ],
-      image: [
-        "/pics/shiji/tms/1.jpg",
-        "/pics/shiji/resv/1.jpg",
-        // "/pics/shiji/resv/2.jpg",
-      ],
+      image: ["/pics/shiji/tms/1.jpg", "/pics/shiji/resv/1.jpg"],
     },
     {
       title: t("hkc"),
@@ -137,8 +133,6 @@ export default function Page({ params: { locale } }: LocaleParam) {
         "/pics/appicidea/3tech/1.jpg",
         "/pics/appicidea/3tech/2.jpg",
         "/pics/appicidea/3tech/3.jpg",
-        // "/pics/appicidea/3tech/4.jpg",
-        // "/pics/appicidea/3tech/5.jpg",
         "/pics/appicidea/3tech/6.jpg",
       ],
     },
@@ -215,17 +209,14 @@ export default function Page({ params: { locale } }: LocaleParam) {
   ];
 
   return (
-    <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh relative">
-      <div className="w-full h-full absolute top-0 left-0 opacity-20 filter brightness-50 -z-10">
-        <Image
-          className="absolute h-full w-full top-0 left-0 object-cover object-center "
-          src="/workbg.jpg"
-          alt="code background"
-          width={1280}
-          height={720}
-          priority
-        />
-      </div>
+    <main className="flex py-8 px-4 sm:p-20 md:p-24 max-height-dvh relative">
+      <BgImage
+        src="/workbg.jpg"
+        alt="code background"
+        width={1280}
+        height={720}
+        priority
+      />
       <section className="flex flex-col flex-1 max-w-full">
         {t("search")}
         <Suspense
@@ -238,14 +229,13 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <SearchBar className="text-xs md:text-base pb-4 w-[200px]" />
         </Suspense>
 
-        {/* grid grid-flow-col */}
         <div className="flex justify-center flex-1 overflow-auto">
           <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1>{t("works")}</h1>
           </div>
           <div className="overflow-auto scrollbar-hide w-auto max-w-5xl">
-            <Suspense fallback={<></>}>
-              <Works works={works} />
+            <Suspense fallback={<>...</>}>
+              <Works works={WORKS} />
             </Suspense>
           </div>
         </div>

@@ -1,15 +1,13 @@
 "use client";
 
 import clsx from "clsx";
-import { AnimatePresence, motion, useInView } from "framer-motion";
-import { usePathname } from "next/navigation";
 import {
-  PropsWithChildren,
-  ReactNode,
-  useEffect,
-  useRef,
-  useState,
-} from "react";
+  // AnimatePresence,
+  motion,
+  useInView,
+} from "framer-motion";
+import { usePathname } from "next/navigation";
+import { PropsWithChildren, ReactNode, useRef, useState } from "react";
 export const PageTransitionWrapper = ({
   children,
 }: {
@@ -101,8 +99,12 @@ export const InViewDiv = ({
   children,
   delay = 0,
   className,
-  withBorder = false
-}: PropsWithChildren & { delay?: number; className?: string, withBorder?: boolean }) => {
+  withBorder = false,
+}: PropsWithChildren & {
+  delay?: number;
+  className?: string;
+  withBorder?: boolean;
+}) => {
   const ref = useRef(null);
   const isInView = useInView(ref, { once: true });
 
@@ -117,7 +119,11 @@ export const InViewDiv = ({
         dealy: delay,
       }}
       ref={ref}
-      className={clsx(className, withBorder ? 'border-effect border-effect-color' : '', withBorder && isInView ? 'border-effect-active' : '')}
+      className={clsx(
+        className,
+        withBorder ? "border-effect border-effect-color" : "",
+        withBorder && isInView ? "border-effect-active" : ""
+      )}
     >
       {isInView && <div>{children}</div>}
     </motion.div>
@@ -127,8 +133,8 @@ export const InViewDiv = ({
 export const HoverDiv = ({
   children,
   className,
-  even
-}: PropsWithChildren & { className?: string, even: boolean }) => {
+  even,
+}: PropsWithChildren & { className?: string; even: boolean }) => {
   const [isHovered, setIsHovered] = useState(false);
   const variant = {
     collapse: {
@@ -159,7 +165,10 @@ export const HoverDiv = ({
           transition={{
             duration: 0.3,
           }}
-          className={clsx("absolute w-full origin-top h-full top-0 left-0 -z-10", even ? 'bg-gray-600' : 'bg-red-500')}
+          className={clsx(
+            "absolute w-full origin-top h-full top-0 left-0 -z-10",
+            even ? "bg-dark-black" : "bg-red-500"
+          )}
         >
           {children}
         </motion.div>

@@ -9,15 +9,3 @@ export interface NavPath {
 export type LocaleParam = {
     params: { locale: Locale }
 }
-
-export type ResumeCardProps = {
-    title: string
-    role?: string
-    company_name?: string
-    url?: string
-    employment_type?: string
-    employment_period?: string
-    environment?: string[]
-    image?: string
-    company_description?: string
-}

@@ -1,9 +1,20 @@
-import { ResumeCardProps } from "@/types";
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
 import Badge from "./Badge";
 import CodeBlock from "./CodeBlock";
+
+type ResumeCardProps = {
+  title: string;
+  role?: string;
+  company_name?: string;
+  url?: string;
+  employment_type?: string;
+  employment_period?: string;
+  environment?: string[];
+  image?: string;
+  company_description?: string;
+};
 
 const Th = ({
   children,
@@ -34,7 +45,10 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
   const t = useTranslations("page");
 
   return (
-    <CodeBlock title={t(props.title) + ".txt"} white={props.title === "academic"}>
+    <CodeBlock
+      title={t(props.title) + ".txt"}
+      white={props.title === "academic"}
+    >
       <div className="flex-1">
         <table className="md:max-w-[80%] text-sm md:text-base">
           <tbody>
@@ -131,22 +145,20 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
         )}
 
         {props.title === "job" && (
-      
-            <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
-              <div className="text-gray-300 text-xs whitespace-pre-line">
-                {props.image && (
-                  <Image
-                    className="bg-white my-1"
-                    alt={t("company_name")}
-                    height={40}
-                    width={40}
-                    src={props.image}
-                  />
-                )}
-                {t(props.company_description)}
-              </div>
+          <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
+            <div className="text-gray-300 text-xs whitespace-pre-line">
+              {props.image && (
+                <Image
+                  className="bg-white my-1"
+                  alt={t("company_name")}
+                  height={40}
+                  width={40}
+                  src={props.image}
+                />
+              )}
+              {t(props.company_description)}
             </div>
-      
+          </div>
         )}
       </div>
     </CodeBlock>

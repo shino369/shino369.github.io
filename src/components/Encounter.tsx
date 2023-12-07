@@ -7,28 +7,32 @@ import { motion, useAnimation } from "framer-motion";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
-// import { MainContext } from "./ContextStore";
+import { useTranslations } from "next-intl";
 
-const complaints = ["remind", "stopit"];
+type AvailableText =
+  | "remind"
+  | "stopit"
+  | "greeting1"
+  | "greeting2"
+  | "greeting3";
+const complaints: AvailableText[] = ["remind", "stopit"];
+const availableText: AvailableText[] = ["greeting1", "greeting2", "greeting3"];
 
-const availableText = ["greeting1", "greeting2", "greeting3"];
-
-const Encounter = ({
-  translated,
-}: {
-  translated: {
-    [key: string]: string;
-  };
-}) => {
+/**
+ * character animation in main page
+ */
+const Encounter = () => {
   const [isHover, setIsHover] = useState(false);
-  // const [isPress, setIsPress] = useState(false);
   const [pressStack, setPressStack] = useState<[] | number[]>([]);
   const [triggered, setTriggered] = useState(false);
   const [freezeAction, setFreezeAction] = useState(false);
   const [currentPic, setCurrentPic] = useState(1);
   const [question, setQuestion] = useState(false);
-  const [currentText, setCurrentText] = useState("greeting1");
+  const [currentText, setCurrentText] = useState<AvailableText>("greeting1");
   const [carouselActive, setCarouselActive] = useState(true);
+  const [isShow, setIsShow] = useState(false);
+  const [isCaraShow, setIsCaraShow] = useState(true);
+
   const interVal = useRef<NodeJS.Timeout>();
   const timeout = useRef<NodeJS.Timeout>();
   const timeout2 = useRef<NodeJS.Timeout>();
@@ -37,19 +41,24 @@ const Encounter = ({
   const controls = useAnimation();
   const showText = useAnimation();
 
-  const [isShow, setIsShow] = useState(false);
-  const [isCaraShow, setIsCaraShow] = useState(true);
-  //   const { context, setter } = useContext(MainContext);
+  const t = useTranslations("page");
 
+  const translated: { [key in AvailableText]: string } = {
+    greeting1: t("greeting1"),
+    greeting2: t("greeting2"),
+    greeting3: t("greeting3"),
+    remind: t("remind"),
+    stopit: t("stopit"),
+  };
+
+  // unmount cleanup
   useEffect(() => {
     return () => {
-      // console.log('cleaning up')
       clearInterval(interVal.current);
       clearTimeout(timeout.current);
       clearTimeout(timeout2.current);
       // eslint-disable-next-line react-hooks/exhaustive-deps
       chainRef.current?.forEach((registerd) => {
-        // console.log(registerd);
         registerd.clear();
       });
     };
@@ -73,20 +82,19 @@ const Encounter = ({
     showText.start({
       opacity: [0, 1, 1, 0],
       transition: {
-        //   time: [0, 4, 8, 12],
+        // time: [0, 4, 8, 12],
         duration: 3,
       },
     });
 
     setTimeout(() => {
-      // console.log("hide");
       setIsShow(false);
     }, 3000);
   };
 
+  // start animation
   useEffect(() => {
     startAnimate();
-
     showText.set({
       opacity: [0, 1, 1, 0],
       transition: {
@@ -97,12 +105,10 @@ const Encounter = ({
   }, [startAnimate, showText]);
 
   const handleHoverStart = () => {
-    // controls.stop();
     setIsHover(true);
   };
 
   const handleHoverEnd = () => {
-    // startAnimate();
     if (!triggered) {
       setIsHover(false);
     }
@@ -111,7 +117,6 @@ const Encounter = ({
   const changeAction = () => {
     setTriggered(true);
     setFreezeAction(true);
-    // console.log("changeAction");
     const chainaction = initChain([
       {
         name: "stop walking",
@@ -176,7 +181,6 @@ const Encounter = ({
   const reset = () => {
     clearTimeout(timeout.current);
     timeout.current = setTimeout(() => {
-      // console.log("reset");
       const chainaction = initChain([
         {
           name: "hide character",
@@ -208,14 +212,13 @@ const Encounter = ({
     }, 10000);
   };
 
+  // show random text in box
   // eslint-disable-next-line react-hooks/exhaustive-deps
   const randomText = useCallback(
     debounce((pressStack, isShow) => {
-      // console.log(isShow);
       if (pressStack.length > 5 && !isShow) {
         const randomComplaint =
           complaints[Math.floor(Math.random() * complaints.length)];
-        // console.log(randomComplaint);
         setCurrentText(randomComplaint);
         startText();
       }
@@ -247,7 +250,6 @@ const Encounter = ({
 
   const handleRelease = () => {
     if (triggered && !freezeAction) {
-      // console.log("release");
       setCurrentPic(5);
       cleanup();
       reset();
@@ -257,13 +259,7 @@ const Encounter = ({
   useEffect(() => {
     if (!triggered) {
       interVal.current = setInterval(() => {
-        setCurrentPic((p) => {
-          if (p < 4) {
-            return p + 1;
-          } else {
-            return 1;
-          }
-        });
+        setCurrentPic((p) => (p < 4 ? p + 1 : 1));
       }, 1000);
 
       return () => {

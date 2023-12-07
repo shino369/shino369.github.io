@@ -72,7 +72,7 @@ export default function LocaleLayout({
 
   unstable_setRequestLocale(locale);
   const messages = useMessages();
-  // prevent to use server action in static site, like deploying in github page
+  // prevent to use server action in static site? like deploying in github page
   // const allPaths = getRootPaths();
   // const concatedPAths = [
   //   {
@@ -88,6 +88,7 @@ export default function LocaleLayout({
   return (
     <html lang={locale}>
       <body className={clsx(inter.className, "scrollbar-hide")}>
+        {/* redux */}
         <AppProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
             <header>

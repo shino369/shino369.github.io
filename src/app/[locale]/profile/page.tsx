@@ -2,18 +2,23 @@ import DelayDiv from "@/components/DelayDiv";
 import { ProfileInitEffect } from "@/components/FramerTransitionWrapper";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
 import Image from "next/image";
+
+export async function generateMetadata({ params: { locale } }: LocaleParam) {
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    title: t("profile"),
+    description: t("profile"),
+  };
+}
 
 export default function Page({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("page");
 
   return (
-    <main className="flex flex-col items-center justify-center p-8 sm:p-20 md:p-24 max-height-dvh">
-      {/* {
-        [1,2,3,4,5,6].map(t => <div className="w-[300px] min-h-[500px] bg-black mb-2"  key={t}>{t}</div>)
-      } */}
+    <main className="flex flex-col items-center justify-center py-8 px-4 sm:p-20 md:p-24 max-height-dvh">
       <div className="border-b-4 pb-2 border-b-black dark:border-b-white ">
         <h1>{t("_profile")}</h1>
       </div>

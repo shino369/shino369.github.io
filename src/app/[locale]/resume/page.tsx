@@ -1,37 +1,33 @@
+import BgImage from "@/components/BgImage";
 import { ListItem, ListWrapper } from "@/components/ListMotion";
 import ResumeCard from "@/components/ResumeCard";
+import { RESUME } from "@/constants/common";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import Image from "next/image";
 
-// export async function generateMetadata({ params: { locale } }: LocaleParam) {
-//   const t = await getTranslations({ locale, namespace: "meta" });
-
-//   return {
-//     title: t("resume"),
-//     description: t("resume"),
-//   };
-// }
+export async function generateMetadata({ params: { locale } }: LocaleParam) {
+  const t = await getTranslations({ locale, namespace: "meta" });
+  return {
+    title: t("resume"),
+    description: t("resume"),
+  };
+}
 
 export default function Page({ params: { locale } }: LocaleParam) {
   unstable_setRequestLocale(locale);
   const t = useTranslations("page");
 
   return (
-    <main className="flex p-8 sm:p-20 md:p-24 max-height-dvh relative">
-      <div className="w-full h-full absolute top-0 left-0 opacity-30 filter brightness-50 -z-10">
-        <Image
-          className="absolute h-full w-full top-0 left-0 object-cover object-center "
-          src="/resumebg.jpg"
-          alt="code background"
-          width={1280}
-          height={720}
-          priority
-        />
-      </div>
+    <main className="flex py-8 px-4 sm:p-20 md:p-24 max-height-dvh relative">
+      <BgImage
+        src="/resumebg.jpg"
+        alt="code background"
+        width={1280}
+        height={720}
+        priority
+      />
       <section className="flex flex-col flex-1">
-        {/* grid grid-flow-col */}
         <div className="flex justify-center flex-1 overflow-auto">
           <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1>{t("_resume")}</h1>
@@ -45,7 +41,6 @@ export default function Page({ params: { locale } }: LocaleParam) {
                     staggerChildren: 0.25,
                     delayChildren: 1.5,
                     delay: 0.5,
-                    //   type: "spring",
                   },
                 },
                 closed: {
@@ -54,64 +49,12 @@ export default function Page({ params: { locale } }: LocaleParam) {
                   transition: {
                     staggerChildren: 0.05,
                     staggerDirection: -1,
-                    // type: "spring"
                   },
                 },
               }}
             >
-              <ListItem scale spring>
-                <ResumeCard
-                  props={{
-                    title: "academic",
-                  }}
-                />
-              </ListItem>
-
-              {[
-                {
-                  title: "job",
-                  role: "programmer",
-                  company_name:
-                    "Shiji Information Technology (Hong Kong) Limited",
-                  image:
-                    "https://assets-global.website-files.com/5bbba67586f1ae657749bb91/5bca0d583401003d63b8cd4e_header-logo-new-blue.png",
-                  url: "https://www.shijigroup.com/",
-                  employment_type: "permanent",
-                  employment_period: "2022-8 ～ 2023-8",
-                  environment: [
-                    "TypeScript",
-                    "JavaScript",
-                    "React.js",
-                    "Vue.js",
-                    "jQuery",
-                    "CakePHP",
-                    "MySQL",
-                  ],
-                  company_description: `shiji_description`,
-                },
-                {
-                  title: "job",
-                  role: "backend_developer",
-                  company_name: "Appicidea IT Solutions Limited",
-                  image:
-                    "https://media.licdn.com/dms/image/C560BAQFlA0KHrp5G6w/company-logo_200_200/0/1669796846916/appicidea_it_solutions_limited_logo?e=1706745600&v=beta&t=Y_jVVQYJUiY191J50YMICRGutEF-BxPk6UxRHvGybNg",
-                  url: "https://appicidea.com/",
-                  employment_type: "permanent",
-                  employment_period: "2021-9 ～ 2022-7",
-                  environment: [
-                    "TypeScript",
-                    "JavaScript",
-                    "React.js",
-                    "React Native",
-                    "Angular",
-                    "Java",
-                    "Springboot",
-                    "PostgreSQL",
-                  ],
-                  company_description: `appicidea_description`,
-                },
-              ].map((props) => (
-                <ListItem scale spring key={props.company_name}>
+              {RESUME.map((props, i) => (
+                <ListItem scale spring key={i}>
                   <ResumeCard props={props} />
                 </ListItem>
               ))}

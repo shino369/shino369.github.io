@@ -1,13 +1,14 @@
 "use client";
 import clsx from "clsx";
+import { AnimatePresence, motion } from "framer-motion";
 import { useTranslations } from "next-intl";
 import Image from "next/image";
-import { PropsWithChildren, useEffect, useState } from "react";
-import DraggableDiv from "./Draggable";
-import Badge from "./Badge";
-import { ListItem, ListWrapper } from "./ListMotion";
-import { useSearchParams } from "next/navigation";
 import Link from "next/link";
+import { useSearchParams } from "next/navigation";
+import { PropsWithChildren, useEffect, useState } from "react";
+import Badge from "./Badge";
+import DraggableDiv from "./Draggable";
+import { ListItem, ListWrapper } from "./ListMotion";
 import WithPlaceholder from "./WithPlaceholder";
 
 const Tr = ({
@@ -77,6 +78,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
   return (
     <>
       <ListWrapper
+        className="px-1"
         variant={{
           open: {
             width: "auto",
@@ -84,7 +86,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
               staggerChildren: 0.25,
               delayChildren: 1.5,
               delay: 0.5,
-              //   type: "spring",
             },
           },
           closed: {
@@ -93,7 +94,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
             transition: {
               staggerChildren: 0.05,
               staggerDirection: -1,
-              // type: "spring"
             },
           },
         }}
@@ -108,7 +108,10 @@ export default function Works({ works }: { works: WorkProps[] }) {
             image,
             url,
           }) => (
-            <ListItem key={title} className="bg-[rgba(0,0,0,0.2)] dark:bg-[rgba(255,255,255,0.7)] shadow-sm mb-4 rounded-md">
+            <ListItem
+              key={title}
+              className="bg-dark-black text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 shadow-md shadow-black rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
+            >
               <div className="flex items-center justify-center py-4 px-2 ">
                 <div className="w-full">
                   <div className="flex justify-center relative">
@@ -141,7 +144,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                       </div>
                     )}
                   </div>
-                  <div className="flex my-2 max-w-full text-slate-300 flex-wrap">
+                  <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
                     {environemnt.map((en, i) => (
                       <Badge
                         className={clsx(
@@ -155,7 +158,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                     ))}
                   </div>
 
-                  <div className="my-2">
+                  <div className="my-4">
                     <strong>{title}</strong>
                   </div>
                   <div className="my-2">
@@ -163,7 +166,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                       url.map((u) => (
                         <div key={u}>
                           <Link
-                            className="hover:bg-slate-500 break-all text-blue-800"
+                            className="hover:bg-slate-500 break-all text-green-400"
                             href={u}
                           >
                             {u}
@@ -172,7 +175,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                       ))}
                   </div>
                   <div></div>
-                  <div className="bg-[rgba(0,0,0,0.2)] text-white dark:bg-[rgba(255,255,255,0.5)] dark:text-black p-2">
+                  <div className="bg-darker-black   p-2">
                     <table className="table whitespace-pre-wrap">
                       <tbody>
                         <Tr>
@@ -196,25 +199,51 @@ export default function Works({ works }: { works: WorkProps[] }) {
           )
         )}
       </ListWrapper>
-      {imageClicked.clicked && (
-        <div className="fixed transition-all h-[100dvh] w-[100vw] top-0 left-0 z-10 flex justify-center items-center bg-[rgba(0,0,0,0.5)]">
-          <div>
-            <Image
-              className="w-auto max-w-[95vw] h-[95dvh] object-contain"
-              alt={imageClicked.src}
-              src={imageClicked.src}
-              width={1000}
-              height={1000}
-              onClick={() => {
-                setImageClicked({
-                  src: "",
-                  clicked: false,
-                });
-              }}
-            />
-          </div>
-        </div>
-      )}
+
+      {/* simple popup */}
+
+      <AnimatePresence mode="wait">
+        {imageClicked.clicked && (
+          <motion.div
+            key={imageClicked.src}
+            variants={{
+              initial: {
+                clipPath: "polygon(0 0, 0 0, 0 100%, 0% 100%)",
+                transition: { duration: 0.4 },
+              },
+              animate: {
+                clipPath: "polygon(0 0, 100% 0, 100% 100%, 0 100%)",
+                transition: { duration: 0.4, staggerChildren: 0.1 },
+              },
+              exit: {
+                clipPath: "polygon(100% 0, 100% 0, 100% 100%, 100% 100%)",
+                transition: { duration: 0.4 },
+              },
+            }}
+            initial="initial"
+            animate="animate"
+            exit="exit"
+            transition={{ duration: 0.4 }}
+            className="fixed transition-all h-[100dvh] w-[100vw] top-0 left-0 z-10 flex justify-center items-center bg-[rgba(0,0,0,0.5)]"
+          >
+            <div>
+              <Image
+                className="w-auto max-w-[95vw] h-[95dvh] object-contain cursor-pointer"
+                alt={imageClicked.src}
+                src={imageClicked.src}
+                width={1000}
+                height={1000}
+                onClick={() => {
+                  setImageClicked({
+                    src: "",
+                    clicked: false,
+                  });
+                }}
+              />
+            </div>
+          </motion.div>
+        )}
+      </AnimatePresence>
     </>
   );
 }
