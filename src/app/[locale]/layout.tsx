@@ -60,6 +60,14 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
       description: t("description"),
       image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
     },
+    icons: {
+      icon: [
+        '/favicon.ico',
+      ],
+      apple: [
+        '/favicon.ico',
+      ]
+    }
   };
 }
 
