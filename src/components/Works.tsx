@@ -50,30 +50,34 @@ export default function Works({ works }: { works: WorkProps[] }) {
   const t = useTranslations("page");
   const searchParams = useSearchParams();
   const search = searchParams.get("search");
-  const [filteredList, setFiltedList] = useState<WorkProps[]>(works);
+  const pass = searchParams.get("password");
+  const [filteredList, setFiltedList] = useState<WorkProps[]>([]);
   const [imageClicked, setImageClicked] = useState({
     src: "",
     clicked: false,
   });
 
   useEffect(() => {
-    if (search) {
-      const reg = new RegExp(`.+${search}|${search}|${search}}.`, "gi");
-      const contain = works.filter(
-        (w) =>
-          reg.test(w.title) ||
-          reg.test(w.description) ||
-          reg.test(w.responsibility) ||
-          reg.test(w.result) ||
-          reg.test(w.environemnt.join(""))
-      );
+    if (pass === "showme") {
+      if (search) {
+        const reg = new RegExp(`.+${search}|${search}|${search}}.`, "gi");
+        const contain = works.filter(
+          (w) =>
+            reg.test(w.title) ||
+            reg.test(w.description) ||
+            reg.test(w.responsibility) ||
+            reg.test(w.result) ||
+            reg.test(w.environemnt.join(""))
+        );
 
-      setFiltedList(contain);
-    } else {
-      setFiltedList(works);
+        setFiltedList(contain);
+      } else {
+        setFiltedList(works);
+      }
     }
+
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [search]);
+  }, [search, pass]);
 
   return (
     <>

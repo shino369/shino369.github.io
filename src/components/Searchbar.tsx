@@ -9,11 +9,12 @@ export default function SearchBar({ className }: { className?: string }) {
   const pathname = usePathname();
   const searchParams = useSearchParams();
   const [text, setText] = useState("");
+  const [pass, setPass] = useState("");
 
   useEffect(() => {
     const searching = searchParams.get("search");
     searching && setText(searching);
-  // eslint-disable-next-line react-hooks/exhaustive-deps
+    // eslint-disable-next-line react-hooks/exhaustive-deps
   }, []);
 
   // eslint-disable-next-line react-hooks/exhaustive-deps
@@ -23,7 +24,8 @@ export default function SearchBar({ className }: { className?: string }) {
         text: string,
         _router: typeof router,
         _searchParams: typeof searchParams,
-        _pathname: typeof pathname
+        _pathname: typeof pathname,
+        keyword: string
       ) => {
         const current = new URLSearchParams(
           Array.from(_searchParams.entries())
@@ -33,9 +35,9 @@ export default function SearchBar({ className }: { className?: string }) {
 
         const value = text.trim();
         if (!value) {
-          current.delete("search");
+          current.delete(keyword);
         } else {
-          current.set("search", value);
+          current.set(keyword, value);
         }
 
         const search = current.toString();
@@ -49,15 +51,38 @@ export default function SearchBar({ className }: { className?: string }) {
 
   const handleInput = (e: FormEvent<HTMLInputElement>) => {
     setText(e.currentTarget.value);
-    debouncedSearch(e.currentTarget.value, router, searchParams, pathname);
+    debouncedSearch(
+      e.currentTarget.value,
+      router,
+      searchParams,
+      pathname,
+      "search"
+    );
+  };
+
+  const handlePassInput = (e: FormEvent<HTMLInputElement>) => {
+    setPass(e.currentTarget.value);
+    debouncedSearch(
+      e.currentTarget.value,
+      router,
+      searchParams,
+      pathname,
+      "password"
+    );
   };
 
   return (
-    <div className={clsx(className)}>
+    <div className={clsx(className, "flex")}>
       <input
         className="h-full w-full text-lg focus:outline-gray-500 p-1 bg-[rgba(255,255,255,0.8)] rounded"
         value={text}
         onInput={handleInput}
+      />
+      <input
+        className="h-full w-16 text-lg focus:outline-gray-500 p-1 bg-[rgba(255,255,255,0.8)] rounded ml-2"
+        value={pass}
+        onInput={handlePassInput}
+        placeholder="pass"
       />
     </div>
   );
