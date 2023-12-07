@@ -2,6 +2,7 @@ import Link from "next/link";
 import Image from "next/image";
 import linkedin from "@/assets/linkedin.svg";
 import github from "@/assets/github.svg";
+import LocaleSwitcher from "./locale-switcher";
 
 export default function Disclaimer() {
   return (
@@ -11,19 +12,32 @@ export default function Disclaimer() {
           <ul className="flex justify-around w-16 md:w-24">
             <li>
               <Link href="https://github.com/shino369">
-                <Image src={github} className="w-5 md:w-8 dark:filter dark:invert" alt="github" />
+                <Image
+                  src={github}
+                  className="w-5 md:w-8 dark:filter dark:invert"
+                  alt="github"
+                />
               </Link>
             </li>
             <li>
               <Link href="https://www.linkedin.com/in/aw3939/">
-                <Image src={linkedin} className="w-5 md:w-8 dark:filter dark:invert" alt="linkedin" />
+                <Image
+                  src={linkedin}
+                  className="w-5 md:w-8 dark:filter dark:invert"
+                  alt="linkedin"
+                />
               </Link>
             </li>
           </ul>
         </nav>
       </section>
       <section>
-        <span className="text-xs md:text-sm font-mono">shino369/AnthonyW © 2023</span>
+        <span className="text-xs md:text-sm font-mono">
+          shino369/AnthonyW © 2023
+        </span>
+      </section>
+      <section className="text-xs md:text-sm font-mono">
+        <LocaleSwitcher />
       </section>
     </footer>
   );

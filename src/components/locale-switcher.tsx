@@ -5,9 +5,9 @@ import { Locale, i18nLocale } from "@/middleware";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
 
-export default function LocaleSwitcher({ toggle }: { toggle: () => void }) {
+export default function LocaleSwitcher({ toggle }: { toggle?: () => void }) {
   const router = useRouter();
-  const t = useTranslations('page')
+  const t = useTranslations("page");
   const pathName = usePathname();
   const redirectedPathName = (locale: string) => {
     if (!pathName) return "/";
@@ -17,7 +17,7 @@ export default function LocaleSwitcher({ toggle }: { toggle: () => void }) {
   };
 
   const beforeRedirect = (locale: Locale) => {
-    toggle();
+    toggle && toggle();
     setTimeout(() => {
       router.push(redirectedPathName(locale));
     }, 400);
@@ -26,7 +26,7 @@ export default function LocaleSwitcher({ toggle }: { toggle: () => void }) {
   return (
     <div>
       <ul className="flex">
-        {i18nLocale.locales.map((locale) => {
+        {i18nLocale.locales.map((locale, i) => {
           return (
             <li
               key={locale}
@@ -35,7 +35,7 @@ export default function LocaleSwitcher({ toggle }: { toggle: () => void }) {
                 beforeRedirect(locale);
               }}
             >
-              {t(locale)}
+              {t(locale)} {i === i18nLocale.locales.length - 1 ? "" : " | "}
             </li>
           );
         })}
