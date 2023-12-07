@@ -29,7 +29,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
   return (
     <main>
       <section className="flex flex-col items-center justify-around py-8 px-4 sm:p-20 md:p-24 max-height-dvh">
-        <header>
+        <div>
           <div className="relative">
             <h1 className="text-4xl md:text-7xl p-2 bg-[rgba(255,255,255,0.3)]">
               <span className="opacity-0">{t("helloworld")}</span>
@@ -42,7 +42,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           <div className="uppercase" title="welcome to my homepage">
             <p>{t("welcome_message")}</p>
           </div>
-        </header>
+        </div>
         <div className="relative w-full">
           <DelayDiv effect="opacity" time={1500}>
             <p className="text-center text-xl mb-2">{t("caption")}</p>
@@ -52,9 +52,9 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
         <div>
           <DelayDiv effect="opacity" time={1500}>
             <div className="uppercase text-xl md:text-2xl max-w-[80vw] overflow-hidden">
-              <ul className="w-full">
+              <div className="w-full">
                 <DelayDiv effect="both" time={2000}>
-                  <li className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
+                  <div className="transition-transform group/route hover:bg-[rgba(0,0,0,0.3)] hover:text-white px-1 hover:scale-90 ">
                     <Link
                       // scroll={false}
                       href="#techstack"
@@ -68,9 +68,9 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                       </div>
                       <div className="text-2xl md:text-3xl scale-x-150">v</div>
                     </Link>
-                  </li>
+                  </div>
                 </DelayDiv>
-              </ul>
+              </div>
             </div>
           </DelayDiv>
         </div>

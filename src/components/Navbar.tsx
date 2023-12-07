@@ -14,6 +14,59 @@ import { setParticle } from "@/redux/reducer/commonSlice";
 
 //svg
 import gear from "@/assets/gear.svg";
+import { usePathname } from "next/navigation";
+
+const Navigation = ({
+  paths,
+  locale,
+  setToggleState,
+  toggleState,
+}: {
+  paths: NavPath[];
+  locale: Locale;
+  setToggleState: (state: string) => void;
+  toggleState?: string;
+}) => {
+  const currentPath = usePathname();
+
+  return (
+    <nav
+      className={clsx(
+        "text-xl md:text-2xl uppercase",
+        toggleState &&
+          (toggleState === "collapsing" ? "expanding" : "collapsing"),
+      )}
+    >
+      <ul className={clsx(toggleState && 'flex md:block w-[calc(100vw-104px)] md:w-full justify-around')}>
+        {paths.map((p, i) => (
+          <li key={p.path} className="mb-2 link">
+            <Link
+              href={p.path}
+              onClick={() => {
+                setToggleState("collapsing");
+              }}
+            >
+              <div
+                className={clsx(
+                  "transition-transform hover:translate-x-2",
+                  (currentPath.endsWith(p.name) ||
+                    (currentPath.endsWith(locale) && p.name === "home")) &&
+                    "border-b-2 " +
+                      (toggleState
+                        ? "border-black dark:border-white"
+                        : "border-white"),
+                  toggleState && "dark:text-white mr-4 md:mr-0"
+                )}
+              >
+                {p.name}
+              </div>
+            </Link>
+          </li>
+        ))}
+      </ul>
+    </nav>
+  );
+};
 
 export const Navbar = ({
   // children,
@@ -24,7 +77,7 @@ export const Navbar = ({
   paths: NavPath[];
   locale: Locale;
 }) => {
-  const [toggleState, setToggleState] = useState("");
+  const [toggleState, setToggleState] = useState("collapsing");
   const { particleInteractive, particleActive } = useAppSelector(
     (rootState) => rootState.common
   );
@@ -41,7 +94,7 @@ export const Navbar = ({
   );
 
   return (
-    <div className="fixed z-50 top-0 right-0">
+    <div className="fixed z-50 top-0 right-0 flex items-start flex-row-reverse md:flex-col">
       {/* nav toggle button */}
       <div className="cursor-pointer active:scale-90 focus:scale-90 hover:scale-90 transition-transform">
         <div
@@ -50,8 +103,21 @@ export const Navbar = ({
             "top-0 right-0 rounded mt-4 mr-4 navbar w-9 h-9 md:h-10 md:w-10 p-1  opacity-75 flex justify-center items-center"
           )}
         >
-          <Image className="spinning filter dark:invert" src={gear} alt="gear" />
+          <Image
+            className="spinning filter dark:invert"
+            src={gear}
+            alt="gear"
+          />
         </div>
+      </div>
+
+      <div className="text-black scale-75">
+        <Navigation
+          paths={paths}
+          setToggleState={() => {}}
+          toggleState={toggleState}
+          locale={locale}
+        />
       </div>
 
       {/* main menu */}
@@ -61,23 +127,12 @@ export const Navbar = ({
           toggleState
         )}
       >
-        {/* page navigation */}
-        <nav className=" text-xl md:text-2xl">
-          <ul>
-            {paths.map((p, i) => (
-              <li key={p.path} className="mb-2 link">
-                <Link
-                  href={p.path}
-                  onClick={() => {
-                    setToggleState("collapsing");
-                  }}
-                >
-                  <div className="transition-transform hover:translate-x-2"> {p.name}</div>
-                </Link>
-              </li>
-            ))}
-          </ul>
-        </nav>
+        <Navigation
+          paths={paths}
+          setToggleState={setToggleState}
+          locale={locale}
+        />
+
         {/* i18n switcher */}
         <section className="">
           <LocaleSwitcher
