@@ -233,10 +233,12 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                         {
                           label: t("_profile"),
                           hover: t("resume"),
+                          href: 'profile'
                         },
                         {
                           label: t("_resume"),
                           hover: t("resume"),
+                          href: 'resume'
                         },
                       ].map((t) => (
                         <li
