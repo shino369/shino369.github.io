@@ -269,7 +269,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
           </div>
         </InViewDiv>
 
-        <div className="bg-[rgba(255,255,255,0.7)] p-4 shadow-md  rounded-xl relative">
+        <div className="p-4 shadow-md  rounded-xl relative">
           <BgImage
             wrapperClassName="rounded-xl overflow-hidden"
             src="/contactbg.jpg"
