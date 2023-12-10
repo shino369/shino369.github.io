@@ -1,5 +1,6 @@
 "use client";
 
+import useMediaQuery from "@/helper/useMediaQuery";
 import { useOutsideClick } from "@/helper/useOutsideClick";
 import { setHash } from "@/redux/reducer/commonSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
@@ -12,6 +13,7 @@ export default function IndexBar() {
     (rootState) => rootState.common.currentHash
   );
   const dispatch = useAppDispatch();
+  const isMD = useMediaQuery("(min-width: 768px)");
   const ref = useOutsideClick(() => {
     setShow(false);
   });
@@ -25,7 +27,11 @@ export default function IndexBar() {
 
   return (
     <nav
-      ref={ref as RefObject<HTMLDivElement>}
+      {...(isMD
+        ? {}
+        : {
+            ref: ref as RefObject<HTMLDivElement>,
+          })}
       className={clsx(
         "fixed transition-transform top-10 left-0 mt-2 flex items-center",
         show ? "" : "translate-x-[-90%]"
