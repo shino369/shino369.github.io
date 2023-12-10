@@ -252,7 +252,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           私の志望動機は、三つあります。
           <br />
           <br />
-          一つ目はは、御社の「仲間と共に」の思いに共感しました。
+          一つ目は、御社の「仲間と共に」の思いに共感しました。
           <br />
           ITエンジニアというキャリアにおいて、「個」の強さがよく強調されます。
           <br />
@@ -351,6 +351,8 @@ export default function Page({ params: { locale } }: LocaleParam) {
           従って、例え業務上で私が未経験な新しい技術を
           <br />
           使う必要があるとしても問題ございません。
+          <br />
+          むしろ私にとって挑戦するがいがあります。
           <br />
           もちろん教える先輩がいればとても助かります。
           <br />

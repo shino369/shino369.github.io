@@ -1,9 +1,10 @@
 "use client";
 
+import { useOutsideClick } from "@/helper/useOutsideClick";
 import { setHash } from "@/redux/reducer/commonSlice";
 import { useAppDispatch, useAppSelector } from "@/redux/store";
 import clsx from "clsx";
-import { useLayoutEffect, useState } from "react";
+import { RefObject, useLayoutEffect, useState } from "react";
 
 export default function IndexBar() {
   const [show, setShow] = useState(true);
@@ -11,17 +12,20 @@ export default function IndexBar() {
     (rootState) => rootState.common.currentHash
   );
   const dispatch = useAppDispatch();
+  const ref = useOutsideClick(() => {
+    setShow(false);
+  });
 
   useLayoutEffect(() => {
-    if(window.location.hash && window.location.hash.length > 0) {
-        const cut = window.location.hash.split('#')[1]
-        dispatch(setHash(cut));
+    if (window.location.hash && window.location.hash.length > 0) {
+      const cut = window.location.hash.split("#")[1];
+      dispatch(setHash(cut));
     }
-
   }, [dispatch]);
 
   return (
     <nav
+      ref={ref as RefObject<HTMLDivElement>}
       className={clsx(
         "fixed transition-transform top-10 left-0 mt-2 flex items-center",
         show ? "" : "translate-x-[-90%]"
