@@ -5,6 +5,7 @@ import { PayloadAction, createSlice } from "@reduxjs/toolkit";
 type CommonState = {
   particleActive: boolean;
   particleInteractive: boolean;
+  currentHash: string;
 };
 
 type CommonStateAction = {
@@ -15,6 +16,7 @@ type CommonStateAction = {
 const initialState: CommonState = {
   particleActive: true,
   particleInteractive: false,
+  currentHash: "",
 };
 
 export const commonSlice = createSlice({
@@ -23,7 +25,7 @@ export const commonSlice = createSlice({
   reducers: {
     setParticle: (state, action: PayloadAction<CommonStateAction>) => {
       const eachVal = Object.entries(action.payload) as [
-        keyof CommonState,
+        keyof CommonStateAction,
         boolean
       ][];
       if (eachVal.length > 0) {
@@ -32,9 +34,12 @@ export const commonSlice = createSlice({
         });
       }
     },
+    setHash: (state, action: PayloadAction<string>) => {
+      state.currentHash = action.payload;
+    },
   },
 });
 
-export const { setParticle } = commonSlice.actions;
+export const { setParticle, setHash } = commonSlice.actions;
 
 export default commonSlice.reducer;
