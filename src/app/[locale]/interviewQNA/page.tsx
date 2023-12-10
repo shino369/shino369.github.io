@@ -425,6 +425,33 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
         </Answer>
       </section>
+      <section id="salary">
+        <Question id="salary">希望年収</Question>
+        <Answer>
+          前職の年収額は312,000香港ドルです。
+          <br />
+          御社の求人に書いた年収下限500万円を希望致しますが、最終的には御社の規定に従います。
+        </Answer>
+      </section>
+      <section id="time-available">
+        <Question id="time-available">入社可能時期を教えてください</Question>
+        <Answer>
+          内定もらえた一か月後で入社可能です。
+          <br />
+          ビザの変更が時間がかかりますので、最短でも一か月は欲しい。
+        </Answer>
+      </section>
+      <section id="other-interview">
+        <Question id="other-interview">他社の選考状況を教えてください</Question>
+        <Answer>
+          今のところ、他に二社が今週一次面接の予定があります。
+          <br />
+          それ以外も一社が二次面接の予定があります。
+          <br />
+          しかしすべて自社サービスがないSESとSIerで、エージェントからオススメされた外国人でも入りやすい会社です。
+          <br />
+        </Answer>
+      </section>
     </main>
   );
 }

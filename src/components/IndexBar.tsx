@@ -112,6 +112,18 @@ export default function IndexBar() {
             id: "question-findy",
             label: "聞きたいこと - findy",
           },
+          {
+            id: "salary",
+            label: "希望年収",
+          },
+          {
+            id: "time-available",
+            label: "入社可能時期",
+          },
+          {
+            id: "other-interview",
+            label: "他社の選考状況",
+          },
         ].map((index) => (
           <li
             key={index.id}
