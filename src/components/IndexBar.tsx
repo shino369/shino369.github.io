@@ -93,6 +93,14 @@ export default function IndexBar() {
             label: "リーダー経験",
           },
           {
+            id: "choice-of-tech",
+            label: "技術の選定基準",
+          },
+          {
+            id: "react-pos-con",
+            label: "Reactの優/劣",
+          },
+          {
             id: "strength",
             label: "強み",
           },

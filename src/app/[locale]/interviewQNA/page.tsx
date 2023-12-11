@@ -187,11 +187,11 @@ export default function Page({ params: { locale } }: LocaleParam) {
           SNSで、「github開発履歴で
           スキルを偏差値化できる」という広告が見ました。
           <br />
-          軽くgithubと連携してアカウントを作って、試してみましたが
+          軽くgithubと連携してアカウントを作って、試してみました
           <br />
-          普段githubで開発することが少ないため、58点しかなかったです。
+          普段githubで開発することが少ないため、58点しかなかったですが。
           <br />
-          しかし大変面白いサービスですの、強く印象に残りました。
+          大変面白いサービスですの、強く印象に残りました。
           <br />
           <br />
           そして今年日本に来て、11月の末から転職活動を始めて、
@@ -238,7 +238,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           私が一番共感するvalueは「no.1」ですね。やるなら一位、best of the
           bestを目指すこと。
           <br />
-          例え現実では、目標までまだ遠いとしても、no.1を取りたい心構えが重要です。
+          例え現実では、目標までまだ遠いだとしても、no.1を取りたい心構えが重要です。
           <br />
           仕事のモチベーションにもなりますので。
         </Answer>
@@ -337,6 +337,57 @@ export default function Page({ params: { locale } }: LocaleParam) {
         </Answer>
       </section>
 
+      <section id="choice-of-tech">
+        <Question id="choice-of-tech">技術の選定は何を基準にする？</Question>
+        <Answer>
+          技術の選定、例えばフロントエンドフレームワークの選定について
+          <br />
+          一番考慮(こうりょ)すべきのは
+          <br />
+          コミュニティのサイズです。
+          <br />
+          コミュニティが大きい方が、メンテナンスとコミュニティサポートがしっかりしてます。
+          <br />
+          そして次は客観的に、
+          stateofjsとかの統計解析で、業界のトレンドを研究し、
+          <br />
+          もしこの技術を使った場合、
+          <br />
+          同じくこの技術を使った経験がある人を雇う難易度を想定すること。
+          <br />
+          新卒を雇う場合も想定すべきです
+          <br />
+          最後は純粋に
+          <br />
+          フレームワークのパフォーマンスと習得の難易度次第です
+          <br />
+        </Answer>
+      </section>
+      <section id="react-pos-con">
+        <Question id="react-pos-con">Reactの優/劣？</Question>
+        <Answer>
+          優:
+          <br />
+          一番優れた(優れた)部分はやはりその認知度とコミュニティサポート
+          <br />
+          何せ、背後にMETAとvercelといった大企業があります。
+          <br />
+          <br />
+          劣： 欠点としは、他のフレームワークと比べてややこしい部分があります
+          <br />
+          functional componentのせいでい、色んなhooksを使わないといけない
+          <br />
+          特にobjectやarrayを更新する時、丸ごと更新しないといけないこと。
+          <br />
+          そしてthrottleやdebounceとか,
+          <br />
+          非同期処理が、useCallbackやuseMemoで保存しないと使えないことですね。
+          <br />
+          あとはCSSカプセル化できない部分かな。
+          <br />
+        </Answer>
+      </section>
+
       <section id="strength">
         <Question id="strength">強みはなんですか？</Question>
         <Answer>
@@ -418,12 +469,12 @@ export default function Page({ params: { locale } }: LocaleParam) {
         <Answer>
           1. Findyの新規事業の内容について知りたいです <br />
           <br />
-          2.チームの雰囲気について知りたいです <br />
+          2. チームの雰囲気について知りたいです <br />
           <br />
           3. メンバーたち1日業務を行うスケジュールが知りたいです
           <br />
           <br />
-          4.この新規事業開発チームについて、チームメンバー、何名まで募集予定ですか？
+          4. この新規事業開発チームについて、チームメンバー、何名まで募集予定ですか？
           <br />
           <br />
         </Answer>
