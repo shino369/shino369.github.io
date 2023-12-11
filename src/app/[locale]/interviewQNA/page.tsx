@@ -430,6 +430,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           svelteはパフォーマンスがいいけど、わかる人が少ないから同じく論外。
           <br />
+          残りのvue.js、パフォーマンス良くて、分かりやすくて、新卒でもすぐ習得でき、だから決めました。
         </Answer>
       </section>
       <section id="react-pos-con">
