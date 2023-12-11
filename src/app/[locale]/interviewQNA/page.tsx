@@ -175,7 +175,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         </Answer>
       </section>
 
-      <section id="siboudouki-findy">
+      {/* <section id="siboudouki-findy">
         <Question id="siboudouki-findy">
           何故うちの会社?（志望動機---Findy）
         </Question>
@@ -216,9 +216,9 @@ export default function Page({ params: { locale } }: LocaleParam) {
           自分もスキル的に当てはまるので応募してみました。
           <br />
         </Answer>
-      </section>
+      </section> */}
 
-      <section id="findy-value">
+      {/* <section id="findy-value">
         <Question id="findy-value">Findyの五つのvalueについて</Question>
         <Answer>
           もちろん存じます。
@@ -241,6 +241,40 @@ export default function Page({ params: { locale } }: LocaleParam) {
           例え現実では、目標までまだ遠いだとしても、no.1を取りたい心構えが重要です。
           <br />
           仕事のモチベーションにもなりますので。
+        </Answer>
+      </section> */}
+
+      <section id="siboudouki-linkx">
+        <Question id="siboudouki-linkx">
+          何故うちの会社?（志望動機---Linkx）
+        </Question>
+        <Answer>
+          私の志望動機は、
+          <br />
+          主に、shikAI（シカイ）という視覚障がい者のためのナビゲーションアプリ
+          <br />
+          そのの存在大きいです。
+          <br />
+          技術は、よりいい社会のためにあると、私は考えています。
+          <br />
+          Linkxは普通の会社と違って、
+          <br />
+          Social Contribution、社会貢献
+          <br />
+          ちゃん技術でよりいい社会のために動く会社だと思って。
+          <br />
+          かなり魅力を感じます。
+          <br />
+          <br />
+          その後社員のインタビューをみて
+          <br />
+          もしLinkxで働くことが叶うなら
+          <br />
+          新しい技術に触れたり、新しいことにチャレンジして成長する機会がたくさんあります。
+          <br />
+          それ以外も外国人の比率が高いでの、私も馴染みやすいと思って
+          <br />
+          決意して応募しました。
         </Answer>
       </section>
 
@@ -349,17 +383,52 @@ export default function Page({ params: { locale } }: LocaleParam) {
           コミュニティが大きい方が、メンテナンスとコミュニティサポートがしっかりしてます。
           <br />
           そして次は客観的に、
-          stateofjsとかの統計解析で、業界のトレンドを研究し、
+          stateofjsとかの統計分析と、求人サイトでキーワードを検索して、業界のトレンドを研究します。
           <br />
           もしこの技術を使った場合、
           <br />
           同じくこの技術を使った経験がある人を雇う難易度を想定すること。
           <br />
-          新卒を雇う場合も想定すべきです
+          日本と違って、まともな研修がないのが殆どなので
+          <br />
+          新卒を雇う場合、習得の難易度も想定すべきです
           <br />
           最後は純粋に
           <br />
-          フレームワークのパフォーマンスと習得の難易度次第です
+          フレームワークのパフォーマンス次第です
+          <br />
+          私の場合は、香港というか、中国においてvue.jsの方が支持率が圧倒的とはいかにが、とても高い
+          <br />
+          vue.jsの設計者本人Evan Youは中国人ですので
+          <br />
+          さらにフレームワーク自体、その背後に、big
+          techからバックアップされていない。
+          <br />
+          開発もメンテナンスも完全にコミュニティの力だけで行う。
+          <br />
+          それなのに今は三大フレームワークと言われるほどまで成長してきました
+          <br />
+          <br />
+          私がリーダーとして技術を選定する時、候補に幾つを考えました。
+          <br />
+          PHPと併用するので、とりあえずSPAを想定します。
+          <br />
+          個人的に理解のあるフレームワークはReact.js、Vue.js、Angular、svelte、この四つです。
+          <br />
+          React.jsはメインのプロジェクトでみんあ経験済みなので、論理的に考えばreactを選ぶのが一番無難でしょう。
+          <br />
+          しかし正直言うと、reactはかなり難しいフレームワークです。その開発思想が他三つのフレームワークと全然違う。
+          <br />
+          Functional
+          componentsで、ちょっとした不注意で、パフォーマンスが落ちることがよくあります。
+          <br />
+          実際メインプロジェクトの「テーブル予約管理システム」のパフォーマンスもあまり宜しくなかった。
+          <br />
+          だからいっそうのこと、思いっきり、新しいフレームワークにしようと思いました。
+          <br />
+          Angularは難易度高いから論外。
+          <br />
+          svelteはパフォーマンスがいいけど、わかる人が少ないから同じく論外。
           <br />
         </Answer>
       </section>
@@ -464,7 +533,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
         </Answer>
       </section>
-      <section id="question-findy">
+      {/* <section id="question-findy">
         <Question id="question-findy">何か聞きたいこと？</Question>
         <Answer>
           1. Findyの新規事業の内容について知りたいです <br />
@@ -478,7 +547,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           <br />
         </Answer>
-      </section>
+      </section> */}
       <section id="salary">
         <Question id="salary">希望年収</Question>
         <Answer>
