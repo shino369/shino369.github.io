@@ -121,7 +121,7 @@ export default function IndexBar() {
             label: "最大の成果・失敗",
           },
           {
-            id: "question-findy",
+            id: "question",
             label: "聞きたいこと - findy",
           },
           {

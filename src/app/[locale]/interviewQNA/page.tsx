@@ -533,45 +533,45 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
         </Answer>
       </section>
-      {/* <section id="question-findy">
-        <Question id="question-findy">何か聞きたいこと？</Question>
+      <section id="question">
+        <Question id="question">何か聞きたいこと？</Question>
         <Answer>
-          1. Findyの新規事業の内容について知りたいです <br />
+          1.
+          shinkAIについて：shinkAIは2016のプロダクトのようですが、当時のAIは今のように強くないです。GPTなどの（自然言語モデル）が公開されたあと、機能アップグレードしましたか？
+          <br />
           <br />
           2. チームの雰囲気について知りたいです <br />
           <br />
-          3. メンバーたち1日業務を行うスケジュールが知りたいです
+          3. Linkxに他の製品がありますか
           <br />
           <br />
-          4. この新規事業開発チームについて、チームメンバー、何名まで募集予定ですか？
+          4. もし私が採用されたら、どのようなプロジェクトを担当する予定ですか？
           <br />
           <br />
         </Answer>
-      </section> */}
+      </section>
       <section id="salary">
         <Question id="salary">希望年収</Question>
         <Answer>
           前職の年収額は312,000香港ドルです。
           <br />
-          御社の求人に書いた年収下限500万円を希望致しますが、最終的には御社の規定に従います。
+          御社の求人に書いた年収範囲を希望致しますが、最終的には御社の規定に従います。
         </Answer>
       </section>
       <section id="time-available">
         <Question id="time-available">入社可能時期を教えてください</Question>
         <Answer>
-          内定もらえた一か月後で入社可能です。
+          すぐ入社できると思いますが。
           <br />
-          ビザの変更が時間がかかりますので、最短でも一か月は欲しい。
+          ビザの変更とかもありますので、内定貰えた一か月後がよろしいかと思います。
         </Answer>
       </section>
       <section id="other-interview">
         <Question id="other-interview">他社の選考状況を教えてください</Question>
         <Answer>
-          今のところ、他に二社が今週一次面接の予定があります。
+          今のところ、他に二社が面接の予定があります。
           <br />
-          それ以外も一社が二次面接の予定があります。
-          <br />
-          しかしすべて自社サービスがないSESとSIerで、エージェントからオススメされた外国人でも入りやすい会社です。
+          中に一社が二次面接となります。
           <br />
         </Answer>
       </section>
