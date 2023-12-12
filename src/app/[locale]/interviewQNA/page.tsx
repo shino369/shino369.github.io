@@ -87,6 +87,8 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           また、英語での業務も全く問題なく行えます。
           <br />
+          即戦力として活躍できると思います。
+          <br />
         </Answer>
       </section>
       <section id="university">
