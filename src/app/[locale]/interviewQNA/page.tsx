@@ -85,7 +85,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           仕事上の会話においては支障がございません。
           <br />
-          また、英語での業務も全く問題なく行えます。
+          また、英語での業務も問題なく行えます。
           <br />
           即戦力として活躍できると思います。
           <br />
