@@ -123,7 +123,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
       <section id="reason-to-japan">
         <Question id="reason-to-japan">なぜ日本に来た？</Question>
         <Answer>
-          そうですね。私は日本の文化に深く影響され、アニメや漫画とか大好きで、
+          そうですね。私は日本に来た多くの外国人と同じ、アニメや漫画とか大好きで、
           <br />
           将来日本で暮らしたいとずっと思ってます。大学卒業後も、
           <br />
