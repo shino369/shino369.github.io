@@ -67,6 +67,10 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           様々なJavaScriptフレームワークでの開発経験がございます。
           <br />
+          フロントエンド限定ですが、例え全く触ったことがないフレームワークでも
+          <br />
+          短時間以内習得自信があります。
+          <br />
           <br />
           バックエンドにおいては、
           <br />
@@ -176,77 +180,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
         </Answer>
       </section>
-
-      {/* <section id="siboudouki-findy">
-        <Question id="siboudouki-findy">
-          何故うちの会社?（志望動機---Findy）
-        </Question>
-        <Answer>
-          そうですね。私の志望動機は割と私の率直な感想になりますが
-          <br />
-          私がFindyを知ったきっかけは、一年前、私がまだ香港に居たころ
-          <br />
-          SNSで、「github開発履歴で
-          スキルを偏差値化できる」という広告が見ました。
-          <br />
-          軽くgithubと連携してアカウントを作って、試してみました
-          <br />
-          普段githubで開発することが少ないため、58点しかなかったですが。
-          <br />
-          大変面白いサービスですの、強く印象に残りました。
-          <br />
-          <br />
-          そして今年日本に来て、11月の末から転職活動を始めて、
-          <br />
-          色んな転職プラットフォームを試しましたが（doda, mynavi, en転職とか）
-          <br />
-          殆どがプログラミングスキルで検索することができませんでした。
-          <br />
-          そして多くの求人内容も、かなり曖昧で、何を求めてるのが分
-          かりませんでした。
-          <br />
-          <br />
-          そこで気づいたのは、Findyでなら普通にスキルで検索できること、
-          <br />
-          さらに、載せた求人内容が分かりやすくて、エンジニア転職者にとって大変ありがたいことです。
-          <br />
-          ちゃんとエンジニアのためのプラットフォームで、エンジニアfirstの会社だと
-          <br />
-          もしスキルアップしたいなら、このような場合がいいと、私は考えています。
-          <br />
-          そして偶然にも御社が新規事業のためにエンジニア募集中、 <br />
-          自分もスキル的に当てはまるので応募してみました。
-          <br />
-        </Answer>
-      </section> */}
-
-      {/* <section id="findy-value">
-        <Question id="findy-value">Findyの五つのvalueについて</Question>
-        <Answer>
-          もちろん存じます。
-          <br />
-          <br />
-          - 前向き　　　　：　新しい挑戦へ前向きに取り込むこと。
-          <br />
-          - 誠実　　　　　：　すべての人へ誠実に向き合う。
-          <br />
-          - チームワーク　　：　 チームで助け合う方がよりいい成果ででます
-          <br />
-          - スピード　　　：　意思決定と実行力
-          <br />
-          - No.1　　　　　:　やるならbest of the best。
-          <br />
-          <br />
-          私が一番共感するvalueは「no.1」ですね。やるなら一位、best of the
-          bestを目指すこと。
-          <br />
-          例え現実では、目標までまだ遠いだとしても、no.1を取りたい心構えが重要です。
-          <br />
-          仕事のモチベーションにもなりますので。
-        </Answer>
-      </section> */}
-
-      <section id="siboudouki-linkx">
+      {/* <section id="siboudouki-linkx">
         <Question id="siboudouki-linkx">
           何故うちの会社?（志望動機---Linkx）
         </Question>
@@ -278,9 +212,9 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           決意して応募しました。
         </Answer>
-      </section>
+      </section> */}
 
-      {/* <section id="siboudouki-bita">
+      <section id="siboudouki-bita">
         <Question id="siboudouki-bita">
           何故うちの会社?（志望動機---BitA）
         </Question>
@@ -305,7 +239,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           上流工程から携わる機会が多いと考えています。
           <br />
-          このやされた環境でもっとエンジニアとしての経験を
+          このすぐれた環境でもっとエンジニアとしての経験を
           <br />
           積んでおきたいと思います。
           <br />
@@ -317,7 +251,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           御社のこのポジションでで活かせると思います。
           <br />
         </Answer>
-      </section> */}
+      </section>
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">
@@ -540,16 +474,10 @@ export default function Page({ params: { locale } }: LocaleParam) {
         <Question id="question">何か聞きたいこと？</Question>
         <Answer>
           1.
-          shinkAIについて：shinkAIは2016のプロダクトのようですが、当時のAIは今のように強くないです。GPTなどの（自然言語モデル）が公開されたあと、機能アップグレードしましたか？
+          仮に私が内定もらえて、一か月後入社した場合、どんなプロジェクトを携わることになりますか？
           <br />
           <br />
           2. チームの雰囲気について知りたいです <br />
-          <br />
-          3. Linkxに他の製品がありますか
-          <br />
-          <br />
-          4. もし私が採用されたら、どのようなプロジェクトを担当する予定ですか？
-          <br />
           <br />
         </Answer>
       </section>

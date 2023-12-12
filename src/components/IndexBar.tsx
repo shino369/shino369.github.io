@@ -73,21 +73,13 @@ export default function IndexBar() {
             label: "9～11月今まで",
           },
           // {
-          //   id: "siboudouki-findy",
-          //   label: "志望動機---findy",
-          // },
-          // {
-          //   id: "findy-value",
-          //   label: "Findyの五つのvalue",
+          //   id: "siboudouki-linkx",
+          //   label: "志望動機---Linkx",
           // },
           {
-            id: "siboudouki-linkx",
-            label: "志望動機---Linkx",
+            id: "siboudouki-bita",
+            label: "志望動機---BitA",
           },
-          // {
-          //   id: "siboudouki-bita",
-          //   label: "志望動機---BitA",
-          // },
           {
             id: "job-in-shiji",
             label: "前職について",
