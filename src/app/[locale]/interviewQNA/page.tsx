@@ -253,7 +253,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           <br />
           主に、shikAI（シカイ）という視覚障がい者のためのナビゲーションアプリ
           <br />
-          そのの存在大きいです。
+          その存在大きいです。
           <br />
           技術は、よりいい社会のためにあると、私は考えています。
           <br />
@@ -266,7 +266,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           かなり魅力を感じます。
           <br />
           <br />
-          その後社員のインタビューをみて
+          御社のホームページを見た、後社員のインタビューをみて
           <br />
           もしLinkxで働くことが叶うなら
           <br />
@@ -278,7 +278,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         </Answer>
       </section>
 
-      <section id="siboudouki-bita">
+      {/* <section id="siboudouki-bita">
         <Question id="siboudouki-bita">
           何故うちの会社?（志望動機---BitA）
         </Question>
@@ -315,7 +315,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
           御社のこのポジションでで活かせると思います。
           <br />
         </Answer>
-      </section>
+      </section> */}
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">

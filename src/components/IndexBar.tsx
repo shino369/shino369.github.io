@@ -84,10 +84,10 @@ export default function IndexBar() {
             id: "siboudouki-linkx",
             label: "志望動機---Linkx",
           },
-          {
-            id: "siboudouki-bita",
-            label: "志望動機---BitA",
-          },
+          // {
+          //   id: "siboudouki-bita",
+          //   label: "志望動機---BitA",
+          // },
           {
             id: "job-in-shiji",
             label: "前職について",
@@ -122,7 +122,7 @@ export default function IndexBar() {
           },
           {
             id: "question",
-            label: "聞きたいこと - findy",
+            label: "聞きたいこと - linkx",
           },
           {
             id: "salary",
