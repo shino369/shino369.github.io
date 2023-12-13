@@ -114,7 +114,7 @@ export default function IndexBar() {
           },
           {
             id: "question",
-            label: "聞きたいこと - linkx",
+            label: "聞きたいこと",
           },
           {
             id: "salary",
