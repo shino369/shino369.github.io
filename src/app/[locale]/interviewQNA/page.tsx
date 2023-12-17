@@ -118,9 +118,35 @@ export default function Page({ params: { locale } }: LocaleParam) {
       <section id="reason-of-resign">
         <Question id="reason-of-resign">転職の理由は？</Question>
         <Answer>
+          一回目の転職：
+          <br />
+          新卒入社した会社が、二次受けの受託開発がメイン、プロジェクトが終わったら、
+          <br />
+          運用保守とか一切なくて、本当に終わりました、という感じで
+          <br />
+          毎回終わった後すぐに次のプロジェクトへ移行しました。
+          <br />
+          そこで、自分が実際何かを作った感覚がしっかり来なかったです。
+          <br />
+          だから、自社サービスがある会社に転職したいと思って、次の会社に転職しました。
+          <br />
+          そして、次の会社、主に自社サービス開発ですので、同じプロダクトを携わることになります。
+          <br />
+          自分が作った新しい機能とか、UIとか、お客様、クライアントですね、
+          <br />
+          ちゃんと使用した感想とか、feedbackがあります
+          <br />
+          そのfeedbackを基づいて、さらに改善する、よりいいサービスを提供することができます。
+          <br />
+          ちゃんと自分が一つのサービスを、製品を、開発している感じがします。
+          <br />
+          <br />
+          <br />
+          二回目の転職：
+          <br />
           私が転職した理由は、日本にくる機会があったからです。
           <br />
-          故郷を離れて、日本という新しい環境でチャレンジしたいので、離職しました。
+          若いうちに、故郷を離れて、日本という新しい環境でチャレンジしたいので、離職しました。
           <br />
         </Answer>
       </section>
@@ -214,7 +240,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         </Answer>
       </section> */}
 
-      <section id="siboudouki-bita">
+      {/* <section id="siboudouki-bita">
         <Question id="siboudouki-bita">
           何故うちの会社?（志望動機---BitA）
         </Question>
@@ -251,7 +277,49 @@ export default function Page({ params: { locale } }: LocaleParam) {
           御社のこのポジションでで活かせると思います。
           <br />
         </Answer>
+      </section> */}
+
+
+      <section id="siboudouki-wamazing">
+        <Question id="siboudouki-wamazing">
+          何故うちの会社?（志望動機---wamazing）
+        </Question>
+        <Answer>
+          私の志望動機は、三つあります。
+          <br />
+          <br />
+          一つ目は、御社の「仲間と共に」の思いに共感しました。
+          <br />
+          ITエンジニアというキャリアにおいて、「個」の強さがよく強調されます。
+          <br />
+          しかし個人の能力は有限で、不足している部分を、仲間が
+          <br />
+          チームが、埋め合わすことができます。
+          <br />
+          チームワークは、よりいい結果をもたらす。
+          <br />
+          私はそう考えています。
+          <br />
+          <br />
+          二つ目は、御社のプライム案件担当の比率が高く、
+          <br />
+          上流工程から携わる機会が多いと考えています。
+          <br />
+          このすぐれた環境でもっとエンジニアとしての経験を
+          <br />
+          積んでおきたいと思います。
+          <br />
+          <br />
+          そして三つ目の原因は、
+          <br />
+          私の一番得意なスキル、リアクトが、
+          <br />
+          御社のこのポジションでで活かせると思います。
+          <br />
+        </Answer>
       </section>
+
+
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">

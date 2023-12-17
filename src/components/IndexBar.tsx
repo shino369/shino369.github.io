@@ -76,9 +76,13 @@ export default function IndexBar() {
           //   id: "siboudouki-linkx",
           //   label: "志望動機---Linkx",
           // },
+          // {
+          //   id: "siboudouki-bita",
+          //   label: "志望動機---BitA",
+          // },
           {
-            id: "siboudouki-bita",
-            label: "志望動機---BitA",
+            id: "siboudouki-wamazing",
+            label: "志望動機---wamazing",
           },
           {
             id: "job-in-shiji",
