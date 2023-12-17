@@ -93,6 +93,18 @@ export default function IndexBar() {
             label: "リーダー経験",
           },
           {
+            id: "self-product-important",
+            label: "自社サービス特に重要な所",
+          },
+          {
+            id: "komatta",
+            label: "userとして困ったこと",
+          },
+          {
+            id: "suggest-service",
+            label: "将来性のあるサービス",
+          },
+          {
             id: "choice-of-tech",
             label: "技術の選定基準",
           },
