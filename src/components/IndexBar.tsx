@@ -105,6 +105,10 @@ export default function IndexBar() {
             label: "将来性のあるサービス",
           },
           {
+            id: "value-wamazing",
+            label: "mission/value",
+          },
+          {
             id: "choice-of-tech",
             label: "技術の選定基準",
           },
