@@ -4,10 +4,7 @@ import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
-export default function Page({ params: { locale } }: LocaleParam) {
-  unstable_setRequestLocale(locale);
-  const t = useTranslations("page");
-
+function JPQNA() {
   return (
     <main className="flex flex-col items-center py-8 px-4 sm:p-20 md:p-24 font-sans relative">
       <IndexBar />
@@ -697,4 +694,579 @@ export default function Page({ params: { locale } }: LocaleParam) {
       </section>
     </main>
   );
+}
+
+function ENQNA() {
+  return (
+    <main className="flex flex-col items-center py-8 px-4 sm:p-20 md:p-24 font-sans relative">
+      <IndexBar />
+
+      <section id="greetings">
+        <Question id="greetings">挨拶</Question>
+        <Answer>
+          Hello, nice to meet you. I&apos;m Wong, or you can just call me
+          Anthony.
+          <br />
+          I came from from Hong Kong, and recently living in Japan.
+          <br />
+        </Answer>
+      </section>
+
+      <section id="self-intro">
+        <Question id="self-intro">自己紹介</Question>
+        <Answer>
+          {`
+            Hello I'm Anthony from Hong Kong.\n
+            I hold a degree in Information Engineering from City University of Hong Kong, \n
+            with a minor in Japanese Studies.\n
+            After graduating, I worked at two companies. The first was\n
+            Appicidea IT Solutions, a small startup focusing on subcontracting projects \n
+            I worked on fullstack using Java Spring Boot, Angular, React.js, and React Native. \n
+            Later, I joined Shiji Information Technology, an IT company\n
+            serving the global hospitality sector. 
+            There, I was involved in in-house product fullstack development, using React.js, Vue.js, and cakePHP.\n\n
+            In my free time, I stay updated on the latest tech news and like learning new things.\n
+            Currently, I'm exploring Next.js 14 App Router.\n\n
+            That sums up my professional journey so far. \n
+            Thanks for your time.
+          `}
+        </Answer>
+      </section>
+
+      <section id="pr">
+        <Question id="pr">自己PRお願いします</Question>
+        <Answer>
+          {`
+            I'm confident that I can handle most modern javascript framework in a short period of time. \n
+            And besides fronend developement, I am also capable for fullstack development. \n
+            As long as it's not as complicated as rust or c++ then it will be fine. \n
+          `}
+        </Answer>
+      </section>
+      <section id="university">
+        <Question id="university">大学について教えてください</Question>
+        <Answer>
+          About the degree, Information Engineering,
+          <br />
+          It contains subjects of computer science,
+          <br />
+          like programming, data structure, database, os
+          <br />
+          plus some networking and signal related subject
+          <br />
+          and there are some modern technology course like teaching aws and
+          <br />
+          web programming framework (vue.js 2.0 and java springboot)
+          <br />
+        </Answer>
+      </section>
+
+      <section id="reason-of-resign">
+        <Question id="reason-of-resign">転職の理由は？</Question>
+        <Answer>
+          For the first company, the reason is quite simple, just want to career
+          up.
+          <br />
+          At that time around June of 2021, I saw my company hiring new graduate
+          <br />
+          using a price of, 24k HKD, 5k HKD (approximatly 90k JPY) higher than
+          my salary.
+          <br />
+          And I did not get any salary increment.
+          <br />
+          Maybe it seems fair beacuse it was still 10 months since I joined that
+          company.
+          <br />
+          But also my colleages, well, my senpai, <br />
+          who have worked for several years but did not get <br />
+          reasonable salary increment. His salary was 27K at that moment, <br />
+          and the company is hiring a same level of his position but in 35k HKD
+          <br />
+          So we decided to leave the company together.
+          <br />
+          <br />
+          For the secondary company, actually I do not expect to leave. <br />
+          The only reason I leave is because the new Japan Visa has been
+          announced.
+        </Answer>
+      </section>
+      <section id="reason-to-japan">
+        <Question id="reason-to-japan">なぜ日本に来た？</Question>
+        <Answer>
+          just like other forigner, I love japanese culture like anime and comic
+          <br />
+          and is planning to live in Japan in the future.
+          <br />
+          But it is quite difficult to apply japanese job oversea
+          <br />
+          and they have serious screening
+          <br />
+          <br />
+          but surprisingly, the japanese government launched the new visa
+          programme
+          <br />
+          that anyone who graduated from a university ranked within 100 <br />
+          in the world university ranking can come to Japan.
+          <br />
+          I applied, and eventually get the visa, and then i am here.
+          <br />
+        </Answer>
+      </section>
+      <section id="sep-to-nov">
+        <Question id="sep-to-nov">9～11月何してきました？</Question>
+        <Answer>
+          In Sepetember it is mainly about preparing my life in Japan.
+          <br />
+          Although the housing is already addressed before I came to Japan,
+          <br />
+          daily supplies and furnitures is need, so I stayed in hotel for week,
+          <br />
+          and then, other things like mobile number, bank account, registeration
+          of resident...
+          <br />
+          After all of that, reached out with my friends who are living in
+          Japan, and asked for advices.
+          <br />
+          <br />
+          And then in October, I decided to move to a better room. <br />
+          My previous room was a one room apartment in Bunkyouku. 13m2. <br />
+          The living space was really small. But the rental rate is quite high.
+          <br />
+          So I spent a month to find a new one.
+          <br />
+          <br />
+          Finally moved to edogawaku, nakakasai, recommended by my friend.
+          <br />
+          After everything calm down, I started my job hunting.
+          <br />
+        </Answer>
+      </section>
+      <section id="siboudouki-linkx">
+        <Question id="siboudouki-linkx">
+          何故うちの会社?（志望動機---Linkx）
+        </Question>
+        <Answer>
+          The main reason I apply Linkx is
+          <br />
+          I saw Linkx has developed an AI application SHIKAI, which provide
+          service for visually disabled people.
+          <br />
+          I think it is company that really cares about society and social
+          minority.
+          <br />
+          I always think that technology should be used for a better world.
+          <br />
+          It initialited my interest towards linkx.
+          <br />
+          Besides, I think Linkx is a place for me to take more challenges,
+          <br />
+          will provide me a chance to learn new skills and become more
+          professional.
+          <br />
+        </Answer>
+      </section>
+
+      <section id="job-in-shiji">
+        <Question id="job-in-shiji">
+          前職、どのような責務を負っていますか？
+        </Question>
+        <Answer>
+          前職について
+          <br />
+          My responisiblity in Shiji Information Technology was
+          <br />
+          mainly adding new features into the existing application apon the
+          requirements of out client.
+          <br />
+          for example our clients complained that the old restaurant reservation
+          statistic calendar
+          <br />
+          was difficult to understander. So we imporve the UI and <br /> into a
+          more clean and straight forwards design, plus some new features.
+          <br />
+          And beside new features, there were also bug fixing, security
+          loopholes fixing,
+          <br />
+          and dealling with technical debt. <br /> Personally dealling with
+          technical debt contains the highest ratio.
+          <br />
+          And to deal with one of the technical debt,
+          <br /> I directed a mini revamp project by adding vue.js <br />
+          into the existing online reservation page.
+          <br />
+        </Answer>
+      </section>
+
+      <section id="lead-project">
+        <Question id="lead-project">
+          リーダーとなって業務を推進したエピソードを教えてください。
+        </Question>
+        <Answer>
+          そうですね
+          <br />
+          {/* 古いオンライン予約システムの技術的負債を処理するために */}
+          it was initialited by a task requested by the client.
+          <br />
+          adding a modal dialog that can select personal preference like
+          vegetrian, or not containing pork, etc.
+          <br />
+          and then after selecting, bind the data to the main reservation form.
+          <br />
+          well it was quite simple feature, and can be done by jQuery alone.
+          <br />
+          but what if more and more similar features are required in the future?
+          <br />
+          and more interactive feature is needed?
+          <br />
+          plus, at that time, the code base of the project was already a mess.
+          Heavy technical debt.
+          <br />
+          So I suggested to the project manager, to add vue.js into the project
+          for doing the dynamic part.
+          <br />
+          And then I was assigned as leader to do the task, followed by 2
+          teammates.
+          <br />
+          And then studying feasible technical stack, design the program
+          structure, and implement it.
+          <br />
+          it was quite a good experience for me.
+          <br />
+        </Answer>
+      </section>
+
+      {/* <section id="self-product-important">
+        <Question id="self-product-important">
+          自社サービス（プロダクト）の開発において、どんなことが特に重要だと感じていますか？
+        </Question>
+        <Answer>
+          一番大事なのは、ユーザーの視点に立つことですね。
+          <br />
+          開発者の角度ではなくて、もし自分がユーザーならどう思うか
+          <br />
+          開発者って理解力がいい人が多いです。
+          <br />
+          彼らにとって、分かり切ったことは、一目瞭然なことが、
+          <br />
+          一般人にとって、必ずしも同じように見えるわけじゃないです。
+          <br />
+          だからUIUXにおいて、華麗なUIよりも、目指すのは「誰でも簡単に使いこなせる」UXですね。
+          <br />
+          それ以外も、サービスの提供対象、例えば国や地域、年齢層、宗教とかで、適切なデザインやサービスを提供すること。
+          <br />
+        </Answer>
+      </section> */}
+
+      {/* <section id="komatta">
+        <Question id="komatta">
+          userとして地方に行ったときは困ったことはありますか?
+        </Question>
+        <Answer>
+          そうですね。実は今年日本に来る時、宿の予約で、初めてagodaというサービスを使いました。
+          <br />
+          アカウントは、直接googleのアカウントを使うことができます。
+          <br />
+          便利だと思いますが、そこで問題発生。
+          <br />
+          私のgoogleアカウントの名前は本名じゃないです。
+          <br />
+          予約を取る時そのまんまで、
+          <br />
+          提示も警告もありませんでした
+          <br />
+          予約を取った後、登録情報を見てようやく気付いました。
+          <br />
+          そこで慌ててカスタマーサービスに連絡くして、
+          <br />
+          一週間かけてようやく本名に変更できました。
+          <br />
+        </Answer>
+      </section> */}
+
+      {/* <section id="suggest-service">
+        <Question id="suggest-service">
+          海外向けのユーザーにどのようなサービスが将来性ありそうなのか？
+        </Question>
+        <Answer>
+          外国人の私から見ると、海外旅行で一番困った部分はやはり言語です。
+          <br />
+          将来性というか、現状でもかなり不足してるのが、翻訳アプリですね。
+          <br />
+          openAIのgptが発表される前の、つまり去年ですね。全ての翻訳アプリがダメです。
+          <br />
+          翻訳間違いは勿論として、翻訳スピードも遅いのが一般的な印象。
+          <br />
+          実際9割人がgoogle翻訳を使います。比較的に新しいのがdeepLですね。
+          <br />
+          それ以外、gptを使用した翻訳アプリは、まあ多数あると思いますが、
+          <br />
+          外国人の私が思い当たるアプリが殆どないのが現状です。
+          <br />
+          だから観光客向けの翻訳アプリは現在でも充分将来性があります。
+        </Answer>
+      </section> */}
+
+      {/* <section id="value-wamazing">
+        <Question id="value-wamazing">wamazingのmission/valueについて</Question>
+        <Answer>
+          【ミッションに関して】
+          <br />
+          感動の提供
+          <br />
+          私が思うには、日本の良さはその多様性と深い文化にあると感じています。
+          <br />
+          私は日本の風景、食事、歴史、そして流行などが融合した文化が魅力の根本になると考えています。
+          <br />
+          実際私も日本が好きで日本に来た外国人のひとりですので、
+          <br />
+          地域の隠された魅力と共にこれらを驚きと感動として観光客に伝え、
+          <br />
+          彼らに日本の魅力を体験させることができるようなサービスを提供して、
+          <br />
+          それと同時に、日本の地域経済の再こうにも力を貸すことができて素晴らしいと思っています。
+          <br />
+          (日本のどんなところが好き？)
+          <br />
+          (一番好きなのは食事ですね。日本の代表的な食べ物といえばお寿司かもしれませんが、)
+          <br />
+          (私は牛丼が大好きです。安くて美味い。松屋さん、吉野家さん、すき家さんとか毎日ローテーションで食べるくらいです。)
+          <br />
+          <br />
+          【バリューに関して】
+          <br />
+          サービス提供について：
+          <br />
+          観光客って日本語わからない方が殆どですので、
+          <br />
+          技術を通して、多言語で、確かな情報を提供することが
+          <br />
+          観光客が日本を安心して楽しむことができる環境を整うのが重要と思います。
+          <br />
+          観光客って日本語わからない方が殆どですので、正確かつ新しい提供
+          <br />
+          <br />
+          【カルチャーに関して】
+          <br />
+          学びについて：
+          <br />
+          仕事の中で、ユーザーエクスペリエンスを向上させるために様々な工夫をこらしてきました。
+          <br />
+          例えば、過去のプロジェクトではユーザーフィードバックを積極的に取り入れ、機能やデザインの改善に取り組みました。
+          <br />
+          まいつきのレストランの予約数を統計するカレンダーですが、元の設計では字だらけで、要領が分かり辛いでした。
+          <br />
+          そこでもっとシンプルなUIを追加して、さらに直接カレンダーで予約することを可能にして、お客様の要望を答えました。
+          <br />
+          ユーザーが本当に求めるものを理解し、
+          <br />
+          ユーザーの期待をうわ回るサービスを提供するために、常に学び続ける姿勢も重要だと思います。
+          <br /> <br />
+        </Answer>
+      </section> */}
+
+      <section id="choice-of-tech">
+        <Question id="choice-of-tech">技術の選定は何を基準にする？</Question>
+        <Answer>
+          技術の選定、例えばフロントエンドフレームワークの選定について
+          <br />
+          一番考慮(こうりょ)すべきのは
+          <br />
+          コミュニティのサイズです。
+          <br />
+          コミュニティが大きい方が、メンテナンスとコミュニティサポートがしっかりしてます。
+          <br />
+          そして次は客観的に、
+          stateofjsとかの統計分析と、求人サイトでキーワードを検索して、業界のトレンドを研究します。
+          <br />
+          もしこの技術を使った場合、
+          <br />
+          同じくこの技術を使った経験がある人を雇う難易度を想定すること。
+          <br />
+          日本と違って、まともな研修がないのが殆どなので
+          <br />
+          新卒を雇う場合、習得の難易度も想定すべきです
+          <br />
+          最後は純粋に
+          <br />
+          フレームワークのパフォーマンス次第です
+          <br />
+          私の場合は、香港というか、中国においてvue.jsの方が支持率が圧倒的とはいかにが、とても高い
+          <br />
+          vue.jsの設計者本人Evan Youは中国人ですので
+          <br />
+          さらにフレームワーク自体、その背後に、big
+          techからバックアップされていない。
+          <br />
+          開発もメンテナンスも完全にコミュニティの力だけで行う。
+          <br />
+          それなのに今は三大フレームワークと言われるほどまで成長してきました
+          <br />
+          <br />
+          私がリーダーとして技術を選定する時、候補に幾つを考えました。
+          <br />
+          PHPと併用するので、とりあえずSPAを想定します。
+          <br />
+          個人的に理解のあるフレームワークはReact.js、Vue.js、Angular、svelte、この四つです。
+          <br />
+          React.jsはメインのプロジェクトでみんあ経験済みなので、論理的に考えばreactを選ぶのが一番無難でしょう。
+          <br />
+          しかし正直言うと、reactはかなり難しいフレームワークです。その開発思想が他三つのフレームワークと全然違う。
+          <br />
+          Functional
+          componentsで、ちょっとした不注意で、パフォーマンスが落ちることがよくあります。
+          <br />
+          実際メインプロジェクトの「テーブル予約管理システム」のパフォーマンスもあまり宜しくなかった。
+          <br />
+          だからいっそうのこと、思いっきり、新しいフレームワークにしようと思いました。
+          <br />
+          Angularは難易度高いから論外。
+          <br />
+          svelteはパフォーマンスがいいけど、わかる人が少ないから同じく論外。
+          <br />
+          残りのvue.js、パフォーマンス良くて、分かりやすくて、新卒でもすぐ習得でき、だから決めました。
+        </Answer>
+      </section>
+      <section id="react-pos-con">
+        <Question id="react-pos-con">Reactの優/劣？</Question>
+        <Answer>
+          優:
+          <br />
+          big community size. backed by facebook and vercel.
+          <br />
+          <br />
+          劣：
+          <br />
+          because it si functional component, the behaviour is different from
+          other frameworks
+          <br />
+          like vue.js, angular
+          <br />
+          when assigning object and array, it need to repalce the whole object
+          and array.
+          <br />
+          and you need wrap those asynchronous operation into a usecallback or
+          usememo hook
+          <br />
+          and it does not have css encapsulation
+          <br />
+          The facenook team recently release the styleX library to due the
+          problem module css.
+          <br />
+          but in my opinions, it just makes the things more complicated.
+        </Answer>
+      </section>
+
+      <section id="strength">
+        <Question id="strength">強みはなんですか？</Question>
+        <Answer>
+          I guess my strength is can learn independently without any guidance.
+          <br />
+          It started from my first company, a small startup,
+          <br />
+          no sufficient manpower to train me. Not even a undemy account.
+          <br />
+          So I need to learn all by myself.
+          <br />
+          And after that I get used to self learning.
+          <br />
+          But of course, I will appreciate if someone can teach me.
+        </Answer>
+      </section>
+
+      <section id="weakness">
+        <Question id="weakness">欠点は何ですか？</Question>
+        <Answer>
+          my biggest weakness should lack of vocabulary.
+          <br />
+          especially using languages other than my mother language.
+          <br />
+          It is quite difficult to express my throught corrently
+          <br />
+          sometimes I still need to use google translate.
+          <br />
+          I am still keep learning to improve it.
+          <br />
+        </Answer>
+      </section>
+
+      <section id="biggest-challenge">
+        <Question id="biggest-challenge">
+          これまでに直面した難題について教えてください。また、どのように解決しましたか？
+        </Question>
+        <Answer>
+          The biggest challenges I have been faced should be
+          <br />
+          choosing the tech stack and design the sturcture of the
+          <br />
+          online reservation system rewal project.
+          <br />
+          that was my first time to hold the decision of prototyping the
+          project.
+          <br />
+          So I need to carefully. carefuilly chooose the tech stack, <br />
+          and the implement method that will cause least impact to the existing
+          system.
+        </Answer>
+      </section>
+
+      <section id="success-fail">
+        <Question id="success-fail">
+          現職において、あなたの最大の成果（失敗）は何ですか？
+        </Question>
+        <Answer>
+          成果：
+          <br />
+          once again should be renewal project that I leaded.
+          <br />
+          <br />
+          失敗：
+          <br />
+          in my career, so far no big mistakes have been made.
+          <br />
+          But in my life, well, quite a lot.
+          <br />
+          the biggest mistake should be my final year of unversity,
+          <br />
+          in the final exam of a subject, I submitted a wrong file.
+          <br />
+          And then I defer for a semister.
+          <br />
+          After that experience, I always double and triple check my tasks
+          <br />
+          before hand in. So no big mistakes happened in work.
+        </Answer>
+      </section>
+      <section id="question">
+        <Question id="question">何か聞きたいこと？</Question>
+        <Answer>
+          1. I have asked all of my concerns during the 1st interview.
+          <br />
+        </Answer>
+      </section>
+      <section id="salary">
+        <Question id="salary">希望年収</Question>
+        <Answer>I will just Follow your companys regulations</Answer>
+      </section>
+      <section id="time-available">
+        <Question id="time-available">入社可能時期を教えてください</Question>
+        <Answer>immediate</Answer>
+      </section>
+      <section id="other-interview">
+        <Question id="other-interview">他社の選考状況を教えてください</Question>
+        <Answer>
+          receive one offer from a company
+          <br />
+          others are still in progress
+          <br />
+        </Answer>
+      </section>
+    </main>
+  );
+}
+
+export default function Page({ params: { locale } }: LocaleParam) {
+  unstable_setRequestLocale(locale);
+  const t = useTranslations("page");
+
+  return locale === "en" ? <ENQNA /> : <JPQNA />;
 }

@@ -72,18 +72,14 @@ export default function IndexBar() {
             id: "sep-to-nov",
             label: "9～11月今まで",
           },
-          // {
-          //   id: "siboudouki-linkx",
-          //   label: "志望動機---Linkx",
-          // },
-          // {
-          //   id: "siboudouki-bita",
-          //   label: "志望動機---BitA",
-          // },
           {
-            id: "siboudouki-wamazing",
-            label: "志望動機---wamazing",
+            id: "siboudouki-linkx",
+            label: "志望動機---Linkx",
           },
+          // {
+          //   id: "siboudouki-wamazing",
+          //   label: "志望動機---wamazing",
+          // },
           {
             id: "job-in-shiji",
             label: "前職について",
@@ -92,22 +88,22 @@ export default function IndexBar() {
             id: "lead-project",
             label: "リーダー経験",
           },
-          {
-            id: "self-product-important",
-            label: "自社サービス特に重要な所",
-          },
-          {
-            id: "komatta",
-            label: "userとして困ったこと",
-          },
-          {
-            id: "suggest-service",
-            label: "将来性のあるサービス",
-          },
-          {
-            id: "value-wamazing",
-            label: "mission/value",
-          },
+          // {
+          //   id: "self-product-important",
+          //   label: "自社サービス特に重要な所",
+          // },
+          // {
+          //   id: "komatta",
+          //   label: "userとして困ったこと",
+          // },
+          // {
+          //   id: "suggest-service",
+          //   label: "将来性のあるサービス",
+          // },
+          // {
+          //   id: "value-wamazing",
+          //   label: "mission/value",
+          // },
           {
             id: "choice-of-tech",
             label: "技術の選定基準",
