@@ -233,47 +233,7 @@ function JPQNA() {
           決意して応募しました。
         </Answer>
       </section> */}
-
-      {/* <section id="siboudouki-bita">
-        <Question id="siboudouki-bita">
-          何故うちの会社?（志望動機---BitA）
-        </Question>
-        <Answer>
-          私の志望動機は、三つあります。
-          <br />
-          <br />
-          一つ目は、御社の「仲間と共に」の思いに共感しました。
-          <br />
-          ITエンジニアというキャリアにおいて、「個」の強さがよく強調されます。
-          <br />
-          しかし個人の能力は有限で、不足している部分を、仲間が
-          <br />
-          チームが、埋め合わすことができます。
-          <br />
-          チームワークは、よりいい結果をもたらす。
-          <br />
-          私はそう考えています。
-          <br />
-          <br />
-          二つ目は、御社のプライム案件担当の比率が高く、
-          <br />
-          上流工程から携わる機会が多いと考えています。
-          <br />
-          このすぐれた環境でもっとエンジニアとしての経験を
-          <br />
-          積んでおきたいと思います。
-          <br />
-          <br />
-          そして三つ目の原因は、
-          <br />
-          私の一番得意なスキル、リアクトが、
-          <br />
-          御社のこのポジションでで活かせると思います。
-          <br />
-        </Answer>
-      </section> */}
-
-      <section id="siboudouki-wamazing">
+      {/* <section id="siboudouki-wamazing">
         <Question id="siboudouki-wamazing">
           何故うちの会社?（志望動機---wamazing）
         </Question>
@@ -291,6 +251,46 @@ function JPQNA() {
           （先ほど申した通り）私は自分が作ったサービスが、
           <br />
           BtoBではなく、BtoCで、色んな人に使われたです。
+          <br />
+        </Answer>
+      </section> */}
+
+      <section id="siboudouki-play">
+        <Question id="siboudouki-play">
+          何故うちの会社?（志望動機---play）
+        </Question>
+        <Answer>
+          私の志望動機は、割と単純ですね
+          <br />
+          今までずっと見る側、サービスを使う側として
+          <br />
+          生きていきたのですが
+          <br />
+          Huluとか、Disney+とか、ネットフリックスとか、らにいえばニコニコ動画とyoutubeみたいなサービス
+          <br />
+          動画配信サービスは日常生活に溶け込んで、今じゃもう当たり前の存在になりました。
+          <br />
+          使う側として、動画配信の魅力がよくわかります。
+          <br />
+          実際に開発を携われる側になってみたい気持ちを持つ人間、たぶん私以外にも、たくさんいますね。
+          <br />
+          しかし関与したい気持ちがあるとしても、そう簡単に入れる業界ではないです。
+          <br />
+          実際香港に居た頃、こういう配信サービスを提供する会社殆どございませんでした。
+          <br />
+          唯一の一社、viuTVという会社ですが、
+          <br />
+          新卒の頃応募しましたが、面接の機会もありませんでした。あとで調べたら、新卒は雇わない会社らしいです。
+          <br />
+          本来なら経験を積んで、もう一度挑戦しようと思いましたが、
+          <br />
+          しかし今現在、私は日本に居ます、そして日本での暮らしも <br />
+          気に入りましたの、暫く、数年以内は香港に帰って仕事をするつもりはないです。
+          <br />
+          そこで仕事探すために、色んな求人サイトで検索しましたが、偶然に御社の求人を見つけまして、
+          <br />
+          丁度動画配信サービスサービスの開発が仕事なの、応募しました。
+          <br />
           <br />
         </Answer>
       </section>
@@ -375,14 +375,14 @@ function JPQNA() {
           <br />
           一般人にとって、必ずしも同じように見えるわけじゃないです。
           <br />
-          だからUIUXにおいて、華麗なUIよりも、目指すのは「誰でも簡単に使いこなせる」UXですね。
+          だからUIUXにおいて、目指すのは「誰でも簡単に使いこなせる」UXですね。
           <br />
-          それ以外も、サービスの提供対象、例えば国や地域、年齢層、宗教とかで、適切なデザインやサービスを提供すること。
+          それ以外も、サービスの提供対象、例えば国や地域、年齢層とかで、適切なデザインやサービスを提供すること。
           <br />
         </Answer>
       </section>
 
-      <section id="komatta">
+      {/* <section id="komatta">
         <Question id="komatta">
           userとして地方に行ったときは困ったことはありますか?
         </Question>
@@ -406,9 +406,9 @@ function JPQNA() {
           一週間かけてようやく本名に変更できました。
           <br />
         </Answer>
-      </section>
+      </section> */}
 
-      <section id="suggest-service">
+      {/* <section id="suggest-service">
         <Question id="suggest-service">
           海外向けのユーザーにどのようなサービスが将来性ありそうなのか？
         </Question>
@@ -429,9 +429,9 @@ function JPQNA() {
           <br />
           だから観光客向けの翻訳アプリは現在でも充分将来性があります。
         </Answer>
-      </section>
+      </section> */}
 
-      <section id="value-wamazing">
+      {/* <section id="value-wamazing">
         <Question id="value-wamazing">wamazingのmission/valueについて</Question>
         <Answer>
           【ミッションに関して】
@@ -487,6 +487,36 @@ function JPQNA() {
           ユーザーの期待をうわ回るサービスを提供するために、常に学び続ける姿勢も重要だと思います。
           <br /> <br />
         </Answer>
+      </section> */}
+
+      <section id="value-play">
+        <Question id="value-play">playのvalueについて</Question>
+        <Answer>
+          THINK USERS
+          <br />
+          お客様の先にいるユーザーを意識したサービス、プロダクトづくりを大切にします。
+          <br />
+          <br />
+          IMPROVE
+          <br />
+          現状に満足せず、もっと良くなるにはどうしたら良いかを常に考え改善します。
+          <br />
+          <br />
+          FAIRNESS
+          <br />
+          自身にも、またあらゆるステイクホルダーに対しても、誠実に公正に向き合います。
+          <br />
+          <br />
+          ANTENNA
+          <br />
+          新しい情報に対するアンテナをいつも張り巡らせ、良いと思うものは積極的に取り入れます。
+          <br />
+          <br />
+          OWNERSHIP
+          <br />
+          あらゆることを自分ごととして捉え、様々な問題や課題に主体性と責任を持って取り組みます。
+          <br />
+        </Answer>
       </section>
 
       <section id="choice-of-tech">
@@ -515,17 +545,6 @@ function JPQNA() {
           <br />
           フレームワークのパフォーマンス次第です
           <br />
-          私の場合は、香港というか、中国においてvue.jsの方が支持率が圧倒的とはいかにが、とても高い
-          <br />
-          vue.jsの設計者本人Evan Youは中国人ですので
-          <br />
-          さらにフレームワーク自体、その背後に、big
-          techからバックアップされていない。
-          <br />
-          開発もメンテナンスも完全にコミュニティの力だけで行う。
-          <br />
-          それなのに今は三大フレームワークと言われるほどまで成長してきました
-          <br />
           <br />
           私がリーダーとして技術を選定する時、候補に幾つを考えました。
           <br />
@@ -546,7 +565,7 @@ function JPQNA() {
           <br />
           Angularは難易度高いから論外。
           <br />
-          svelteはパフォーマンスがいいけど、わかる人が少ないから同じく論外。
+          svelteはパフォーマンスがいいけど、わかる人が少ないから不採用。
           <br />
           残りのvue.js、パフォーマンス良くて、分かりやすくて、新卒でもすぐ習得でき、だから決めました。
         </Answer>
@@ -560,16 +579,15 @@ function JPQNA() {
           <br />
           何せ、背後にMETAとvercelといった大企業があります。
           <br />
+          コミュニティが大きくて、ライブラリが充実のところですね
           <br />
           劣： 欠点としは、他のフレームワークと比べてややこしい部分があります
           <br />
           functional componentのせいでい、色んなhooksを使わないといけない
           <br />
-          特にobjectやarrayを更新する時、丸ごと更新しないといけないこと。
+          特にobjectやarrayを更新する時、丸ごと更新しないといけない部分ですね。
           <br />
-          そしてthrottleやdebounceとか,
-          <br />
-          非同期処理が、useCallbackやuseMemoで保存しないと使えないことですね。
+          そして非同期処理が、useCallbackやuseMemoで保存しないといけないことですね。
           <br />
           あとはCSSカプセル化できない部分かな。
           <br />
@@ -686,9 +704,7 @@ function JPQNA() {
       <section id="other-interview">
         <Question id="other-interview">他社の選考状況を教えてください</Question>
         <Answer>
-          今のところ、他に二社が面接の予定があります。
-          <br />
-          中に一社が二次面接となります。
+          今のところ、一社が内定、二社が結果待ち、二社が面接が一次面接待ち
           <br />
         </Answer>
       </section>
