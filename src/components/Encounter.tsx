@@ -83,13 +83,13 @@ const Encounter = () => {
       opacity: [0, 1, 1, 0],
       transition: {
         // time: [0, 4, 8, 12],
-        duration: 3,
+        duration: 5,
       },
     });
 
     setTimeout(() => {
       setIsShow(false);
-    }, 3000);
+    }, 5000);
   };
 
   // start animation
