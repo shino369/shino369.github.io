@@ -17,7 +17,12 @@ export const SKILLSET = [
   "docker",
 ];
 
-export const SERVICES = ["spa", "staticsite", "mobileapp", "api"];
+export const SERVICES = [
+  { name: "spa", img: "/service-1.jpg" },
+  { name: "staticsite", img: "/service-2.jpg" },
+  { name: "mobileapp", img: "/service-3.jpg" },
+  { name: "api", img: "/service-4.jpg" },
+];
 
 export const RESUME = [
   {

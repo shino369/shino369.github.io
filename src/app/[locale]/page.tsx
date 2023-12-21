@@ -77,7 +77,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
       </section>
 
       <section
-        className="flex flex-col items-center justify-around  py-8 sm:py-20 md:py-24 max-height-dvh relative"
+        className="flex flex-col items-center justify-around  py-8 sm:py-20 md:py-24 relative"
         id="techstack"
       >
         <BgImage
@@ -115,7 +115,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
               <a
                 href={`/${locale}/work?search=${skill}`}
                 key={skill}
-                className="w-[96px] md:w-[128px] pr-4 max-h-[64px] h-[64px] md:h-[96px] md:max-h-[96px]  filter contrast-50 hover:contrast-100"
+                className="w-[128px] md:w-[160px] px-4 max-h-[64px] h-[64px] md:h-[96px] md:max-h-[96px]  filter contrast-50 hover:contrast-100"
               >
                 <div className="flex flex-col items-center mb-2 character-shadow">
                   <Image
@@ -145,7 +145,7 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
 
         <InViewDiv className="w-full flex justify-center">
           <ListWrapper
-            className="grid grid-cols-2 max-w-[calc(80vw+2rem)] md:max-w-[800px] bg-[rgba(255,255,255,0.5)] p-2 md:p-4 rounded-xl relative shadow-md"
+            className="flex flex-wrap justify-center max-w-[calc(80vw+2rem)] md:max-w-[1600px] p-2 md:p-4"
             variant={{
               open: {
                 transition: {
@@ -162,26 +162,28 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
               },
             }}
           >
-            <BgImage
-              wrapperClassName="rounded-xl overflow-hidden"
-              src="/servicebg.jpg"
-              alt="code background"
-              width={720}
-              height={320}
-              priority
-            />
             {SERVICES.map((cando, i) => (
               <ListItem
-                key={cando}
-                className="flex justify-center text-xs md:text-lg hover:text-white"
+                key={cando.name}
+                className="flex relative w-[450px] justify-start text-xs md:text-lg hover:text-white rounded-xl shadow-md m-4 h-40 md:h-60 group overflow-hidden"
               >
-                <div className="m-3 relative text-center break-all p-2 overflow-hidden">
-                  <HoverDiv
-                    className="absolute w-full h-full top-0 left-0"
-                    even={i % 2 === 0}
-                  />
-                  {t(cando)}
+                <div className="relative rounded-s-xl w-40 flex justify-center px-2 h-full items-center text-center break-all overflow-hidden  group-hover:text-white font-bold text-black">
+                  <div className="absolute w-full h-full bg-[rgba(255,255,255,0.8)] origin-right top-0 left-0 -z-10 transition-transform duration-300 scale-x-100 group-hover:scale-x-0" />
+                  <div className="absolute w-full h-full bg-[rgba(0,0,0,0.5)] origin-left top-0 left-0 -z-10 transition-transform duration-300 scale-x-0 group-hover:scale-x-100" />
+                  {t(cando.name)}
                 </div>
+       
+                  <BgImage
+                    wrapperClassName="rounded-e-xl overflow-hidden group-hover:scale-125 transition-transform duration-300"
+                    opacity="opacity-90"
+                    contrast={false}
+                    src={cando.img}
+                    alt="code background"
+                    width={720}
+                    height={320}
+                    priority
+                  />
+          
               </ListItem>
             ))}
           </ListWrapper>
@@ -233,12 +235,12 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                         {
                           label: t("_profile"),
                           hover: t("resume"),
-                          href: 'profile'
+                          href: "profile",
                         },
                         {
                           label: t("_resume"),
                           hover: t("resume"),
-                          href: 'resume'
+                          href: "resume",
                         },
                       ].map((t) => (
                         <li

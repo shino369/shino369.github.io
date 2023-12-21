@@ -9,6 +9,8 @@ export default function BgImage({
   priority,
   wrapperClassName = "",
   imgClassName = "",
+  opacity = "opacity-30",
+  contrast = true,
 }: {
   src: string;
   alt: string;
@@ -17,11 +19,15 @@ export default function BgImage({
   priority?: boolean;
   wrapperClassName?: string;
   imgClassName?: string;
+  opacity?: string;
+  contrast?: boolean;
 }) {
   return (
     <div
       className={clsx(
-        "w-full h-full absolute top-0 left-0 opacity-30 filter brightness-50 -z-20",
+        "w-full h-full absolute top-0 left-0 -z-20",
+        contrast && "filter brightness-50",
+        opacity,
         wrapperClassName
       )}
     >
