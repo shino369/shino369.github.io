@@ -720,36 +720,41 @@ function ENQNA() {
       <section id="greetings">
         <Question id="greetings">挨拶</Question>
         <Answer>
-          Hello, nice to meet you. I&apos;m Wong Tsz Chung, you can call me
-          wong, or Anthony.
-          <br />
-          I came from from Hong Kong, and recently living in Japan.
-          <br />
+          {`Hello, nice to meet you. I'm Wong, or you can call me Anthony.`}
         </Answer>
       </section>
 
       <section id="self-intro">
-        <Question id="self-intro">自己紹介</Question>
+        <Question id="self-intro">Self Intro</Question>
         <Answer>
           {`
-            Ok. Let me Introduction myself.\n
-            I'm Anthony from Hong Kong.\n
-            I hold a degree in Information Engineering from City University of Hong Kong, \n
-            with a minor in Japanese Studies.\n
-            After graduating, I worked at two companies. The first was\n
-            Appicidea IT Solutions, a startup company focusing on subcontracting projects \n
-            I worked on fullstack using Java Spring Boot, Angular, React.js, and React Native. \n
-            
-            Later, I joined Shiji Information Technology, an IT company\n
-            serving the global hospitality sector. 
-            There, I was involved in fullstack development of a SaaS product, \n
-            called "table management system", using React.js, Vue.js, and cakePHP.\n\n
-            In my free time, I stay updated on the latest tech news and like learning new things.\n
-            Currently, I'm exploring new Next.js 14 App Router.\n\n
-            That sums up my career journey so far. \n
-
-            I hope I can use my skill, contribute to the team, learn more and growth together with Linkx.
-            Thank you for your time.
+            Allow me to introduce myself. \n
+            I am Anthony, originally from Hong Kong.  \n
+            I earned a degree in Information Engineering from  \n
+            City University of Hong Kong,  \n
+            with a minor in Japanese Studies. \n
+            \n 
+            After I graduated,  \n
+            I began working at Appicidea IT Solutions,  \n
+            a growing startup specializing in subcontracting projects.  \n
+            There, I gained hands-on experience in full-stack development  \n
+            using Java Spring Boot, Angular, React.js, and React Native. \n
+            \n 
+            Later, I had the opportunity to work in Shiji Information Technology, \n
+            a global IT company serving the hospitality sector. \n
+            I contributed to the full-stack development of  \n
+            a SaaS product known as the "Table Management System", \n
+            working with framworks such as React.js, Vue.js, and CakePHP. \n
+            \n 
+            In my private time,  \n
+            I love to stay close with tech innovations \n
+            and enjoy learning new concepts.  \n
+            Recently, I am exploring the newly released features of Next.js. \n
+            \n 
+            I hope I can make a meaningful contribution to the team at Linkx,  \n
+            learn and grow simultaneously. \n
+            \n 
+            Thank you.
           `}
         </Answer>
       </section>
@@ -758,318 +763,325 @@ function ENQNA() {
         <Question id="pr">自己PRお願いします</Question>
         <Answer>
           {`
-            I'm confident that I can handle most modern javascript framework in a short period of time. \n
-            And besides fronend developement, I am also capable for fullstack development. \n
-            As long as it's not as complicated as rust or c++ then it will be fine. \n
           `}
         </Answer>
       </section>
       <section id="university">
-        <Question id="university">大学について教えてください</Question>
+        <Question id="university">University</Question>
         <Answer>
-          About the degree, Information Engineering,
-          <br />
-          It contains subjects of computer science,
-          <br />
-          like programming, data structure, database, os
-          <br />
-          plus some networking and signal related subject
-          <br />
-          and there are some modern technology course like teaching aws and
-          <br />
-          web programming framework (java springboot)
-          <br />
+          {`
+            About the degree, Information Engineering,\n
+            It contains subjects of computer science,\n
+            like programming, data structure, database, os\n
+            plus some networking and signal related subject\n
+            and there are some modern technology course like teaching aws and\n
+            web programming framework (java springboot)
+          `}
         </Answer>
       </section>
 
       <section id="reason-of-resign">
-        <Question id="reason-of-resign">転職の理由は？</Question>
+        <Question id="reason-of-resign">Reason of Resignation</Question>
         <Answer>
-          For the first company, the reason was about the learning environment.
-          <br />
-          <br />
-          I was a fresh graduate at that time, no experience at all. The company
-          did not provide on job training. <br />
-          But I was reqested to start doing tasks since the first week.
-          <br />
-          And all the senior dev are buzy on their work, I have to learn all by
-          myself.
-          <br />
-          And most importantly, there was no code review
-          <br />
-          I cannot even know if I wrote my code correctly or not.
-          <br />
-          So I decided to find a company with better environment.
-          <br />
-          <br />
-          And then I came to the second company. The collegues were nice,
-          <br />
-          the senior devlopers were willing to teach, and there was code review.
-          <br />
-          <br />
-          For the reason I left the second company, actually I did not plan to
-          leave. <br />
-          But in late April this year, I noticed that Japanese Government
-          announced a new visa scheme. <br />
-          that I am eligible to apply. After a month of consideration, <br />
-          I did not want to miss the chance because I always wanted to live in
-          Japan. <br />
-          I applied in June, got the visa in July, and then resigned in August.
-          <br />
+          {`
+            In my first job, as a fresh graduate,\n
+            I was looking for a nurturing and instructive environment \n
+            to kickstart my career. \n
+            Although they offered good projects,\n
+            I found that the learning opportunities are limited \n
+            due to the lack of on-job training and code reviews.\n
+            \n
+            Therefore, I decided to move on to a workspace\n
+            that offered more supportive learning benefits.\n
+            \n
+            In the second company,\n
+            I appreciated the positive culture at Shiji,\n
+            with approachable seniors \n
+            and strong emphasis on mentorship.\n
+            Ironically, I hadn't planned on leaving. \n
+            However, an unexpected opportunity arose in late April this year.\n
+            when the Japanese Government introduced a new visa scheme.\n
+            I saw this as a unique chance, \n
+            because I always wanted to live in Japan.\n
+            So, After a month of consideration, \n
+            I applied for it and subsequently resigned from Shiji \n
+            following the visa approval. 
+          `}
         </Answer>
       </section>
       <section id="reason-to-japan">
-        <Question id="reason-to-japan">なぜ日本に来た？</Question>
+        <Question id="reason-to-japan">Why come to Japan?</Question>
         <Answer>
-          just like many other foreigner, I love japanese culture like anime and
-          comic
-          <br />
-          and is planning to live in Japan in the future.
-          <br />
-          But it is quite difficult to apply japanese job oversea
-          <br />
-          <br />
-          but surprisingly, the japanese government launched the new visa
-          programme
-          <br />
-          that anyone who graduated from a university ranked within 100 <br />
-          in the world university ranking can come to Japan.
-          <br />
-          It was a good new to me.
-          <br />
-          I applied, and eventually get the visa, and then i am here.
-          <br />
+          {`
+            just like many other foreigner, I love japanese subculture like anime and comic\n
+            and is planning to live in Japan in the future.\n
+            But it is quite difficult to apply japanese job oversea\n
+            \n
+            Surprisingly, the japanese government launched the new visa programme\n
+            I saw this as a good chance and applied.
+          `}
         </Answer>
       </section>
       <section id="sep-to-nov">
-        <Question id="sep-to-nov">9～11月何してきました？</Question>
+        <Question id="sep-to-nov">
+          What have done from September to November?
+        </Question>
         <Answer>
-          In Sepetember it is mainly about preparing my life in Japan.
-          <br />
-          Although the housing is already addressed before I came to Japan,
-          <br />
-          daily supplies and furnitures is still needed, so I stayed in hotel
-          for week,
-          <br />
-          and then, other things like mobile number, bank account, registeration
-          of resident...
-          <br />
-          After all of that, reached out with my friends who are living in
-          Japan, and asked for advices.
-          <br />
-          <br />
-          And then in October, I decided to move to a better room. <br />
-          My previous room was a one room apartment in Bunkyouku. 13m2. <br />
-          The living space was really small. But the rental rate is quite high.
-          <br />
-          So I spent a month to find a new one.
-          <br />
-          <br />
-          Finally moved to edogawaku, nakakasai, recommended by my friend.
-          <br />
-          After everything calm down, I started my job hunting.
-          <br />
+          {`
+            The time from September to November has been a transition period for me.\n
+            September was mainly about setting up my life in Japan - \n
+            from addressing housing needs to obtaining essential daily supplies. \n
+            Even though I had already secured a place before my arrival in Japan, \n
+            there were other things like purchasing furniture, \n
+            getting a local mobile number, setting up a bank account, \n
+            and registering as a resident. \n
+            I also seek for advice from friends already living in Japan \n
+            to ensure a smooth transition.\n
+            \n
+            In October, I decided to relocate to a more spacious apartment. \n
+            My previous place was a single-room apartment in Bunkyouku,\n
+            which, although having a small room size, it had a relatively high rental. \n
+            I spent a month to find a more suitable option, \n
+            finally moving to Edogawaku, Nakakasai, as per one of my friend's recommendation.\n
+            \n
+            Once everything was in place, \n
+            I preparde myself and started my job searching. \n
+          `}
         </Answer>
       </section>
       <section id="siboudouki-linkx">
         <Question id="siboudouki-linkx">
-          何故うちの会社?（志望動機---Linkx）
+          why our company? (志望動機---Linkx)
         </Question>
         <Answer>
-          The reason I apply Linkx is
-          <br />
-          I saw Linkx has developed an AI application called SHIKAI, which
-          provide service for visually disabled people.
-          <br />
-          I think Linkx is a company that really cares about society.
-          <br />
-          I always think that technology should be used for a better and more
-          convenient world.
-          <br />
-          The SHIKAI project initialited my interest towards linkx.
-          <br />
-          <br />
-          And then after I search more,
-          <br />
-          I believe that Linkx is a perfect place for me to take more
-          challenges,
-          <br />
-          and it can provide me a chance to be a part of the a talented team,
-          <br />
-          get the opportunities to work with skillful software engineer and
-          learn from their experiences, <br />
-          having chances to use some of the cutting-edge technology
-          <br />
-          ulitmately use the skill to solve more promblems in the modern
-          society.
-          <br />
-          In the second interview, the live coding test, it proved that my
-          thought is correct.
-          <br />
-          Actually it was my first time doing live coding, I was very nervious.
-          <br />
-          but mr Pulkit guided me paitently, and he was able to point out my
-          mistakes and remind me instantly.
-          <br />
-          So that at last I can successfully complete the task.
-          <br />I really hope that I can join Linkx, learn more and contribute
-          to the team.
+          {`
+            I saw Linkx has developed an AI application called "SHIKAI", \n
+            which provide service for visually impaired people.\n
+            I always think that technology should be used for a better and more convenient world.\n
+            I believe that Linkx is a company that really cares about the society.\n
+            \n
+            Although I was initially attracted to Linkx\n
+            because of this remarkable "SHIKAI" project, \n
+            my interest get deeper as I learned more about the current focus. \n
+            I believe that fintech and lab automation are essential and exciting fields\n
+            that can also create significant impact on society directly or indirectly \n
+            by digital transforming finance and research.\n
+            I see a great opportunity here to expand my knowledge and skills\n
+            in these cutting-edge areas.\n
+            I believe that Linkx is a perfect environment for me\n
+            to learn more, challenge more and grow with the team.\n
+          `}
+        </Answer>
+      </section>
+      <section id="exp">
+        <Question id="exp">
+          Do you have any experience in fintech or lab automation?
+        </Question>
+        <Answer>
+          {`
+            My primary experience is in general development \n
+            rather than specific sectors like fintech or lab automation. \n
+            However, I'm always eager to learn and adapt to new technology and sectors.\n
+            Given the mentorship and talented team here, \n
+            particularly individuals like Pulkit, who guided me in the last interview.\n
+            I'm confident that I would contribute and grow quickly in these areas.\n
+          `}
+        </Answer>
+      </section>
+      <section id="different-senior">
+        <Question id="different-senior">
+          what if you are assigned to a different senior engineer
+        </Question>
+        <Answer>
+          {`
+            While I had a positive interaction with Pulkit, \n
+            I believe that everyone in your team has valuable experience and skills to share. \n
+            If I have the opportunity to work with another senior engineer, \n
+            I would embrace that chance. \n
+            In the end, it's all about the team and the values of the company\n
+            that make it great a place to work rather than a single individual.
+          `}
         </Answer>
       </section>
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">
-          前職、どのような責務を負っていますか？
+          What were your responsibilities in your previous job?
         </Question>
         <Answer>
-          前職について
-          <br />
-          My responisiblity in Shiji Information Technology was
-          <br />
-          mainly adding new features into the existing application apon the
-          requirements of out client.
-          <br />
-          <br />
-          And beside new features, there were also bug fixing, security
-          loopholes fixing,
-          <br />
-          and most importantly, dealling with technical debt. <br />
-          Old product always comes with technical debt
-          <br />
-          And to deal with one of the technical debt,
-          <br /> I directed a mini renewal project by adding vue.js <br />
-          into the existing online reservation page.
-          <br />
+          {`
+            In my role at Shiji Information Technology, \n
+            I was primarily responsible for enhancing our existing application\n
+            by adding new features as per client requirements.\n
+            In addition to the development of new functionalities,\n
+            my duties also included troubleshooting and fixing bugs,\n
+            patching security loopholes,\n
+            and addressing technical debt within older parts of the products.
+          `}
         </Answer>
       </section>
 
       <section id="lead-project">
         <Question id="lead-project">
-          リーダーとなって業務を推進したエピソードを教えてください。
+          Can you tell me about a project that you have led?
         </Question>
         <Answer>
-          そうですね
-          <br />
-          {/* 古いオンライン予約システムの技術的負債を処理するために */}
-          it was initially just a task requested by the client.
-          <br />
-          adding a modal dialog that can select personal preference like
-          vegetrian or not, or any allergy, etc.
-          <br />
-          and then after selecting or inputing the data, bind the data to the
-          main reservation form.
-          <br />
-          well it was quite simple feature, and can be done by jQuery alone.
-          <br />
-          but considering there will be more and more similar interactive
-          features are required in the future,
-          <br />
-          <br />
-          plus, at that time, the code base of the project was already a mess.
-          with Heavy technical debt.
-          <br />
-          So I suggested to the project manager, to add vue.js into it,
-          <br />
-          and gradually replace the whole page
-          <br />
-          And then I was assigned as leader to do the task, followed by 2
-          teammates.
-          <br />
-          And then studying feasible technical stack, design the program
-          structure, and implement it.
-          <br />
-          it was quite a good experience for me.
-          <br />
+          {`
+              Sure,\n
+              One of the most fulfilling projects I got to lead was a mini-renewal project\n
+              to tackle some of the technical debt. 
+              I had the opportunity to integrate vue.js\n
+              into our existing online reservation page.\n
+              This task not only improved the functionality of the product \n
+              but also offered me a chance to expand my development skills.\n
+              \n
+
+
+
+              Initially We received a request from a client \n
+              to add new features to the old reservation page.\n
+              I was given the responsibility of handling this task. \n
+              Upon assessment, I noticed that current code base, \n
+              particularly the frontend, \n
+              was rather outdated and messy, making it difficult to navigate and debug.\n
+              \n
+              Realizing the existing technical debt,\n
+              I recommended to my managers that we consider updating it\n
+              by adding a new framework to improve the maintainability \n
+              and enable future growth.\n
+              Thankfully, they agreed, 
+              and I was provided the opportunity\n
+              to lead the mini-renewal project.\n
+              Studying feasible technical stacks, \n
+              designing program structure, and implementing it.\n
+              And for difficulties that I was not able to solve alone,\n
+              I seeked advices from the seniors.\n
+              I have learnt a lot in the process. \n
+              It was an enlightening experience that reinforced my understanding of \n
+              the importance of writing clean and maintainable code. \n
+              I am grateful to have had the opportunity to lead this small project and learn from it.\n
+          `}
         </Answer>
       </section>
 
       <section id="choice-of-tech">
         <Question id="choice-of-tech">技術の選定は何を基準にする？</Question>
-        <Answer>
-          For choosing technical stack, in my opinions, <br />
-          there are several important things need to take care of
-          <br />
-          The first is community size.
-          <br />
-          The bigger it is, more supports can be provided. <br />
-          Like bug fixing and security enhancement.
-          <br />
-          And the second is to think about how difficult will it be, <br />
-          if we want to hire someone who know that technology.
-          <br />
-          And how difficult will it be, when learning it from zero.
-          <br />
-          And the last one is simply base on the usecase and performance.
-          <br />
-        </Answer>
+        <Answer></Answer>
       </section>
       <section id="react-pos-con">
         <Question id="react-pos-con">Reactの優/劣？</Question>
-        <Answer>
-          優:
-          <br />
-          big community size. backed by facebook and vercel.
-          <br />
-          <br />
-          劣：
-          <br />
-          because it is functional component, the behaviour is different from
-          other frameworks
-          <br />
-          like vue.js, angular
-          <br />
-          when assigning object and array, it need to repalce the whole object
-          and array.
-          <br />
-          and you need wrap those asynchronous operation into a usecallback or
-          usememo hook
-          <br />
-          and it does not have css encapsulation
-          <br />
-          The facenook team recently release the styleX library to due the
-          problem module css.
-          <br />
-          but in my opinions, it just makes the things more complicated.
-        </Answer>
+        <Answer></Answer>
       </section>
 
       <section id="strength">
-        <Question id="strength">強みはなんですか？</Question>
+        <Question id="strength">what is your strength?</Question>
         <Answer>
-          I guess my biggest strength is not afraid to take challenge and learn.
-          <br />
-          For working and programming, it is about to actively learning new
-          technology.
-          <br />
-          Do not afraid learning something that I have never touched before.
-          <br />
-          When I graduated, the only programming language I know was c++ and
-          Java.
-          <br />
-          But after I started working, I keep learning and adapting new skills
-          that is required for my job.
-          <br />
-          And able to take challenge like leading a small project.
-          <br />
-          And in daily live, I challenge myself by came to Japan alone.
-          <br />
-          As a foreigner, everyday in Japan is a challenge, everyday is fun and
-          exicting.
+          {`
+           One of my strength is my willingness to embrace challenges and learn new things. \n
+           Whether it's in my professional life or my personal life, \n
+           I see every challenge as an opportunity to grow. \n
+           \n
+           Take programming, for instance.  \n
+           When I first graduated, my programming knowledge was limited to C++ and Java only. \n
+           But I knew that continuous learning is important in the technology world.  \n
+           Therefore, I kept an open mind and progressively \n
+           adapted to technologies and programming languages  \n
+           that are required by my job, \n
+           and even took on the challenge of leading a minor project. \n
+           \n
+           On the personal side,  \n
+           moving to Japan alone was a step outside my comfort zone.  \n
+           In Japan, being a foreigner here is always a challenge. \n
+           but I find it both fun and exciting. \n
+           I believe it's important to learn and grow from each challenge we face. \n
+          `}
         </Answer>
       </section>
 
       <section id="weakness">
-        <Question id="weakness">欠点は何ですか？</Question>
+        <Question id="weakness">what is your weakness?</Question>
         <Answer>
-          my biggest weakness should be lack of vocabulary.
-          <br />
-          especially using languages other than my mother language.
-          <br />
-          It is quite difficult to express my throught corrently
-          <br />
-          <br />
-          I am still improving it.
-          <br />
+          {`
+            One area I want to improve on is multitasking.\n
+            I am someone who prefers to concentrate on one project at a time\n
+            to ensure its quality,\n
+            but I understand that the real working environment often requires mult-tasking. \n
+            To deal with it, I've started to work on task management strategies, \n
+            using tools to organize my workflow, and consistently remind myself \n
+            to switch tasks and monitor progress. \n
+            While I'm still enhancing this skill, \n
+            I've seen improvements and will continue to work on it \n
+            to be more efficient and adaptable.\n
+          `}
+        </Answer>
+      </section>
+
+      <section id="pressure-deadline">
+        <Question id="pressure-deadline">
+          How do you work under pressure or tight deadlines
+        </Question>
+        <Answer>
+          {`
+            I understand that chasing deadlines are a part of the job, \n
+            especially in an innovative and fast-paced industry like fintech.\n
+            In such situations, I prioritize my work, \n
+            ensure which task is more important and should be done first.\n
+            Also having clear communication with teamates, \n
+            and do not hesitate to ask for help from them.\n
+            helping each other efficiently generally produce a better result.
+          `}
+        </Answer>
+      </section>
+
+      <section id="keepup-changes">
+        <Question id="keepup-changes">
+          How do you keep up with changes and advancements in technology
+        </Question>
+        <Answer>
+          {`
+            Technology is always evolving and staying updated is a necessity in our field. \n
+            I regularly read technology-focused blogs and news to keep it up. \n
+            One way that can effectively let tech new around your daily life is, \n
+            subscribing those tech media in social networking site like facebook and twitter. \n
+            then even during your private time, maybe taking a break,\n
+            those news come into your eyes \n
+          `}
+        </Answer>
+      </section>
+
+      <section id="explain-tech">
+        <Question id="explain-tech">
+          Can you explain a technical concept or process in a way that a
+          non-technical person can understand?
+        </Question>
+        <Answer>
+          {`
+            It's crucial to communicate effectively to non-technical stakeholders.  \n
+            Usually using real life example or a similar situation to metaphor the that will works. \n
+            For example, let's consider the concept of machine learning.  \n
+            It's similar to teaching a child how to walk.  \n
+            Firstly, the child observes and learns from adult,  \n
+            then it tries and falls many times,  \n
+            but after each fall, it improves until it is finally able to walk. \n
+          `}
+        </Answer>
+      </section>
+
+      <section id="handle-conflict">
+        <Question id="handle-conflict">
+          How would you address disagreement or conflict in your team?
+        </Question>
+        <Answer>
+          {`
+            Healthy disagreement is a part of teamwork \n
+            and is often a source of creative ideas.  \n
+            When dealing with such situations,  \n
+            I believe that communicating openly,  \n
+            listening patiently to understand the other's point of view,  \n
+            and then rationally discussing should the best choice of action.  \n
+            It's important to keep the main goal in mind  \n
+            and respect everyone's perspectives. \n
+          `}
         </Answer>
       </section>
 
@@ -1087,7 +1099,7 @@ function ENQNA() {
           that was my first time to hold the decision of prototyping a whole
           project.
           <br />
-          So I need to carefully. Carefuilly chooose the tech stack, <br />
+          So I need to be careful. Carefuilly chooose the tech stack, <br />
           and the implement method that will cause least impact to the existing
           system.
         </Answer>
@@ -1105,7 +1117,7 @@ function ENQNA() {
           <br />
           失敗：
           <br />
-          in my career, so far no big mistakes have been made.
+          Fortunately no big mistakes have been made so far.
           <br />
           But in my life, well, quite a lot.
           <br />

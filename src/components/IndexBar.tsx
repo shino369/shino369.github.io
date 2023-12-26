@@ -85,6 +85,14 @@ export default function IndexBar() {
             label: "志望動機---play",
           },
           {
+            id: "exp",
+            label: "experience in fintech",
+          },
+          {
+            id: "different-senior",
+            label: "different senior",
+          },
+          {
             id: "job-in-shiji",
             label: "前職について",
           },
@@ -127,6 +135,22 @@ export default function IndexBar() {
           {
             id: "weakness",
             label: "欠点",
+          },
+          {
+            id: "pressure-deadline",
+            label: "work under pressure"
+          },
+          {
+            id: "keepup-changes",
+            label: "keep up to tech news"
+          },
+          {
+            id: "explain-tech",
+            label: "explain tech"
+          },
+          {
+            id: "handle-conflict",
+            label: "handle conflict"
           },
           {
             id: "biggest-challenge",
