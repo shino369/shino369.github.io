@@ -720,8 +720,8 @@ function ENQNA() {
       <section id="greetings">
         <Question id="greetings">挨拶</Question>
         <Answer>
-          Hello, nice to meet you. I&apos;m Wong, or you can just call me
-          Anthony.
+          Hello, nice to meet you. I&apos;m Wong Tsz Chung, you can call me
+          wong, or Anthony.
           <br />
           I came from from Hong Kong, and recently living in Japan.
           <br />
@@ -732,19 +732,24 @@ function ENQNA() {
         <Question id="self-intro">自己紹介</Question>
         <Answer>
           {`
-            Hello I'm Anthony from Hong Kong.\n
+            Ok. Let me Introduction myself.\n
+            I'm Anthony from Hong Kong.\n
             I hold a degree in Information Engineering from City University of Hong Kong, \n
             with a minor in Japanese Studies.\n
             After graduating, I worked at two companies. The first was\n
-            Appicidea IT Solutions, a small startup focusing on subcontracting projects \n
+            Appicidea IT Solutions, a startup company focusing on subcontracting projects \n
             I worked on fullstack using Java Spring Boot, Angular, React.js, and React Native. \n
+            
             Later, I joined Shiji Information Technology, an IT company\n
             serving the global hospitality sector. 
-            There, I was involved in in-house product fullstack development, using React.js, Vue.js, and cakePHP.\n\n
+            There, I was involved in fullstack development of a SaaS product, \n
+            called "table management system", using React.js, Vue.js, and cakePHP.\n\n
             In my free time, I stay updated on the latest tech news and like learning new things.\n
-            Currently, I'm exploring Next.js 14 App Router.\n\n
-            That sums up my professional journey so far. \n
-            Thanks for your time.
+            Currently, I'm exploring new Next.js 14 App Router.\n\n
+            That sums up my career journey so far. \n
+
+            I hope I can use my skill, contribute to the team, learn more and growth together with Linkx.
+            Thank you for your time.
           `}
         </Answer>
       </section>
@@ -772,7 +777,7 @@ function ENQNA() {
           <br />
           and there are some modern technology course like teaching aws and
           <br />
-          web programming framework (vue.js 2.0 and java springboot)
+          web programming framework (java springboot)
           <br />
         </Answer>
       </section>
@@ -780,42 +785,48 @@ function ENQNA() {
       <section id="reason-of-resign">
         <Question id="reason-of-resign">転職の理由は？</Question>
         <Answer>
-          For the first company, the reason is quite simple, just want to career
-          up.
-          <br />
-          At that time around June of 2021, I saw my company hiring new graduate
-          <br />
-          using a price of, 24k HKD, 5k HKD (approximatly 90k JPY) higher than
-          my salary.
-          <br />
-          And I did not get any salary increment.
-          <br />
-          Maybe it seems fair beacuse it was still 10 months since I joined that
-          company.
-          <br />
-          But also my colleages, well, my senpai, <br />
-          who have worked for several years but did not get <br />
-          reasonable salary increment. His salary was 27K at that moment, <br />
-          and the company is hiring a same level of his position but in 35k HKD
-          <br />
-          So we decided to leave the company together.
+          For the first company, the reason was about the learning environment.
           <br />
           <br />
-          For the secondary company, actually I do not expect to leave. <br />
-          The only reason I leave is because the new Japan Visa has been
-          announced.
+          I was a fresh graduate at that time, no experience at all. The company
+          did not provide on job training. <br />
+          But I was reqested to start doing tasks since the first week.
+          <br />
+          And all the senior dev are buzy on their work, I have to learn all by
+          myself.
+          <br />
+          And most importantly, there was no code review
+          <br />
+          I cannot even know if I wrote my code correctly or not.
+          <br />
+          So I decided to find a company with better environment.
+          <br />
+          <br />
+          And then I came to the second company. The collegues were nice,
+          <br />
+          the senior devlopers were willing to teach, and there was code review.
+          <br />
+          <br />
+          For the reason I left the second company, actually I did not plan to
+          leave. <br />
+          But in late April this year, I noticed that Japanese Government
+          announced a new visa scheme. <br />
+          that I am eligible to apply. After a month of consideration, <br />
+          I did not want to miss the chance because I always wanted to live in
+          Japan. <br />
+          I applied in June, got the visa in July, and then resigned in August.
+          <br />
         </Answer>
       </section>
       <section id="reason-to-japan">
         <Question id="reason-to-japan">なぜ日本に来た？</Question>
         <Answer>
-          just like other forigner, I love japanese culture like anime and comic
+          just like many other foreigner, I love japanese culture like anime and
+          comic
           <br />
           and is planning to live in Japan in the future.
           <br />
           But it is quite difficult to apply japanese job oversea
-          <br />
-          and they have serious screening
           <br />
           <br />
           but surprisingly, the japanese government launched the new visa
@@ -823,6 +834,8 @@ function ENQNA() {
           <br />
           that anyone who graduated from a university ranked within 100 <br />
           in the world university ranking can come to Japan.
+          <br />
+          It was a good new to me.
           <br />
           I applied, and eventually get the visa, and then i am here.
           <br />
@@ -835,7 +848,8 @@ function ENQNA() {
           <br />
           Although the housing is already addressed before I came to Japan,
           <br />
-          daily supplies and furnitures is need, so I stayed in hotel for week,
+          daily supplies and furnitures is still needed, so I stayed in hotel
+          for week,
           <br />
           and then, other things like mobile number, bank account, registeration
           of resident...
@@ -862,23 +876,44 @@ function ENQNA() {
           何故うちの会社?（志望動機---Linkx）
         </Question>
         <Answer>
-          The main reason I apply Linkx is
+          The reason I apply Linkx is
           <br />
-          I saw Linkx has developed an AI application SHIKAI, which provide
-          service for visually disabled people.
+          I saw Linkx has developed an AI application called SHIKAI, which
+          provide service for visually disabled people.
           <br />
-          I think it is company that really cares about society and social
-          minority.
+          I think Linkx is a company that really cares about society.
           <br />
-          I always think that technology should be used for a better world.
+          I always think that technology should be used for a better and more
+          convenient world.
           <br />
-          It initialited my interest towards linkx.
+          The SHIKAI project initialited my interest towards linkx.
           <br />
-          Besides, I think Linkx is a place for me to take more challenges,
           <br />
-          will provide me a chance to learn new skills and become more
-          professional.
+          And then after I search more,
           <br />
+          I believe that Linkx is a perfect place for me to take more
+          challenges,
+          <br />
+          and it can provide me a chance to be a part of the a talented team,
+          <br />
+          get the opportunities to work with skillful software engineer and
+          learn from their experiences, <br />
+          having chances to use some of the cutting-edge technology
+          <br />
+          ulitmately use the skill to solve more promblems in the modern
+          society.
+          <br />
+          In the second interview, the live coding test, it proved that my
+          thought is correct.
+          <br />
+          Actually it was my first time doing live coding, I was very nervious.
+          <br />
+          but mr Pulkit guided me paitently, and he was able to point out my
+          mistakes and remind me instantly.
+          <br />
+          So that at last I can successfully complete the task.
+          <br />I really hope that I can join Linkx, learn more and contribute
+          to the team.
         </Answer>
       </section>
 
@@ -894,20 +929,15 @@ function ENQNA() {
           mainly adding new features into the existing application apon the
           requirements of out client.
           <br />
-          for example our clients complained that the old restaurant reservation
-          statistic calendar
-          <br />
-          was difficult to understander. So we imporve the UI and <br /> into a
-          more clean and straight forwards design, plus some new features.
           <br />
           And beside new features, there were also bug fixing, security
           loopholes fixing,
           <br />
-          and dealling with technical debt. <br /> Personally dealling with
-          technical debt contains the highest ratio.
+          and most importantly, dealling with technical debt. <br />
+          Old product always comes with technical debt
           <br />
           And to deal with one of the technical debt,
-          <br /> I directed a mini revamp project by adding vue.js <br />
+          <br /> I directed a mini renewal project by adding vue.js <br />
           into the existing online reservation page.
           <br />
         </Answer>
@@ -921,24 +951,26 @@ function ENQNA() {
           そうですね
           <br />
           {/* 古いオンライン予約システムの技術的負債を処理するために */}
-          it was initialited by a task requested by the client.
+          it was initially just a task requested by the client.
           <br />
           adding a modal dialog that can select personal preference like
-          vegetrian, or not containing pork, etc.
+          vegetrian or not, or any allergy, etc.
           <br />
-          and then after selecting, bind the data to the main reservation form.
+          and then after selecting or inputing the data, bind the data to the
+          main reservation form.
           <br />
           well it was quite simple feature, and can be done by jQuery alone.
           <br />
-          but what if more and more similar features are required in the future?
+          but considering there will be more and more similar interactive
+          features are required in the future,
           <br />
-          and more interactive feature is needed?
           <br />
           plus, at that time, the code base of the project was already a mess.
-          Heavy technical debt.
+          with Heavy technical debt.
           <br />
-          So I suggested to the project manager, to add vue.js into the project
-          for doing the dynamic part.
+          So I suggested to the project manager, to add vue.js into it,
+          <br />
+          and gradually replace the whole page
           <br />
           And then I was assigned as leader to do the task, followed by 2
           teammates.
@@ -951,195 +983,24 @@ function ENQNA() {
         </Answer>
       </section>
 
-      {/* <section id="self-product-important">
-        <Question id="self-product-important">
-          自社サービス（プロダクト）の開発において、どんなことが特に重要だと感じていますか？
-        </Question>
-        <Answer>
-          一番大事なのは、ユーザーの視点に立つことですね。
-          <br />
-          開発者の角度ではなくて、もし自分がユーザーならどう思うか
-          <br />
-          開発者って理解力がいい人が多いです。
-          <br />
-          彼らにとって、分かり切ったことは、一目瞭然なことが、
-          <br />
-          一般人にとって、必ずしも同じように見えるわけじゃないです。
-          <br />
-          だからUIUXにおいて、華麗なUIよりも、目指すのは「誰でも簡単に使いこなせる」UXですね。
-          <br />
-          それ以外も、サービスの提供対象、例えば国や地域、年齢層、宗教とかで、適切なデザインやサービスを提供すること。
-          <br />
-        </Answer>
-      </section> */}
-
-      {/* <section id="komatta">
-        <Question id="komatta">
-          userとして地方に行ったときは困ったことはありますか?
-        </Question>
-        <Answer>
-          そうですね。実は今年日本に来る時、宿の予約で、初めてagodaというサービスを使いました。
-          <br />
-          アカウントは、直接googleのアカウントを使うことができます。
-          <br />
-          便利だと思いますが、そこで問題発生。
-          <br />
-          私のgoogleアカウントの名前は本名じゃないです。
-          <br />
-          予約を取る時そのまんまで、
-          <br />
-          提示も警告もありませんでした
-          <br />
-          予約を取った後、登録情報を見てようやく気付いました。
-          <br />
-          そこで慌ててカスタマーサービスに連絡くして、
-          <br />
-          一週間かけてようやく本名に変更できました。
-          <br />
-        </Answer>
-      </section> */}
-
-      {/* <section id="suggest-service">
-        <Question id="suggest-service">
-          海外向けのユーザーにどのようなサービスが将来性ありそうなのか？
-        </Question>
-        <Answer>
-          外国人の私から見ると、海外旅行で一番困った部分はやはり言語です。
-          <br />
-          将来性というか、現状でもかなり不足してるのが、翻訳アプリですね。
-          <br />
-          openAIのgptが発表される前の、つまり去年ですね。全ての翻訳アプリがダメです。
-          <br />
-          翻訳間違いは勿論として、翻訳スピードも遅いのが一般的な印象。
-          <br />
-          実際9割人がgoogle翻訳を使います。比較的に新しいのがdeepLですね。
-          <br />
-          それ以外、gptを使用した翻訳アプリは、まあ多数あると思いますが、
-          <br />
-          外国人の私が思い当たるアプリが殆どないのが現状です。
-          <br />
-          だから観光客向けの翻訳アプリは現在でも充分将来性があります。
-        </Answer>
-      </section> */}
-
-      {/* <section id="value-wamazing">
-        <Question id="value-wamazing">wamazingのmission/valueについて</Question>
-        <Answer>
-          【ミッションに関して】
-          <br />
-          感動の提供
-          <br />
-          私が思うには、日本の良さはその多様性と深い文化にあると感じています。
-          <br />
-          私は日本の風景、食事、歴史、そして流行などが融合した文化が魅力の根本になると考えています。
-          <br />
-          実際私も日本が好きで日本に来た外国人のひとりですので、
-          <br />
-          地域の隠された魅力と共にこれらを驚きと感動として観光客に伝え、
-          <br />
-          彼らに日本の魅力を体験させることができるようなサービスを提供して、
-          <br />
-          それと同時に、日本の地域経済の再こうにも力を貸すことができて素晴らしいと思っています。
-          <br />
-          (日本のどんなところが好き？)
-          <br />
-          (一番好きなのは食事ですね。日本の代表的な食べ物といえばお寿司かもしれませんが、)
-          <br />
-          (私は牛丼が大好きです。安くて美味い。松屋さん、吉野家さん、すき家さんとか毎日ローテーションで食べるくらいです。)
-          <br />
-          <br />
-          【バリューに関して】
-          <br />
-          サービス提供について：
-          <br />
-          観光客って日本語わからない方が殆どですので、
-          <br />
-          技術を通して、多言語で、確かな情報を提供することが
-          <br />
-          観光客が日本を安心して楽しむことができる環境を整うのが重要と思います。
-          <br />
-          観光客って日本語わからない方が殆どですので、正確かつ新しい提供
-          <br />
-          <br />
-          【カルチャーに関して】
-          <br />
-          学びについて：
-          <br />
-          仕事の中で、ユーザーエクスペリエンスを向上させるために様々な工夫をこらしてきました。
-          <br />
-          例えば、過去のプロジェクトではユーザーフィードバックを積極的に取り入れ、機能やデザインの改善に取り組みました。
-          <br />
-          まいつきのレストランの予約数を統計するカレンダーですが、元の設計では字だらけで、要領が分かり辛いでした。
-          <br />
-          そこでもっとシンプルなUIを追加して、さらに直接カレンダーで予約することを可能にして、お客様の要望を答えました。
-          <br />
-          ユーザーが本当に求めるものを理解し、
-          <br />
-          ユーザーの期待をうわ回るサービスを提供するために、常に学び続ける姿勢も重要だと思います。
-          <br /> <br />
-        </Answer>
-      </section> */}
-
       <section id="choice-of-tech">
         <Question id="choice-of-tech">技術の選定は何を基準にする？</Question>
         <Answer>
-          技術の選定、例えばフロントエンドフレームワークの選定について
+          For choosing technical stack, in my opinions, <br />
+          there are several important things need to take care of
           <br />
-          一番考慮(こうりょ)すべきのは
+          The first is community size.
           <br />
-          コミュニティのサイズです。
+          The bigger it is, more supports can be provided. <br />
+          Like bug fixing and security enhancement.
           <br />
-          コミュニティが大きい方が、メンテナンスとコミュニティサポートがしっかりしてます。
+          And the second is to think about how difficult will it be, <br />
+          if we want to hire someone who know that technology.
           <br />
-          そして次は客観的に、
-          stateofjsとかの統計分析と、求人サイトでキーワードを検索して、業界のトレンドを研究します。
+          And how difficult will it be, when learning it from zero.
           <br />
-          もしこの技術を使った場合、
+          And the last one is simply base on the usecase and performance.
           <br />
-          同じくこの技術を使った経験がある人を雇う難易度を想定すること。
-          <br />
-          日本と違って、まともな研修がないのが殆どなので
-          <br />
-          新卒を雇う場合、習得の難易度も想定すべきです
-          <br />
-          最後は純粋に
-          <br />
-          フレームワークのパフォーマンス次第です
-          <br />
-          私の場合は、香港というか、中国においてvue.jsの方が支持率が圧倒的とはいかにが、とても高い
-          <br />
-          vue.jsの設計者本人Evan Youは中国人ですので
-          <br />
-          さらにフレームワーク自体、その背後に、big
-          techからバックアップされていない。
-          <br />
-          開発もメンテナンスも完全にコミュニティの力だけで行う。
-          <br />
-          それなのに今は三大フレームワークと言われるほどまで成長してきました
-          <br />
-          <br />
-          私がリーダーとして技術を選定する時、候補に幾つを考えました。
-          <br />
-          PHPと併用するので、とりあえずSPAを想定します。
-          <br />
-          個人的に理解のあるフレームワークはReact.js、Vue.js、Angular、svelte、この四つです。
-          <br />
-          React.jsはメインのプロジェクトでみんあ経験済みなので、論理的に考えばreactを選ぶのが一番無難でしょう。
-          <br />
-          しかし正直言うと、reactはかなり難しいフレームワークです。その開発思想が他三つのフレームワークと全然違う。
-          <br />
-          Functional
-          componentsで、ちょっとした不注意で、パフォーマンスが落ちることがよくあります。
-          <br />
-          実際メインプロジェクトの「テーブル予約管理システム」のパフォーマンスもあまり宜しくなかった。
-          <br />
-          だからいっそうのこと、思いっきり、新しいフレームワークにしようと思いました。
-          <br />
-          Angularは難易度高いから論外。
-          <br />
-          svelteはパフォーマンスがいいけど、わかる人が少ないから同じく論外。
-          <br />
-          残りのvue.js、パフォーマンス良くて、分かりやすくて、新卒でもすぐ習得でき、だから決めました。
         </Answer>
       </section>
       <section id="react-pos-con">
@@ -1152,7 +1013,7 @@ function ENQNA() {
           <br />
           劣：
           <br />
-          because it si functional component, the behaviour is different from
+          because it is functional component, the behaviour is different from
           other frameworks
           <br />
           like vue.js, angular
@@ -1175,32 +1036,39 @@ function ENQNA() {
       <section id="strength">
         <Question id="strength">強みはなんですか？</Question>
         <Answer>
-          I guess my strength is can learn independently without any guidance.
+          I guess my biggest strength is not afraid to take challenge and learn.
           <br />
-          It started from my first company, a small startup,
+          For working and programming, it is about to actively learning new
+          technology.
           <br />
-          no sufficient manpower to train me. Not even a undemy account.
+          Do not afraid learning something that I have never touched before.
           <br />
-          So I need to learn all by myself.
+          When I graduated, the only programming language I know was c++ and
+          Java.
           <br />
-          And after that I get used to self learning.
+          But after I started working, I keep learning and adapting new skills
+          that is required for my job.
           <br />
-          But of course, I will appreciate if someone can teach me.
+          And able to take challenge like leading a small project.
+          <br />
+          And in daily live, I challenge myself by came to Japan alone.
+          <br />
+          As a foreigner, everyday in Japan is a challenge, everyday is fun and
+          exicting.
         </Answer>
       </section>
 
       <section id="weakness">
         <Question id="weakness">欠点は何ですか？</Question>
         <Answer>
-          my biggest weakness should lack of vocabulary.
+          my biggest weakness should be lack of vocabulary.
           <br />
           especially using languages other than my mother language.
           <br />
           It is quite difficult to express my throught corrently
           <br />
-          sometimes I still need to use google translate.
           <br />
-          I am still keep learning to improve it.
+          I am still improving it.
           <br />
         </Answer>
       </section>
@@ -1214,12 +1082,12 @@ function ENQNA() {
           <br />
           choosing the tech stack and design the sturcture of the
           <br />
-          online reservation system rewal project.
+          online reservation system renewal project.
           <br />
-          that was my first time to hold the decision of prototyping the
+          that was my first time to hold the decision of prototyping a whole
           project.
           <br />
-          So I need to carefully. carefuilly chooose the tech stack, <br />
+          So I need to carefully. Carefuilly chooose the tech stack, <br />
           and the implement method that will cause least impact to the existing
           system.
         </Answer>
@@ -1241,21 +1109,39 @@ function ENQNA() {
           <br />
           But in my life, well, quite a lot.
           <br />
-          the biggest mistake should be my final year of unversity,
+          the biggest mistake should be my final year of unversity.
           <br />
-          in the final exam of a subject, I submitted a wrong file.
+          At that time, it was under Covid, so I was taking online lesson.
           <br />
-          And then I defer for a semister.
+          And also final exam is conducted through online.
+          <br />
+          in the final exam of a subject, I did not check carefully,
+          <br />
+          and I submitted a blank file.
+          <br />
+          Eventually I failed the exam, and need to defer for a semister.
           <br />
           After that experience, I always double and triple check my tasks
           <br />
           before hand in. So no big mistakes happened in work.
+          <br />
+          To be honest it gave me a big trauma. Not only limited to work,
+          <br />
+          it also affect some small daily things, like locking the entrance door
+          before I leave my home.
+          <br />
+          Sometimes even I already get off from the elevator, I will go back and
+          check again,
+          <br />
+          To see if I have really locked the door.
         </Answer>
       </section>
       <section id="question">
         <Question id="question">何か聞きたいこと？</Question>
         <Answer>
-          1. I have asked all of my concerns during the 1st interview.
+          {`1. company's journey and how it started.`}
+          1. I would like to learn about, what kind of exicting project that
+          hopefully I am able to participate in?
           <br />
         </Answer>
       </section>
