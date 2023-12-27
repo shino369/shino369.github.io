@@ -39,7 +39,7 @@ export default function IndexBar() {
     >
       <ul
         className={clsx(
-          "flex flex-col bg-[rgb(203,213,225,0.7)] shadow-xl text-white p-2 rounded-xl  origin-left ab"
+          "flex flex-col bg-[rgb(203,213,225,0.7)] max-h-[80dvh] overflow-auto scrollbar-hide shadow-xl text-white p-2 rounded-xl  origin-left ab"
         )}
       >
         {[

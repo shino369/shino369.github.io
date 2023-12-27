@@ -1,12 +1,12 @@
 import IndexBar from "@/components/IndexBar";
-import { Answer, Question } from "@/components/QNA";
+import { Answer, Highlight, Question } from "@/components/QNA";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { unstable_setRequestLocale } from "next-intl/server";
 
 function JPQNA() {
   return (
-    <main className="flex flex-col items-center py-8 px-4 sm:p-20 md:p-24 font-sans relative">
+    <main className="flex flex-col items-center py-8 px-4 sm:p-20 md:p-24 font-sans relative text-lg md:text-xl">
       <IndexBar />
 
       <section id="greetings">
@@ -714,7 +714,7 @@ function JPQNA() {
 
 function ENQNA() {
   return (
-    <main className="flex flex-col items-center py-8 px-4 sm:p-20 md:p-24 font-sans relative">
+    <main className="flex flex-col items-center py-8 px-4 sm:p-20 md:p-24 font-sans relative text-sm md:text-xl">
       <IndexBar />
 
       <section id="greetings">
@@ -727,35 +727,27 @@ function ENQNA() {
       <section id="self-intro">
         <Question id="self-intro">Self Intro</Question>
         <Answer>
-          {`
-            Allow me to introduce myself. \n
-            I am Anthony, originally from Hong Kong.  \n
-            I earned a degree in Information Engineering from  \n
-            City University of Hong Kong,  \n
-            with a minor in Japanese Studies. \n
+          {`Allow me to introduce myself.
+            \n
+            I am Anthony, originally from Hong Kong. I earned a degree in Information Engineering from City University of Hong Kong, with a minor in Japanese Studies.
+            \n
+            After I graduated, I began working at Appicidea IT Solutions, a growing startup specializing in subcontracting projects.  
+            \n
+            There, I gained hands-on experience in full-stack development using Java Spring Boot, Angular, React.js, and React Native.
             \n 
-            After I graduated,  \n
-            I began working at Appicidea IT Solutions,  \n
-            a growing startup specializing in subcontracting projects.  \n
-            There, I gained hands-on experience in full-stack development  \n
-            using Java Spring Boot, Angular, React.js, and React Native. \n
+            Later, I had the opportunity to work in Shiji Information Technology, a global IT company serving the hospitality sector. \n
+            I contributed to the full-stack development of a SaaS product known as the "Table Management System", working with framworks such as React.js, Vue.js, and CakePHP. \n
+            In my private time, I love to stay close with tech innovations and enjoy learning new concepts.  
+            \n
+            Recently, I am exploring the newly released features of Next.js.
             \n 
-            Later, I had the opportunity to work in Shiji Information Technology, \n
-            a global IT company serving the hospitality sector. \n
-            I contributed to the full-stack development of  \n
-            a SaaS product known as the "Table Management System", \n
-            working with framworks such as React.js, Vue.js, and CakePHP. \n
-            \n 
-            In my private time,  \n
-            I love to stay close with tech innovations \n
-            and enjoy learning new concepts.  \n
-            Recently, I am exploring the newly released features of Next.js. \n
-            \n 
-            I hope I can make a meaningful contribution to the team at Linkx,  \n
-            learn and grow simultaneously. \n
+            I hope I can make a meaningful contribution to the team at Linkx, learn and grow simultaneously.
             \n 
             Thank you.
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -769,31 +761,28 @@ function ENQNA() {
       <section id="university">
         <Question id="university">University</Question>
         <Answer>
-          {`
-            About the degree, Information Engineering,\n
+          {`About the degree, Information Engineering,\n
             It contains subjects of computer science,\n
-            like programming, data structure, database, os\n
-            plus some networking and signal related subject\n
-            and there are some modern technology course like teaching aws and\n
-            web programming framework (java springboot)
-          `}
+            like programming, data structure, database, os, plus some networking and signal related subject\n
+            and there are some modern technology course like teaching aws and web programming framework (java springboot)
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
       <section id="reason-of-resign">
         <Question id="reason-of-resign">Reason of Resignation</Question>
         <Answer>
-          {`
-            In my first job, as a fresh graduate,\n
+          {/* {`In my first job, as a fresh graduate,\n
             I was looking for a nurturing and instructive environment \n
             to kickstart my career. \n
             Although they offered good projects,\n
             I found that the learning opportunities are limited \n
             due to the lack of on-job training and code reviews.\n
-            \n
             Therefore, I decided to move on to a workspace\n
             that offered more supportive learning benefits.\n
-            \n
             In the second company,\n
             I appreciated the positive culture at Shiji,\n
             with approachable seniors \n
@@ -806,20 +795,74 @@ function ENQNA() {
             So, After a month of consideration, \n
             I applied for it and subsequently resigned from Shiji \n
             following the visa approval. 
-          `}
+          `.split("\n")
+          .map((t) => t.trim()).join('\n')} */}
+          In my <Highlight>first job</Highlight>, as a{" "}
+          <Highlight>fresh graduate</Highlight>,
+          <br />I was{" "}
+          <Highlight>
+            looking for a nurturing and instructive environment
+          </Highlight>
+          <br />
+          to start my career.
+          <br />
+          <br />
+          Although <Highlight>they offered good projects,</Highlight>
+          <br />I found that the <Highlight>
+            learning opportunities
+          </Highlight>{" "}
+          are <Highlight>limited</Highlight>
+          <br />
+          due to the{" "}
+          <Highlight>lack of on-job training and code reviews</Highlight>.
+          <br />
+          <br />
+          Therefore, I decided to <Highlight>move on</Highlight> to a workspace
+          <br />
+          that <Highlight>offered</Highlight> more{" "}
+          <Highlight>supportive learning benefits</Highlight>.
+          <br />
+          <br />
+          In the <Highlight>second company</Highlight>,
+          <br />I appreciated the <Highlight>positive culture</Highlight> at
+          Shiji,
+          <br />
+          with <Highlight>approachable seniors</Highlight>
+          <br />
+          and <Highlight>strong emphasis</Highlight> on{" "}
+          <Highlight>mentorship</Highlight>.
+          <br />
+          <br />
+          Ironically, <Highlight>I hadn&apos;t planned to leave</Highlight>.
+          <br />
+          but, an <Highlight>unexpected opportunity arose</Highlight> in late
+          April this year.
+          <br />
+          when the Japanese Government introduced a{" "}
+          <Highlight>new visa scheme</Highlight>.
+          <br />I saw this as a unique <Highlight>chance</Highlight>,
+          <br />
+          because I <Highlight>always wanted to live in Japan</Highlight>.
+          <br />
+          So, After a month of <Highlight>consideration</Highlight>,
+          <br />I <Highlight>applied</Highlight> for it and{" "}
+          <Highlight>subsequently resigned</Highlight> from Shiji
+          <br />
+          <Highlight>following the visa approval</Highlight>.
         </Answer>
       </section>
       <section id="reason-to-japan">
         <Question id="reason-to-japan">Why come to Japan?</Question>
         <Answer>
-          {`
-            just like many other foreigner, I love japanese subculture like anime and comic\n
+          {`just like many other foreigner, I love japanese subculture like anime and comic\n
             and is planning to live in Japan in the future.\n
             But it is quite difficult to apply japanese job oversea\n
-            \n
             Surprisingly, the japanese government launched the new visa programme\n
             I saw this as a good chance and applied.
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
       <section id="sep-to-nov">
@@ -827,8 +870,7 @@ function ENQNA() {
           What have done from September to November?
         </Question>
         <Answer>
-          {`
-            The time from September to November has been a transition period for me.\n
+          {`The time from September to November has been a transition period for me.\n
             September was mainly about setting up my life in Japan - \n
             from addressing housing needs to obtaining essential daily supplies. \n
             Even though I had already secured a place before my arrival in Japan, \n
@@ -846,7 +888,10 @@ function ENQNA() {
             \n
             Once everything was in place, \n
             I preparde myself and started my job searching. \n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
       <section id="siboudouki-linkx">
@@ -854,8 +899,7 @@ function ENQNA() {
           why our company? (志望動機---Linkx)
         </Question>
         <Answer>
-          {`
-            I saw Linkx has developed an AI application called "SHIKAI", \n
+          {/* {`I saw Linkx has developed an AI application called "SHIKAI", \n
             which provide service for visually impaired people.\n
             I always think that technology should be used for a better and more convenient world.\n
             I believe that Linkx is a company that really cares about the society.\n
@@ -870,7 +914,53 @@ function ENQNA() {
             in these cutting-edge areas.\n
             I believe that Linkx is a perfect environment for me\n
             to learn more, challenge more and grow with the team.\n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")} */}
+          I saw Linkx has developed an{" "}
+          <Highlight>AI application called &quot;SHIKAI&quot;</Highlight>,
+          <br />
+          which provide service for{" "}
+          <Highlight>visually impaired people</Highlight>.
+          <br />I always think that{" "}
+          <Highlight>
+            technology should be used for a better and more convenient world
+          </Highlight>
+          .
+          <br />I believe that Linkx is a <Highlight>
+            company
+          </Highlight> that{" "}
+          <Highlight>really cares about the society</Highlight>.
+          <br />
+          <br />
+          Although I was <Highlight>initially</Highlight> attracted to Linkx
+          <br />
+          because of this{" "}
+          <Highlight>remarkable &quot;SHIKAI&quot; project</Highlight> ,
+          <br />
+          my <Highlight>interest get deeper</Highlight> as I learned more about
+          the <Highlight>current focus</Highlight>.
+          <br />I believe that <Highlight>fintech</Highlight> and{" "}
+          <Highlight>lab automation</Highlight> are{" "}
+          <Highlight>essential</Highlight> and exciting fields
+          <br />
+          that can also{" "}
+          <Highlight>
+            create significant impact on society directly or indirectly
+          </Highlight>
+          <br />
+          by <Highlight>digital transforming finance and research</Highlight>.
+          <br />I see <Highlight>a great opportunity here</Highlight> to{" "}
+          <Highlight>enrich my knowledge and skills</Highlight>
+          <br />
+          in these <Highlight>cutting-edge areas</Highlight>.
+          <br />I believe that Linkx is{" "}
+          <Highlight>a perfect environment for me</Highlight>
+          <br />
+          to <Highlight>learn more</Highlight>,{" "}
+          <Highlight>challenge more</Highlight> and{" "}
+          <Highlight>grow with the team together</Highlight>.
         </Answer>
       </section>
       <section id="exp">
@@ -878,14 +968,39 @@ function ENQNA() {
           Do you have any experience in fintech or lab automation?
         </Question>
         <Answer>
-          {`
-            My primary experience is in general development \n
+          {/* {`My primary experience is in general development \n
             rather than specific sectors like fintech or lab automation. \n
             However, I'm always eager to learn and adapt to new technology and sectors.\n
             Given the mentorship and talented team here, \n
             particularly individuals like Pulkit, who guided me in the last interview.\n
             I'm confident that I would contribute and grow quickly in these areas.\n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")} */}
+          My <Highlight>primary experience</Highlight> is in{" "}
+          <Highlight>general development</Highlight>
+          <br />
+          rather than <Highlight>specific sectors</Highlight> like fintech or
+          lab automation.
+          <br />
+          <br />
+          However,
+          <Highlight>
+            I&apos;m always eager to learn and adapt to new technology and
+            sectors.
+          </Highlight>
+          <br />
+          Given the <Highlight>mentorship and talented team here</Highlight>,
+          <br />
+          <Highlight>
+            particularly individuals like Pulkit, who guided me in the last
+            interview.
+          </Highlight>
+          <br />
+          I&apos;m confident that I would <Highlight>
+            contribute
+          </Highlight> and <Highlight>grow quickly</Highlight> in these areas.
         </Answer>
       </section>
       <section id="different-senior">
@@ -893,14 +1008,34 @@ function ENQNA() {
           what if you are assigned to a different senior engineer
         </Question>
         <Answer>
-          {`
-            While I had a positive interaction with Pulkit, \n
+          {/* {`While I had a positive interaction with Pulkit, \n
             I believe that everyone in your team has valuable experience and skills to share. \n
             If I have the opportunity to work with another senior engineer, \n
             I would embrace that chance. \n
             In the end, it's all about the team and the values of the company\n
             that make it great a place to work rather than a single individual.
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")} */}
+          While I had a <Highlight>positive interaction</Highlight> with{" "}
+          <Highlight>Pulkit</Highlight>,
+          <br />I believe that{" "}
+          <Highlight>
+            everyone in your team has valuable experience and skills to share.
+          </Highlight>
+          <br />
+          If I have the <Highlight>opportunity</Highlight> to{" "}
+          <Highlight>work with others</Highlight> talented engineer,
+          <br />I would <Highlight>embrace that chance and learn</Highlight>.
+          <br />
+          In the end,{" "}
+          <Highlight>
+            it&apos;s all about the team and the values of the company
+          </Highlight>
+          <br />
+          that <Highlight>make it great a place to work</Highlight> rather than
+          a <Highlight>single individual</Highlight>.
         </Answer>
       </section>
 
@@ -909,15 +1044,17 @@ function ENQNA() {
           What were your responsibilities in your previous job?
         </Question>
         <Answer>
-          {`
-            In my role at Shiji Information Technology, \n
+          {`In my role at Shiji Information Technology, \n
             I was primarily responsible for enhancing our existing application\n
             by adding new features as per client requirements.\n
             In addition to the development of new functionalities,\n
             my duties also included troubleshooting and fixing bugs,\n
             patching security loopholes,\n
             and addressing technical debt within older parts of the products.
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -926,41 +1063,40 @@ function ENQNA() {
           Can you tell me about a project that you have led?
         </Question>
         <Answer>
-          {`
-              Sure,\n
-              One of the most fulfilling projects I got to lead was a mini-renewal project\n
-              to tackle some of the technical debt. 
-              I had the opportunity to integrate vue.js\n
-              into our existing online reservation page.\n
-              This task not only improved the functionality of the product \n
-              but also offered me a chance to expand my development skills.\n
-              \n
-
-
-
-              Initially We received a request from a client \n
-              to add new features to the old reservation page.\n
-              I was given the responsibility of handling this task. \n
-              Upon assessment, I noticed that current code base, \n
-              particularly the frontend, \n
-              was rather outdated and messy, making it difficult to navigate and debug.\n
-              \n
-              Realizing the existing technical debt,\n
-              I recommended to my managers that we consider updating it\n
-              by adding a new framework to improve the maintainability \n
-              and enable future growth.\n
-              Thankfully, they agreed, 
-              and I was provided the opportunity\n
-              to lead the mini-renewal project.\n
-              Studying feasible technical stacks, \n
-              designing program structure, and implementing it.\n
-              And for difficulties that I was not able to solve alone,\n
-              I seeked advices from the seniors.\n
-              I have learnt a lot in the process. \n
-              It was an enlightening experience that reinforced my understanding of \n
-              the importance of writing clean and maintainable code. \n
-              I am grateful to have had the opportunity to lead this small project and learn from it.\n
-          `}
+          {`Sure,\n
+            One of the most fulfilling projects I got to lead was a mini-renewal project\n
+            to tackle some of the technical debt. 
+            I had the opportunity to integrate vue.js\n
+            into our existing online reservation page.\n
+            This task not only improved the functionality of the product \n
+            but also offered me a chance to expand my development skills.\n
+            \n
+            Initially We received a request from a client \n
+            to add new features to the old reservation page.\n
+            I was given the responsibility of handling this task. \n
+            Upon assessment, I noticed that current code base, \n
+            particularly the frontend, \n
+            was rather outdated and messy, making it difficult to navigate and debug.\n
+            \n
+            Realizing the existing technical debt,\n
+            I recommended to my managers that we consider updating it\n
+            by adding a new framework to improve the maintainability \n
+            and enable future growth.\n
+            Thankfully, they agreed, 
+            and I was provided the opportunity\n
+            to lead the mini-renewal project.\n
+            Studying feasible technical stacks, \n
+            designing program structure, and implementing it.\n
+            And for difficulties that I was not able to solve alone,\n
+            I seeked advices from the seniors.\n
+            I have learnt a lot in the process. \n
+            It was an enlightening experience that reinforced my understanding of \n
+            the importance of writing clean and maintainable code. \n
+            I am grateful to have had the opportunity to lead this small project and learn from it.\n
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -976,8 +1112,7 @@ function ENQNA() {
       <section id="strength">
         <Question id="strength">what is your strength?</Question>
         <Answer>
-          {`
-           One of my strength is my willingness to embrace challenges and learn new things. \n
+          {`One of my strength is my willingness to embrace challenges and learn new things. \n
            Whether it's in my professional life or my personal life, \n
            I see every challenge as an opportunity to grow. \n
            \n
@@ -994,15 +1129,17 @@ function ENQNA() {
            In Japan, being a foreigner here is always a challenge. \n
            but I find it both fun and exciting. \n
            I believe it's important to learn and grow from each challenge we face. \n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
       <section id="weakness">
         <Question id="weakness">what is your weakness?</Question>
         <Answer>
-          {`
-            One area I want to improve on is multitasking.\n
+          {`One area I want to improve on is multitasking.\n
             I am someone who prefers to concentrate on one project at a time\n
             to ensure its quality,\n
             but I understand that the real working environment often requires mult-tasking. \n
@@ -1012,7 +1149,10 @@ function ENQNA() {
             While I'm still enhancing this skill, \n
             I've seen improvements and will continue to work on it \n
             to be more efficient and adaptable.\n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -1021,15 +1161,17 @@ function ENQNA() {
           How do you work under pressure or tight deadlines
         </Question>
         <Answer>
-          {`
-            I understand that chasing deadlines are a part of the job, \n
+          {`I understand that chasing deadlines are a part of the job, \n
             especially in an innovative and fast-paced industry like fintech.\n
             In such situations, I prioritize my work, \n
             ensure which task is more important and should be done first.\n
             Also having clear communication with teamates, \n
             and do not hesitate to ask for help from them.\n
             helping each other efficiently generally produce a better result.
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -1038,14 +1180,16 @@ function ENQNA() {
           How do you keep up with changes and advancements in technology
         </Question>
         <Answer>
-          {`
-            Technology is always evolving and staying updated is a necessity in our field. \n
+          {`Technology is always evolving and staying updated is a necessity in our field. \n
             I regularly read technology-focused blogs and news to keep it up. \n
             One way that can effectively let tech new around your daily life is, \n
             subscribing those tech media in social networking site like facebook and twitter. \n
             then even during your private time, maybe taking a break,\n
             those news come into your eyes \n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -1055,15 +1199,17 @@ function ENQNA() {
           non-technical person can understand?
         </Question>
         <Answer>
-          {`
-            It's crucial to communicate effectively to non-technical stakeholders.  \n
+          {`It's crucial to communicate effectively to non-technical stakeholders.  \n
             Usually using real life example or a similar situation to metaphor the that will works. \n
             For example, let's consider the concept of machine learning.  \n
             It's similar to teaching a child how to walk.  \n
             Firstly, the child observes and learns from adult,  \n
             then it tries and falls many times,  \n
             but after each fall, it improves until it is finally able to walk. \n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
@@ -1072,8 +1218,7 @@ function ENQNA() {
           How would you address disagreement or conflict in your team?
         </Question>
         <Answer>
-          {`
-            Healthy disagreement is a part of teamwork \n
+          {`Healthy disagreement is a part of teamwork \n
             and is often a source of creative ideas.  \n
             When dealing with such situations,  \n
             I believe that communicating openly,  \n
@@ -1081,7 +1226,10 @@ function ENQNA() {
             and then rationally discussing should the best choice of action.  \n
             It's important to keep the main goal in mind  \n
             and respect everyone's perspectives. \n
-          `}
+          `
+            .split("\n")
+            .map((t) => t.trim())
+            .join("\n")}
         </Answer>
       </section>
 
