@@ -1537,40 +1537,59 @@ function ENQNA() {
         <Answer>
           成果：
           <br />
-          once again should be renewal project that I leaded.
+          It should be the mini-renewal project that I was responsible for.
           <br />
+          It&apos;s my{" "}
+          <Highlight>
+            first time handling a buisiness project from scretch
+          </Highlight>
+          .
+          <br />I have <Highlight>learnt alot throught the process</Highlight>.
+          <br />
+          And I was{" "}
+          <Highlight>
+            grateful that I was supported by good collegues and managers
+          </Highlight>
+          <br />
+          They provided me <Highlight>chance to grow</Highlight>.
+          <br />
+          And I was{" "}
+          <Highlight>
+            able to do someing real that really contributed to the team
+          </Highlight>
+          by <Highlight>addressing the old technical debt.</Highlight>
           <br />
           失敗：
           <br />
-          Fortunately no big mistakes have been made so far.
+          Fortunately there was no significant failure have been encountered so
+          far.
           <br />
-          But in my life, well, quite a lot.
+          But I&apos;ve <Highlight>faced challenges along the way</Highlight>,
+          like misunderstood some project requirements.
           <br />
-          the biggest mistake should be my final year of unversity.
+          For instance, in my first company, in frontend aspect
           <br />
-          At that time, it was under Covid, so I was taking online lesson.
+          I was responsible to following the design of UX designer and implement
+          it correctly.
           <br />
-          And also final exam is conducted through online.
+          Most design were straignt forward, but sometimes
           <br />
-          in the final exam of a subject, I did not check carefully,
+          there were special UX requirements that were not shown in figma.
           <br />
-          and I submitted a blank file.
+          following the image in figma, at first I thought I had finished the
+          task.
           <br />
-          Eventually I failed the exam, and need to defer for a semister.
+          but after I showed her my work, she reminded me that I had missed some
+          of UX behaviour. Then I took some time to fix it.
           <br />
-          After that experience, I always double and triple check my tasks
+          Hopefully I demostrated to her first before I show it my boss,
           <br />
-          before hand in. So no big mistakes happened in work.
+          Quite a simple event, but this{" "}
+          <Highlight>taught me a valuable lesson</Highlight> about importance of{" "}
+          <Highlight>communication among the team</Highlight>.
           <br />
-          To be honest it gave me a big trauma. Not only limited to work,
-          <br />
-          it also affect some small daily things, like locking the entrance door
-          before I leave my home.
-          <br />
-          Sometimes even I already get off from the elevator, I will go back and
-          check again,
-          <br />
-          To see if I have really locked the door.
+          Since then I always ask more to clarify the requiremnt before I start
+          my work.
         </Answer>
       </section>
       <section id="question">

@@ -109,10 +109,6 @@ export default function IndexBar() {
           //   label: "mission/value",
           // },
           {
-            id: "value-play",
-            label: "value",
-          },
-          {
             id: "choice-of-tech",
             label: "技術の選定基準",
           },
