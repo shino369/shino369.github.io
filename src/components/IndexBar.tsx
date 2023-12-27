@@ -72,17 +72,9 @@ export default function IndexBar() {
             id: "sep-to-nov",
             label: "9～11月今まで",
           },
-          // {
-          //   id: "siboudouki-linkx",
-          //   label: "志望動機---Linkx",
-          // },
-          // {
-          //   id: "siboudouki-wamazing",
-          //   label: "志望動機---wamazing",
-          // },
           {
-            id: "siboudouki-play",
-            label: "志望動機---play",
+            id: "siboudouki-linkx",
+            label: "志望動機---Linkx",
           },
           {
             id: "exp",

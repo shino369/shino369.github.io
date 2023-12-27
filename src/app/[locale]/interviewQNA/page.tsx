@@ -870,7 +870,7 @@ function ENQNA() {
           What have done from September to November?
         </Question>
         <Answer>
-          {`The time from September to November has been a transition period for me.\n
+          {/* {`The time from September to November has been a transition period for me.\n
             September was mainly about setting up my life in Japan - \n
             from addressing housing needs to obtaining essential daily supplies. \n
             Even though I had already secured a place before my arrival in Japan, \n
@@ -891,7 +891,49 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          The time from September to November has been a
+          <Highlight>transition period for me.</Highlight>
+          <br />
+          September was mainly about
+          <Highlight>setting up my life in Japan</Highlight> -
+          <br />
+          from <Highlight>addressing housing needs</Highlight> to getting
+          <Highlight>essential daily supplies</Highlight>.
+          <br />
+          Even though I had already
+          <Highlight>secured a place before my arrival in Japan</Highlight>,
+          <br />
+          there were <Highlight>other things</Highlight> like
+          <Highlight>purchasing furniture</Highlight>,
+          <br />
+          getting a <Highlight>local mobile number</Highlight>, setting up a
+          <Highlight>bank account</Highlight>,
+          <br />
+          and <Highlight>registering as a resident</Highlight>.
+          <br />I also <Highlight>seek for advice from friends</Highlight>
+          already living in Japan
+          <br />
+          to <Highlight>ensure a smooth transition</Highlight>.
+          <br />
+          <br />
+          In October, I decided to
+          <Highlight>relocate to a more spacious apartment</Highlight>.
+          <br />
+          My previous place was a single-room apartment in Bunkyouku,
+          <br />
+          which, although having a <Highlight>small room size</Highlight>, it
+          had a relatively <Highlight>high rental.</Highlight>
+          <br />
+          I spent a month to find a more suitable option,
+          <br />
+          finally <Highlight>moving to Edogawaku, Nakakasai</Highlight>, as
+          recommended by one of my friend
+          <br />
+          Once <Highlight>everything was in place,</Highlight>
+          <br />
+          <Highlight>I prepare myself and started my job searching.</Highlight>
+          <br />
         </Answer>
       </section>
       <section id="siboudouki-linkx">
@@ -942,7 +984,7 @@ function ENQNA() {
           my <Highlight>interest get deeper</Highlight> as I learned more about
           the <Highlight>current focus</Highlight>.
           <br />I believe that <Highlight>fintech</Highlight> and{" "}
-          <Highlight>lab automation</Highlight> are{" "}
+          <Highlight>lab related solutions</Highlight> are{" "}
           <Highlight>essential</Highlight> and exciting fields
           <br />
           that can also{" "}
@@ -950,13 +992,17 @@ function ENQNA() {
             create significant impact on society directly or indirectly
           </Highlight>
           <br />
-          by <Highlight>digital transforming finance and research</Highlight>.
+          by{" "}
+          <Highlight>
+            digital transforming the old way of finance and research
+          </Highlight>
+          .
           <br />I see <Highlight>a great opportunity here</Highlight> to{" "}
           <Highlight>enrich my knowledge and skills</Highlight>
           <br />
           in these <Highlight>cutting-edge areas</Highlight>.
           <br />I believe that Linkx is{" "}
-          <Highlight>a perfect environment for me</Highlight>
+          <Highlight>a perfect environment</Highlight>
           <br />
           to <Highlight>learn more</Highlight>,{" "}
           <Highlight>challenge more</Highlight> and{" "}
@@ -1018,18 +1064,18 @@ function ENQNA() {
             .split("\n")
             .map((t) => t.trim())
             .join("\n")} */}
-          While I had a <Highlight>positive interaction</Highlight> with{" "}
+          While I had a <Highlight>positive interaction</Highlight> with
           <Highlight>Pulkit</Highlight>,
-          <br />I believe that{" "}
+          <br />I believe that
           <Highlight>
             everyone in your team has valuable experience and skills to share.
           </Highlight>
           <br />
-          If I have the <Highlight>opportunity</Highlight> to{" "}
+          If I have the <Highlight>opportunity</Highlight> to
           <Highlight>work with others</Highlight> talented engineer,
           <br />I would <Highlight>embrace that chance and learn</Highlight>.
           <br />
-          In the end,{" "}
+          In the end,
           <Highlight>
             it&apos;s all about the team and the values of the company
           </Highlight>
@@ -1044,7 +1090,7 @@ function ENQNA() {
           What were your responsibilities in your previous job?
         </Question>
         <Answer>
-          {`In my role at Shiji Information Technology, \n
+          {/* {`In my role at Shiji Information Technology, \n
             I was primarily responsible for enhancing our existing application\n
             by adding new features as per client requirements.\n
             In addition to the development of new functionalities,\n
@@ -1054,7 +1100,24 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          In my role at Shiji Information Technology,
+          <br />I was primarily responsible for
+          <Highlight>enhancing our existing application</Highlight>
+          <br />
+          by <Highlight>adding new features</Highlight> as per
+          <Highlight>client requirements</Highlight>.
+          <br />
+          In addition to the development of new functions,
+          <br />
+          my duties also included
+          <Highlight>troubleshooting and fixing bugs</Highlight>,
+          <br />
+          <Highlight>patching security loopholes</Highlight>,
+          <br />
+          and <Highlight>addressing technical debt</Highlight> within older
+          parts of the products.
+          <br />
         </Answer>
       </section>
 
@@ -1063,13 +1126,11 @@ function ENQNA() {
           Can you tell me about a project that you have led?
         </Question>
         <Answer>
-          {`Sure,\n
+          {/* {`Sure,\n
             One of the most fulfilling projects I got to lead was a mini-renewal project\n
             to tackle some of the technical debt. 
             I had the opportunity to integrate vue.js\n
             into our existing online reservation page.\n
-            This task not only improved the functionality of the product \n
-            but also offered me a chance to expand my development skills.\n
             \n
             Initially We received a request from a client \n
             to add new features to the old reservation page.\n
@@ -1090,13 +1151,78 @@ function ENQNA() {
             And for difficulties that I was not able to solve alone,\n
             I seeked advices from the seniors.\n
             I have learnt a lot in the process. \n
+            \n
+            This task not only improved the functionality of the product \n
+            but also offered me a chance to expand my development skills.\n
             It was an enlightening experience that reinforced my understanding of \n
             the importance of writing clean and maintainable code. \n
             I am grateful to have had the opportunity to lead this small project and learn from it.\n
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          Sure,
+          <br />
+          One of the most fulfilling projects I got to lead was a{" "}
+          <Highlight>mini-renewal project</Highlight>
+          <br />
+          to tackle some of the <Highlight>technical debt</Highlight>. I had the
+          opportunity to
+          <Highlight>
+            integrate vue.js into our existing online reservation page.
+          </Highlight>
+          <br />
+          Initially We received a request from a client
+          <br />
+          to <Highlight>add new features</Highlight> to the old reservation
+          page.
+          <br />I was given the
+          <Highlight> responsibility of handling </Highlight>this task.
+          <br />
+          Upon assessment, I noticed that{" "}
+          <Highlight>current code base,</Highlight>
+          <Highlight>particularly the frontend,</Highlight>
+          <br />
+          was rather <Highlight>outdated and messy</Highlight>, making it
+          difficult to <Highlight>navigate and debug.</Highlight>
+          <br />
+          <br />
+          Realizing the <Highlight>existing technical debt</Highlight>,
+          <br />I <Highlight>recommended to my managers</Highlight> that
+          consider updating it
+          <br />
+          by <Highlight>adding a new framework</Highlight> to improve the{" "}
+          <Highlight>maintainability</Highlight>
+          <br />
+          and <Highlight>enable future growth</Highlight>.
+          <br />
+          Suprisingly I was provided the <Highlight>opportunity</Highlight>
+          <br />
+          to <Highlight>lead the mini-renewal project</Highlight>.
+          <br />
+          <Highlight>Studying feasible technical stacks,</Highlight>
+          <br />
+          <Highlight>
+            designing program structure, and implementing it.
+          </Highlight>
+          <br />
+          And for <Highlight>difficulties</Highlight> that I was{" "}
+          <Highlight>not able to solve alone</Highlight>,
+          <br />I <Highlight>seeked advices from the seniors</Highlight>.
+          <br />
+          <br />
+          This task not only improved the functionality of the product
+          <br />
+          but also offered me a chance to expand my development skills.
+          <br />
+          It was an enlightening experience that reinforced my understanding of
+          <br />
+          the importance of writing clean and maintainable code.
+          <br />
+          <Highlight>
+            I am grateful to have had the opportunity to lead this small project
+            and learn from it.
+          </Highlight>
         </Answer>
       </section>
 
@@ -1112,7 +1238,7 @@ function ENQNA() {
       <section id="strength">
         <Question id="strength">what is your strength?</Question>
         <Answer>
-          {`One of my strength is my willingness to embrace challenges and learn new things. \n
+          {/* {`One of my strength is my willingness to embrace challenges and learn new things. \n
            Whether it's in my professional life or my personal life, \n
            I see every challenge as an opportunity to grow. \n
            \n
@@ -1132,14 +1258,57 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          One of my strength is{" "}
+          <Highlight>
+            my willingness to embrace challenges and learn new things.
+          </Highlight>
+          <br />
+          Whether it&apos;s in my <Highlight>professional life</Highlight> or my{" "}
+          <Highlight>personal life</Highlight>,
+          <br />I{" "}
+          <Highlight>see every challenge as an opportunity to grow</Highlight>.
+          <br />
+          <br />
+          Take <Highlight>programming, for instance</Highlight>.
+          <br />
+          When I first graduated,{" "}
+          <Highlight>my programming knowledge was limited</Highlight> to C++ and
+          Java only.
+          <br />
+          But I knew that{" "}
+          <Highlight>
+            continuous learning is important in the technology world.
+          </Highlight>
+          <br />
+          Therefore, I <Highlight>kept an open mind</Highlight> and{" "}
+          <Highlight>progressively adapted to technologies</Highlight>
+          <br />
+          that are <Highlight>required by my job</Highlight>,
+          <br />
+          <br />
+          On the <Highlight>personal side</Highlight>,
+          <br />
+          <Highlight>
+            moving to Japan alone was a step outside my comfort zone.
+          </Highlight>
+          <br />
+          In Japan,{" "}
+          <Highlight>being a foreigner here is always a challenge.</Highlight>
+          <br />
+          but I <Highlight>find it both fun and exciting</Highlight>.
+          <br />I believe it&apos;s{" "}
+          <Highlight>
+            important to learn and grow from each challenge
+          </Highlight>{" "}
+          we face.
         </Answer>
       </section>
 
       <section id="weakness">
         <Question id="weakness">what is your weakness?</Question>
         <Answer>
-          {`One area I want to improve on is multitasking.\n
+          {/* {`One area I want to improve on is multitasking.\n
             I am someone who prefers to concentrate on one project at a time\n
             to ensure its quality,\n
             but I understand that the real working environment often requires mult-tasking. \n
@@ -1152,7 +1321,31 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          One area I want to improve on is <Highlight>multitasking</Highlight>.
+          <br />I am someone who{" "}
+          <Highlight>
+            prefers to concentrate on one project at a time
+          </Highlight>{" "}
+          to ensure its <Highlight>quality</Highlight>,
+          <br />
+          <br />
+          but I understand that the{" "}
+          <Highlight>real working environment</Highlight> often{" "}
+          <Highlight>requires mult-tasking.</Highlight>
+          <br />
+          <br />
+          To deal with it, I&apos;ve started to work on{" "}
+          <Highlight>task management strategies</Highlight>, using tools like{" "}
+          <Highlight>task scheduler</Highlight> to
+          <Highlight>organize my workflow</Highlight>, and remind myself to{" "}
+          <Highlight>switch tasks and monitor progress.</Highlight>
+          <br />
+          <br />
+          While I&apos;m still enhancing this skill,
+          <br />
+          I&apos;ve seen improvements and will continue to work on it to be more
+          efficient and adaptable.
         </Answer>
       </section>
 
@@ -1161,7 +1354,7 @@ function ENQNA() {
           How do you work under pressure or tight deadlines
         </Question>
         <Answer>
-          {`I understand that chasing deadlines are a part of the job, \n
+          {/* {`I understand that chasing deadlines are a part of the job, \n
             especially in an innovative and fast-paced industry like fintech.\n
             In such situations, I prioritize my work, \n
             ensure which task is more important and should be done first.\n
@@ -1171,7 +1364,29 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          I understand that{" "}
+          <Highlight>chasing deadlines are a part of the job</Highlight>,
+          especially{" "}
+          <Highlight>in an innovative and fast-paced industry</Highlight> like
+          fintech.
+          <br />
+          <br />
+          In such situations, I <Highlight>prioritize my work</Highlight>,
+          <br />
+          ensure{" "}
+          <Highlight>
+            which task is more important and should be done first
+          </Highlight>
+          .
+          <br />
+          Also <Highlight>having clear communication with teamates</Highlight>,
+          <br />
+          and <Highlight>do not hesitate to ask for help</Highlight> from them.
+          <br />
+          <Highlight>
+            helping each other efficiently generally produce a better result.
+          </Highlight>
         </Answer>
       </section>
 
@@ -1180,7 +1395,7 @@ function ENQNA() {
           How do you keep up with changes and advancements in technology
         </Question>
         <Answer>
-          {`Technology is always evolving and staying updated is a necessity in our field. \n
+          {/* {`Technology is always evolving and staying updated is a necessity in our field. \n
             I regularly read technology-focused blogs and news to keep it up. \n
             One way that can effectively let tech new around your daily life is, \n
             subscribing those tech media in social networking site like facebook and twitter. \n
@@ -1189,7 +1404,29 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          Technology is always evolving and staying updated is a necessity in
+          our field.
+          <br />I{" "}
+          <Highlight>
+            regularly read technology-focused blogs and news
+          </Highlight>{" "}
+          to keep up with the latest trend.
+          <br />
+          One way that can{" "}
+          <Highlight>
+            effectively let tech new around your daily life
+          </Highlight>{" "}
+          is,
+          <br />
+          <Highlight>
+            subscribing those tech media in social networking site
+          </Highlight>{" "}
+          like facebook and twitter.
+          <br />
+          then even during your private time, maybe taking a break,
+          <br />
+          those news come into your eyes
         </Answer>
       </section>
 
@@ -1199,7 +1436,7 @@ function ENQNA() {
           non-technical person can understand?
         </Question>
         <Answer>
-          {`It's crucial to communicate effectively to non-technical stakeholders.  \n
+          {/* {`It's crucial to communicate effectively to non-technical stakeholders.  \n
             Usually using real life example or a similar situation to metaphor the that will works. \n
             For example, let's consider the concept of machine learning.  \n
             It's similar to teaching a child how to walk.  \n
@@ -1209,7 +1446,28 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          It&apos;s{" "}
+          <Highlight>
+            crucial to communicate effectively to non-technical stakeholders.
+          </Highlight>
+          <br />
+          Usually{" "}
+          <Highlight>
+            using real life example or a similar situation to metaphor
+          </Highlight>{" "}
+          will works pretty well.
+          <br />
+          For example, let&apos;s consider the concept of machine learning.
+          <br />
+          It&apos;s similar to teaching a child how to walk.
+          <br />
+          Firstly, the child observes and learns from adult,
+          <br />
+          then it tries and falls many times,
+          <br />
+          but after each fall, it improves until it is finally able to walk.
+          <br />
         </Answer>
       </section>
 
@@ -1218,7 +1476,7 @@ function ENQNA() {
           How would you address disagreement or conflict in your team?
         </Question>
         <Answer>
-          {`Healthy disagreement is a part of teamwork \n
+          {/* {`Healthy disagreement is a part of teamwork \n
             and is often a source of creative ideas.  \n
             When dealing with such situations,  \n
             I believe that communicating openly,  \n
@@ -1229,7 +1487,26 @@ function ENQNA() {
           `
             .split("\n")
             .map((t) => t.trim())
-            .join("\n")}
+            .join("\n")} */}
+          <Highlight>Healthy disagreement</Highlight> is a{" "}
+          <Highlight>part of teamwork</Highlight>
+          <br />
+          and is often a <Highlight>source of new ideas</Highlight>.
+          <br />
+          When <Highlight>dealing with such situations</Highlight>,
+          <br />I believe that <Highlight>communication is essentail</Highlight>
+          . <Highlight>Eommunicating openly</Highlight>,
+          <br />
+          <Highlight>listening patiently</Highlight>,{" "}
+          <Highlight>understanding the each other&apos;s viewpoint</Highlight>,
+          <br />
+          and then <Highlight>rationally discussing</Highlight> should the{" "}
+          <Highlight>best choice of action</Highlight>.
+          <br />
+          It&apos;s important to{" "}
+          <Highlight>
+            keep the main goal in mind and respect everyone&apos;s perspectives.
+          </Highlight>
         </Answer>
       </section>
 
@@ -1299,15 +1576,24 @@ function ENQNA() {
       <section id="question">
         <Question id="question">何か聞きたいこと？</Question>
         <Answer>
-          {`1. company's journey and how it started.`}
-          1. I would like to learn about, what kind of exicting project that
+          1. company&apos;s journey and how it started. Spin-off from progress
+          technology in 2020, is there any story behind it?
+          <br />
+          2. what kind of exicting on going projects are running now? that
           hopefully I am able to participate in?
+          <br />
+          3. About SHIKAI, it was released in 2016, which is 7 years ago. In
+          this new AI era, mainly about LLM, is there any plan upgrade the
+          SHIKAI?
           <br />
         </Answer>
       </section>
       <section id="salary">
         <Question id="salary">希望年収</Question>
-        <Answer>I will just Follow your companys regulations</Answer>
+        <Answer>
+          Hannah, my agent in charge of Boy and more will be discussing about
+          it.
+        </Answer>
       </section>
       <section id="time-available">
         <Question id="time-available">入社可能時期を教えてください</Question>
