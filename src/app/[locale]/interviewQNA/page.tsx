@@ -255,7 +255,7 @@ function JPQNA() {
         </Answer>
       </section> */}
 
-      <section id="siboudouki-play">
+      {/* <section id="siboudouki-play">
         <Question id="siboudouki-play">
           何故うちの会社?（志望動機---play）
         </Question>
@@ -293,7 +293,7 @@ function JPQNA() {
           <br />
           <br />
         </Answer>
-      </section>
+      </section> */}
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">
