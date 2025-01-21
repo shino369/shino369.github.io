@@ -3,7 +3,8 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { LocaleParam } from "@/types";
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
+export async function generateMetadata({ params }: { params: Promise<LocaleParam> }) {
+  const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: "meta" });
 
   // generate metadata
@@ -30,26 +31,26 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
       // url,
       siteName: t("title"),
       type: "website",
-      image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
+      image: process.env.NEXT_PUBLIC_BASEURL! + "/opengraph-image.jpg",
     },
     twitter: {
       card: "summary_large_image",
       site: "@shino_aw39",
       title: t("title"),
       description: t("description"),
-      image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
+      image: process.env.NEXT_PUBLIC_BASEURL! + "/opengraph-image.jpg",
     },
   };
 }
 
 export default function NotFound() {
-  const t = useTranslations('page')
-  
+  const t = useTranslations("page");
+
   return (
     <main className="flex flex-col items-center justify-center p-8 sm:p-20 md:p-24 max-height-dvh">
-      <h1 className="text-2xl">{t('404')}</h1>
+      <h1 className="text-2xl">{t("404")}</h1>
       <Link href="/" className="hover:bg-[rgba(0,0,0,0.5)] px-2">
-        {t('back')}
+        {t("back")}
       </Link>
     </main>
   );

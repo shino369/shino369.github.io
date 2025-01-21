@@ -1,3 +1,5 @@
+'use client';
+
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
 import Image from "next/image";

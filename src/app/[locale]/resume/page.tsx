@@ -4,9 +4,15 @@ import ResumeCard from "@/components/ResumeCard";
 import { RESUME } from "@/constants/common";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations } from "next-intl/server";
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
+export async function generateMetadata(props: {
+  params: Promise<LocaleParam>;
+}) {
+  const params = await props.params;
+
+  const { locale } = params;
+
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("resume"),
@@ -14,8 +20,7 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
   };
 }
 
-export default function Page({ params: { locale } }: LocaleParam) {
-  unstable_setRequestLocale(locale);
+export default function Page() {
   const t = useTranslations("page");
 
   return (
@@ -45,7 +50,6 @@ export default function Page({ params: { locale } }: LocaleParam) {
                 },
                 closed: {
                   width: 0,
-                  display: "none",
                   transition: {
                     staggerChildren: 0.05,
                     staggerDirection: -1,
@@ -54,7 +58,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
               }}
             >
               {RESUME.map((props, i) => (
-                <ListItem scale spring key={i}>
+                <ListItem scale key={i}>
                   <ResumeCard props={props} />
                 </ListItem>
               ))}

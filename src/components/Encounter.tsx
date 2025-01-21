@@ -3,7 +3,7 @@
 import { RegisterMap, initChain } from "@/helper/animate-chain";
 import { debounce } from "@/helper/client-utils";
 import clsx from "clsx";
-import { motion, useAnimation } from "framer-motion";
+import { motion, useAnimation } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
@@ -33,9 +33,9 @@ const Encounter = () => {
   const [isShow, setIsShow] = useState(false);
   const [isCaraShow, setIsCaraShow] = useState(true);
 
-  const interVal = useRef<NodeJS.Timeout>();
-  const timeout = useRef<NodeJS.Timeout>();
-  const timeout2 = useRef<NodeJS.Timeout>();
+  const interVal = useRef<NodeJS.Timeout>(undefined);
+  const timeout = useRef<NodeJS.Timeout>(undefined);
+  const timeout2 = useRef<NodeJS.Timeout>(undefined);
   const chainRef = useRef<RegisterMap[]>([]);
 
   const controls = useAnimation();

@@ -2,27 +2,31 @@
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 // import { getRootPaths } from "@/helper/utils";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
-import { PropsWithChildren } from "react";
 import { LocaleParam } from "@/types";
 
 // global style
 import "@/styles/globals.css";
 import ParticlesBG from "@/components/ParticlesBG";
-import { i18nLocale } from "@/middleware";
 import { PageTransitionWrapper } from "@/components/FramerTransitionWrapper";
 import AppProvider from "@/redux/AppProvider";
 import clsx from "clsx";
 import Disclaimer from "@/components/Disclaimer";
-import { NextIntlClientProvider, useMessages } from "next-intl";
+import { NextIntlClientProvider } from "next-intl";
+import { i18nLocale, routing } from "@/i18n/routing";
 
 export function generateStaticParams() {
-  return i18nLocale.locales.map((locale) => ({ locale }));
+  return routing.locales.map((locale) => ({ locale }));
 }
 const inter = Inter({ subsets: ["latin"], display: "swap" });
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<LocaleParam>;
+}) {
+  const locale = (await params).locale;
   const t = await getTranslations({ locale, namespace: "meta" });
   // generate metadata
   // consider all page use the same metadata, unless contain blog post
@@ -39,7 +43,7 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
       "Anthony Wong",
     ],
     verification: {
-      google: "63nDQ2uCV1_BGmV0KxU6stNJhWMZD0OCZEpGrbAMkWQ"
+      google: "63nDQ2uCV1_BGmV0KxU6stNJhWMZD0OCZEpGrbAMkWQ",
     },
     creator: "Antonhy Wong",
     generator: "Next.js 14",
@@ -51,35 +55,36 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
       // url,
       siteName: t("title"),
       type: "website",
-      image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
+      image: process.env.NEXT_PUBLIC_BASEURL! + "/opengraph-image.jpg",
     },
     twitter: {
       card: "summary_large_image",
       site: "@shino_aw39",
       title: t("title"),
       description: t("description"),
-      image: process.env.NEXT_PUBLIC_BASEURL! + '/opengraph-image.jpg'
+      image: process.env.NEXT_PUBLIC_BASEURL! + "/opengraph-image.jpg",
     },
     icons: {
-      icon: [
-        '/favicon.ico',
-      ],
-      apple: [
-        '/favicon.ico',
-      ]
-    }
+      icon: ["/favicon.ico"],
+      apple: ["/favicon.ico"],
+    },
   };
 }
 
-export default function LocaleLayout({
+export default async function LocaleLayout({
   children,
-  params: { locale },
-}: PropsWithChildren & LocaleParam) {
-  // Validate that the incoming `locale` parameter is valid
-  if (!i18nLocale.locales.includes(locale as any)) notFound();
+  params,
+}: Readonly<{
+  children: React.ReactNode;
+  params: Promise<LocaleParam>;
+}>) {
+  const locale = (await params).locale;
 
-  unstable_setRequestLocale(locale);
-  const messages = useMessages();
+  // Validate that the incoming `locale` parameter is valid
+  if (!routing.locales.includes(locale as any)) notFound();
+
+  setRequestLocale(locale);
+  const messages = await getMessages();
   // prevent to use server action in static site? like deploying in github page
   // const allPaths = getRootPaths();
   // const concatedPAths = [
@@ -103,8 +108,12 @@ export default function LocaleLayout({
               <Navbar
                 paths={[
                   { name: "home", icon: "home", path: `/${locale}` },
-                  { name: "profile", icon: "profile", path: `/${locale}/profile` },
-                  { name: "resume", icon: "resume", path:`/${locale}/resume` },
+                  {
+                    name: "profile",
+                    icon: "profile",
+                    path: `/${locale}/profile`,
+                  },
+                  { name: "resume", icon: "resume", path: `/${locale}/resume` },
                   { name: "work", icon: "work", path: `/${locale}/work` },
                 ]}
                 locale={locale}

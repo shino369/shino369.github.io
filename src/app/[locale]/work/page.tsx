@@ -1,12 +1,18 @@
 import SearchBar from "@/components/Searchbar";
 import Works from "@/components/Works";
 import { LocaleParam } from "@/types";
-import { useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
-import { Suspense } from "react";
+import { useLocale, useTranslations } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Suspense, use } from "react";
 import BgImage from "@/components/BgImage";
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
+export async function generateMetadata(props: {
+  params: Promise<LocaleParam>;
+}) {
+  const params = await props.params;
+
+  const { locale } = params;
+
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("works"),
@@ -14,8 +20,7 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
   };
 }
 
-export default function Page({ params: { locale } }: LocaleParam) {
-  unstable_setRequestLocale(locale);
+export default function Page() {
   const t = useTranslations("page");
 
   // the lower component is client side. Need to handle translate here
@@ -38,7 +43,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         "macOS",
         "git",
         "Bitbucket",
-        "Jira"
+        "Jira",
       ],
       image: [
         "/pics/appicidea/hkjc/1.jpg",
@@ -105,7 +110,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         "macOS",
         "git",
         "gitlab",
-        "Jira"
+        "Jira",
       ],
       image: [
         "/pics/appicidea/3tech/0.jpg",
@@ -139,7 +144,7 @@ export default function Page({ params: { locale } }: LocaleParam) {
         "Gitlab",
         "svn",
         "sqlmap",
-        "swagger"
+        "swagger",
       ],
       image: [
         "/pics/shiji/tms/1.jpg",

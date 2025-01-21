@@ -1,8 +1,9 @@
+import { use } from "react";
 import IndexBar from "@/components/IndexBar";
 import { Answer, Highlight, Question } from "@/components/QNA";
 import { LocaleParam } from "@/types";
-import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
+import { useLocale, useTranslations } from "next-intl";
+import { setRequestLocale } from "next-intl/server";
 
 function JPQNA() {
   return (
@@ -1631,9 +1632,7 @@ function ENQNA() {
   );
 }
 
-export default function Page({ params: { locale } }: LocaleParam) {
-  unstable_setRequestLocale(locale);
-  const t = useTranslations("page");
-
+export default async function Page() {
+  const locale = useLocale();
   return locale === "en" ? <ENQNA /> : <JPQNA />;
 }

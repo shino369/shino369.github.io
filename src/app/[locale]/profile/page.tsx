@@ -2,10 +2,16 @@ import DelayDiv from "@/components/DelayDiv";
 import { ProfileInitEffect } from "@/components/FramerTransitionWrapper";
 import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
-import { getTranslations, unstable_setRequestLocale } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
+export async function generateMetadata(props: {params: Promise<LocaleParam>}) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("profile"),
@@ -13,8 +19,7 @@ export async function generateMetadata({ params: { locale } }: LocaleParam) {
   };
 }
 
-export default function Page({ params: { locale } }: LocaleParam) {
-  unstable_setRequestLocale(locale);
+export default function Page() {
   const t = useTranslations("page");
 
   return (
