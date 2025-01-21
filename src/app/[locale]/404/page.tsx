@@ -3,7 +3,13 @@ import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 import { LocaleParam } from "@/types";
 
-export async function generateMetadata({ params: { locale } }: LocaleParam) {
+export async function generateMetadata(props: {params: Promise<LocaleParam>}) {
+  const params = await props.params;
+
+  const {
+    locale
+  } = params;
+
   const t = await getTranslations({ locale, namespace: "meta" });
 
   // generate metadata

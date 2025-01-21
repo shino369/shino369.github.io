@@ -6,8 +6,8 @@ import { useEffect, useRef, useState } from "react";
 const Typing = ({ text }: { text: string }) => {
   const [newText, setNewText] = useState("");
   const [blinkState, setBlinkState] = useState(true);
-  const intervalRef = useRef<null | NodeJS.Timeout>();
-  const interval2Ref = useRef<null | NodeJS.Timeout>();
+  const intervalRef = useRef<null | NodeJS.Timeout>(undefined);
+  const interval2Ref = useRef<null | NodeJS.Timeout>(undefined);
 
   useEffect(() => {
     const splited = text.split("");

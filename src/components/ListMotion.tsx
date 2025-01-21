@@ -1,7 +1,7 @@
 "use client";
 
 import clsx from "clsx";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 export const ListItem = ({
   children,

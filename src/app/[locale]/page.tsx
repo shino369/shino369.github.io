@@ -1,7 +1,3 @@
-import { LocaleParam } from "@/types";
-import { useTranslations } from "next-intl";
-import { unstable_setRequestLocale } from "next-intl/server";
-
 import Blinker from "@/components/Blinker";
 import DelayDiv from "@/components/DelayDiv";
 import Typing from "@/components/Typing";
@@ -9,15 +5,16 @@ import Link from "next/link";
 import Encounter from "@/components/Encounter";
 import Carousel from "@/components/Carousel";
 import Image from "next/image";
-import { usePathname, useRouter } from "next/navigation";
-import { HoverDiv, InViewDiv } from "@/components/FramerTransitionWrapper";
+import { InViewDiv } from "@/components/FramerTransitionWrapper";
 import { ListItem, ListWrapper } from "@/components/ListMotion";
 import EmailForm from "@/components/Email";
 import { SERVICES, SKILLSET } from "@/constants/common";
 import BgImage from "@/components/BgImage";
+import { useLocale, useTranslations } from "next-intl";
 
-export default function IndexPage({ params: { locale } }: LocaleParam) {
-  unstable_setRequestLocale(locale);
+export default function IndexPage() {
+  const locale = useLocale();
+
   const t = useTranslations("page");
 
   const env = {
@@ -172,18 +169,17 @@ export default function IndexPage({ params: { locale } }: LocaleParam) {
                   <div className="absolute w-full h-full bg-[rgba(0,0,0,0.5)] origin-left top-0 left-0 -z-10 transition-transform duration-300 scale-x-0 group-hover:scale-x-100" />
                   {t(cando.name)}
                 </div>
-       
-                  <BgImage
-                    wrapperClassName="rounded-e-xl overflow-hidden group-hover:scale-125 transition-transform duration-300"
-                    opacity="opacity-90"
-                    contrast={false}
-                    src={cando.img}
-                    alt="code background"
-                    width={720}
-                    height={320}
-                    priority
-                  />
-          
+
+                <BgImage
+                  wrapperClassName="rounded-e-xl overflow-hidden group-hover:scale-125 transition-transform duration-300"
+                  opacity="opacity-90"
+                  contrast={false}
+                  src={cando.img}
+                  alt="code background"
+                  width={720}
+                  height={320}
+                  priority
+                />
               </ListItem>
             ))}
           </ListWrapper>

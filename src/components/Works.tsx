@@ -9,7 +9,7 @@ import { ListItem, ListWrapper } from "./ListMotion";
 import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import WithPlaceholder from "./WithPlaceholder";
-import { AnimatePresence, motion } from "framer-motion";
+import { AnimatePresence, motion } from "motion/react";
 
 const Tr = ({
   children,
@@ -90,7 +90,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
           },
           closed: {
             width: 0,
-            display: "none",
             transition: {
               staggerChildren: 0.05,
               staggerDirection: -1,

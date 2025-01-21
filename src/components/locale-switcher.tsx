@@ -1,9 +1,10 @@
 "use client";
 
 import { usePathname } from "next/navigation";
-import { Locale, i18nLocale } from "@/middleware";
+import { Locale } from "@/middleware";
 import { useRouter } from "next/navigation";
 import { useTranslations } from "next-intl";
+import { i18nLocale } from "@/i18n/routing";
 
 export default function LocaleSwitcher({ toggle }: { toggle?: () => void }) {
   const router = useRouter();

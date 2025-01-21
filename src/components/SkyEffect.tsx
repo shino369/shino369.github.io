@@ -1,6 +1,6 @@
 "use client";
 import clsx from "clsx";
-import { motion } from "framer-motion";
+import { motion } from "motion/react";
 import { useEffect, useRef, useState } from "react";
 
 // unsolved error casuing crash
@@ -8,7 +8,7 @@ import { useEffect, useRef, useState } from "react";
 
 export default function SkyEffect() {
   const [current, setCurrent] = useState(11);
-  const interval = useRef<NodeJS.Timeout>();
+  const interval = useRef<NodeJS.Timeout>(undefined);
 
   useEffect(() => {
     interval.current = setInterval(() => {

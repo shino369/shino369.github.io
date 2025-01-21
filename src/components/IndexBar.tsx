@@ -26,11 +26,11 @@ export default function IndexBar() {
   }, [dispatch]);
 
   return (
-    <nav
+    (<nav
       {...(isMD
         ? {}
         : {
-            ref: ref as RefObject<HTMLDivElement>,
+            ref: ref as RefObject<HTMLDivElement | null>,
           })}
       className={clsx(
         "fixed transition-transform top-10 left-0 mt-2 flex items-center",
@@ -193,6 +193,6 @@ export default function IndexBar() {
       >
         {show ? "-" : "+"}
       </div>
-    </nav>
+    </nav>)
   );
 }
