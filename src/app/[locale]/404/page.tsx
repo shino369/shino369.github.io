@@ -48,6 +48,8 @@ export async function generateMetadata(props: {params: Promise<LocaleParam>}) {
   };
 }
 
+export const dynamic = "force-static";
+
 export default function NotFound() {
   const t = useTranslations("page");
 

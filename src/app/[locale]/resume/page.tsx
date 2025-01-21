@@ -6,6 +6,8 @@ import { LocaleParam } from "@/types";
 import { useTranslations } from "next-intl";
 import { getTranslations } from "next-intl/server";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata(props: {
   params: Promise<LocaleParam>;
 }) {

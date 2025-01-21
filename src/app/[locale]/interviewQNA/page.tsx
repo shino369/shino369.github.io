@@ -1633,3 +1633,5 @@ export default function Page() {
   const locale = useLocale();
   return locale === "en" ? <ENQNA /> : <JPQNA />;
 }
+
+export const dynamic = "force-static";

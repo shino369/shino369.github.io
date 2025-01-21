@@ -6,6 +6,8 @@ import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Suspense, use } from "react";
 import BgImage from "@/components/BgImage";
 
+export const dynamic = "force-static";
+
 export async function generateMetadata(props: {
   params: Promise<LocaleParam>;
 }) {

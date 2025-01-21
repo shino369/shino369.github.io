@@ -12,6 +12,8 @@ import { SERVICES, SKILLSET } from "@/constants/common";
 import BgImage from "@/components/BgImage";
 import { useLocale, useTranslations } from "next-intl";
 
+export const dynamic = "force-static";
+
 export default function IndexPage() {
   const locale = useLocale();
 
