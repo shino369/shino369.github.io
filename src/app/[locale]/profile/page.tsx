@@ -1,7 +1,6 @@
 import DelayDiv from "@/components/DelayDiv";
 import { ProfileInitEffect } from "@/components/FramerTransitionWrapper";
 import { LocaleParam } from "@/types";
-import { useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import Image from "next/image";
 
@@ -21,8 +20,10 @@ export async function generateMetadata(props: {params: Promise<LocaleParam>}) {
   };
 }
 
-export default function Page() {
-  const t = useTranslations("page");
+export default async function Page(props: { params: Promise<LocaleParam> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "page" });
 
   return (
     <main className="flex flex-col items-center justify-center py-8 px-4 sm:p-20 md:p-24 max-height-dvh">

@@ -10,14 +10,15 @@ import { ListItem, ListWrapper } from "@/components/ListMotion";
 import EmailForm from "@/components/Email";
 import { SERVICES, SKILLSET } from "@/constants/common";
 import BgImage from "@/components/BgImage";
-import { useLocale, useTranslations } from "next-intl";
+import { LocaleParam } from "@/types";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export const dynamic = "force-static";
 
-export default function IndexPage() {
-  const locale = useLocale();
-
-  const t = useTranslations("page");
+export default async function IndexPage(props: { params: Promise<LocaleParam> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "page" });
 
   const env = {
     NEXT_PUBLIC_EMAIL_SERVICE_ID: process.env.NEXT_PUBLIC_EMAIL_SERVICE_ID,

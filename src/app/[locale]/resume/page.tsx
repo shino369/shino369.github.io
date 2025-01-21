@@ -3,8 +3,7 @@ import { ListItem, ListWrapper } from "@/components/ListMotion";
 import ResumeCard from "@/components/ResumeCard";
 import { RESUME } from "@/constants/common";
 import { LocaleParam } from "@/types";
-import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 export const dynamic = "force-static";
 
@@ -15,6 +14,8 @@ export async function generateMetadata(props: {
 
   const { locale } = params;
 
+  setRequestLocale(locale);
+
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("resume"),
@@ -22,8 +23,10 @@ export async function generateMetadata(props: {
   };
 }
 
-export default function Page() {
-  const t = useTranslations("page");
+export default async function Page(props: { params: Promise<LocaleParam> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "page" });
 
   return (
     <main className="flex py-8 px-4 sm:p-20 md:p-24 max-height-dvh relative">

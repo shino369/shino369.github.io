@@ -1,7 +1,6 @@
 import SearchBar from "@/components/Searchbar";
 import Works from "@/components/Works";
 import { LocaleParam } from "@/types";
-import { useLocale, useTranslations } from "next-intl";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { Suspense, use } from "react";
 import BgImage from "@/components/BgImage";
@@ -15,6 +14,8 @@ export async function generateMetadata(props: {
 
   const { locale } = params;
 
+  setRequestLocale(locale);
+
   const t = await getTranslations({ locale, namespace: "meta" });
   return {
     title: t("works"),
@@ -22,8 +23,10 @@ export async function generateMetadata(props: {
   };
 }
 
-export default function Page() {
-  const t = useTranslations("page");
+export default async function Page(props: { params: Promise<LocaleParam> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "page" });
 
   // the lower component is client side. Need to handle translate here
   const WORKS = [

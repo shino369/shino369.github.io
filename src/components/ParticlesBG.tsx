@@ -2,17 +2,14 @@
 
 import { useAppSelector } from "@/redux/store";
 import {
-  Ref,
   useCallback,
   useEffect,
-  useLayoutEffect,
   useRef,
   useState,
 } from "react";
 import Particles, { initParticlesEngine } from "@tsparticles/react";
 import type { Container, Engine } from "@tsparticles/engine";
 import { loadSlim } from "@tsparticles/slim";
-import ToggleButton from "./ToggleButton";
 
 const ParticlesBG = () => {
   const [init, setInit] = useState(false);
@@ -35,9 +32,15 @@ const ParticlesBG = () => {
     });
   }, []);
 
+  const particleRef = useRef<Container | undefined>(null);
+
   // will be called when loaded
   const particlesLoaded = useCallback(
     async (container: Container | undefined) => {
+      if (!particleRef.current) {
+        particleRef.current = container;
+      }
+
       if (!particleActive) {
         setTimeout(() => {
           particleRef.current?.pause();
@@ -52,11 +55,10 @@ const ParticlesBG = () => {
     (commonState) => commonState.common
   );
 
-  const particleRef = useRef<Container | null>(null);
-
   useEffect(() => {
     // console.log(particleActive);
-    particleActive ? particleRef.current?.play() : particleRef.current?.pause();
+    // particleActive ? particleRef.current?.play() : particleRef.current?.pause();
+    setInit(particleActive);
   }, [particleActive]);
 
   return (

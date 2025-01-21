@@ -1,6 +1,7 @@
 import IndexBar from "@/components/IndexBar";
 import { Answer, Highlight, Question } from "@/components/QNA";
-import { useLocale } from "next-intl";
+import { LocaleParam } from "@/types";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 
 function JPQNA() {
   return (
@@ -1629,8 +1630,28 @@ function ENQNA() {
   );
 }
 
-export default function Page() {
-  const locale = useLocale();
+export async function generateMetadata(props: {
+  params: Promise<LocaleParam>;
+}) {
+  const params = await props.params;
+
+  const { locale } = params;
+
+  console.log(locale);
+
+  setRequestLocale(locale);
+
+  const t = await getTranslations({ locale, namespace: "meta" });
+  console.log(t("works"));
+  return {
+    title: t("works"),
+    description: t("works"),
+  };
+}
+
+export default async function Page(props: { params: Promise<LocaleParam> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
   return locale === "en" ? <ENQNA /> : <JPQNA />;
 }
 

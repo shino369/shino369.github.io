@@ -1,6 +1,5 @@
 import Link from "next/link";
-import { useTranslations } from "next-intl";
-import { getTranslations } from "next-intl/server";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { LocaleParam } from "@/types";
 
 export async function generateMetadata(props: {params: Promise<LocaleParam>}) {
@@ -50,8 +49,10 @@ export async function generateMetadata(props: {params: Promise<LocaleParam>}) {
 
 export const dynamic = "force-static";
 
-export default function NotFound() {
-  const t = useTranslations("page");
+export default async function NotFound(props: { params: Promise<LocaleParam> }) {
+  const { locale } = await props.params;
+  setRequestLocale(locale);
+  const t = await getTranslations({ locale, namespace: "page" });
 
   return (
     <main className="flex flex-col items-center justify-center p-8 sm:p-20 md:p-24 max-height-dvh">
