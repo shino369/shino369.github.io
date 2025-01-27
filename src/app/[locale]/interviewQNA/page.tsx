@@ -1637,12 +1637,12 @@ export async function generateMetadata(props: {
 
   const { locale } = params;
 
-  console.log(locale);
+  // console.log(locale);
 
   setRequestLocale(locale);
 
   const t = await getTranslations({ locale, namespace: "meta" });
-  console.log(t("works"));
+  // console.log(t("works"));
   return {
     title: t("works"),
     description: t("works"),
