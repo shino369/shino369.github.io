@@ -8,7 +8,7 @@ export default function RootPage() {
   // not usage, just to show metadata at root level and redirect to localized page.
 
   return (
-    <html lang={"ja"}>
+    <html lang={"ja"} className="dark">
       <body className={clsx(inter.className, "scrollbar-hide")}>
         shino369 homepage
       </body>

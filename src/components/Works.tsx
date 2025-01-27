@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import WithPlaceholder from "./WithPlaceholder";
 import { AnimatePresence, motion } from "motion/react";
+import { WorkProps } from "@/types";
 
 const Tr = ({
   children,
@@ -22,7 +23,9 @@ const Th = ({
   children,
   className,
 }: PropsWithChildren & { className?: string }) => {
-  return <th className={clsx(className, "text-left")}>{children}</th>;
+  return (
+    <th className={clsx(className, "text-left capitalize")}>{children}</th>
+  );
 };
 
 const Td = ({
@@ -31,19 +34,9 @@ const Td = ({
 }: PropsWithChildren & { className?: string }) => {
   return (
     <td className={clsx(className)}>
-      <div className="py-2 pl-2">{children}</div>
+      <div className="py-2 pl-2 leading-8">{children}</div>
     </td>
   );
-};
-
-type WorkProps = {
-  title: string;
-  description: string;
-  responsibility: string;
-  result: string;
-  environemnt: string[];
-  image: string[];
-  url?: string[];
 };
 
 export default function Works({ works }: { works: WorkProps[] }) {
@@ -63,8 +56,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
         (w) =>
           reg.test(w.title) ||
           reg.test(w.description) ||
-          reg.test(w.responsibility) ||
-          reg.test(w.result) ||
           reg.test(w.environemnt.join(""))
       );
 
@@ -98,106 +89,85 @@ export default function Works({ works }: { works: WorkProps[] }) {
           },
         }}
       >
-        {filteredList.map(
-          ({
-            title,
-            description,
-            responsibility,
-            result,
-            environemnt,
-            image,
-            url,
-          }) => (
-            <ListItem
-              key={title}
-              className="bg-dark-black text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 shadow-md shadow-black rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
-            >
-              <div className="flex items-center justify-center py-4 px-2 ">
-                <div className="w-full">
-                  <div className="flex justify-center relative">
-                    {image.length > 1 && (
-                      <div className="character-shadow self-center absolute left-0 flex items-center text-2xl px-2">
-                        {"<"}
-                      </div>
-                    )}
-                    <DraggableDiv className="flex max-w-full overflow-auto">
-                      {image.map((m) => (
-                        <WithPlaceholder
-                          className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
-                          key={m}
-                          alt={title}
-                          src={m}
-                          width={800}
-                          height={800}
-                          onClick={() => {
-                            setImageClicked({
-                              src: m,
-                              clicked: true,
-                            });
-                          }}
-                        />
+        <div className="md:px-16">
+          {filteredList.map(
+            ({ title, description, environemnt, image, url }) => (
+              <ListItem
+                key={title}
+                className="text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 bg-[rgb(37,37,38,0.75)] shadow-md rounded-md"
+              >
+                <div className="flex items-center justify-center md:py-4 px-4">
+                  <div className="w-full">
+                    <div className="my-4 text-lg">
+                      <strong>{title}</strong>
+                    </div>
+                    <div className="flex justify-center relative">
+                      {image && (
+                        <DraggableDiv className="flex max-w-full overflow-auto">
+                          {image.map((m) => (
+                            <WithPlaceholder
+                              className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
+                              key={m}
+                              alt={title}
+                              src={m}
+                              width={800}
+                              height={800}
+                              onClick={() => {
+                                setImageClicked({
+                                  src: m,
+                                  clicked: true,
+                                });
+                              }}
+                            />
+                          ))}
+                        </DraggableDiv>
+                      )}
+                    </div>
+                    <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
+                      {environemnt.map((en, i) => (
+                        <Badge className={clsx("capitalize")} key={en}>
+                          {en}
+                        </Badge>
                       ))}
-                    </DraggableDiv>
-                    {image.length > 1 && (
-                      <div className="character-shadow self-center absolute right-0  flex items-center text-2xl px-2">
-                        {">"}
-                      </div>
-                    )}
-                  </div>
-                  <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
-                    {environemnt.map((en, i) => (
-                      <Badge
-                        className={clsx(
-                          i % 2 === 0 ? "bg-sky-700" : "bg-gray-700",
-                          "capitalize"
-                        )}
-                        key={en}
-                      >
-                        {en}
-                      </Badge>
-                    ))}
-                  </div>
+                    </div>
 
-                  <div className="my-4">
-                    <strong>{title}</strong>
-                  </div>
-                  <div className="my-2">
-                    {url &&
-                      url.map((u) => (
-                        <div key={u}>
-                          <Link
-                            className="hover:bg-slate-500 break-all text-green-400"
-                            href={u}
-                          >
-                            {u}
-                          </Link>
-                        </div>
-                      ))}
-                  </div>
-                  <div></div>
-                  <div className="bg-darker-black   p-2">
-                    <table className="table whitespace-pre-wrap">
-                      <tbody>
-                        <Tr>
-                          <Th>{t("description")}</Th>
-                          <Td>{description}</Td>
-                        </Tr>
-                        <Tr>
-                          <Th>{t("responsibility")}</Th>
-                          <Td>{responsibility}</Td>
-                        </Tr>
-                        <Tr>
-                          <Th>{t("result")}</Th>
-                          <Td>{result}</Td>
-                        </Tr>
-                      </tbody>
-                    </table>
+                    <div className="my-4">
+                      {url &&
+                        url.map((u) => (
+                          <div key={u}>
+                            <Link
+                              className="hover:bg-slate-500 break-all text-green-400"
+                              href={u}
+                            >
+                              {u}
+                            </Link>
+                          </div>
+                        ))}
+                    </div>
+                    <div className="shadow-md rounded-md text-[rgb(68,68,68)]  bg-[#d3d3d3] my-4 p-4">
+                      <table className="table whitespace-pre-wrap">
+                        <tbody>
+                          <Tr>
+                            <Th>{/* {t("description")} */}</Th>
+                            <Td>{description}</Td>
+                          </Tr>
+                          {/* <Tr>
+                            <Th>{t("responsibility")}</Th>
+                            <Td>{responsibility}</Td>
+                          </Tr> */}
+                          {/* <Tr>
+                            <Th>{t("result")}</Th>
+                            <Td>{result}</Td>
+                          </Tr> */}
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ListItem>
-          )
-        )}
+              </ListItem>
+            )
+          )}
+        </div>
       </ListWrapper>
       {/* simple popup */}
       <AnimatePresence mode="wait">

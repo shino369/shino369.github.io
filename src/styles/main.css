@@ -16,6 +16,10 @@
   filter: drop-shadow(black 2px 4px 6px);
 }
 
+.white-shadow {
+  filter: drop-shadow(white 2px 2px 8px);
+}
+
 .character-bright {
   filter: brightness(0.5);
 }

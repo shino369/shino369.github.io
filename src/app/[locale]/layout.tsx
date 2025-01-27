@@ -2,7 +2,11 @@
 import { Inter } from "next/font/google";
 import { Navbar } from "@/components/Navbar";
 // import { getRootPaths } from "@/helper/utils";
-import { getMessages, getTranslations, setRequestLocale } from "next-intl/server";
+import {
+  getMessages,
+  getTranslations,
+  setRequestLocale,
+} from "next-intl/server";
 import { notFound } from "next/navigation";
 import { LocaleParam } from "@/types";
 
@@ -99,8 +103,10 @@ export default async function LocaleLayout({
   // console.log(concatedPAths);
 
   return (
-    <html lang={locale}>
-      <body className={clsx(inter.className, "scrollbar-hide")}>
+    <html lang={locale} className="dark">
+      <body
+        className={clsx(inter.className, "scrollbar-hide", "md:max-w-[1280px]")}
+      >
         {/* redux */}
         <AppProvider>
           <NextIntlClientProvider locale={locale} messages={messages}>
