@@ -168,15 +168,15 @@ const Encounter = () => {
         delay: 300,
         duration: 0,
       },
-      // {
-      //   name: "show greet",
-      //   func: () => {
-      //     setCurrentText("greeting1");
-      //     // startText();
-      //     reset();
-      //   },
-      //   duration: 0,
-      // },
+      {
+        name: "show greet",
+        func: () => {
+          // setCurrentText("greeting1");
+          // startText();
+          reset();
+        },
+        duration: 0,
+      },
     ]);
 
     chainRef.current.push(chainaction);
