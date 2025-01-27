@@ -17,7 +17,10 @@ export type TranslationModel = {
 };
 
 export const isTranslationModel = (obj: any): obj is TranslationModel => {
-  return obj.shouldTranslate && obj.key;
+  return (
+    Object.keys(obj).includes("shouldTranslate") &&
+    Object.keys(obj).includes("key")
+  );
 };
 
 export type WorkProps = {

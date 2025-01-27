@@ -309,6 +309,23 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
   },
   {
     title: {
+      shouldTranslate: false,
+      key: "flutter-background-screen-lock",
+    },
+    description: {
+      shouldTranslate: false,
+      key: "Show your custom lock screen after coming back from background, or use the lock screen as a route guarding page. Initially designed for high security app like banking app.",
+    },
+    environemnt: [
+      SKILLSET.mobile.dart[0],
+      SKILLSET.mobile.flutter[0],
+      SKILLSET.devops.github[0],
+      SKILLSET.devops.git[0],
+    ],
+    url: ["https://github.com/shino369/flutter-background-screen-lock"],
+  },
+  {
+    title: {
       shouldTranslate: true,
       key: "hkjccare",
     },
