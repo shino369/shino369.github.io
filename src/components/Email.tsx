@@ -79,7 +79,7 @@ export default function EmailForm({
         } catch (error) {
           console.log(error);
           setFormStatus({
-            msg: t("error"),
+            msg: t("fail"),
             error: true,
           });
           setSending(false);
@@ -93,12 +93,14 @@ export default function EmailForm({
     <form
       ref={ref}
       onSubmit={handleSubmit(sendEmail)}
-      className="w-full flex justify-center"
+      className="w-full flex justify-center text-black"
     >
       <div className="w-[800px] max-w-[80vw]">
         <div className="flex justify-center mb-6">
           <div className="uppercase w-fit text-2xl md:text-3xl text-center font-bold">
-            <InViewDiv><h2>{"<Contact/>"}</h2></InViewDiv>
+            <InViewDiv>
+              <h2>{"<Contact/>"}</h2>
+            </InViewDiv>
           </div>
         </div>
         <div className="mb-2">
