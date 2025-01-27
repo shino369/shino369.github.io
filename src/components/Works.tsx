@@ -56,8 +56,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
         (w) =>
           reg.test(w.title) ||
           reg.test(w.description) ||
-          reg.test(w.responsibility) ||
-          reg.test(w.result) ||
           reg.test(w.environemnt.join(""))
       );
 
@@ -93,43 +91,37 @@ export default function Works({ works }: { works: WorkProps[] }) {
       >
         <div className="md:px-16">
           {filteredList.map(
-            ({
-              title,
-              description,
-              responsibility,
-              result,
-              environemnt,
-              image,
-              url,
-            }) => (
+            ({ title, description, environemnt, image, url }) => (
               <ListItem
                 key={title}
-                className="text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 "
+                className="text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 bg-[rgb(37,37,38,0.75)] shadow-md rounded-md"
               >
-                <div className="flex items-center justify-center py-4 px-2 ">
+                <div className="flex items-center justify-center md:py-4 px-4">
                   <div className="w-full">
-                    <div className="my-4">
+                    <div className="my-4 text-lg">
                       <strong>{title}</strong>
                     </div>
                     <div className="flex justify-center relative">
-                      <DraggableDiv className="flex max-w-full overflow-auto">
-                        {image.map((m) => (
-                          <WithPlaceholder
-                            className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
-                            key={m}
-                            alt={title}
-                            src={m}
-                            width={800}
-                            height={800}
-                            onClick={() => {
-                              setImageClicked({
-                                src: m,
-                                clicked: true,
-                              });
-                            }}
-                          />
-                        ))}
-                      </DraggableDiv>
+                      {image && (
+                        <DraggableDiv className="flex max-w-full overflow-auto">
+                          {image.map((m) => (
+                            <WithPlaceholder
+                              className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
+                              key={m}
+                              alt={title}
+                              src={m}
+                              width={800}
+                              height={800}
+                              onClick={() => {
+                                setImageClicked({
+                                  src: m,
+                                  clicked: true,
+                                });
+                              }}
+                            />
+                          ))}
+                        </DraggableDiv>
+                      )}
                     </div>
                     <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
                       {environemnt.map((en, i) => (
@@ -156,17 +148,17 @@ export default function Works({ works }: { works: WorkProps[] }) {
                       <table className="table whitespace-pre-wrap">
                         <tbody>
                           <Tr>
-                            <Th>{t("description")}</Th>
+                            <Th>{/* {t("description")} */}</Th>
                             <Td>{description}</Td>
                           </Tr>
-                          <Tr>
+                          {/* <Tr>
                             <Th>{t("responsibility")}</Th>
                             <Td>{responsibility}</Td>
-                          </Tr>
-                          <Tr>
+                          </Tr> */}
+                          {/* <Tr>
                             <Th>{t("result")}</Th>
                             <Td>{result}</Td>
-                          </Tr>
+                          </Tr> */}
                         </tbody>
                       </table>
                     </div>

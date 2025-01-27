@@ -1,6 +1,7 @@
 import { TranslationModel } from "@/types";
+import { image } from "motion/react-client";
 
-export const SKILLSET: Record<string, Record<string, string[]>> = {
+export const SKILLSET = {
   frontend: {
     javascript: [
       "JavaScript",
@@ -245,6 +246,68 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
   {
     title: {
       shouldTranslate: true,
+      key: "linkx_sbi",
+    },
+    description: {
+      shouldTranslate: true,
+      key: "linkx_sbi_description",
+    },
+    environemnt: [
+      SKILLSET.frontend.typescript[0],
+      SKILLSET.frontend.javascript[0],
+      SKILLSET.frontend.next[0],
+      SKILLSET.frontend.recoil[0],
+      SKILLSET.frontend.reactQuery[0],
+      SKILLSET.frontend.materialUi[0],
+      SKILLSET.frontend.jest[0],
+      SKILLSET.devops.git[0],
+      SKILLSET.devops.github[0],
+      SKILLSET.devops.githubActions[0],
+      SKILLSET.devops.jira[0],
+    ],
+  },
+  {
+    title: {
+      shouldTranslate: true,
+      key: "linkx_hokkoku",
+    },
+    description: {
+      shouldTranslate: true,
+      key: "linkx_hokkoku_description",
+    },
+    environemnt: [
+      SKILLSET.frontend.javascript[0],
+      SKILLSET.mobile.dart[0],
+      SKILLSET.mobile.flutter[0],
+      SKILLSET.mobile.riverpod[0],
+      SKILLSET.mobile.kotlin[0],
+      SKILLSET.devops.git[0],
+      SKILLSET.devops.azureDevOps[0],
+    ],
+    image: ["https://www.hokkokubank.co.jp/assets/img/logo.svg"],
+  },
+  {
+    title: {
+      shouldTranslate: true,
+      key: "playwright",
+    },
+    description: {
+      shouldTranslate: true,
+      key: "playwright_description",
+    },
+    environemnt: [
+      SKILLSET.frontend.javascript[0],
+      SKILLSET.frontend.typescript[0],
+      SKILLSET.frontend.playwright[0],
+      SKILLSET.backend.node[0],
+      SKILLSET.devops.github[0],
+      SKILLSET.devops.git[0],
+    ],
+    url: ["https://github.com/shino369/playwright-ticket-buyer"],
+  },
+  {
+    title: {
+      shouldTranslate: true,
       key: "hkjccare",
     },
     url: [
@@ -255,19 +318,11 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
       shouldTranslate: true,
       key: "hkjccare_description",
     },
-    responsibility: {
-      shouldTranslate: true,
-      key: "hkjccare_responsibility",
-    },
-    result: {
-      shouldTranslate: true,
-      key: "hkjccare_result",
-    },
     environemnt: [
+      SKILLSET.mobile.reactNative[0],
       SKILLSET.frontend.javascript[0],
       SKILLSET.frontend.typescript[0],
       SKILLSET.frontend.react[0],
-      SKILLSET.mobile.reactNative[0],
       SKILLSET.frontend.i18next[0],
       SKILLSET.devops.git[0],
       SKILLSET.devops.jira[0],
@@ -287,14 +342,6 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
     description: {
       shouldTranslate: true,
       key: "hkc_description",
-    },
-    responsibility: {
-      shouldTranslate: true,
-      key: "hkc_responsibility",
-    },
-    result: {
-      shouldTranslate: true,
-      key: "hkc_result",
     },
     environemnt: [
       SKILLSET.frontend.angular[0],
@@ -322,14 +369,6 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
       shouldTranslate: true,
       key: "3tech_description",
     },
-    responsibility: {
-      shouldTranslate: true,
-      key: "3tech_responsibility",
-    },
-    result: {
-      shouldTranslate: true,
-      key: "3tech_result",
-    },
     environemnt: [
       SKILLSET.frontend.angular[0],
       SKILLSET.frontend.typescript[0],
@@ -356,14 +395,6 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
     description: {
       shouldTranslate: true,
       key: "tms_description",
-    },
-    responsibility: {
-      shouldTranslate: true,
-      key: "tms_responsibility",
-    },
-    result: {
-      shouldTranslate: true,
-      key: "tms_result",
     },
     environemnt: [
       SKILLSET.frontend.typescript[0],
@@ -394,14 +425,6 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
       shouldTranslate: true,
       key: "tms_resv_description",
     },
-    responsibility: {
-      shouldTranslate: true,
-      key: "tms_resv_responsibility",
-    },
-    result: {
-      shouldTranslate: true,
-      key: "tms_resv_result",
-    },
     environemnt: [
       SKILLSET.frontend.vue[0],
       SKILLSET.frontend.vite[0],
@@ -418,5 +441,23 @@ export const WORKS: Record<string, TranslationModel | string[]>[] = [
       SKILLSET.devops.gitlab[0],
     ],
     image: ["/pics/shiji/tms/1.jpg", "/pics/shiji/resv/1.jpg"],
+  },
+  {
+    title: {
+      shouldTranslate: true,
+      key: "telegrambot",
+    },
+    description: {
+      shouldTranslate: true,
+      key: "telegrambot_description",
+    },
+    environemnt: [
+      SKILLSET.frontend.typescript[0],
+      SKILLSET.frontend.javascript[0],
+      SKILLSET.backend.node[0],
+      SKILLSET.devops.github[0],
+      SKILLSET.devops.git[0],
+    ],
+    url: ["https://github.com/shino369/telegram-bot-typescript-template"],
   },
 ];

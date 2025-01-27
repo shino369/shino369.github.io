@@ -23,22 +23,13 @@ export const isTranslationModel = (obj: any): obj is TranslationModel => {
 export type WorkProps = {
   title: string;
   description: string;
-  responsibility: string;
-  result: string;
   environemnt: string[];
-  image: string[];
+  image?: string[];
   url?: string[];
 };
 
 export const isWorkProps = (obj: any): obj is WorkProps => {
-  return (
-    obj.title &&
-    obj.description &&
-    obj.responsibility &&
-    obj.result &&
-    obj.environemnt &&
-    obj.image
-  );
+  return obj.title && obj.description && obj.environemnt;
 };
 
 export type i18nT = ReturnType<typeof getTranslations> extends Promise<infer T>

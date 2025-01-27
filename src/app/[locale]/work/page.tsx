@@ -41,7 +41,7 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
   const works: WorkProps[] = translateArr<WorkProps>(WORKS, t, isWorkProps);
 
   return (
-    <main className="flex py-8 px-4 sm:p-20 md:p-24 max-height-dvh relative">
+    <main className="flex py-8 px-4 sm:p-20 md:p-24 max-height-dvh relative bg-[rgba(88,88,88,0.5)]">
       <BgImage
         src="/workbg.jpg"
         alt="code background"
@@ -62,10 +62,10 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
         </Suspense>
 
         <div className="flex justify-center flex-1 overflow-auto">
-          <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
+          <div className="min-w-8 text-lg md:text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1>{t("works")}</h1>
           </div>
-          <div className="overflow-auto scrollbar-hide w-auto max-w-5xl bg-[rgb(37,37,38,0.75)] border-2 rounded-md border-[#d3d3d3]">
+          <div className="overflow-auto scrollbar-hide w-auto max-w-5xl">
             <Suspense fallback={<></>}>
               <Works works={works} />
             </Suspense>
