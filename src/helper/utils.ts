@@ -75,7 +75,7 @@ export const translateArr = <T>(
       }
     }
 
-    console.log(formatted);
+    // console.log(formatted);
 
     if (checker(formatted)) {
       return formatted;
