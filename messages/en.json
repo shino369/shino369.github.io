@@ -65,7 +65,7 @@
 
     "linkx_sbi": "金融機関向けIDaaS認証アプリ",
     "linkx_sbi_description": "Next.jsを使用した、某大手銀行グループの金融機関向けIDaaS認証アプリ開発。",
-    "linkx_hokkoku": "北国銀行ネットバンキング",
+    "linkx_hokkoku": "北国銀行カード明細管理アプリ",
     "linkx_hokkoku_description": "Flutterを活用した北国フィナンシャルホールディングス発のカード明細管理アプリ",
     "tms": "テーブル予約管理システム",
     "tms_description": "自社SaaSプロダクト「席予約管理システム（Table Management System）」の開発及び保守運用",
