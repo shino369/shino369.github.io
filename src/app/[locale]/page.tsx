@@ -55,7 +55,9 @@ export default async function IndexPage(props: {
           </div>
           <div className="relative w-full">
             <DelayDiv effect="opacity" time={1500}>
-              <p className="text-center text-xl mb-2">{t("caption")}</p>
+              <p className="text-center text-xl mb-2 whitespace-pre-line">
+                {t("caption")}
+              </p>
               <Encounter />
             </DelayDiv>
           </div>
@@ -113,14 +115,14 @@ export default async function IndexPage(props: {
 
           <InViewDiv className="w-full h-fit">
             <Carousel
-              className="h-[96px] min-h-[96px] md:h-[128px] md:min-h-[128px] bg-[rgba(123,123,123,0.5)] md:mb-10"
+              className="h-[96px] min-h-[96px] md:h-[128px] md:min-h-[128px] bg-[rgba(0,0,0,0.5)] md:mb-10 border-t-2 border-b-2 border-slate-100"
               speed={30000}
             >
               {SKILLSET_ARR.filter((s) => s[1]).map((skill) => (
                 <a
                   href={`/${locale}/work?search=${skill[0]}`}
                   key={skill[0]}
-                  className="w-[128px] md:w-[160px] px-2 max-h-[80px] h-[80px] md:h-[96px] md:max-h-[96px] flex items-center filter contrast-50 hover:contrast-100"
+                  className="w-[128px] md:w-[144px] px-2 max-h-[80px] h-[80px] md:h-[96px] md:max-h-[96px] flex items-center filter contrast-50 hover:contrast-100"
                 >
                   <div className="flex flex-col items-center character-shadow">
                     <Image

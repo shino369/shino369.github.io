@@ -65,7 +65,7 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
           <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1>{t("works")}</h1>
           </div>
-          <div className="overflow-auto scrollbar-hide w-auto max-w-5xl bg-darker-black">
+          <div className="overflow-auto scrollbar-hide w-auto max-w-5xl bg-[rgb(37,37,38,0.75)] border-2 rounded-md border-[#d3d3d3]">
             <Suspense fallback={<></>}>
               <Works works={works} />
             </Suspense>

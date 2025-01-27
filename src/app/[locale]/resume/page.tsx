@@ -41,7 +41,7 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
         <div className="flex flex-col md:flex-row justify-center flex-1 overflow-auto">
           <div className="hidden md:block mt-12 w-96 min-w-96 max-w-96 text-2xl mr-2 break-all md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
             <h1 className="mb-2 text-2xl">{t("academic")}</h1>
-            <div className="bg-zinc-900 ">
+            <div className="bg-zinc-900 rounded-md p-2">
               <Academic />
             </div>
           </div>

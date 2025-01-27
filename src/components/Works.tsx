@@ -91,95 +91,91 @@ export default function Works({ works }: { works: WorkProps[] }) {
           },
         }}
       >
-        {filteredList.map(
-          ({
-            title,
-            description,
-            responsibility,
-            result,
-            environemnt,
-            image,
-            url,
-          }) => (
-            <ListItem
-              key={title}
-              className="text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 "
-            >
-              <div className="flex items-center justify-center py-4 px-2 ">
-                <div className="w-full">
-                  <div className="flex justify-center relative">
-                    <DraggableDiv className="flex max-w-full overflow-auto">
-                      {image.map((m) => (
-                        <WithPlaceholder
-                          className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
-                          key={m}
-                          alt={title}
-                          src={m}
-                          width={800}
-                          height={800}
-                          onClick={() => {
-                            setImageClicked({
-                              src: m,
-                              clicked: true,
-                            });
-                          }}
-                        />
+        <div className="md:px-16">
+          {filteredList.map(
+            ({
+              title,
+              description,
+              responsibility,
+              result,
+              environemnt,
+              image,
+              url,
+            }) => (
+              <ListItem
+                key={title}
+                className="text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 "
+              >
+                <div className="flex items-center justify-center py-4 px-2 ">
+                  <div className="w-full">
+                    <div className="my-4">
+                      <strong>{title}</strong>
+                    </div>
+                    <div className="flex justify-center relative">
+                      <DraggableDiv className="flex max-w-full overflow-auto">
+                        {image.map((m) => (
+                          <WithPlaceholder
+                            className="mr-3 max-h-[300px] h-40 w-auto cursor-pointer"
+                            key={m}
+                            alt={title}
+                            src={m}
+                            width={800}
+                            height={800}
+                            onClick={() => {
+                              setImageClicked({
+                                src: m,
+                                clicked: true,
+                              });
+                            }}
+                          />
+                        ))}
+                      </DraggableDiv>
+                    </div>
+                    <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
+                      {environemnt.map((en, i) => (
+                        <Badge className={clsx("capitalize")} key={en}>
+                          {en}
+                        </Badge>
                       ))}
-                    </DraggableDiv>
-                  </div>
-                  <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
-                    {environemnt.map((en, i) => (
-                      <Badge
-                        className={clsx(
-                          i % 2 === 0 ? "bg-sky-700" : "bg-gray-700",
-                          "capitalize"
-                        )}
-                        key={en}
-                      >
-                        {en}
-                      </Badge>
-                    ))}
-                  </div>
+                    </div>
 
-                  <div className="my-4">
-                    <strong>{title}</strong>
-                  </div>
-                  <div className="my-4">
-                    {url &&
-                      url.map((u) => (
-                        <div key={u}>
-                          <Link
-                            className="hover:bg-slate-500 break-all text-green-400"
-                            href={u}
-                          >
-                            {u}
-                          </Link>
-                        </div>
-                      ))}
-                  </div>
-                  <div className="shadow-md rounded-md text-[rgb(68,68,68)] font-sans bg-[#d3d3d3] my-4 p-4">
-                    <table className="table whitespace-pre-wrap">
-                      <tbody>
-                        <Tr>
-                          <Th>{t("description")}</Th>
-                          <Td>{description}</Td>
-                        </Tr>
-                        <Tr>
-                          <Th>{t("responsibility")}</Th>
-                          <Td>{responsibility}</Td>
-                        </Tr>
-                        <Tr>
-                          <Th>{t("result")}</Th>
-                          <Td>{result}</Td>
-                        </Tr>
-                      </tbody>
-                    </table>
+                    <div className="my-4">
+                      {url &&
+                        url.map((u) => (
+                          <div key={u}>
+                            <Link
+                              className="hover:bg-slate-500 break-all text-green-400"
+                              href={u}
+                            >
+                              {u}
+                            </Link>
+                          </div>
+                        ))}
+                    </div>
+                    <div className="shadow-md rounded-md text-[rgb(68,68,68)]  bg-[#d3d3d3] my-4 p-4">
+                      <table className="table whitespace-pre-wrap">
+                        <tbody>
+                          <Tr>
+                            <Th>{t("description")}</Th>
+                            <Td>{description}</Td>
+                          </Tr>
+                          <Tr>
+                            <Th>{t("responsibility")}</Th>
+                            <Td>{responsibility}</Td>
+                          </Tr>
+                          <Tr>
+                            <Th>{t("result")}</Th>
+                            <Td>{result}</Td>
+                          </Tr>
+                        </tbody>
+                      </table>
+                    </div>
                   </div>
                 </div>
-              </div>
-            </ListItem>
-          )
-        )}
+              </ListItem>
+            )
+          )}
+        </div>
       </ListWrapper>
       {/* simple popup */}
       <AnimatePresence mode="wait">

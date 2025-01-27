@@ -1,5 +1,4 @@
 import { TranslationModel } from "@/types";
-import { url } from "inspector";
 
 export const SKILLSET: Record<string, Record<string, string[]>> = {
   frontend: {
@@ -184,6 +183,15 @@ export const SKILLSET: Record<string, Record<string, string[]>> = {
     ],
   },
 };
+
+export const REVERSED_SKILL_MAP = Object.entries(SKILLSET).reduce<
+  Record<string, string>
+>((acc, [key, value]) => {
+  Object.entries(value).forEach(([k, v]) => {
+    acc[v[0]] = key;
+  });
+  return acc;
+}, {});
 
 export const SKILLSET_ARR = Object.values(SKILLSET).reduce<string[][]>(
   (acc, cur) => [...acc, ...Object.values(cur)],

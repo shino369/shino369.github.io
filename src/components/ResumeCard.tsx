@@ -48,7 +48,7 @@ export const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
 
   return (
     <CodeBlock title={t(props.title)} white={props.title === "academic"}>
-      <div className="flex-1">
+      <div className="flex-1 p-2">
         <table className="md:max-w-[80%] text-sm md:text-base">
           <tbody>
             {props.title === "job" && (
