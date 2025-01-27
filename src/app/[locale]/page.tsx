@@ -174,7 +174,7 @@ export default async function IndexPage(props: {
                   key={cando.name}
                   className="flex relative w-[450px] justify-start text-xs md:text-lg hover:text-white rounded-xl shadow-md m-2 md:m-4 h-32 md:h-60 group overflow-hidden"
                 >
-                  <div className="relative rounded-s-xl w-40 flex justify-center px-2 h-full items-center text-center break-all overflow-hidden  group-hover:text-white font-bold text-black">
+                  <div className="relative rounded-s-xl w-40 flex justify-center px-2 h-full items-center text-center whitespace-pre-wrap overflow-hidden  group-hover:text-white font-bold text-black">
                     <div className="absolute w-full h-full bg-[rgba(255,255,255,0.8)] origin-right top-0 left-0 -z-10 transition-transform duration-300 scale-x-100 group-hover:scale-x-0" />
                     <div className="absolute w-full h-full bg-[rgba(0,0,0,0.5)] origin-left top-0 left-0 -z-10 transition-transform duration-300 scale-x-0 group-hover:scale-x-100" />
                     {t(cando.name)}

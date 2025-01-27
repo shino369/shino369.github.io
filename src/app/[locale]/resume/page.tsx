@@ -28,6 +28,24 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
   setRequestLocale(locale);
   const t = await getTranslations({ locale, namespace: "page" });
 
+  const UpperSection = () => {
+    return (
+      <>
+        <div className="mb-6">
+          <h1 className="mb-2 text-2xl">{t("academic")}</h1>
+          <div className="bg-zinc-900 rounded-md p-2">
+            <Academic />
+          </div>
+        </div>
+
+        <h1 className="mb-2 text-2xl">{t("language")}</h1>
+        <div className="bg-zinc-900 text-slate-200  text-sm whitespace-pre-wrap rounded-md p-6 leading-8">
+          {t("languages")}
+        </div>
+      </>
+    );
+  };
+
   return (
     <main className="flex py-8 px-4 sm:py-0  max-height-dvh relative">
       <BgImage
@@ -40,17 +58,11 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
       <section className="flex flex-col flex-1">
         <div className="flex flex-col md:flex-row justify-center flex-1 overflow-auto">
           <div className="hidden md:block mt-12 w-96 min-w-96 max-w-96 text-2xl mr-2 break-all md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
-            <h1 className="mb-2 text-2xl">{t("academic")}</h1>
-            <div className="bg-zinc-900 rounded-md p-2">
-              <Academic />
-            </div>
+            <UpperSection />
           </div>
           <div className="py-12 overflow-auto w-auto scrollbar-hide max-w-5xl">
             <div className="md:hidden mb-4 w-auto mt-12 text-2xl break-all self-start">
-              <h1 className="mb-2 text-2xl">{t("academic")}</h1>
-              <div className="bg-zinc-900 ">
-                <Academic />
-              </div>
+              <UpperSection />
             </div>
             <ListWrapper
               variant={{

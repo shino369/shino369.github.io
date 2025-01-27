@@ -146,7 +146,7 @@ export const Academic = () => {
       <div className="border-t-black border-t-[1px] mt-2 pt-2">
         <a href="https://www.cityu.edu.hk/" className="break-all">
           <img
-            className="bg-slate-300 p-2 my-1"
+            className="white-shadow p-2 my-1"
             alt="Cityu"
             height={96}
             width={"auto"}
