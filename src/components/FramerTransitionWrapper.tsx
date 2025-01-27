@@ -18,7 +18,7 @@ export const PageTransitionWrapper = ({
   return (
     <motion.div
       key={pathName}
-      className="opacity-0 bg-[rgba(0,0,0,0.1)]"
+      // className="bg-[rgba(0,0,0,0.1)]"
       initial={{ opacity: 0 }}
       animate={{ opacity: 1 }}
       transition={{ duration: 1 }}

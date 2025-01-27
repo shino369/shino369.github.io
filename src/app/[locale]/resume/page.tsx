@@ -1,6 +1,6 @@
 import BgImage from "@/components/BgImage";
 import { ListItem, ListWrapper } from "@/components/ListMotion";
-import ResumeCard from "@/components/ResumeCard";
+import { Academic, ResumeCard } from "@/components/ResumeCard";
 import { RESUME } from "@/constants/common";
 import { LocaleParam } from "@/types";
 import { getTranslations, setRequestLocale } from "next-intl/server";
@@ -29,7 +29,7 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
   const t = await getTranslations({ locale, namespace: "page" });
 
   return (
-    <main className="flex py-8 px-4 sm:p-20 md:p-24 max-height-dvh relative">
+    <main className="flex py-8 px-4 sm:py-0  max-height-dvh relative">
       <BgImage
         src="/resumebg.jpg"
         alt="code background"
@@ -38,11 +38,20 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
         priority
       />
       <section className="flex flex-col flex-1">
-        <div className="flex justify-center flex-1 overflow-auto">
-          <div className=" min-w-8 text-2xl mr-2 break-all w-8 md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
-            <h1>{t("_resume")}</h1>
+        <div className="flex flex-col md:flex-row justify-center flex-1 overflow-auto">
+          <div className="hidden md:block mt-12 w-96 min-w-96 max-w-96 text-2xl mr-2 break-all md:w-auto border-r-4 pr-2 border-r-black dark:border-r-white self-start">
+            <h1 className="mb-2 text-2xl">{t("academic")}</h1>
+            <div className="bg-zinc-900 ">
+              <Academic />
+            </div>
           </div>
-          <div className="overflow-auto scrollbar-hide w-auto max-w-5xl">
+          <div className="py-12 overflow-auto w-auto scrollbar-hide max-w-5xl">
+            <div className="md:hidden mb-4 w-auto mt-12 text-2xl break-all self-start">
+              <h1 className="mb-2 text-2xl">{t("academic")}</h1>
+              <div className="bg-zinc-900 ">
+                <Academic />
+              </div>
+            </div>
             <ListWrapper
               variant={{
                 open: {
@@ -62,6 +71,7 @@ export default async function Page(props: { params: Promise<LocaleParam> }) {
                 },
               }}
             >
+              <h1 className="mb-2 text-2xl">{t("_resume")}</h1>
               {RESUME.map((props, i) => (
                 <ListItem scale key={i}>
                   <ResumeCard props={props} />

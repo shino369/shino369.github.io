@@ -10,6 +10,7 @@ import { useSearchParams } from "next/navigation";
 import Link from "next/link";
 import WithPlaceholder from "./WithPlaceholder";
 import { AnimatePresence, motion } from "motion/react";
+import { WorkProps } from "@/types";
 
 const Tr = ({
   children,
@@ -22,7 +23,9 @@ const Th = ({
   children,
   className,
 }: PropsWithChildren & { className?: string }) => {
-  return <th className={clsx(className, "text-left")}>{children}</th>;
+  return (
+    <th className={clsx(className, "text-left capitalize")}>{children}</th>
+  );
 };
 
 const Td = ({
@@ -31,19 +34,9 @@ const Td = ({
 }: PropsWithChildren & { className?: string }) => {
   return (
     <td className={clsx(className)}>
-      <div className="py-2 pl-2">{children}</div>
+      <div className="py-2 pl-2 leading-8">{children}</div>
     </td>
   );
-};
-
-type WorkProps = {
-  title: string;
-  description: string;
-  responsibility: string;
-  result: string;
-  environemnt: string[];
-  image: string[];
-  url?: string[];
 };
 
 export default function Works({ works }: { works: WorkProps[] }) {
@@ -110,16 +103,11 @@ export default function Works({ works }: { works: WorkProps[] }) {
           }) => (
             <ListItem
               key={title}
-              className="bg-dark-black text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 shadow-md shadow-black rounded-tr-3xl rounded-bl-3xl rounded-br-3xl"
+              className="text-slate-300 mb-4 md:mb-8 py-2 md:py-4 md:px-2 "
             >
               <div className="flex items-center justify-center py-4 px-2 ">
                 <div className="w-full">
                   <div className="flex justify-center relative">
-                    {image.length > 1 && (
-                      <div className="character-shadow self-center absolute left-0 flex items-center text-2xl px-2">
-                        {"<"}
-                      </div>
-                    )}
                     <DraggableDiv className="flex max-w-full overflow-auto">
                       {image.map((m) => (
                         <WithPlaceholder
@@ -138,11 +126,6 @@ export default function Works({ works }: { works: WorkProps[] }) {
                         />
                       ))}
                     </DraggableDiv>
-                    {image.length > 1 && (
-                      <div className="character-shadow self-center absolute right-0  flex items-center text-2xl px-2">
-                        {">"}
-                      </div>
-                    )}
                   </div>
                   <div className="flex my-4 max-w-full text-slate-300 flex-wrap">
                     {environemnt.map((en, i) => (
@@ -161,7 +144,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                   <div className="my-4">
                     <strong>{title}</strong>
                   </div>
-                  <div className="my-2">
+                  <div className="my-4">
                     {url &&
                       url.map((u) => (
                         <div key={u}>
@@ -174,8 +157,7 @@ export default function Works({ works }: { works: WorkProps[] }) {
                         </div>
                       ))}
                   </div>
-                  <div></div>
-                  <div className="bg-darker-black   p-2">
+                  <div className="shadow-md rounded-md text-[rgb(68,68,68)] font-sans bg-[#d3d3d3] my-4 p-4">
                     <table className="table whitespace-pre-wrap">
                       <tbody>
                         <Tr>

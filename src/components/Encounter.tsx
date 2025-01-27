@@ -7,7 +7,8 @@ import { motion, useAnimation } from "motion/react";
 import Image from "next/image";
 import { useCallback, useEffect, useRef, useState } from "react";
 import Carousel from "./Carousel";
-import { useTranslations } from "next-intl";
+import { useLocale, useTranslations } from "next-intl";
+import { useRouter } from "next/navigation";
 
 type AvailableText =
   | "remind"
@@ -32,6 +33,7 @@ const Encounter = () => {
   const [carouselActive, setCarouselActive] = useState(true);
   const [isShow, setIsShow] = useState(false);
   const [isCaraShow, setIsCaraShow] = useState(true);
+  const [isNavigating, setIsNavigating] = useState(false);
 
   const interVal = useRef<NodeJS.Timeout>(undefined);
   const timeout = useRef<NodeJS.Timeout>(undefined);
@@ -40,6 +42,8 @@ const Encounter = () => {
 
   const controls = useAnimation();
   const showText = useAnimation();
+  const router = useRouter();
+  const locale = useLocale();
 
   const t = useTranslations("page");
 
@@ -77,20 +81,20 @@ const Encounter = () => {
     });
   }, [controls]);
 
-  const startText = () => {
-    setIsShow(true);
-    showText.start({
-      opacity: [0, 1, 1, 0],
-      transition: {
-        // time: [0, 4, 8, 12],
-        duration: 5,
-      },
-    });
+  // const startText = () => {
+  //   setIsShow(true);
+  //   showText.start({
+  //     opacity: [0, 1, 1, 0],
+  //     transition: {
+  //       // time: [0, 4, 8, 12],
+  //       duration: 5,
+  //     },
+  //   });
 
-    setTimeout(() => {
-      setIsShow(false);
-    }, 5000);
-  };
+  //   setTimeout(() => {
+  //     setIsShow(false);
+  //   }, 5000);
+  // };
 
   // start animation
   useEffect(() => {
@@ -164,15 +168,15 @@ const Encounter = () => {
         delay: 300,
         duration: 0,
       },
-      {
-        name: "show greet",
-        func: () => {
-          setCurrentText("greeting1");
-          startText();
-          reset();
-        },
-        duration: 0,
-      },
+      // {
+      //   name: "show greet",
+      //   func: () => {
+      //     setCurrentText("greeting1");
+      //     // startText();
+      //     reset();
+      //   },
+      //   duration: 0,
+      // },
     ]);
 
     chainRef.current.push(chainaction);
@@ -214,23 +218,23 @@ const Encounter = () => {
 
   // show random text in box
   // eslint-disable-next-line react-hooks/exhaustive-deps
-  const randomText = useCallback(
-    debounce((pressStack, isShow) => {
-      if (pressStack.length > 5 && !isShow) {
-        const randomComplaint =
-          complaints[Math.floor(Math.random() * complaints.length)];
-        setCurrentText(randomComplaint);
-        startText();
-      }
-      if (pressStack.length < 6 && !isShow) {
-        const randomText =
-          availableText[Math.floor(Math.random() * availableText.length)];
-        setCurrentText(randomText);
-        startText();
-      }
-    }, 500),
-    []
-  );
+  // const randomText = useCallback(
+  //   debounce((pressStack, isShow) => {
+  //     if (pressStack.length > 5 && !isShow) {
+  //       const randomComplaint =
+  //         complaints[Math.floor(Math.random() * complaints.length)];
+  //       setCurrentText(randomComplaint);
+  //       // startText();
+  //     }
+  //     if (pressStack.length < 6 && !isShow) {
+  //       const randomText =
+  //         availableText[Math.floor(Math.random() * availableText.length)];
+  //       setCurrentText(randomText);
+  //       // startText();
+  //     }
+  //   }, 500),
+  //   []
+  // );
 
   const handlePress = () => {
     clearTimeout(timeout.current);
@@ -240,8 +244,8 @@ const Encounter = () => {
     }
 
     if (currentPic >= 5 && !freezeAction) {
-      randomText(pressStack, isShow);
-      setPressStack((p) => [...p, 1]);
+      // randomText(pressStack, isShow);
+      // setPressStack((p) => [...p, 1]);
       setCurrentPic(6);
       clearInterval(interVal.current);
       reset();
@@ -253,6 +257,14 @@ const Encounter = () => {
       setCurrentPic(5);
       cleanup();
       reset();
+
+      if (!isNavigating) {
+        setIsNavigating(true);
+        setTimeout(() => {
+          // go to profile
+          router.push(`/${locale}/profile`);
+        }, 500);
+      }
     }
   };
 
@@ -310,7 +322,7 @@ const Encounter = () => {
         }}
         className={clsx("character-shadow relative")}
       >
-        {pressStack.map((s, i) => (
+        {/* {pressStack.map((s, i) => (
           <motion.div
             key={i}
             animate={{
@@ -325,7 +337,7 @@ const Encounter = () => {
           >
             - 10 HP
           </motion.div>
-        ))}
+        ))} */}
 
         {question && (
           <motion.div

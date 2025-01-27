@@ -1,4 +1,4 @@
-'use client';
+"use client";
 
 import clsx from "clsx";
 import { useTranslations } from "next-intl";
@@ -27,7 +27,7 @@ const Th = ({
 }) => (
   <th
     className={clsx(
-      "min-w-24 text-[lightseagreen] pr-2 whitespace-nowrap md:px-12",
+      "min-w-24 text-[lightseagreen] pr-2 whitespace-nowrap md:pr-12 text-start capitalize",
       className
     )}
   >
@@ -43,45 +43,14 @@ const Td = ({
   className?: string;
 }) => <td className={className}>{children}</td>;
 
-const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
+export const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
   const t = useTranslations("page");
 
   return (
-    <CodeBlock
-      title={t(props.title) + ".txt"}
-      white={props.title === "academic"}
-    >
+    <CodeBlock title={t(props.title)} white={props.title === "academic"}>
       <div className="flex-1">
         <table className="md:max-w-[80%] text-sm md:text-base">
           <tbody>
-            {props.title === "academic" && (
-              <>
-                <tr>
-                  <Th className="text-[#475cbb]">{t("university")}</Th>
-                  <Td>{t("cityu")}</Td>
-                </tr>
-                <tr>
-                  <Th className="text-[#475cbb]">{t("degree")}</Th>
-                  <Td>{t("information_engineering")}</Td>
-                </tr>
-                <tr>
-                  <Th className="text-[#475cbb]">{t("grad_year")}</Th>
-                  <Td>2021-2</Td>
-                </tr>
-                <tr>
-                  <Th className="text-[#475cbb]">URL</Th>
-                  <Td className="hover:bg-slate-500 text-[cadetblue]">
-                    <a
-                      href="https://www.ee.cityu.edu.hk/current_students/undergraduate/major/admission_beng-infe_aim"
-                      className="break-all"
-                    >
-                      https://www.ee.cityu.edu.hk/current_students/undergraduate/major/admission_beng-infe_aim
-                    </a>
-                  </Td>
-                </tr>
-              </>
-            )}
-
             {props.title === "job" && (
               <>
                 <tr>
@@ -110,7 +79,7 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
                   <Th>{t("employment_period")}</Th>
                   <Td>{props.employment_period}</Td>
                 </tr>
-                <tr>
+                {/* <tr>
                   <Th>{t("environment")}</Th>
                   <Td>
                     <div className="flex flex-wrap text-slate-100">
@@ -126,37 +95,24 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
                       ))}
                     </div>
                   </Td>
-                </tr>
+                </tr> */}
               </>
             )}
           </tbody>
         </table>
-        {props.title === "academic" && (
-          <div className="border-t-black border-t-[1px] mt-2 pt-2 px-2">
-            <Image
-              className="bg-white my-1"
-              alt="Cityu"
-              height={30}
-              width={50}
-              src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/CityU_logo.svg/1200px-CityU_logo.svg.png"
-            />
-            <div className="text-black text-xs whitespace-pre-line">
-              {t("uni_description")}
-            </div>
-          </div>
-        )}
-
         {props.title === "job" && (
-          <div className="border-t-white border-t-[1px] mt-2 pt-2 px-2">
-            <div className="text-gray-300 text-xs whitespace-pre-line">
+          <div className="border-t-white border-t-[1px] mt-2 pt-2">
+            <div className="text-slate-200 text-sm whitespace-pre-line leading-8">
               {props.image && (
-                <Image
-                  className="bg-white my-1"
-                  alt={t("company_name")}
-                  height={40}
-                  width={40}
-                  src={props.image}
-                />
+                <div className="flex justify-center character-shadow">
+                  <img
+                    className=" my-1 p-2"
+                    alt={t("company_name")}
+                    height={96}
+                    width={"auto"}
+                    src={props.image}
+                  />
+                </div>
               )}
               {t(props.company_description)}
             </div>
@@ -167,4 +123,40 @@ const ResumeCard = ({ props }: { props: ResumeCardProps }) => {
   );
 };
 
-export default ResumeCard;
+export const Academic = () => {
+  const t = useTranslations("page");
+  return (
+    <div className=" p-4">
+      <table className="md:max-w-[90%] text-sm md:text-base">
+        <tbody>
+          <tr>
+            <Th className="text-[#475cbb]">{t("university")}</Th>
+            <Td>{t("cityu")}</Td>
+          </tr>
+          <tr>
+            <Th className="text-[#475cbb]">{t("degree")}</Th>
+            <Td>{t("information_engineering")}</Td>
+          </tr>
+          <tr>
+            <Th className="text-[#475cbb]">{t("grad_year")}</Th>
+            <Td>2021-2</Td>
+          </tr>
+        </tbody>
+      </table>
+      <div className="border-t-black border-t-[1px] mt-2 pt-2">
+        <a href="https://www.cityu.edu.hk/" className="break-all">
+          <img
+            className="bg-slate-300 p-2 my-1"
+            alt="Cityu"
+            height={96}
+            width={"auto"}
+            src="https://upload.wikimedia.org/wikipedia/en/thumb/4/4a/CityU_logo.svg/1200px-CityU_logo.svg.png"
+          />
+        </a>
+        <div className="text-slate-200 text-sm whitespace-pre-line leading-8">
+          {t("uni_description")}
+        </div>
+      </div>
+    </div>
+  );
+};

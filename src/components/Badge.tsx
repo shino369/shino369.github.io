@@ -10,7 +10,9 @@ const Badge = ({
   children: React.ReactNode;
 }) => {
   return (
-    <div className={clsx("rounded-lg  px-1 mr-1 mb-1 shadow-sm shadow-black", className || '')}>{children}</div>
+    <div className={clsx("rounded-lg  px-2 pb-1 mr-1 mb-1 ", className || "")}>
+      {children}
+    </div>
   );
 };
 
