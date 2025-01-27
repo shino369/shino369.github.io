@@ -45,6 +45,11 @@ html {
   scroll-behavior: smooth;
 }
 
+.scroll-smooth {
+  overflow: auto;
+  scroll-behavior: smooth;
+}
+
 @font-face {
   font-family: "PixelMplus";
   font-style: normal;
