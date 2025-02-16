@@ -26,7 +26,7 @@ export default function IndexBar() {
   }, [dispatch]);
 
   return (
-    (<nav
+    <nav
       {...(isMD
         ? {}
         : {
@@ -52,10 +52,6 @@ export default function IndexBar() {
             label: "自己紹介",
           },
           {
-            id: "pr",
-            label: "自己PR",
-          },
-          {
             id: "university",
             label: "大学について",
           },
@@ -73,41 +69,33 @@ export default function IndexBar() {
             label: "9～11月今まで",
           },
           {
-            id: "siboudouki-linkx",
-            label: "志望動機---Linkx",
+            id: "why-hire",
+            label: "Why should we hire you?",
           },
           {
-            id: "exp",
-            label: "experience in fintech",
-          },
-          {
-            id: "different-senior",
-            label: "different senior",
+            id: "siboudouki-rakuten",
+            label: "志望動機---Rakuten",
           },
           {
             id: "job-in-shiji",
-            label: "前職について",
+            label: "前職について(Shiji)",
+          },
+          {
+            id: "job-in-linkx",
+            label: "前職について(LinkX)",
+          },
+          {
+            id: "challenging-task",
+            label: "最も挑戦的だったタスク",
+          },
+          {
+            id: "learn-new-tech",
+            label: "新しい技術を学ぶ",
           },
           {
             id: "lead-project",
             label: "リーダー経験",
           },
-          // {
-          //   id: "self-product-important",
-          //   label: "自社サービス特に重要な所",
-          // },
-          // {
-          //   id: "komatta",
-          //   label: "userとして困ったこと",
-          // },
-          // {
-          //   id: "suggest-service",
-          //   label: "将来性のあるサービス",
-          // },
-          // {
-          //   id: "value-wamazing",
-          //   label: "mission/value",
-          // },
           {
             id: "choice-of-tech",
             label: "技術の選定基準",
@@ -126,23 +114,19 @@ export default function IndexBar() {
           },
           {
             id: "pressure-deadline",
-            label: "work under pressure"
+            label: "work under pressure",
           },
           {
             id: "keepup-changes",
-            label: "keep up to tech news"
+            label: "keep up to tech news",
           },
           {
             id: "explain-tech",
-            label: "explain tech"
+            label: "explain tech",
           },
           {
             id: "handle-conflict",
-            label: "handle conflict"
-          },
-          {
-            id: "biggest-challenge",
-            label: "これまでに直面した難題",
+            label: "handle conflict",
           },
           {
             id: "success-fail",
@@ -193,6 +177,6 @@ export default function IndexBar() {
       >
         {show ? "-" : "+"}
       </div>
-    </nav>)
+    </nav>
   );
 }

@@ -727,34 +727,43 @@ function ENQNA() {
         <Question id="self-intro">Self Intro</Question>
         <Answer>
           {`Allow me to introduce myself.
-            \n
-            I am Anthony, originally from Hong Kong. I earned a degree in Information Engineering from City University of Hong Kong, with a minor in Japanese Studies.
-            \n
-            After I graduated, I began working at Appicidea IT Solutions, a growing startup specializing in subcontracting projects.  
-            \n
+            
+            I am Anthony Wong, a Trilingual Software Engineer with more than 3 years of experience in frontend development.
+            
+            I am originally from Hong Kong. I earned a degree in Information Engineering from City University of Hong Kong, with a minor in Japanese Studies.
+            
+
+            After I graduated, I began working at Appicidea IT Solutions, which is a growing startup specializing in subcontracting projects.  
+            
             There, I gained hands-on experience in full-stack development using Java Spring Boot, Angular, React.js, and React Native.
-            \n 
-            Later, I had the opportunity to work in Shiji Information Technology, a global IT company serving the hospitality sector. \n
-            I contributed to the full-stack development of a SaaS product known as the "Table Management System", working with framworks such as React.js, Vue.js, and CakePHP. \n
-            In my private time, I love to stay close with tech innovations and enjoy learning new concepts.  
-            \n
-            Recently, I am exploring the newly released features of Next.js.
-            \n 
-            I hope I can make a meaningful contribution to the team at Linkx, learn and grow simultaneously.
-            \n 
+            
+
+            Later, I had the opportunity to work in Shiji Group, which is a global IT corporation serving the hospitality sector. \n
+            I contributed to the full-stack development of their SaaS product known as "Infrasys Cloud POS", and mainly focus on the development of one of the main system called "Table Management System".
+            It is a reservation system for restaurant and hotel, developed in React.js, Vue.js, and CakePHP.
+
+            During the period, I also led a small-scale system revamp, integrating vue.js into the existing system, aims to gradually replace jquery in the future, 
+            which was a great experience for me in terms of project management and choosing tech stack.
+
+
+            In September of 2023, I got the opportunity to move to Japan, thanks to the new visa scheme introduced by the Japanese government.
+
+            After I settled down, I joined my current company, Linkx, as a Software Engineer. 
+            
+            It is a fintech company which focuses on providing digital transformation solutions for financial institutions. I mainly work on frontend and mobile app development, using Next.js and flutter.
+            
+            I have contributed to 2 projects, one using next.js, and the other using flutter. Especially the flutter project, it is a challenging yet rewarding experience for me. Is a project that completely built from scratch.
+            
+            Given that I have no piror expenrience in flutter at all, so I learn, I improve, I grow a lot during the project. Just in half of a year, I become the leading flutter developer in the team, which proves my ability to learn and adapt to new technology quickly.
+            
+            
+            I hope I can make a meaningful contribution to the team at Rakuten, learn and gain unique and valuable experiences in the process.
+            
             Thank you.
           `
             .split("\n")
             .map((t) => t.trim())
             .join("\n")}
-        </Answer>
-      </section>
-
-      <section id="pr">
-        <Question id="pr">自己PRお願いします</Question>
-        <Answer>
-          {`
-          `}
         </Answer>
       </section>
       <section id="university">
@@ -763,7 +772,7 @@ function ENQNA() {
           {`About the degree, Information Engineering,\n
             It contains subjects of computer science,\n
             like programming, data structure, database, os, plus some networking and signal related subject\n
-            and there are some modern technology course like teaching aws and web programming framework (java springboot)
+            and there are some modern technology course like teaching aws and web programming framework (java springboot, vue.js)
           `
             .split("\n")
             .map((t) => t.trim())
@@ -774,28 +783,6 @@ function ENQNA() {
       <section id="reason-of-resign">
         <Question id="reason-of-resign">Reason of Resignation</Question>
         <Answer>
-          {/* {`In my first job, as a fresh graduate,\n
-            I was looking for a nurturing and instructive environment \n
-            to kickstart my career. \n
-            Although they offered good projects,\n
-            I found that the learning opportunities are limited \n
-            due to the lack of on-job training and code reviews.\n
-            Therefore, I decided to move on to a workspace\n
-            that offered more supportive learning benefits.\n
-            In the second company,\n
-            I appreciated the positive culture at Shiji,\n
-            with approachable seniors \n
-            and strong emphasis on mentorship.\n
-            Ironically, I hadn't planned on leaving. \n
-            However, an unexpected opportunity arose in late April this year.\n
-            when the Japanese Government introduced a new visa scheme.\n
-            I saw this as a unique chance, \n
-            because I always wanted to live in Japan.\n
-            So, After a month of consideration, \n
-            I applied for it and subsequently resigned from Shiji \n
-            following the visa approval. 
-          `.split("\n")
-          .map((t) => t.trim()).join('\n')} */}
           In my <Highlight>first job</Highlight>, as a{" "}
           <Highlight>fresh graduate</Highlight>,
           <br />I was{" "}
@@ -835,7 +822,7 @@ function ENQNA() {
           Ironically, <Highlight>I hadn&apos;t planned to leave</Highlight>.
           <br />
           but, an <Highlight>unexpected opportunity arose</Highlight> in late
-          April this year.
+          April of 2023.
           <br />
           when the Japanese Government introduced a{" "}
           <Highlight>new visa scheme</Highlight>.
@@ -848,6 +835,33 @@ function ENQNA() {
           <Highlight>subsequently resigned</Highlight> from Shiji
           <br />
           <Highlight>following the visa approval</Highlight>.
+          <br />
+          <br />
+          After I settled down, I joined Linkx, which is my current company.
+          <br />
+          So far it is a <Highlight>good company with good culture</Highlight>,
+          but just like many other startup, it doesn't have a well-organized or
+          well-designed salary review system.
+          <br />
+          which means it is hard to get a raise, even if you have done a good
+          job.
+          <br />
+          <br />
+          For instance, I have been working on a flutter project for half a
+          year, <Highlight>leading the team</Highlight> , and so far the project
+          is going well.
+          <br />I got a <Highlight>A rank</Highlight> in the performance review,
+          which is the <Highlight>highest possible rank</Highlight> that an
+          engineer can get.
+          <br />
+          <br />
+          But what I got is just 1.9% of salary raise.
+          <br />
+          It is not even enough to cover the inflation rate.
+          <br />
+          So I think it is time for me to move on.
+          <br />
+          This is the main reason why I am looking for a new job.
         </Answer>
       </section>
       <section id="reason-to-japan">
@@ -869,28 +883,6 @@ function ENQNA() {
           What have done from September to November?
         </Question>
         <Answer>
-          {/* {`The time from September to November has been a transition period for me.\n
-            September was mainly about setting up my life in Japan - \n
-            from addressing housing needs to obtaining essential daily supplies. \n
-            Even though I had already secured a place before my arrival in Japan, \n
-            there were other things like purchasing furniture, \n
-            getting a local mobile number, setting up a bank account, \n
-            and registering as a resident. \n
-            I also seek for advice from friends already living in Japan \n
-            to ensure a smooth transition.\n
-            \n
-            In October, I decided to relocate to a more spacious apartment. \n
-            My previous place was a single-room apartment in Bunkyouku,\n
-            which, although having a small room size, it had a relatively high rental. \n
-            I spent a month to find a more suitable option, \n
-            finally moving to Edogawaku, Nakakasai, as per one of my friend's recommendation.\n
-            \n
-            Once everything was in place, \n
-            I preparde myself and started my job searching. \n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           The time from September to November has been a
           <Highlight>transition period for me.</Highlight>
           <br />
@@ -935,153 +927,129 @@ function ENQNA() {
           <br />
         </Answer>
       </section>
-      <section id="siboudouki-linkx">
-        <Question id="siboudouki-linkx">
-          why our company? (志望動機---Linkx)
+      <section id="why-hire">
+        <Question id="why-hire">Why should we hire you?</Question>
+        <Answer>
+          In current work, I have demonstrated the ability to{" "}
+          <Highlight>learn quickly</Highlight>,{" "}
+          <Highlight>take ownership</Highlight>, and{" "}
+          <Highlight>deliver high-quality frontend solutions</Highlight> in
+          complex projects.
+          <br />
+          At LiNKX, I was assigned to an IDaaS project using Next.js, where I
+          initially worked with another 2 frontend engineers.
+          <br />
+          However, one month after I joined, one of them was reassigned to
+          backend team, and <Highlight>one was resigned</Highlight>.
+          <br />I had to handle the{" "}
+          <Highlight>entire frontend development alone</Highlight> for three
+          months.
+          <br />I{" "}
+          <Highlight>successfully delivered the product on time</Highlight>{" "}
+          while maintaining code quality, and later, I facilitated a{" "}
+          <Highlight>smooth handover</Highlight> when two new engineers from the
+          customer side joined. This experience strengthened my ability to work
+          independently under{" "}
+          <Highlight>
+            tight deadlines in an extremely stressful environment
+          </Highlight>
+          .
+          <br />
+          <br />
+          Additionally, despite having{" "}
+          <Highlight>no prior Flutter experience</Highlight>, I{" "}
+          <Highlight>quickly adapted and became a key contributor</Highlight> to
+          my current mobile project. I designed a{" "}
+          <Highlight>
+            scalable error-handling system, reducing 90% of unnecessary
+            try-catch blocks
+          </Highlight>
+          , and implemented an <Highlight>error boundary system</Highlight>,
+          similar to React’s, improving app stability.
+          <br />I also helped integrating{" "}
+          <Highlight>
+            Firebase Crashlytics along with logging system
+          </Highlight>{" "}
+          for better debugging.
+          <br />
+          And not limited to the Flutter parts, I am currently{" "}
+          <Highlight>
+            working on the native-side, using kotlin to integrate Visa
+            push-provisioning service
+          </Highlight>
+          .
+          <br />
+          <br />
+          Beyond technical skills, I work well in global teams,{" "}
+          <Highlight>
+            communicate effectively in Japanese, English, and Chinese
+          </Highlight>
+          , and have experience collaborating in cross-functional Agile
+          environments.
+          <br />I believe that my technical expertise, adaptability,
+          problem-solving ability, and commitment to continuous improvement make
+          me a strong candidate for this role at Rakuten.
+        </Answer>
+      </section>
+      <section id="siboudouki-rakuten">
+        <Question id="siboudouki-rakuten">
+          why our company? (志望動機---Rakuten)
         </Question>
         <Answer>
-          {/* {`I saw Linkx has developed an AI application called "SHIKAI", \n
-            which provide service for visually impaired people.\n
-            I always think that technology should be used for a better and more convenient world.\n
-            I believe that Linkx is a company that really cares about the society.\n
-            \n
-            Although I was initially attracted to Linkx\n
-            because of this remarkable "SHIKAI" project, \n
-            my interest get deeper as I learned more about the current focus. \n
-            I believe that fintech and lab automation are essential and exciting fields\n
-            that can also create significant impact on society directly or indirectly \n
-            by digital transforming finance and research.\n
-            I see a great opportunity here to expand my knowledge and skills\n
-            in these cutting-edge areas.\n
-            I believe that Linkx is a perfect environment for me\n
-            to learn more, challenge more and grow with the team.\n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
-          I saw Linkx has developed an{" "}
-          <Highlight>AI application called &quot;SHIKAI&quot;</Highlight>,
+          Rakuten is one of the most{" "}
+          <Highlight>innovative e-commerce platforms</Highlight> in Japan, with
+          a strong <Highlight>global presence</Highlight> and a focus on
+          expanding <Highlight>digital services.</Highlight>
           <br />
-          which provide service for{" "}
-          <Highlight>visually impaired people</Highlight>.
-          <br />I always think that{" "}
+          <br />I am drawn to Rakuten because of its{" "}
+          <Highlight>commitment to innovation</Highlight>,{" "}
+          <Highlight>diversity</Highlight>, and the{" "}
+          <Highlight>empowerment of society</Highlight>, as encapsulated in the{" "}
+          <Highlight>core philosophy known as "Rakuten Shugi"</Highlight>. This
+          philosophy emphasizes principles such as "Empowerment," "Innovation,"
+          and "Professionalism," which{" "}
           <Highlight>
-            technology should be used for a better and more convenient world
+            resonate deeply with my personal and professional values
           </Highlight>
           .
-          <br />I believe that Linkx is a <Highlight>
-            company
-          </Highlight> that{" "}
-          <Highlight>really cares about the society</Highlight>.
           <br />
           <br />
-          Although I was <Highlight>initially</Highlight> attracted to Linkx
-          <br />
-          because of this{" "}
-          <Highlight>remarkable &quot;SHIKAI&quot; project</Highlight> ,
-          <br />
-          my <Highlight>interest get deeper</Highlight> as I learned more about
-          the <Highlight>current focus</Highlight>.
-          <br />I believe that <Highlight>fintech</Highlight> and{" "}
-          <Highlight>lab related solutions</Highlight> are{" "}
-          <Highlight>essential</Highlight> and exciting fields
-          <br />
-          that can also{" "}
+          The EC Solution Development Department's{" "}
           <Highlight>
-            create significant impact on society directly or indirectly
-          </Highlight>
+            mission to enhance marketplace diversity
+          </Highlight> and{" "}
+          <Highlight>develop essential tools for merchants</Highlight> aligns
+          with my passion for{" "}
+          <Highlight>creating impactful, user-centric solutions</Highlight>.
           <br />
-          by{" "}
-          <Highlight>
-            digital transforming the old way of finance and research
-          </Highlight>
-          .
-          <br />I see <Highlight>a great opportunity here</Highlight> to{" "}
-          <Highlight>enrich my knowledge and skills</Highlight>
+          <br />I am particularly excited about the opportunity to develop{" "}
+          <Highlight>a new e-commerce service from scratch</Highlight>, as it
+          allows me to apply my skills to services that have a{" "}
+          <Highlight>significant impact to the society</Highlight>.
           <br />
-          in these <Highlight>cutting-edge areas</Highlight>.
-          <br />I believe that Linkx is{" "}
-          <Highlight>a perfect environment</Highlight>
           <br />
-          to <Highlight>learn more</Highlight>,{" "}
-          <Highlight>challenge more</Highlight> and{" "}
-          <Highlight>grow with the team together</Highlight>.
+          Moreover, Rakuten's emphasis on a{" "}
+          <Highlight>collaborative and diverse work environment</Highlight>,
+          where professionals from various backgrounds{" "}
+          <Highlight>unite towards common goals</Highlight>, is an atmosphere in
+          which I desire.
+          <br />
+          <br />I am eager to bring my experience and enthusiasm to Rakuten,
+          contributing to its mission of empowering people and society through
+          innovation.
+          <br />
+          <br />
+          Especially given that the team{" "}
+          <Highlight>requires to work with the team in China</Highlight>, I
+          believe my language skill will be beneficial. I’m looking forward to
+          the challenge and growth opportunities Rakuten offers.
         </Answer>
       </section>
       <section id="exp">
         <Question id="exp">
-          Do you have any experience in fintech or lab automation?
+          Do you have any experience in EC site development?
         </Question>
-        <Answer>
-          {/* {`My primary experience is in general development \n
-            rather than specific sectors like fintech or lab automation. \n
-            However, I'm always eager to learn and adapt to new technology and sectors.\n
-            Given the mentorship and talented team here, \n
-            particularly individuals like Pulkit, who guided me in the last interview.\n
-            I'm confident that I would contribute and grow quickly in these areas.\n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
-          My <Highlight>primary experience</Highlight> is in{" "}
-          <Highlight>general development</Highlight>
-          <br />
-          rather than <Highlight>specific sectors</Highlight> like fintech or
-          lab automation.
-          <br />
-          <br />
-          However,
-          <Highlight>
-            I&apos;m always eager to learn and adapt to new technology and
-            sectors.
-          </Highlight>
-          <br />
-          Given the <Highlight>mentorship and talented team here</Highlight>,
-          <br />
-          <Highlight>
-            particularly individuals like Pulkit, who guided me in the last
-            interview.
-          </Highlight>
-          <br />
-          I&apos;m confident that I would <Highlight>
-            contribute
-          </Highlight> and <Highlight>grow quickly</Highlight> in these areas.
-        </Answer>
-      </section>
-      <section id="different-senior">
-        <Question id="different-senior">
-          what if you are assigned to a different senior engineer
-        </Question>
-        <Answer>
-          {/* {`While I had a positive interaction with Pulkit, \n
-            I believe that everyone in your team has valuable experience and skills to share. \n
-            If I have the opportunity to work with another senior engineer, \n
-            I would embrace that chance. \n
-            In the end, it's all about the team and the values of the company\n
-            that make it great a place to work rather than a single individual.
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
-          While I had a <Highlight>positive interaction</Highlight> with
-          <Highlight>Pulkit</Highlight>,
-          <br />I believe that
-          <Highlight>
-            everyone in your team has valuable experience and skills to share.
-          </Highlight>
-          <br />
-          If I have the <Highlight>opportunity</Highlight> to
-          <Highlight>work with others</Highlight> talented engineer,
-          <br />I would <Highlight>embrace that chance and learn</Highlight>.
-          <br />
-          In the end,
-          <Highlight>
-            it&apos;s all about the team and the values of the company
-          </Highlight>
-          <br />
-          that <Highlight>make it great a place to work</Highlight> rather than
-          a <Highlight>single individual</Highlight>.
-        </Answer>
+        <Answer></Answer>
       </section>
 
       <section id="job-in-shiji">
@@ -1089,17 +1057,6 @@ function ENQNA() {
           What were your responsibilities in your previous job?
         </Question>
         <Answer>
-          {/* {`In my role at Shiji Information Technology, \n
-            I was primarily responsible for enhancing our existing application\n
-            by adding new features as per client requirements.\n
-            In addition to the development of new functionalities,\n
-            my duties also included troubleshooting and fixing bugs,\n
-            patching security loopholes,\n
-            and addressing technical debt within older parts of the products.
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           In my role at Shiji Information Technology,
           <br />I was primarily responsible for
           <Highlight>enhancing our existing application</Highlight>
@@ -1107,7 +1064,7 @@ function ENQNA() {
           by <Highlight>adding new features</Highlight> as per
           <Highlight>client requirements</Highlight>.
           <br />
-          In addition to the development of new functions,
+          In addition to the development of new features,
           <br />
           my duties also included
           <Highlight>troubleshooting and fixing bugs</Highlight>,
@@ -1120,46 +1077,88 @@ function ENQNA() {
         </Answer>
       </section>
 
+      <section id="challenging-task">
+        <Question id="challenging-task">
+          What was the most challenging task you faced in your previous job?
+        </Question>
+        <Answer>
+          One of the most challenging projects I worked on was an IDaaS
+          authentication platform for financial institutions, built with
+          Next.js.
+          <br />
+          <br />
+          When I joined, there was another frontend engineer who had already
+          been on the project for a year. However, he resigned after one month,
+          leaving me as the sole frontend engineer. For the next three months, I
+          was fully responsible for delivering new features and maintaining the
+          frontend, ensuring we stayed on schedule.
+          <br />
+          <br />
+          The challenge was balancing feature development, debugging, and
+          performance optimization while handling the workload alone. Later, in
+          my final month on the project, two engineers from the customer side
+          joined, and I focused on a smooth handover and conducting code
+          reviews.
+          <br />
+          <br />
+          Although I didn’t make major architectural decisions (as the tech
+          stack was predefined), I ensured that my implementations followed best
+          practices and delivered a stable product on time. This experience
+          strengthened my ability to work independently under tight deadlines
+          and effectively collaborate with new team members
+        </Answer>
+      </section>
+
+      <section id="learn-new-tech">
+        <Question id="learn-new-tech">
+          Tell me about a time you had to learn a new technology quickly
+        </Question>
+        <Answer>
+          When I joined my current company, I was assigned to a Flutter-based
+          mobile project despite having no prior experience with Flutter.
+          <br />
+          To get up to speed:
+          <br />
+          ✅ I studied Flutter documentation and took an intensive self-learning
+          approach.
+          <br />
+          ✅ I built small practice apps to familiarize myself with state
+          management and UI development.
+          <br />
+          ✅ I collaborated with experienced team members to understand project
+          architecture.
+          <br />
+          <br />
+          Gradually, I started leading frontend development and contributed to
+          core system design improvements, such as:
+          <br />
+          Implementing an error-handling system that reduced 90% of unnecessary
+          try-catch blocks using a result type approach (isFailure, isSuccess).
+          <br />
+          Introducing an error boundary, similar to React, to catch unexpected
+          failures at the UI level.
+          <br />
+          Integrating Firebase Crashlytics to enhance error tracking and
+          debugging.
+          <br />
+          <br />
+          Additionally, the project follows MVVM Clean Architecture, ensuring
+          modular and maintainable code. Interestingly, we use Flutter Hooks,
+          allowing me to apply my React knowledge to Flutter development.
+          <br />
+          <br />
+          Currently, I am working on native-side integration for Visa
+          push-provisioning services. This experience has proven my ability to
+          quickly learn new technologies and take on leadership responsibilities
+          in development.
+        </Answer>
+      </section>
+
       <section id="lead-project">
         <Question id="lead-project">
           Can you tell me about a project that you have led?
         </Question>
         <Answer>
-          {/* {`Sure,\n
-            One of the most fulfilling projects I got to lead was a mini-renewal project\n
-            to tackle some of the technical debt. 
-            I had the opportunity to integrate vue.js\n
-            into our existing online reservation page.\n
-            \n
-            Initially We received a request from a client \n
-            to add new features to the old reservation page.\n
-            I was given the responsibility of handling this task. \n
-            Upon assessment, I noticed that current code base, \n
-            particularly the frontend, \n
-            was rather outdated and messy, making it difficult to navigate and debug.\n
-            \n
-            Realizing the existing technical debt,\n
-            I recommended to my managers that we consider updating it\n
-            by adding a new framework to improve the maintainability \n
-            and enable future growth.\n
-            Thankfully, they agreed, 
-            and I was provided the opportunity\n
-            to lead the mini-renewal project.\n
-            Studying feasible technical stacks, \n
-            designing program structure, and implementing it.\n
-            And for difficulties that I was not able to solve alone,\n
-            I seeked advices from the seniors.\n
-            I have learnt a lot in the process. \n
-            \n
-            This task not only improved the functionality of the product \n
-            but also offered me a chance to expand my development skills.\n
-            It was an enlightening experience that reinforced my understanding of \n
-            the importance of writing clean and maintainable code. \n
-            I am grateful to have had the opportunity to lead this small project and learn from it.\n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           Sure,
           <br />
           One of the most fulfilling projects I got to lead was a{" "}
@@ -1237,27 +1236,6 @@ function ENQNA() {
       <section id="strength">
         <Question id="strength">what is your strength?</Question>
         <Answer>
-          {/* {`One of my strength is my willingness to embrace challenges and learn new things. \n
-           Whether it's in my professional life or my personal life, \n
-           I see every challenge as an opportunity to grow. \n
-           \n
-           Take programming, for instance.  \n
-           When I first graduated, my programming knowledge was limited to C++ and Java only. \n
-           But I knew that continuous learning is important in the technology world.  \n
-           Therefore, I kept an open mind and progressively \n
-           adapted to technologies and programming languages  \n
-           that are required by my job, \n
-           and even took on the challenge of leading a minor project. \n
-           \n
-           On the personal side,  \n
-           moving to Japan alone was a step outside my comfort zone.  \n
-           In Japan, being a foreigner here is always a challenge. \n
-           but I find it both fun and exciting. \n
-           I believe it's important to learn and grow from each challenge we face. \n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           One of my strength is{" "}
           <Highlight>
             my willingness to embrace challenges and learn new things.
@@ -1307,20 +1285,6 @@ function ENQNA() {
       <section id="weakness">
         <Question id="weakness">what is your weakness?</Question>
         <Answer>
-          {/* {`One area I want to improve on is multitasking.\n
-            I am someone who prefers to concentrate on one project at a time\n
-            to ensure its quality,\n
-            but I understand that the real working environment often requires mult-tasking. \n
-            To deal with it, I've started to work on task management strategies, \n
-            using tools to organize my workflow, and consistently remind myself \n
-            to switch tasks and monitor progress. \n
-            While I'm still enhancing this skill, \n
-            I've seen improvements and will continue to work on it \n
-            to be more efficient and adaptable.\n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           One area I want to improve on is <Highlight>multitasking</Highlight>.
           <br />I am someone who{" "}
           <Highlight>
@@ -1353,38 +1317,44 @@ function ENQNA() {
           How do you work under pressure or tight deadlines
         </Question>
         <Answer>
-          {/* {`I understand that chasing deadlines are a part of the job, \n
-            especially in an innovative and fast-paced industry like fintech.\n
-            In such situations, I prioritize my work, \n
-            ensure which task is more important and should be done first.\n
-            Also having clear communication with teamates, \n
-            and do not hesitate to ask for help from them.\n
-            helping each other efficiently generally produce a better result.
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           I understand that{" "}
           <Highlight>chasing deadlines are a part of the job</Highlight>,
           especially{" "}
           <Highlight>in an innovative and fast-paced industry</Highlight> like
-          fintech.
+          E-commerce.
           <br />
           <br />
-          In such situations, I <Highlight>prioritize my work</Highlight>,
+          When facing tight deadlines, I follow a structured approach:
           <br />
-          ensure{" "}
-          <Highlight>
-            which task is more important and should be done first
-          </Highlight>
-          .
+          1️⃣ Prioritize Tasks – I break down requirements into smaller pieces
+          and identify critical ones first, aims to "get the most important
+          things done".
           <br />
-          Also <Highlight>having clear communication with teamates</Highlight>,
+          <br />
+          For example, when developing the IDaaS project, most of the time, I
+          was the only frontend developer.
+          <br />I had to <Highlight>
+            prioritized critical features
+          </Highlight>{" "}
+          first,
+          <br />
+          ensuring that the core functionality was implemented and tested.
+          <br />
+          It sacrificed some critiria like code quality, but it was necessary to
+          meet the deadline.
+          <br />
+          And after code was delivered on schedule, I usually will create
+          another task to refactor the code to improve quality.
+          <br />
+          <br />
+          2️⃣ Efficient Communication –{" "}
+          <Highlight>having clear communication with teamates</Highlight>,
           <br />
           and <Highlight>do not hesitate to ask for help</Highlight> from them.
           <br />
           <Highlight>
-            helping each other efficiently generally produce a better result.
+            somethings helping each other can efficiently produce a better
+            result.
           </Highlight>
         </Answer>
       </section>
@@ -1394,16 +1364,6 @@ function ENQNA() {
           How do you keep up with changes and advancements in technology
         </Question>
         <Answer>
-          {/* {`Technology is always evolving and staying updated is a necessity in our field. \n
-            I regularly read technology-focused blogs and news to keep it up. \n
-            One way that can effectively let tech new around your daily life is, \n
-            subscribing those tech media in social networking site like facebook and twitter. \n
-            then even during your private time, maybe taking a break,\n
-            those news come into your eyes \n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           Technology is always evolving and staying updated is a necessity in
           our field.
           <br />I{" "}
@@ -1435,17 +1395,6 @@ function ENQNA() {
           non-technical person can understand?
         </Question>
         <Answer>
-          {/* {`It's crucial to communicate effectively to non-technical stakeholders.  \n
-            Usually using real life example or a similar situation to metaphor the that will works. \n
-            For example, let's consider the concept of machine learning.  \n
-            It's similar to teaching a child how to walk.  \n
-            Firstly, the child observes and learns from adult,  \n
-            then it tries and falls many times,  \n
-            but after each fall, it improves until it is finally able to walk. \n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           It&apos;s{" "}
           <Highlight>
             crucial to communicate effectively to non-technical stakeholders.
@@ -1475,18 +1424,6 @@ function ENQNA() {
           How would you address disagreement or conflict in your team?
         </Question>
         <Answer>
-          {/* {`Healthy disagreement is a part of teamwork \n
-            and is often a source of creative ideas.  \n
-            When dealing with such situations,  \n
-            I believe that communicating openly,  \n
-            listening patiently to understand the other's point of view,  \n
-            and then rationally discussing should the best choice of action.  \n
-            It's important to keep the main goal in mind  \n
-            and respect everyone's perspectives. \n
-          `
-            .split("\n")
-            .map((t) => t.trim())
-            .join("\n")} */}
           <Highlight>Healthy disagreement</Highlight> is a{" "}
           <Highlight>part of teamwork</Highlight>
           <br />
@@ -1506,26 +1443,6 @@ function ENQNA() {
           <Highlight>
             keep the main goal in mind and respect everyone&apos;s perspectives.
           </Highlight>
-        </Answer>
-      </section>
-
-      <section id="biggest-challenge">
-        <Question id="biggest-challenge">
-          これまでに直面した難題について教えてください。また、どのように解決しましたか？
-        </Question>
-        <Answer>
-          The biggest challenges I have been faced should be
-          <br />
-          choosing the tech stack and design the sturcture of the
-          <br />
-          online reservation system renewal project.
-          <br />
-          that was my first time to hold the decision of prototyping a whole
-          project.
-          <br />
-          So I need to be careful. Carefuilly chooose the tech stack, <br />
-          and the implement method that will cause least impact to the existing
-          system.
         </Answer>
       </section>
 
@@ -1592,7 +1509,7 @@ function ENQNA() {
         </Answer>
       </section>
       <section id="question">
-        <Question id="question">何か聞きたいこと？</Question>
+        <Question id="question">Any questions?</Question>
         <Answer>
           1. company&apos;s journey and how it started. Spin-off from progress
           technology in 2020, is there any story behind it?
@@ -1607,22 +1524,17 @@ function ENQNA() {
         </Answer>
       </section>
       <section id="salary">
-        <Question id="salary">希望年収</Question>
-        <Answer>
-          Hannah, my agent in charge of Boy and more will be discussing about
-          it.
-        </Answer>
+        <Question id="salary">expected salary</Question>
+        <Answer>7 million yen</Answer>
       </section>
       <section id="time-available">
-        <Question id="time-available">入社可能時期を教えてください</Question>
-        <Answer>immediate</Answer>
+        <Question id="time-available">when can you join</Question>
+        <Answer>1 month after resign</Answer>
       </section>
       <section id="other-interview">
         <Question id="other-interview">他社の選考状況を教えてください</Question>
         <Answer>
-          receive one offer from a company
-          <br />
-          others are still in progress
+          As I started job hunting this month, others are still in progress.
           <br />
         </Answer>
       </section>
