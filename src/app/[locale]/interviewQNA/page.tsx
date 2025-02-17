@@ -1162,7 +1162,9 @@ function ENQNA() {
           Sure,
           <br />
           One of the most fulfilling projects I got to lead was a{" "}
-          <Highlight>mini-renewal project</Highlight>
+          <Highlight>
+            mini-revamp project when I worked at Shiji Group
+          </Highlight>
           <br />
           to tackle some of the <Highlight>technical debt</Highlight>. I had the
           opportunity to
@@ -1186,7 +1188,7 @@ function ENQNA() {
           <br />
           <br />
           Realizing the <Highlight>existing technical debt</Highlight>,
-          <br />I <Highlight>recommended to my managers</Highlight> that
+          <br />I <Highlight>recommended to my supervisor</Highlight> that
           consider updating it
           <br />
           by <Highlight>adding a new framework</Highlight> to improve the{" "}
@@ -1196,7 +1198,7 @@ function ENQNA() {
           <br />
           Suprisingly I was provided the <Highlight>opportunity</Highlight>
           <br />
-          to <Highlight>lead the mini-renewal project</Highlight>.
+          to <Highlight>lead the mini-revamp project</Highlight>.
           <br />
           <Highlight>Studying feasible technical stacks,</Highlight>
           <br />
@@ -1216,99 +1218,122 @@ function ENQNA() {
           It was an enlightening experience that reinforced my understanding of
           <br />
           the importance of writing clean and maintainable code.
-          <br />
+          <br /> <br />
           <Highlight>
             I am grateful to have had the opportunity to lead this small project
             and learn from it.
           </Highlight>
+          <br />
+          <br />
+          In my Flutter project, I initially had no experience with Flutter, but
+          as I learned the framework, I gradually took the lead in frontend
+          development.
+          <br />
+          ✅ Challenges & Leadership Contributions:
+          <br />
+          <br />
+          I designed a new error-handling system, reducing 90% of unnecessary
+          try-catch blocks by implementing a result-type pattern (isFailure,
+          isSuccess).
+          <br /> <br />
+          I introduced an error boundary (similar to React’s) to improve app
+          stability and prevent crashes from propagating.
+          <br /> <br />
+          I integrated Firebase Crashlytics, which enhanced debugging efficiency
+          by providing real-time error logs.
+          <br /> <br />
+          I actively participated in architectural discussions and ensured that
+          the project followed MVVM Clean Architecture for better scalability
+          and maintainability.
+          <br /> <br />
+          I conducted code reviews and mentoring for junior engineers, improving
+          the team’s overall code quality.
+          <br /> <br />
+          ✅ Outcome:
+          <br /> <br />
+          The system became easier to maintain and significantly reduced
+          debugging time.
+          <br /> <br />
+          The project followed best practices in error handling, leading to a
+          more stable application.
+          <br /> <br />
+          My leadership contributed to a smoother development workflow and
+          knowledge sharing within the team.
+          <br /> <br />
+          This project proved my ability to learn quickly, take ownership, and
+          drive improvements, even in an unfamiliar tech stack.
         </Answer>
-      </section>
-
-      <section id="choice-of-tech">
-        <Question id="choice-of-tech">技術の選定は何を基準にする？</Question>
-        <Answer></Answer>
-      </section>
-      <section id="react-pos-con">
-        <Question id="react-pos-con">Reactの優/劣？</Question>
-        <Answer></Answer>
       </section>
 
       <section id="strength">
         <Question id="strength">what is your strength?</Question>
         <Answer>
-          One of my strength is{" "}
-          <Highlight>
-            my willingness to embrace challenges and learn new things.
-          </Highlight>
-          <br />
-          Whether it&apos;s in my <Highlight>professional life</Highlight> or my{" "}
-          <Highlight>personal life</Highlight>,
-          <br />I{" "}
-          <Highlight>see every challenge as an opportunity to grow</Highlight>.
+          One of my biggest strengths is my ability to quickly learn and adapt
+          to new technologies while maintaining high-quality code.
           <br />
           <br />
-          Take <Highlight>programming, for instance</Highlight>.
-          <br />
-          When I first graduated,{" "}
-          <Highlight>my programming knowledge was limited</Highlight> to C++ and
-          Java only.
-          <br />
-          But I knew that{" "}
-          <Highlight>
-            continuous learning is important in the technology world.
-          </Highlight>
-          <br />
-          Therefore, I <Highlight>kept an open mind</Highlight> and{" "}
-          <Highlight>progressively adapted to technologies</Highlight>
-          <br />
-          that are <Highlight>required by my job</Highlight>,
+          ✅ Examples of My Strengths:
           <br />
           <br />
-          On the <Highlight>personal side</Highlight>,
+          When I joined my Flutter project, I had no prior Flutter experience,
+          yet I quickly adapted and led key architectural improvements within a
+          few months.
           <br />
-          <Highlight>
-            moving to Japan alone was a step outside my comfort zone.
-          </Highlight>
           <br />
-          In Japan,{" "}
-          <Highlight>being a foreigner here is always a challenge.</Highlight>
+          In my IDaaS Next.js project, I had to work alone on the frontend for
+          three months, ensuring the project stayed on schedule while
+          maintaining clean and efficient code.
           <br />
-          but I <Highlight>find it both fun and exciting</Highlight>.
-          <br />I believe it&apos;s{" "}
-          <Highlight>
-            important to learn and grow from each challenge
-          </Highlight>{" "}
-          we face.
+          <br />
+          I also have strong debugging and problem-solving skills, as seen in my
+          error-handling refactor, which significantly reduced redundant code
+          and improved maintainability.
+          <br />
+          <br />
+          Additionally, I communicate well in English, Japanese, and Chinese,
+          allowing me to collaborate effectively in multinational teams.
+          <br />
+          <br />
+          These strengths allow me to quickly contribute to any project, adapt
+          to challenges, and drive technical improvements.
         </Answer>
       </section>
 
       <section id="weakness">
         <Question id="weakness">what is your weakness?</Question>
         <Answer>
-          One area I want to improve on is <Highlight>multitasking</Highlight>.
-          <br />I am someone who{" "}
-          <Highlight>
-            prefers to concentrate on one project at a time
-          </Highlight>{" "}
-          to ensure its <Highlight>quality</Highlight>,
+          One of my weaknesses is that I sometimes over-engineer frontend
+          solutions, spending too much time optimizing code rather than focusing
+          on delivering functional features quickly.
           <br />
           <br />
-          but I understand that the{" "}
-          <Highlight>real working environment</Highlight> often{" "}
-          <Highlight>requires mult-tasking.</Highlight>
+          ✅ Example:
           <br />
           <br />
-          To deal with it, I&apos;ve started to work on{" "}
-          <Highlight>task management strategies</Highlight>, using tools like{" "}
-          <Highlight>task scheduler</Highlight> to
-          <Highlight>organize my workflow</Highlight>, and remind myself to{" "}
-          <Highlight>switch tasks and monitor progress.</Highlight>
+          - In my IDaaS Next.js project, I initially spent too much time
+          refactoring the frontend state management, optimizing API calls with
+          TanStack Query, and improving modularity.
+          <br />
+          - While these optimizations were beneficial, I later realized that
+          business requirements should take priority, and I should focus more on
+          MVP (Minimum Viable Product) development.
           <br />
           <br />
-          While I&apos;m still enhancing this skill,
+          ✅ How I’m Improving:
           <br />
-          I&apos;ve seen improvements and will continue to work on it to be more
-          efficient and adaptable.
+          <br />
+          - I now balance clean architecture with delivery speed by following
+          Agile principles.
+          <br />
+          - I prioritize tasks based on user impact and communicate with
+          stakeholders to ensure I am focusing on business-critical features
+          first.
+          <br />
+          - Instead of immediately refactoring everything, I schedule
+          improvements as incremental tasks after the core features are
+          delivered.
+          <br />- This awareness has helped me become a more pragmatic frontend
+          engineer, ensuring that I optimize where it truly matters.
         </Answer>
       </section>
 
@@ -1344,7 +1369,7 @@ function ENQNA() {
           meet the deadline.
           <br />
           And after code was delivered on schedule, I usually will create
-          another task to refactor the code to improve quality.
+          another follow-up task to refactor the code to improve quality.
           <br />
           <br />
           2️⃣ Efficient Communication –{" "}
@@ -1353,8 +1378,8 @@ function ENQNA() {
           and <Highlight>do not hesitate to ask for help</Highlight> from them.
           <br />
           <Highlight>
-            somethings helping each other can efficiently produce a better
-            result.
+            helping each other can absolutely produce a better result, in most
+            cases.
           </Highlight>
         </Answer>
       </section>
@@ -1430,8 +1455,8 @@ function ENQNA() {
           and is often a <Highlight>source of new ideas</Highlight>.
           <br />
           When <Highlight>dealing with such situations</Highlight>,
-          <br />I believe that <Highlight>communication is essentail</Highlight>
-          . <Highlight>Eommunicating openly</Highlight>,
+          <br />I believe that <Highlight>communication is essential</Highlight>
+          . <Highlight>Communicating openly</Highlight>,
           <br />
           <Highlight>listening patiently</Highlight>,{" "}
           <Highlight>understanding the each other&apos;s viewpoint</Highlight>,
@@ -1443,6 +1468,71 @@ function ENQNA() {
           <Highlight>
             keep the main goal in mind and respect everyone&apos;s perspectives.
           </Highlight>
+          <br />
+          In case if I need to persuade someone, I will try to create a poc or a
+          prototype to demonstrate my idea.
+          <br />
+          Explain the idea in a simple way, and show them the benefit of it.
+          <br />
+          While working on the latest Flutter project, there was an initial
+          debate about how to handle error management.
+          <br />
+          The existing implementation relied heavily on try-catch blocks, making
+          the codebase difficult to maintain.
+          <br />
+          <br />
+          Some engineers were comfortable with the try-catch approach,
+          <br />
+          while I suggested using a result type system (isFailure, isSuccess) to
+          simplify error handling and improve readability.
+          <br />
+          ✅ I demonstrated a proof-of-concept showing how the result type
+          system reduced 90% of unnecessary try-catch blocks.
+          <br />
+          ✅ I walked the team through the benefits, including cleaner code and
+          better debugging with Firebase Crashlytics.
+          <br />
+          ✅ After discussion and team feedback, we adopted the new approach,
+          improving code maintainability and reducing error-handling complexity.
+          <br />
+          This experience taught me that clear demonstrations and collaboration
+          are key to introducing technical improvements successfully
+        </Answer>
+      </section>
+
+      <section id="handle-negative-feedback">
+        <Question id="handle-negative-feedback">
+          How do you handle negative feedback?
+        </Question>
+        <Answer>
+          I see negative feedback as an opportunity to learn and grow.
+          <br />
+          <br />
+          ✅ Example:
+          <br />
+          <br />
+          In my Flutter project, I initially wrote overly complex code for error
+          handling.
+          <br />
+          During a peer review, my colleague suggested simplifying the logic and
+          making it easier for others to understand.
+          <br />
+          Instead of taking it personally, I reviewed my approach, refactored
+          the code, and improved documentation.
+          <br />
+          <br />
+          ✅ How I Approach Feedback Now:
+          <br />
+          <br />
+          I always ask clarifying questions to fully understand the feedback.
+          <br />
+          I view it as a chance to improve my skills and coding efficiency.
+          <br />
+          I regularly request feedback proactively to continuously refine my
+          work.
+          <br />
+          This approach has helped me become a better engineer and a stronger
+          team player.
         </Answer>
       </section>
 
@@ -1508,18 +1598,36 @@ function ENQNA() {
           my work.
         </Answer>
       </section>
+      <section id="5-years">
+        <Question id="5-years">Where do you see yourself in 5 years?</Question>
+        <Answer>
+          In five years, I see myself growing as a technical lead or senior
+          frontend engineer, leading complex projects and mentoring junior
+          developers.
+          <br /> <br />
+          ✅ I aim to deepen my expertise in frontend performance optimization
+          and system architecture.
+          <br />
+          ✅ I want to contribute to open-source projects and participate in
+          frontend engineering conferences.
+          <br />
+          ✅ Ideally, I would like to grow within Rakuten, helping to build and
+          scale innovative e-commerce solutions.
+          <br />
+        </Answer>
+      </section>
       <section id="question">
         <Question id="question">Any questions?</Question>
         <Answer>
-          1. company&apos;s journey and how it started. Spin-off from progress
-          technology in 2020, is there any story behind it?
+          1️⃣ Can you tell me more about the roadmap for this new e-commerce
+          service?
           <br />
-          2. what kind of exicting on going projects are running now? that
-          hopefully I am able to participate in?
+          2️⃣ What are some challenges the EC Solution Development team is
+          currently facing?
           <br />
-          3. About SHIKAI, it was released in 2016, which is 7 years ago. In
-          this new AI era, mainly about LLM, is there any plan upgrade the
-          SHIKAI?
+          3️⃣ How does Rakuten support engineers in professional development?
+          <br />
+          4️⃣ What is the team structure and development workflow like?
           <br />
         </Answer>
       </section>

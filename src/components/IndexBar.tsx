@@ -97,14 +97,6 @@ export default function IndexBar() {
             label: "リーダー経験",
           },
           {
-            id: "choice-of-tech",
-            label: "技術の選定基準",
-          },
-          {
-            id: "react-pos-con",
-            label: "Reactの優/劣",
-          },
-          {
             id: "strength",
             label: "強み",
           },
@@ -129,8 +121,16 @@ export default function IndexBar() {
             label: "handle conflict",
           },
           {
+            id: "handle-negative-feedback",
+            label: "handle negative feedback",
+          },
+          {
             id: "success-fail",
             label: "最大の成果・失敗",
+          },
+          {
+            id: "5-years",
+            label: "5年後",
           },
           {
             id: "question",
