@@ -840,8 +840,8 @@ function ENQNA() {
           After I settled down, I joined Linkx, which is my current company.
           <br />
           So far it is a <Highlight>good company with good culture</Highlight>,
-          but just like many other startup, it doesn't have a well-organized or
-          well-designed salary review system.
+          but just like many other startup, it doesn&apos;t have a
+          well-organized or well-designed salary review system.
           <br />
           which means it is hard to get a raise, even if you have done a good
           job.
@@ -1005,16 +1005,19 @@ function ENQNA() {
           <Highlight>commitment to innovation</Highlight>,{" "}
           <Highlight>diversity</Highlight>, and the{" "}
           <Highlight>empowerment of society</Highlight>, as encapsulated in the{" "}
-          <Highlight>core philosophy known as "Rakuten Shugi"</Highlight>. This
-          philosophy emphasizes principles such as "Empowerment," "Innovation,"
-          and "Professionalism," which{" "}
+          <Highlight>
+            core philosophy known as &quot;Rakuten Shugi&quot;
+          </Highlight>
+          . This philosophy emphasizes principles such as
+          &quot;Empowerment,&quot; &quot;Innovation,&quot; and
+          &quot;Professionalism,&quot; which{" "}
           <Highlight>
             resonate deeply with my personal and professional values
           </Highlight>
           .
           <br />
           <br />
-          The EC Solution Development Department's{" "}
+          The EC Solution Development Department&apos;s{" "}
           <Highlight>
             mission to enhance marketplace diversity
           </Highlight> and{" "}
@@ -1028,7 +1031,7 @@ function ENQNA() {
           <Highlight>significant impact to the society</Highlight>.
           <br />
           <br />
-          Moreover, Rakuten's emphasis on a{" "}
+          Moreover, Rakuten&apos;s emphasis on a{" "}
           <Highlight>collaborative and diverse work environment</Highlight>,
           where professionals from various backgrounds{" "}
           <Highlight>unite towards common goals</Highlight>, is an atmosphere in
@@ -1352,8 +1355,8 @@ function ENQNA() {
           When facing tight deadlines, I follow a structured approach:
           <br />
           1️⃣ Prioritize Tasks – I break down requirements into smaller pieces
-          and identify critical ones first, aims to "get the most important
-          things done".
+          and identify critical ones first, aims to &quot;get the most important
+          things done&quot;.
           <br />
           <br />
           For example, when developing the IDaaS project, most of the time, I
