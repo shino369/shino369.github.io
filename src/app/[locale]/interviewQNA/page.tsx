@@ -726,7 +726,9 @@ function ENQNA() {
       <section id="self-intro">
         <Question id="self-intro">Self Intro</Question>
         <Answer>
-          {`Allow me to introduce myself.
+          {`detailed one:
+          
+            Allow me to introduce myself.
             
             I am Anthony Wong, a Trilingual Software Engineer with more than 3 years of experience in frontend development.
             
@@ -760,6 +762,37 @@ function ENQNA() {
             I hope I can make a meaningful contribution to the team at Rakuten, learn and gain unique and valuable experiences in the process.
             
             Thank you.
+
+            ================================================
+
+            short one:
+
+            My name is Anthony Wong, and I am a software engineer with over three years of experience, focusing on frontend and mobile development.
+            
+            I am specializing in React, Next.js, Vue.js (Composition API), and Flutter.
+
+
+            Currently, I work at LiNKX Inc., where I have contributed to multiple projects, including:
+
+            ✅ A Next.js-based IDaaS authentication platform for financial institutions 
+            
+            – I handled frontend development alone for three out of five months, ensuring the project stayed on schedule, and conducting a smooth handover to the customer’s engineers.
+
+            ✅ A Flutter-based payment-related application 
+            
+            – Despite having no prior Flutter experience, I quickly adapted and became a key contributor, 
+            implementing an advanced error-handling system that reduced 90% of redundant try-catch blocks, 
+            added an error boundary (inspired by React), and integrated Firebase Crashlytics for better debugging.
+
+            
+            Beyond technical expertise, I am capable to work in multinational teams, as I am fluent in Japanese, English, and Chinese. 
+
+            I actively collaborate with backend engineers, conduct code reviews, and mentor junior developers to improve overall team efficiency.
+            I am excited about this opportunity at Rakuten because of its mission 
+            to empower businesses through innovation and its commitment to large-scale e-commerce solutions. 
+
+            With my experience in scalable frontend architectures, performance optimization, and cross-functional teamwork, 
+            I believe I can contribute to Rakuten’s EC Solution Development Department and help build high-quality, user-focused products
           `
             .split("\n")
             .map((t) => t.trim())
@@ -857,7 +890,14 @@ function ENQNA() {
           <br />
           But what I got is just 1.9% of salary raise.
           <br />
-          It is not even enough to cover the inflation rate.
+          Given that <Highlight>my objective right now</Highlight> is to become
+          a permanent resident in Japan
+          <br />I need not only a stable income to support my life here, but
+          also need to <Highlight>fulfill the requirement</Highlight> of the
+          visa that
+          <br />
+          I am planning to apply in the future. (Highly skilled professional
+          visa)
           <br />
           So I think it is time for me to move on.
           <br />
@@ -867,11 +907,8 @@ function ENQNA() {
       <section id="reason-to-japan">
         <Question id="reason-to-japan">Why come to Japan?</Question>
         <Answer>
-          {`just like many other foreigner, I love japanese subculture like anime and comic\n
-            and is planning to live in Japan in the future.\n
-            But it is quite difficult to apply japanese job oversea\n
-            Surprisingly, the japanese government launched the new visa programme\n
-            I saw this as a good chance and applied.
+          {`just like many other foreigner, I love japanese culure like food, anime and comic\n
+            and is planning to settle my life in Japan in the future.
           `
             .split("\n")
             .map((t) => t.trim())
@@ -1057,10 +1094,10 @@ function ENQNA() {
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">
-          What were your responsibilities in your previous job?
+          What were your responsibilities in Shiji Group?
         </Question>
         <Answer>
-          In my role at Shiji Information Technology,
+          In my role at Shiji Group,
           <br />I was primarily responsible for
           <Highlight>enhancing our existing application</Highlight>
           <br />
@@ -1080,28 +1117,76 @@ function ENQNA() {
         </Answer>
       </section>
 
+      <section id="job-in-linkx">
+        <Question id="job-in-linkx">
+          What were your responsibilities in your previous job?
+        </Question>
+        <Answer>
+          I have contributed to 2 projects at Linkx, one using Next.js, and the
+          other using Flutter.
+          <br />
+          In the Next.js project, I was responsible for the frontend development
+          for a IDaaS Product.
+          <br />
+          It is basically an{" "}
+          <Highlight>
+            OIDC CIBA (like Single Sign On) + Passkey manager
+          </Highlight>{" "}
+          with advanced feature like, authorizing payment or transcation for
+          financial institution.
+          <br />
+          What I mainly responsible for was the next.js part, which{" "}
+          <Highlight>
+            performs account creation, user auth flow, and integrate with some
+            third party service like eKYC
+          </Highlight>
+          .
+          <br />
+          <br />
+          I ensured that the project stayed on schedule, and conducted a smooth
+          handover to the customer’s engineers.
+          <br />
+          In the Flutter project, I was assigned to a payment-related
+          application, where I quickly adapted and became a key contributor,
+          <br />
+          implementing an advanced error-handling system that reduced 90% of
+          redundant try-catch blocks, added an error boundary (inspired by
+          React), and integrated Firebase Crashlytics for better debugging.
+          <br />
+        </Answer>
+      </section>
+
       <section id="challenging-task">
         <Question id="challenging-task">
           What was the most challenging task you faced in your previous job?
         </Question>
         <Answer>
-          One of the most challenging projects I worked on was an IDaaS
-          authentication platform for financial institutions, built with
-          Next.js.
+          One of the most challenging projects I worked on was an IDaaS project
+          for financial institutions, built with Next.js.
           <br />
           <br />
-          When I joined, there was another frontend engineer who had already
-          been on the project for a year. However, he resigned after one month,
-          leaving me as the sole frontend engineer. For the next three months, I
-          was fully responsible for delivering new features and maintaining the
-          frontend, ensuring we stayed on schedule.
+          When I joined,{" "}
+          <Highlight>there was another 2 frontend engineers</Highlight> who had
+          already been on the project for more than one year. However, one of
+          them changed to the backend side, and the another one{" "}
+          <Highlight>
+            resigned one month after I joined, without notice period
+          </Highlight>
+          , leaving me as the only frontend engineer. For the next three months,
+          I was fully responsible for delivering new features and maintaining
+          the frontend, ensuring we stayed on schedule.
           <br />
           <br />
           The challenge was balancing feature development, debugging, and
-          performance optimization while handling the workload alone. Later, in
-          my final month on the project, two engineers from the customer side
-          joined, and I focused on a smooth handover and conducting code
-          reviews.
+          performance optimization while handling the workload alone. And{" "}
+          <Highlight>
+            most importantly it was a product which requires high security and
+            stability, there were quite a lot of complex logic about the
+            authorization and authentication
+          </Highlight>
+          . Later, in my final month on the project, two engineers from the
+          customer side joined, and I focused on a smooth handover and
+          conducting code reviews.
           <br />
           <br />
           Although I didn’t make major architectural decisions (as the tech
@@ -1314,8 +1399,7 @@ function ENQNA() {
           <br />
           <br />
           - In my IDaaS Next.js project, I initially spent too much time
-          refactoring the frontend state management, optimizing API calls with
-          TanStack Query, and improving modularity.
+          refactoring API calls with TanStack Query, and improving modularity.
           <br />
           - While these optimizations were beneficial, I later realized that
           business requirements should take priority, and I should focus more on
