@@ -77,6 +77,10 @@ export default function IndexBar() {
             label: "志望動機---Rakuten",
           },
           {
+            id: "siboudouki-commune",
+            label: "志望動機---Commune",
+          },
+          {
             id: "job-in-shiji",
             label: "前職について(Shiji)",
           },
@@ -95,6 +99,10 @@ export default function IndexBar() {
           {
             id: "lead-project",
             label: "リーダー経験",
+          },
+          {
+            id: "self-product-important",
+            label: "プロダクト作りにおいて",
           },
           {
             id: "strength",
