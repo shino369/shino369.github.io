@@ -77,8 +77,8 @@ export default function IndexBar() {
             label: "志望動機---Rakuten",
           },
           {
-            id: "siboudouki-commune",
-            label: "志望動機---Commune",
+            id: "siboudouki-menu",
+            label: "志望動機---Menu",
           },
           {
             id: "job-in-shiji",

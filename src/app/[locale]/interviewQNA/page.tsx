@@ -19,62 +19,75 @@ function JPQNA() {
       <section id="self-intro">
         <Question id="self-intro">自己紹介</Question>
         <Answer>
-          了解しました。では改めまして <br />
-          <br />
-          はじめまして、アンソニー・ウォンです。
-          <br />
-          香港出身で、日本に来て一年半になります。
-          <br />
-          もともと日本の文化が好きで、実際に日本で働いてみたいという気持ちから移住しました。
-          日本語の会話はまだ完璧ではありませんが、日々練習を続けています。できるだけ分かりやすく伝えられるように頑張りますので、ご了承を頂けると幸いです。
+          改めまして、アンソニー・ウォンと申します。よろしくお願いいたします。
           <br />
           <br />
-          ソフトウェアエンジニアとして3年以上の実務経験があり、フロントエンドやモバイルアプリの開発を専門としています。
-          <br />
-          香港城市大学を2021年に卒業後、 <br />
-          新卒ではappicidea it solutionsという、 <br />
-          受託開発がメインのスタートアップ会社に入社して、 <br />
-          そこでバックエンド以外も <br />
-          実務に通じて、幅広いフロントエンドのフレームワーク、主にReactとAngularの勉強ができました。{" "}
+          私はソフトウェアエンジニアとして3年以上の経験を持ち、主にフロントエンドとモバイルアプリ開発を専門としております。
           <br />
           <br />
-          そのあとはホスピタリティ業界のグローバル企業、Shiji Groupに転職し、
-          <br />
-          自社のSaaSプロダクト「Infrasys Cloud
-          POS」のシステムの一部、「テーブルマネジメントシステム」のフルスタックの開発を任せられました。{" "}
+          香港出身で、2023年に日本に移住しました。日本の文化に魅力を感じ、ここで技術力を活かして働きたいと思い移住を決意しました。
           <br />
           <br />
-          このテーブルはデータベースのテーブルではなく、飲食店やホテルのテーブル、つまり席とのことで、それを管理するシステムです。{" "}
-          システムは主にreactとcakephpを使って開発しました。 <br />
-          <br />
-          それ以外もVue.jsを用いたオンライン予 <br />
-          約システムの小規模リプレースメントプロジェクトをリードした経験があります。{" "}
+          香港城市大学で情報工学を学び、2021年に卒業後、最初はスタートアップ企業で受託開発に携わり、React
+          NativeやAngularを用いたフロントエンド開発のスキルを磨きました。
           <br />
           <br />
-          <br />
-          そして2023年に、日本政府の新しいビザのおかげで、日本に移住するチャンスがありまして、{" "}
-          <br />
-          それで2023年の九月に、日本に移住しました。
-          <br />
-          <br />
-          生活が落ち着いた後、求職活動を始めまして、 <br />
-          <br />
-          今の会社リンクス株式会社に入社しました。
-          <br />
-          リンクス株はFintechのスタートアップで、金融機関向けのソフトウェア開発とDX支援を行っています。
-          <br />
-          自分は主にフロントエンドとモバイルアプリの開発を担当していて、
-          <br />
-          Next.jsを用いた、金融機関向けのIDaaS認証アプリ開発や、Flutterのカード管理アプリの開発に携わりました。
-          <br />
-          UI/UX向上、アーキテクチャとコンポーネントの設計、改善、
-          <br />
-          コードレビューやメンバーの指導 などに注力してきました。
+          その後、ホスピタリティ業界のグローバル企業であるShiji
+          Groupに転職し、SaaSプロダクト「Infrasys Cloud
+          POS」のテーブル管理システムのフルスタック開発を担当しました。具体的には、ReactやVue.js、CakePHPを活用し、ユーザー体験の向上に注力しました。
           <br />
           <br />
-          これまでのスキルと経験をCommunで活かしておきたいと考えております。
+          2023年に日本に移住し、現在はリンクス株式会社というFintechスタートアップで働いています。Next.jsを使用した金融機関向けIDaaSアプリや、Flutterを用いたモバイルアプリの開発をリードし、アーキテクチャ設計やチームの技術力向上に貢献してきました。
           <br />
-          どうぞよろしくお願いいたします。 <br />
+          <br />
+          特にフロントエンドとモバイルの開発経験を活かし、UI/UXの最適化やスケーラブルなコードの実装に力を入れています。
+          <br />
+          <br />
+          MENU様の「MENU」アプリの技術スタックであるReact
+          NativeやExpoに強い関心があり、これまでの経験を活かして、ユーザーに愛されるプロダクトづくりに貢献したいと考えております。
+          <br />
+          <br />
+          日本語はJLPT
+          N1を取得しておりますが、まだ流暢さには磨きが必要だと感じており、日々努力を続けています。どうぞよろしくお願いいたします。
+          <br />
+          <br />
+          ---
+          <br />
+          <br />
+          Allow me to introduce myself. My name is Anthony Wong. Thank you for
+          having me.
+          <br />
+          <br />
+          I am a software engineer with over three years of experience,
+          specializing in frontend and mobile application development.
+          Originally from Hong Kong, I moved to Japan in 2023. Having always
+          been drawn to Japanese culture, I decided to relocate here to leverage
+          my technical skills in this environment.
+          <br />
+          <br />
+          After graduating from City University of Hong Kong with a degree in
+          Information Engineering in 2021, I began my career at a startup
+          focused on contract development, where I honed my skills in frontend
+          frameworks like React and Angular. Later, I joined Shiji Group, a
+          global company in the hospitality industry, where I worked on the
+          full-stack development of the SaaS product “Infrasys Cloud POS,”
+          specifically its table management system. Using React, Vue.js, and
+          CakePHP, I focused on enhancing the user experience.
+          <br />
+          <br />
+          In 2023, I moved to Japan and now work at LiNKX Inc., a Fintech
+          startup. I’ve led the development of an IDaaS app for financial
+          institutions using Next.js and a mobile app using Flutter,
+          contributing to architecture design and team skill development. My
+          experience in React Native and Flutter has allowed me to prioritize
+          UI/UX optimization and scalable code implementation.
+          <br />
+          <br />I am particularly excited about this opportunity to work with
+          the “MENU” app, built with React Native and Expo, and I believe my
+          background aligns well with this role. I’d love to contribute to
+          creating a product that users love. While I hold JLPT N1, I’m still
+          working on fluency and continue to practice daily. Thank you for your
+          consideration.
         </Answer>
       </section>
 
@@ -197,38 +210,35 @@ function JPQNA() {
           <br />
         </Answer>
       </section>
-      <section id="siboudouki-commune">
-        <Question id="siboudouki-commune">
+      <section id="siboudouki-menu">
+        <Question id="siboudouki-menu">
           何故うちの会社?（志望動機---commune）
         </Question>
         <Answer>
-          きっかけはFindyにいいねをもらいました。
-          <br />
-          求人の内容を見て、CommuneのSNSの形をとったcommunity success
-          platformが革新的で、
-          <br />
-          ユニークな「BtoBtoC」というモデルに興味を持ちました。
-          <br />
-          そのあと土佐さんとのカジュアル面談を通じて、
-          <br />
-          Communeのビジネスとユーザー体験のバランスを取りながらプロダクトを成長させることに魅力を感じました。
+          私は普段からフードデリバリーアプリをよく利用しており、特にMENUやUberEatsのヘビーユーザーです。
           <br />
           <br />
-          また、このポジションは デザインシステム開発のリード
-          という重要な役割が期待されています。
+          MENUアプリを使っていて、そのシンプルで直感的なUIとスムーズな注文体験にいつも感心しています。
           <br />
-          自分はこれまで
-          コンポーネントの標準化・アクセシビリティ向上・パフォーマンス最適化
-          などを行ってきて、
           <br />
-          さらに直近のプロジェクト、flutterではありますが、StoryBookと似た、
+          しかし、ユーザーとして、例えば画面遷移のラグやUIのズレなど改善の余地があると感じたことがあります。
           <br />
-          WidgetBookが導入され、
           <br />
-          デザインシステムのコードレビューやメンバーの指導を行っています。
+          他にももっとユーザーにとって便利な機能やサービスがあればいいのに、と思うことがあります。
           <br />
-          これらの経験を活かし、プロダクト全体の品質向上に貢献したい
-          と思っています。
+          <br />
+          このような課題を技術者として解決し、ユーザーの生活をより便利にしたいという思いが、私の志望動機のきっかけとなりました。
+          <br />
+          <br />
+          私はこれまで、React
+          NativeやFlutterを使ったモバイルアプリ開発に携わり、ユーザー体験を向上させるための設計や最適化に注力してきました。例えば、現在の会社ではFlutterを使った決済アプリの開発をリードし、エラーハンドリングを見直すことでアプリの安定性を高め、また直接UIデザイナーと協力して、ユーザーにとって使いやすいUI/UXを提供することに貢献してきました。
+          <br />
+          <br />
+          MENU様の「MENU」アプリはReact
+          Nativeを活用しており、私の技術スキルと経験が活かせる場だと感じています。ユーザーの視点とエンジニアのスキルを組み合わせ、注文から配送までシームレスな体験を提供するプロダクトづくりに貢献したいと考えています。さらに、日本で育まれるフードテック文化の一端を担い、地域の飲食店やユーザーとつながるサービスを一緒に成長させたいという思いもあります。
+          <br />
+          <br />
+          このような理由から、ぜひ貴社で働きたいと強く願っております。
         </Answer>
       </section>
 
