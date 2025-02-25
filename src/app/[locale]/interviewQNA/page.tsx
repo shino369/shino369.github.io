@@ -212,7 +212,7 @@ function JPQNA() {
       </section>
       <section id="siboudouki-menu">
         <Question id="siboudouki-menu">
-          何故うちの会社?（志望動機---commune）
+          何故うちの会社?（志望動機---menu
         </Question>
         <Answer>
           私は普段からフードデリバリーアプリをよく利用しており、特にMENUやUberEatsのヘビーユーザーです。
