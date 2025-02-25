@@ -105,6 +105,10 @@ export default function IndexBar() {
             label: "プロダクト作りにおいて",
           },
           {
+            id: "choice-of-tech",
+            label: "技術選定",
+          },
+          {
             id: "strength",
             label: "強み",
           },
