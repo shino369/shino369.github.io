@@ -77,10 +77,6 @@ export default function IndexBar() {
             label: "志望動機---Rakuten",
           },
           {
-            id: "siboudouki-menu",
-            label: "志望動機---Menu",
-          },
-          {
             id: "job-in-shiji",
             label: "前職について(Shiji)",
           },

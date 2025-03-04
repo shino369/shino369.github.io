@@ -210,37 +210,6 @@ function JPQNA() {
           <br />
         </Answer>
       </section>
-      <section id="siboudouki-menu">
-        <Question id="siboudouki-menu">
-          何故うちの会社?（志望動機---menu
-        </Question>
-        <Answer>
-          私は普段からフードデリバリーアプリをよく利用しており、特にMENUやUberEatsのヘビーユーザーです。
-          <br />
-          <br />
-          MENUアプリを使っていて、そのシンプルで直感的なUIとスムーズな注文体験にいつも感心しています。
-          <br />
-          <br />
-          しかし、ユーザーとして、例えば画面遷移のラグやUIのズレなど改善の余地があると感じたことがあります。
-          <br />
-          <br />
-          他にももっとユーザーにとって便利な機能やサービスがあればいいなぁ、と思うことがあります。
-          <br />
-          <br />
-          このような課題をエンジニアとして解決し、ユーザーの生活をより便利にしたいという思いが、私の志望動機のきっかけとなりました。
-          <br />
-          <br />
-          私はこれまで、React
-          NativeやFlutterを使ったモバイルアプリ開発に携わり、ユーザー体験を向上させるための設計や最適化に注力してきました。例えば、現在の会社ではFlutterを使ったカードアプリの開発をシニアエンジニアとしてリードし、エラーハンドリングを見直すことでアプリの安定性を高め、また直接UIデザイナーと協力して、ユーザーにとって使いやすいUI/UXを提供することに貢献してきました。
-          <br />
-          <br />
-          MENU様の「MENU」アプリはReact
-          Nativeを活用しており、私のスキルと経験が活かせる場だと感じています。ユーザーの視点とエンジニアのスキルを組み合わせ、注文から配送までシームレスな体験を提供するプロダクトづくりに貢献したいと考えています。さらに、日本で育まれるフードテック文化の一端を担い、地域の飲食店やユーザーとつながるサービスを一緒に成長させたいという思いもあります。
-          <br />
-          <br />
-          このような理由から、ぜひ御社で働きたいと強く願っております。
-        </Answer>
-      </section>
 
       <section id="job-in-shiji">
         <Question id="job-in-shiji">
@@ -577,7 +546,7 @@ function ENQNA() {
             I am originally from Hong Kong. I earned a degree in Information Engineering from City University of Hong Kong, with a minor in Japanese Studies.
             
 
-            After I graduated, I began working at Appicidea IT Solutions, which is a growing startup specializing in subcontracting projects.  
+            After I graduated, I began working at Appicidea IT Solutions, which is a growing startup specializing in digital transformation and mobile app development.  
             
             There, I gained hands-on experience in full-stack development using Java Spring Boot, Angular, React.js, and React Native.
             
@@ -718,32 +687,23 @@ function ENQNA() {
           but just like many other startup, it doesn&apos;t have a
           well-organized or well-designed salary review system.
           <br />
-          which means it is hard to get a raise, even if you have done a good
-          job.
+          which means it is difficult to get a raise, even if you have done a
+          good job. Considering this situation, I think it is not a good place
+          for long-term career, so I am casually looking for a new job.
           <br />
           <br />
-          For instance, I have been working on a flutter project for half a
-          year, <Highlight>leading the team</Highlight> , and so far the project
-          is going well.
-          <br />I got a <Highlight>A rank</Highlight> in the performance review,
-          which is the <Highlight>highest possible rank</Highlight> that an
-          engineer can get.
+          in addition, I have always wanted to work in a diverse and global
+          company like Rakuten.
           <br />
+          Actually before I joined Linkx, during my job hunting in 2023, I have
+          already applied for Rakuten, which is similar roles in EC Marketplace
+          Development Department and EC First Party Development Department.
           <br />
-          But what I got is just 1.9% of salary raise.
+          But I didn&apos;t get the opportunity to have an interview.
           <br />
-          Given that <Highlight>my objective right now</Highlight> is to become
-          a permanent resident in Japan
-          <br />I need not only a stable income to support my life here, but
-          also need to <Highlight>fulfill the requirement</Highlight> of the
-          visa that
+          Rakuten is a company that I have been looking forward to working with
+          for a long time.
           <br />
-          I am planning to apply in the future. (Highly skilled professional
-          visa)
-          <br />
-          So I think it is time for me to move on.
-          <br />
-          This is the main reason why I am looking for a new job.
         </Answer>
       </section>
       <section id="reason-to-japan">
@@ -980,13 +940,14 @@ function ENQNA() {
           What I mainly responsible for was the next.js part, which{" "}
           <Highlight>
             performs account creation, user auth flow, and integrate with some
-            third party service like eKYC
+            third party service like eKYC. I customized the UI, implemented the
+            business logic and delivered the product to the customer.
           </Highlight>
           .
           <br />
           <br />
-          I ensured that the project stayed on schedule, and conducted a smooth
-          handover to the customer’s engineers.
+          I ensured that the project stayed on schedule, and lastly conducted a
+          smooth handover to the customer’s engineers.
           <br />
           In the Flutter project, I was assigned to a payment-related
           application, where I quickly adapted and became a key contributor,
@@ -995,6 +956,12 @@ function ENQNA() {
           redundant try-catch blocks, added an error boundary (inspired by
           React), and integrated Firebase Crashlytics for better debugging.
           <br />
+          I also contributed to the native-side integration like Visa
+          push-provisioning services.
+          <br />
+          Besides, since the team has a lot of junior members, I also conducted
+          code reviews and mentored junior developers to improve overall team
+          efficiency.
         </Answer>
       </section>
 
