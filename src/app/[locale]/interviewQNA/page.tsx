@@ -37,57 +37,15 @@ function JPQNA() {
           POS」のテーブル管理システムのフルスタック開発を担当しました。具体的には、ReactやVue.js、CakePHPを活用し、ユーザー体験の向上に注力しました。
           <br />
           <br />
-          2023年に日本に移住し、現在はリンクス株式会社というFintechスタートアップで働いています。Next.jsを使用した金融機関向けIDaaSアプリや、Flutterを用いたモバイルアプリの開発をシニアとしてリードし、システム設計やチームの技術力向上に貢献してきました。
+          2023年に日本に移住し、現在はリンクス株式会社というFintechスタートアップで働いています。Next.jsを使用した金融機関向けIDaaSアプリや、Flutterを用いたカードアプリの開発を牽引し、システム設計やチームの技術力向上に貢献してきました。
           <br />
           <br />
           特にフロントエンドとモバイルの開発経験を活かし、UI/UXの最適化やスケーラブルなコードの実装に力を入れています。
           <br />
           <br />
-          MENU様の「MENU」アプリの技術スタックであるReact
-          NativeやExpoに強い関心があり、これまでの経験を活かして、ユーザーに愛されるプロダクトづくりに貢献したいと考えております。
-          <br />
-          <br />
           日本語はJLPT
           N1を取得しておりますが、まだ流暢さには磨きが必要だと感じており、日々努力を続けています。どうぞよろしくお願いいたします。
           <br />
-          <br />
-          ---
-          <br />
-          <br />
-          Allow me to introduce myself. My name is Anthony Wong. Thank you for
-          having me.
-          <br />
-          <br />
-          I am a software engineer with over three years of experience,
-          specializing in frontend and mobile application development.
-          Originally from Hong Kong, I moved to Japan in 2023. Having always
-          been drawn to Japanese culture, I decided to relocate here to leverage
-          my technical skills in this environment.
-          <br />
-          <br />
-          After graduating from City University of Hong Kong with a degree in
-          Information Engineering in 2021, I began my career at a startup
-          focused on contract development, where I honed my skills in frontend
-          frameworks like React and Angular. Later, I joined Shiji Group, a
-          global company in the hospitality industry, where I worked on the
-          full-stack development of the SaaS product “Infrasys Cloud POS,”
-          specifically its table management system. Using React, Vue.js, and
-          CakePHP, I focused on enhancing the user experience.
-          <br />
-          <br />
-          In 2023, I moved to Japan and now work at LiNKX Inc., a Fintech
-          startup. I’ve led the development of an IDaaS app for financial
-          institutions using Next.js and a mobile app using Flutter,
-          contributing to architecture design and team skill development. My
-          experience in React Native and Flutter has allowed me to prioritize
-          UI/UX optimization and scalable code implementation.
-          <br />
-          <br />I am particularly excited about this opportunity to work with
-          the “MENU” app, built with React Native and Expo, and I believe my
-          background aligns well with this role. I’d love to contribute to
-          creating a product that users love. While I hold JLPT N1, I’m still
-          working on fluency and continue to practice daily. Thank you for your
-          consideration.
         </Answer>
       </section>
 
