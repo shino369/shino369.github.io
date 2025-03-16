@@ -557,10 +557,11 @@ function ENQNA() {
             I also led a system revamp, integrating Vue.js to gradually replace jQuery, which strengthened my skills in tech stack selection & project management.
 
 
-            After that, I moved to Japan and joined Linkx, a fintech company serving financial institutions, 
+            After that, I moved to Japan and joined my current company Linkx, a fintech company serving financial institutions, 
             
             where I focus on frontend & mobile app development using Next.js and Flutter.
 
+            I have worked on two projects so far:
 
             ✅ Next.js-based identity verification app 
             
