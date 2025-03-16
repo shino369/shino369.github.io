@@ -25,19 +25,17 @@ function JPQNA() {
           私はソフトウェアエンジニアとして3年以上の経験を持ち、主にフロントエンドとモバイルアプリ開発を専門としております。
           <br />
           <br />
-          香港出身で、2023年に日本に移住しました。日本の文化に魅力を感じ、ここで技術力を活かして働きたいと思い移住を決意しました。
-          <br />
           <br />
           香港城市大学で情報工学を学び、2021年に卒業後、最初はスタートアップ企業で受託開発に携わり、React
           NativeやAngularを用いたフロントエンド開発のスキルを磨きました。
           <br />
           <br />
-          その後、ホスピタリティ業界のグローバル企業であるShiji
+          その後、ホスピタリティ業界の企業Shiji
           Groupに転職し、SaaSプロダクト「Infrasys Cloud
-          POS」のテーブル管理システムのフルスタック開発を担当しました。具体的には、ReactやVue.js、CakePHPを活用し、ユーザー体験の向上に注力しました。
+          POS」のテーブル管理システムのフルスタック開発を担当しました。ReactやVue.js、CakePHPを活用し、ユーザー体験の向上に注力しました。
           <br />
           <br />
-          2023年に日本に移住し、現在はリンクス株式会社というFintechスタートアップで働いています。Next.jsを使用した金融機関向けIDaaSアプリや、Flutterを用いたカードアプリの開発を牽引し、システム設計やチームの技術力向上に貢献してきました。
+          2023年に日本に移住し、現在はリンクス株式会社というFintechスタートアップで働いています。Next.jsを使用した金融機関向けIDaaS本人認証アプリや、Flutterを用いたカードアプリの開発を牽引し、システム設計やチームの技術力向上に貢献してきました。
           <br />
           <br />
           特にフロントエンドとモバイルの開発経験を活かし、UI/UXの最適化やスケーラブルなコードの実装に力を入れています。
@@ -495,9 +493,7 @@ function ENQNA() {
       <section id="self-intro">
         <Question id="self-intro">Self Intro</Question>
         <Answer>
-          {`detailed one:
-          
-            Allow me to introduce myself.
+          {`
             
             I am Anthony Wong, a Trilingual Software Engineer with more than 3 years of experience in frontend development.
             
@@ -510,58 +506,36 @@ function ENQNA() {
             
 
             Later, I had the opportunity to work in Shiji Group, which is a global IT corporation serving the hospitality sector. \n
-            I contributed to the full-stack development of their SaaS product known as "Infrasys Cloud POS", and mainly focus on the development of one of the main system called "Table Management System".
-            It is a reservation system for restaurant and hotel, developed in React.js, Vue.js, and CakePHP.
+            I contributed to the full-stack development of their SaaS product known as "Infrasys Cloud POS", and mainly focused on the development of one of the main system called "Table Management System".
+            It is a reservation system for restaurant and hotel, developed in React.js and CakePHP.
 
             During the period, I also led a small-scale system revamp, integrating vue.js into the existing system, aims to gradually replace jquery in the future, 
             which was a great experience for me in terms of project management and choosing tech stack.
 
 
-            In September of 2023, I got the opportunity to move to Japan, thanks to the new visa scheme introduced by the Japanese government.
+            In September of 2023, I got the opportunity to move to Japan, 
 
             After I settled down, I joined my current company, Linkx, as a Software Engineer. 
             
             It is a fintech company which focuses on providing digital transformation solutions for financial institutions. I mainly work on frontend and mobile app development, using Next.js and flutter.
-            
-            I have contributed to 2 projects, one using next.js, and the other using flutter. Especially the flutter project, it is a challenging yet rewarding experience for me. Is a project that completely built from scratch.
-            
-            Given that I have no piror expenrience in flutter at all, so I learn, I improve, I grow a lot during the project. Just in half of a year, I become the leading flutter developer in the team, which proves my ability to learn and adapt to new technology quickly.
-            
-            
-            I hope I can make a meaningful contribution to the team at Rakuten, learn and gain unique and valuable experiences in the process.
-            
-            Thank you.
 
-            ================================================
-
-            short one:
-
-            My name is Anthony Wong, and I am a software engineer with over three years of experience, focusing on frontend and mobile development.
+            I have worked on two projects so far:
             
-            I am specializing in React, Next.js, Vue.js (Composition API), and Flutter.
-
-
-            Currently, I work at LiNKX Inc., where I have contributed to multiple projects, including:
-
-            ✅ A Next.js-based IDaaS authentication platform for financial institutions 
+            ✅ A Next.js-based identity verfication app for financial institutions 
             
             – I handled frontend development alone for three out of five months, ensuring the project stayed on schedule, and conducting a smooth handover to the customer’s engineers.
 
             ✅ A Flutter-based payment-related application 
             
             – Despite having no prior Flutter experience, I quickly adapted and became a key contributor, 
-            implementing an advanced error-handling system that reduced 90% of redundant try-catch blocks, 
-            added an error boundary (inspired by React), and integrated Firebase Crashlytics for better debugging.
-
+            implemented an advanced error-handling system that reduced 90% of redundant try-catch blocks, 
+            and integrated Firebase Crashlytics for better debugging.
             
             Beyond technical expertise, I am capable to work in multinational teams, as I am fluent in Japanese, English, and Chinese. 
-
-            I actively collaborate with backend engineers, conduct code reviews, and mentor junior developers to improve overall team efficiency.
-            I am excited about this opportunity at Rakuten because of its mission 
-            to empower businesses through innovation and its commitment to large-scale e-commerce solutions. 
-
-            With my experience in scalable frontend architectures, performance optimization, and cross-functional teamwork, 
-            I believe I can contribute to Rakuten’s EC Solution Development Department and help build high-quality, user-focused products
+            
+            I hope I can make a meaningful contribution to the team at Rakuten, learn and gain unique and valuable experiences in the process.
+            
+            Thank you.
           `
             .split("\n")
             .map((t) => t.trim())
