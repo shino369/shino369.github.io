@@ -540,19 +540,19 @@ function ENQNA() {
             ==============================================
 
 
-            I’m Anthony Wong, a trilingual software engineer with 3+ years of frontend development experience.
+            I’m Anthony Wong, a trilingual software engineer with over 3 years of frontend development experience.
             
             Originally from Hong Kong, I earned a degree in Information Engineering from City University of Hong Kong, minoring in Japanese Studies.
 
 
             I started my career at Appicidea IT Solutions, a startup specializing in digital transformation,
             
-            where I gained hands-on experience in full-stack development using Java Spring Boot, Angular, React.js, and React Native.
+            where I gained hands-on experience in full-stack development using Java Spring Boot, Angular, React, and React Native.
 
             
             Later, at Shiji Group, a global hospitality IT company, I worked on their SaaS product Infrasys Cloud POS, 
             
-            focusing on the Table Management System, which is a React.js & CakePHP-based restaurant reservation system. 
+            focusing on the Table Management System, which is a React & CakePHP-based restaurant reservation system. 
             
             I also led a system revamp, integrating Vue.js to gradually replace jQuery, which strengthened my skills in tech stack selection & project management.
 
@@ -567,11 +567,11 @@ function ENQNA() {
             
             → Led frontend development alone for 3 out of 5 months, ensuring timely delivery and smooth handover.
             
-            ✅ Flutter-based payment application 
+            ✅ Flutter-based payment-related application 
             
-            → Despite no prior Flutter experience, I quickly adapted, implementing an advanced error-handling system, reducing 90% of redundant try-catch blocks, and integrating Firebase Crashlytics for better logging.
+            → Despite no prior Flutter experience, I quickly adapted and became a key contributer, implementing an advanced error-handling system, reducing 90% of redundant try-catch blocks, and integrating Firebase Crashlytics for better logging.
 
-            Beyond technical expertise, I am fluent in Japanese, English, and Chinese, so I am capable in multinational teams. 
+            Beyond technical expertise, I am fluent in English, Japanese, and Chinese, so I am capable in multinational teams. 
             
             I hope I can make a meaningful contribution to the team at Rakuten, learn and gain unique and valuable experiences in the process.
             
